@@ -2632,8 +2632,7 @@ informative:
    to such URLs.  These URLs are expected to be sufficiently permanent
    and stable.
 
-##  Guidance for Writing the IANA Considerations for RFCs Defining IANA-
-    Maintained Modules {#sec-iana-mm}
+##  Guidance for Writing the IANA Considerations for RFCs Defining IANA-Maintained Modules {#sec-iana-mm}
 
    In addition to the IANA considerations in {{sec-iana-cons}},
    the IANA Considerations Section of an RFC that includes an IANA-
@@ -2679,9 +2678,9 @@ informative:
    authoritative IANA registry).
 
    The following templates are to be considered in addition to the
-   required information that is provided in Section 3.8 of [RFC8407].
+   required information that is provided in {{sec-iana-cons}}.
 
-##  Template for IANA-Maintained Modules with Identities {#sec-temp-id}
+###  Template for IANA-Maintained Modules with Identities {#sec-temp-id}
 
 ~~~~
    <CODE BEGINS>
@@ -2729,7 +2728,7 @@ informative:
    <CODE ENDS>
 ~~~~
 
-##  Template for IANA-Maintained Modules with Enumerations {#sec-temp-enum}
+###  Template for IANA-Maintained Modules with Enumerations {#sec-temp-enum}
 
 ~~~~
    <CODE BEGINS>
