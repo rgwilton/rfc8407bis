@@ -162,10 +162,10 @@ informative:
 ##  Changes since RFC 8407
 
    The following changes have been made to the guidelines published in
-   {{!RFC8407}}:
+   {{?RFC8407}}:
 
-   * item1
-   * item2
+   * Implement errata 5693, 5800, and 6899.
+   * Add guidelines for IANA-maintained modules.
 
 #  Terminology
 
@@ -1323,7 +1323,7 @@ can be extracted correctly.
     identity one {
       base f:foo-type;
     }
-    
+
     identity two {
       base f:foo-type;
     }
@@ -2935,7 +2935,7 @@ registry]:
    details about IANA considerations.
 
 
-From RFC8407:
+From RFC 8407:
 
    : The structure and contents of this document are adapted from
      "Guidelines for Authors and Reviewers of MIB Documents" {{?RFC4181}}, by
