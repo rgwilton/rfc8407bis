@@ -69,7 +69,6 @@ informative:
               date: false
               target: https://www.iana.org/assignments/xml-registry/
 
-
    RFC-STYLE:
               title: "Style Guide"
               author:
