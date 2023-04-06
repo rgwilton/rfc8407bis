@@ -100,11 +100,8 @@ informative:
               target: https://github.com/llhotka/iana-yang
 
    IANA-YANG-PARAMETERS:
-             title: "YANG Parameters"
-              author:
-                org: IANA
-              date: false
-              target: https://www.iana.org/assignments/yang-parameters
+              title: "YANG Parameters"
+              target: https://github.com/llhotka/iana-yang
 
 --- abstract
 
