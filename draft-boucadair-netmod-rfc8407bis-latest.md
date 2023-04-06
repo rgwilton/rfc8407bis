@@ -52,8 +52,6 @@ normative:
                 date: November 1999
               target: http://www.w3.org/TR/1999/REC-xpath-19991116
 
-
-
 informative:
 
    IANA-MOD-NAMES:
@@ -75,13 +73,6 @@ informative:
                 org: RFC Editor
               date: false
               target: http://www.rfc-editor.org/styleguide/
-
-   IANA-YANG-PARAMETERS:
-             title: "YANG Parameters"
-              author:
-                org: IANA
-              date: false
-              target: https://www.iana.org/assignments/yang-parameters
 
    IANA_BFD_URL:
               title: "iana-bfd-types YANG Module"
@@ -107,6 +98,13 @@ informative:
    Style:
               title: "IANA YANG"
               target: https://github.com/llhotka/iana-yang
+
+   IANA-YANG-PARAMETERS:
+             title: "YANG Parameters"
+              author:
+                org: IANA
+              date: false
+              target: https://www.iana.org/assignments/yang-parameters
 
 --- abstract
 
