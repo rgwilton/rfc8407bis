@@ -41,9 +41,9 @@ normative:
    ID-Guidelines:
               title: "Guidelines to Authors of Internet-Drafts"
               author:
-                name: Russ Housley
-                date: December 2010
-              target: https://www.ietf.org/standards/ids/guidelines/
+                org: IETF
+                date: false
+              target: https://authors.ietf.org/en/content-guidelines-overview
 
    W3C.REC-xpath:
               title: "XML Path Language (XPath) Version 1.0"
@@ -283,7 +283,7 @@ informative:
    component.
 
    The "<CODE BEGINS>" tag SHOULD be followed by a string identifying
-   the file name specified in Section 5.2 of {{!RFC7950}}.  The name string
+   the file name specified in Section 5.2 of [RFC7950].  The name string
    form that includes the revision date SHOULD be used.  The revision
    date MUST match the date used in the most recent revision of the
    module.
@@ -314,8 +314,8 @@ informative:
 ###  Example Modules
 
 ~~~
-  Example modules are not code components.  The <CODE BEGINS>
-  convention MUST NOT be used for example modules.
+Example modules are not code components.  The <CODE BEGINS>
+convention MUST NOT be used for example modules.
 ~~~
 
    An example module SHOULD be named using the term "example", followed
@@ -363,9 +363,9 @@ informative:
 
    Example:
 
-     The YANG data model in this document conforms to the Network
-     Management Datastore Architecture defined in
-     RFC 8342.
+      The YANG data model in this document conforms to the Network
+      Management Datastore Architecture defined in
+      RFC 8342.
 
    Consistent indentation SHOULD be used for all examples, including
    YANG fragments and protocol message instance data.  If line wrapping
@@ -378,7 +378,7 @@ informative:
    <myleaf xmlns="tag:example.com,2017:example-two">\
      this is a long value so the line needs to wrap to stay\
      within 72 characters\
-    </myleaf>
+   </myleaf>
 ~~~
 
 ##  Definitions Section
@@ -445,63 +445,63 @@ informative:
 ~~~
 <CODE BEGINS>
 
-   X.  Security Considerations
+X.  Security Considerations
 
-   The YANG module specified in this document defines a schema for data
-   that is designed to be accessed via network management protocols such
-   as NETCONF [RFC6241] or RESTCONF [RFC8040].  The lowest NETCONF layer
-   is the secure transport layer, and the mandatory-to-implement secure
-   transport is Secure Shell (SSH) [RFC6242].  The lowest RESTCONF layer
-   is HTTPS, and the mandatory-to-implement secure transport is TLS
-   [RFC8446].
+The YANG module specified in this document defines a schema for data
+that is designed to be accessed via network management protocols such
+as NETCONF [RFC6241] or RESTCONF [RFC8040].  The lowest NETCONF layer
+is the secure transport layer, and the mandatory-to-implement secure
+transport is Secure Shell (SSH) [RFC6242].  The lowest RESTCONF layer
+is HTTPS, and the mandatory-to-implement secure transport is TLS
+[RFC8446].
 
-   The Network Configuration Access Control Model (NACM) [RFC8341]
-   provides the means to restrict access for particular NETCONF or
-   RESTCONF users to a preconfigured subset of all available NETCONF or
-   RESTCONF protocol operations and content.
+The Network Configuration Access Control Model (NACM) [RFC8341]
+provides the means to restrict access for particular NETCONF or
+RESTCONF users to a preconfigured subset of all available NETCONF or
+RESTCONF protocol operations and content.
 
-    -- if you have any writable data nodes (those are all the
-    -- "config true" nodes, and remember, that is the default)
-    -- describe their specific sensitivity or vulnerability.
+ -- if you have any writable data nodes (those are all the
+ -- "config true" nodes, and remember, that is the default)
+ -- describe their specific sensitivity or vulnerability.
 
-   There are a number of data nodes defined in this YANG module that are
-   writable/creatable/deletable (i.e., config true, which is the
-   default).  These data nodes may be considered sensitive or vulnerable
-   in some network environments.  Write operations (e.g., edit-config)
-   and delete operations to these data nodes without proper protection
-   or authentication can have a negative effect on network operations.
-   These are the subtrees and data nodes and their sensitivity/
-   vulnerability:
-
-   <list subtrees and data nodes and state why they are sensitive>
-
-    -- for all YANG modules you must evaluate whether any readable data
-    -- nodes (those are all the "config false" nodes, but also all other
-    -- nodes, because they can also be read via operations like get or
-    -- get-config) are sensitive or vulnerable (for instance, if they
-    -- might reveal customer information or violate personal privacy
-    -- laws such as those of the European Union if exposed to
-    -- unauthorized parties)
-
-   Some of the readable data nodes in this YANG module may be considered
-   sensitive or vulnerable in some network environments.  It is thus
-   important to control read access (e.g., via get, get-config, or
-   notification) to these data nodes.  These are the subtrees and data
-   nodes and their sensitivity/vulnerability:
+There are a number of data nodes defined in this YANG module that are
+writable/creatable/deletable (i.e., config true, which is the
+default).  These data nodes may be considered sensitive or vulnerable
+in some network environments.  Write operations (e.g., edit-config)
+and delete operations to these data nodes without proper protection
+or authentication can have a negative effect on network operations.
+These are the subtrees and data nodes and their sensitivity/
+vulnerability:
 
    <list subtrees and data nodes and state why they are sensitive>
 
-    -- if your YANG module has defined any RPC operations
-    -- describe their specific sensitivity or vulnerability.
+  -- for all YANG modules you must evaluate whether any readable data
+  -- nodes (those are all the "config false" nodes, but also all other
+  -- nodes, because they can also be read via operations like get or
+  -- get-config) are sensitive or vulnerable (for instance, if they
+  -- might reveal customer information or violate personal privacy
+  -- laws such as those of the European Union if exposed to
+  -- unauthorized parties)
 
-   Some of the RPC operations in this YANG module may be considered
-   sensitive or vulnerable in some network environments.  It is thus
-   important to control access to these operations.  These are the
-   operations and their sensitivity/vulnerability:
+ Some of the readable data nodes in this YANG module may be considered
+ sensitive or vulnerable in some network environments.  It is thus
+ important to control read access (e.g., via get, get-config, or
+ notification) to these data nodes.  These are the subtrees and data
+ nodes and their sensitivity/vulnerability:
+
+   <list subtrees and data nodes and state why they are sensitive>
+
+   -- if your YANG module has defined any RPC operations
+   -- describe their specific sensitivity or vulnerability.
+
+Some of the RPC operations in this YANG module may be considered
+sensitive or vulnerable in some network environments.  It is thus
+important to control access to these operations.  These are the
+operations and their sensitivity/vulnerability:
 
    <list RPC operations and state why they are sensitive>
 
-   <CODE ENDS>
+<CODE ENDS>
 ~~~
 
 ##  IANA Considerations Section {#sec-iana-cons}
@@ -672,30 +672,30 @@ can be extracted correctly.
    below, the identifier "foo" is used in all three modules:
 
 ~~~ yang
-       module example-foo {
-         namespace "tag:example.com,2017:example-foo";
-         prefix f;
+    module example-foo {
+      namespace "tag:example.com,2017:example-foo";
+      prefix f;
 
-         container foo;
-       }
+      container foo;
+    }
 
-       module example-bar {
-         namespace "tag:example.com,2017:example-bar";
-         prefix b;
+    module example-bar {
+      namespace "tag:example.com,2017:example-bar";
+      prefix b;
 
-         typedef foo { type uint32; }
-       }
+      typedef foo { type uint32; }
+    }
 
-       module example-one {
-         namespace "tag:example.com,2017:example-one";
-         prefix one;
-         import example-foo { prefix f; }
-         import example-bar { prefix b; }
+    module example-one {
+      namespace "tag:example.com,2017:example-one";
+      prefix one;
+      import example-foo { prefix f; }
+      import example-bar { prefix b; }
 
-         augment "/f:foo" {
-            leaf foo { type b:foo; }
-         }
-       }
+      augment "/f:foo" {
+         leaf foo { type b:foo; }
+      }
+    }
 ~~~
 
    YANG defines the following rules for prefix usage:
@@ -898,7 +898,7 @@ can be extracted correctly.
    function that should not be used:
 
 ~~~ yang
-      /*[local-name()='foo']
+   /*[local-name()='foo']
 ~~~
 
    The "derived-from-or-self" function SHOULD be used instead of an
@@ -908,11 +908,11 @@ can be extracted correctly.
    Example:
 
 ~~~ yang
-      // do not use
-      when "md-name-format = 'name-format-null'";
+   // do not use
+   when "md-name-format = 'name-format-null'";
 
-      // this is preferred
-      when "derived-from-or-self(md-name-format, 'name-format-null')";
+   // this is preferred
+   when "derived-from-or-self(md-name-format, 'name-format-null')";
 ~~~
 
 ###  Axes
@@ -974,14 +974,14 @@ can be extracted correctly.
    Example:
 
 ~~~ yang
-      augment "/rt:active-route/rt:input/rt:destination-address" {
-         when "rt:address-family='v4ur:ipv4-unicast'" {
-           description
-             "This augment is valid only for IPv4 unicast.";
-         }
-         // nodes defined here within the augment-stmt
-         // cannot be referenced in the when-stmt
+   augment "/rt:active-route/rt:input/rt:destination-address" {
+      when "rt:address-family='v4ur:ipv4-unicast'" {
+        description
+          "This augment is valid only for IPv4 unicast.";
       }
+      // nodes defined here within the augment-stmt
+      // cannot be referenced in the when-stmt
+   }
 ~~~
 
 ###  Wildcards
@@ -999,11 +999,11 @@ can be extracted correctly.
    match the wildcard expansion.
 
 ~~~ yang
-      when /foo/services/*/active {
-        description
-          "No services directly defined in this module.
-           Matches objects that have augmented the services container.";
-      }
+   when /foo/services/*/active {
+     description
+       "No services directly defined in this module.
+        Matches objects that have augmented the services container.";
+   }
 ~~~
 
 ###  Boolean Expressions
@@ -1018,38 +1018,38 @@ can be extracted correctly.
    to "one" or "three":
 
 ~~~ yang
-        leaf foo1 {
-          type enumeration {
-             enum one;
-             enum two;
-             enum three;
-          }
-        }
+     leaf foo1 {
+       type enumeration {
+          enum one;
+          enum two;
+          enum three;
+       }
+     }
 
-        leaf foo2 {
-          // INCORRECT
-          must "/f:foo1 != 'two'";
-          type string;
-        }
-        leaf foo2 {
-          // CORRECT
-          must "/f:foo1 = 'one' or /f:foo1 = 'three'";
-          type string;
-        }
+     leaf foo2 {
+       // INCORRECT
+       must "/f:foo1 != 'two'";
+       type string;
+     }
+     leaf foo2 {
+       // CORRECT
+       must "/f:foo1 = 'one' or /f:foo1 = 'three'";
+       type string;
+     }
 ~~~
 
    In the next revision of the module, leaf "foo1" is extended with a
    new enum named "four":
 
 ~~~ yang
-        leaf foo1 {
-          type enumeration {
-             enum one;
-             enum two;
-             enum three;
-             enum four;
-          }
-        }
+     leaf foo1 {
+       type enumeration {
+          enum one;
+          enum two;
+          enum three;
+          enum four;
+       }
+     }
 ~~~
 
    Now the first XPath expression will allow the enum "four" to be
@@ -1080,10 +1080,10 @@ can be extracted correctly.
    within an import statement.
 
 ~~~ yang
-        import ietf-yang-types {
-           prefix yang;
-           reference "RFC 6991: Common YANG Data Types";
-        }
+     import ietf-yang-types {
+        prefix yang;
+        reference "RFC 6991: Common YANG Data Types";
+     }
 ~~~
 
    If submodules are used, then the document containing the main module
@@ -1095,14 +1095,14 @@ can be extracted correctly.
    not specify placeholder objects like the "reserved" example below:
 
 ~~~ yang
-       leaf reserved {
-         type string;
-         description
-           "This object has no purpose at this time, but a future
-            revision of this module might define a purpose
-            for this object.";
-         }
-       }
+   leaf reserved {
+     type string;
+      description
+        "This object has no purpose at this time, but a future
+         revision of this module might define a purpose
+         for this object.";
+      }
+    }
 ~~~
 
 ##  Module Header, Meta, and Revision Statements
@@ -1145,13 +1145,13 @@ can be extracted correctly.
    YANG module:
 
 ~~~ yang
-      revision "2012-02-22" {
-        description
-          "Initial version";
-        reference
-          "RFC 8341: Network Configuration
-                     Access Control Model";
-      }
+   revision "2012-02-22" {
+     description
+       "Initial version";
+     reference
+       "RFC 8341: Network Configuration
+                  Access Control Model";
+   }
 ~~~
 
    For an unpublished module, a complete history of each unpublished
@@ -1167,23 +1167,23 @@ can be extracted correctly.
    unpublished update to a published YANG module:
 
 ~~~ yang
-      revision "2017-12-11" {
-        description
-          "Added support for YANG 1.1 actions and notifications tied to
-           data nodes.  Clarify how NACM extensions can be used by other
-           data models.";
-        reference
-          "RFC 8407: Network Configuration Protocol (NETCONF)
-                     Access Control Model";
-      }
+   revision "2017-12-11" {
+     description
+       "Added support for YANG 1.1 actions and notifications tied to
+        data nodes.  Clarify how NACM extensions can be used by other
+        data models.";
+     reference
+       "RFC 8407: Network Configuration Protocol (NETCONF)
+                  Access Control Model";
+   }
 
-      revision "2012-02-22" {
-        description
-          "Initial version";
-        reference
-          "RFC 8341: Network Configuration
-                     Access Control Model";
-      }
+   revision "2012-02-22" {
+     description
+       "Initial version";
+     reference
+       "RFC 8341: Network Configuration
+                  Access Control Model";
+   }
 ~~~
 
 ##  Namespace Assignments {#sec-namespace-assignments}
@@ -1192,14 +1192,9 @@ can be extracted correctly.
    documents, whether or not the modules are published yet.  This
    allows:
 
-   o  the module to compile correctly instead of generating disruptive
-      fatal errors.
-
-   o  early implementors to use the modules without picking a random
-      value for the XML namespace.
-
-   o  early interoperability testing since independent implementations
-      will use the same XML namespace value.
+   * the module to compile correctly instead of generating disruptive fatal errors.
+   * early implementors to use the modules without picking a random value for the XML namespace.
+   * early interoperability testing since independent implementations will use the same XML namespace value.
 
    Until a URI is assigned by the IANA, a proposed namespace URI MUST be
    provided for the namespace statement in a YANG module.  A value
@@ -1210,25 +1205,25 @@ can be extracted correctly.
    A standard namespace statement value SHOULD have the following form:
 
 ~~~
-       <URN prefix string>:<module-name>
+   <URN prefix string>:<module-name>
 ~~~
 
    The following URN prefix string SHOULD be used for published and
    unpublished YANG modules:
 
 ~~~
-       urn:ietf:params:xml:ns:yang:
+    urn:ietf:params:xml:ns:yang:
 ~~~
 
    The following example URNs would be valid namespace statement values
    for Standards Track modules:
 
 ~~~
-       urn:ietf:params:xml:ns:yang:ietf-netconf-partial-lock
+    urn:ietf:params:xml:ns:yang:ietf-netconf-partial-lock
 
-       urn:ietf:params:xml:ns:yang:ietf-netconf-state
+    urn:ietf:params:xml:ns:yang:ietf-netconf-state
 
-       urn:ietf:params:xml:ns:yang:ietf-netconf
+    urn:ietf:params:xml:ns:yang:ietf-netconf
 ~~~
 
    Note that a different URN prefix string SHOULD be used for modules
@@ -1244,17 +1239,17 @@ can be extracted correctly.
    Example URIs using URLs per {{!RFC3986}}:
 
 ~~~
-       https://example.com/ns/example-interfaces
+    https://example.com/ns/example-interfaces
 
-       https://example.com/ns/example-system
+    https://example.com/ns/example-system
 ~~~
 
    Example URIs using tags per {{?RFC4151}}:
 
 ~~~
-       tag:example.com,2017:example-interfaces
+    tag:example.com,2017:example-interfaces
 
-       tag:example.com,2017:example-system
+    tag:example.com,2017:example-system
 ~~~
 
 ##  Top-Level Data Definitions
@@ -1308,12 +1303,12 @@ can be extracted correctly.
    type SHOULD be used.
 
 ~~~ yang
-       leaf foo {
-         type enumeration {
-           enum one;
-           enum two;
-         }
-       }
+    leaf foo {
+      type enumeration {
+        enum one;
+        enum two;
+      }
+    }
 ~~~
 
    If extensibility of enumerated values is required, then the
@@ -1321,22 +1316,23 @@ can be extracted correctly.
    other built-in type.
 
 ~~~ yang
-       identity foo-type {
-         description "Base for the extensible type";
-       }
+    identity foo-type {
+      description "Base for the extensible type";
+    }
 
-       identity one {
-         base f:foo-type;
-       }
-       identity two {
-         base f:foo-type;
-       }
+    identity one {
+      base f:foo-type;
+    }
+    
+    identity two {
+      base f:foo-type;
+    }
 
-       leaf foo {
-         type identityref {
-           base f:foo-type;
-         }
-       }
+    leaf foo {
+      type identityref {
+        base f:foo-type;
+      }
+    }
 ~~~
 
    Note that any module can declare an identity with base "foo-type"
@@ -1357,12 +1353,12 @@ can be extracted correctly.
    the "pattern" statement:
 
 ~~~ yang
-       typedef ipv4-address-no-zone {
-         type inet:ipv4-address {
-           pattern '[0-9\.]*';
-         }
-         ...
-       }
+    typedef ipv4-address-no-zone {
+      type inet:ipv4-address {
+        pattern '[0-9\.]*';
+      }
+      ...
+    }
 ~~~
 
    For string data types, if the length of the string is required to be
@@ -1373,14 +1369,14 @@ can be extracted correctly.
    the "length" statement:
 
 ~~~ yang
-       typedef yang-identifier {
-         type string {
-           length "1..max";
-           pattern '[a-zA-Z_][a-zA-Z0-9\-_.]*';
-           pattern '.|..|[^xX].*|.[^mM].*|..[^lL].*';
-         }
-         ...
-       }
+    typedef yang-identifier {
+      type string {
+       length "1..max";
+        pattern '[a-zA-Z_][a-zA-Z0-9\-_.]*';
+        pattern '.|..|[^xX].*|.[^mM].*|..[^lL].*';
+      }
+      ...
+   }
 ~~~
 
    For numeric data types, if the values allowed by the intended
@@ -1391,12 +1387,12 @@ can be extracted correctly.
    the "range" statement:
 
 ~~~ yang
-       typedef dscp {
-         type uint8 {
-            range "0..63";
-         }
-         ...
-       }
+    typedef dscp {
+      type uint8 {
+         range "0..63";
+      }
+      ...
+    }
 ~~~
 
 ###  Enumerations and Bits
@@ -1406,30 +1402,30 @@ can be extracted correctly.
    (within each "enum" or "bit" statement) SHOULD be present.
 
 ~~~ yang
-       leaf foo {
-         // INCORRECT
-         type enumeration {
-           enum one;
-           enum two;
-         }
-         description
-           "The foo enum...
-            one: The first enum
-            two: The second enum";
-       }
-       leaf foo {
-         // CORRECT
-         type enumeration {
-           enum one {
-             description "The first enum";
-           }
-           enum two {
-             description "The second enum";
-           }
-         }
-         description
-           "The foo enum...  ";
-       }
+    leaf foo {
+      // INCORRECT
+      type enumeration {
+        enum one;
+        enum two;
+      }
+      description
+        "The foo enum...
+         one: The first enum
+         two: The second enum";
+    }
+    leaf foo {
+      // CORRECT
+      type enumeration {
+        enum one {
+          description "The first enum";
+        }
+        enum two {
+          description "The second enum";
+        }
+      }
+      description
+        "The foo enum...  ";
+    }
 ~~~
 
 ###  Union Types
@@ -1442,26 +1438,28 @@ can be extracted correctly.
    In the following example, the "enumeration" type will never be
    matched because the preceding "string" type will match everything.
 
-~~~ yang
    Incorrect:
 
-      type union {
-        type string;
-        type enumeration {
-          enum up;
-          enum down;
-        }
-      }
+~~~ yang
+   type union {
+     type string;
+     type enumeration {
+       enum up;
+       enum down;
+     }
+   }
+~~~
 
    Correct:
 
-      type union {
-        type enumeration {
-          enum up;
-          enum down;
-        }
-        type string;
-      }
+~~~ yang
+   type union {
+     type enumeration {
+       enum up;
+       enum down;
+     }
+     type string;
+   }
 ~~~
 
    It is possible for different member types to match, depending on the
@@ -1474,20 +1472,22 @@ can be extracted correctly.
    number will be matched by the "string" type.  The second version will
    match the "int32" member type no matter how the input is encoded.
 
-~~~ yang
    Incorrect:
 
-      type union {
-        type string;
-        type int32;
-      }
+~~~ yang
+   type union {
+     type string;
+     type int32;
+   }
+~~~~
 
    Correct:
 
-      type union {
-        type int32;
-        type string;
-      }
+~~~ yang
+   type union {
+     type int32;
+     type string;
+   }
 ~~~
 
 ###  Empty and Boolean
@@ -1525,18 +1525,18 @@ can be extracted correctly.
    Incorrect:
 
 ~~~ yang
-      leaf flag1 {
-        type empty;
-      }
+   leaf flag1 {
+     type empty;
+   }
 ~~~
 
    Correct:
 
 ~~~ yang
-      leaf flag2 {
-        type boolean;
-        default false;
-      }
+   leaf flag2 {
+     type boolean;
+     default false;
+   }
 ~~~
 
 ##  Reusable Type Definitions
@@ -1654,23 +1654,23 @@ can be extracted correctly.
    Example using container wrappers:
 
 ~~~ yang
-       container top {
-          container foos {
-             list foo { ... }
-          }
-          container bars {
-             list bar { ... }
-          }
+    container top {
+       container foos {
+          list foo { ... }
        }
+       container bars {
+          list bar { ... }
+       }
+    }
 ~~~
 
    Example without container wrappers:
 
 ~~~
-       container top {
-          list foo { ... }
-          list bar { ... }
-       }
+    container top {
+       list foo { ... }
+       list bar { ... }
+    }
 ~~~
 
    Use of non-presence containers to organize data is a subjective
@@ -1720,14 +1720,14 @@ can be extracted correctly.
    values for the resource instance.  For example:
 
 ~~~ yang
-     notification interface-up {
-       description "Sent when an interface is activated.";
-       leaf name {
-         type leafref {
-           path "/if:interfaces/if:interface/if:name";
-         }
-       }
-     }
+    notification interface-up {
+      description "Sent when an interface is activated.";
+      leaf name {
+        type leafref {
+          path "/if:interfaces/if:interface/if:name";
+        }
+      }
+    }
 ~~~
 
    Note that there are no formal YANG statements to identify any data
@@ -1774,14 +1774,14 @@ can be extracted correctly.
    For example, feature2 requires implementation of feature1:
 
 ~~~
-      feature feature1 {
-        description "Some protocol feature";
-      }
+   feature feature1 {
+     description "Some protocol feature";
+   }
 
-      feature feature2 {
-        if-feature "feature1";
-        description "Another protocol feature";
-      }
+   feature feature2 {
+     if-feature "feature1";
+     description "Another protocol feature";
+   }
 ~~~
 
 ##  YANG Data Node Constraints
@@ -1838,15 +1838,15 @@ can be extracted correctly.
    entries of the type "ethernetCsmacd".
 
 ~~~
-        augment "/if:interfaces/if:interface" {
-            when "if:type = 'ianaift:ethernetCsmacd'";
+     augment "/if:interfaces/if:interface" {
+         when "if:type = 'ianaift:ethernetCsmacd'";
 
-            container ethernet {
-                leaf duplex {
-                    ...
-                }
-            }
-        }
+         container ethernet {
+             leaf duplex {
+                 ...
+             }
+         }
+     }
 ~~~
 
 ###  Conditionally Mandatory Data Definition Statements
@@ -1882,28 +1882,28 @@ can be extracted correctly.
    not add a mandatory data node.
 
 ~~~
-     module example-module {
+  module example-module {
 
-       yang-version 1.1;
-       namespace "tag:example.com,2017:example-module";
-       prefix mymod;
+    yang-version 1.1;
+    namespace "tag:example.com,2017:example-module";
+    prefix mymod;
 
-       import iana-if-type { prefix iana; }
-       import ietf-interfaces { prefix if; }
+    import iana-if-type { prefix iana; }
+    import ietf-interfaces { prefix if; }
 
-       identity some-new-iftype {
-          base iana:iana-interface-type;
+    identity some-new-iftype {
+       base iana:iana-interface-type;
+    }
+
+    augment "/if:interfaces/if:interface" {
+      when "if:type = 'mymod:some-new-iftype'";
+
+       leaf mandatory-leaf {
+          type string;
+          mandatory true;
        }
-
-       augment "/if:interfaces/if:interface" {
-          when "if:type = 'mymod:some-new-iftype'";
-
-          leaf mandatory-leaf {
-             type string;
-             mandatory true;
-          }
-       }
-     }
+    }
+  }
 ~~~
 
    Note that this practice is safe only for creating data resources.  It
@@ -1947,26 +1947,27 @@ can be extracted correctly.
 
    Example documenting platform resource limits:
 
-~~~
+
      Wrong: (max-elements in the list itself)
 
-        container backups {
-          list backup {
-             ...
-             max-elements  10;
-             ...
-          }
-        }
+~~~
+     container backups {
+       list backup {
+          ...
+          max-elements  10;
+          ...
+       }
+     }
 ~~~
 
      Correct: (max-elements in a deviation)
 
 ~~~
-        deviation /bk:backups/bk:backup {
-          deviate add {
-             max-elements  10;
-          }
-        }
+     deviation /bk:backups/bk:backup {
+       deviate add {
+          max-elements  10;
+       }
+     }
 ~~~
 
 ##  Extension Statements
@@ -2043,49 +2044,49 @@ can be extracted correctly.
    Not preferred:
 
 ~~~
-      list foo {
-         key name;
-         leaf name {
-           type string;
-         }
-         ...
+   list foo {
+      key name;
+      leaf name {
+        type string;
       }
+      ...
+   }
 
-      list foo-addon {
-         key name;
-         config false;
-         leaf name {
-           type string;
-         }
-         ...
+   list foo-addon {
+      key name;
+      config false;
+      leaf name {
+        type string;
       }
+      ...
+   }
 ~~~
 
    Preferred:
 
 ~~~
-      list foo {
-         key name;
-         leaf name {
-           type string;
-         }
-         ...
+   list foo {
+      key name;
+      leaf name {
+        type string;
       }
+      ...
+   }
 
-      list foo-addon {
-         key name;
-         config false;
-         leaf name {
-           type leafref {
-             path "/foo/name";
-             require-instance false;
-           }
-         }
-         leaf addon {
-           type string;
-           mandatory true;
-         }
+   list foo-addon {
+      key name;
+      config false;
+      leaf name {
+        type leafref {
+          path "/foo/name";
+          require-instance false;
+        }
       }
+      leaf addon {
+        type string;
+        mandatory true;
+      }
+   }
 ~~~
 
 ##  Operational State
@@ -2116,11 +2117,11 @@ can be extracted correctly.
    retrieved together with minimal message overhead.
 
 ~~~
-      container foo {
-        ...
-        // contains "config true" and "config false" nodes that have
-        // no corresponding "config true" object (e.g., counters)
-      }
+   container foo {
+     ...
+     // contains "config true" and "config false" nodes that have
+     // no corresponding "config true" object (e.g., counters)
+   }
 ~~~
 
 ###  Representing Operational Values of Configuration Data
@@ -2180,7 +2181,7 @@ can be extracted correctly.
    The remaining are options that MAY be followed during the time that
    NMDA mechanisms are being defined.
 
-   (a)  Modules that require immediate support for the NMDA features
+   *  Modules that require immediate support for the NMDA features
         SHOULD be structured for NMDA.  A temporary non-NMDA version of
         this type of module MAY exist, as either an existing model or a
         model created by hand or with suitable tools that mirror the
@@ -2191,7 +2192,7 @@ can be extracted correctly.
         allow temporary bridging of the time period until NMDA
         implementations are available.
 
-   (b)  For published models, the model should be republished with an
+   *  For published models, the model should be republished with an
         NMDA-compatible structure, deprecating non-NMDA constructs.  For
         example, the "ietf-interfaces" model in {{?RFC7223}} has been
         restructured as an NMDA-compatible model in {{?RFC8343}}.  The
@@ -2202,7 +2203,7 @@ can be extracted correctly.
         non-NMDA-capable implementations to utilize them for access to
         the operational values.
 
-   (c)  For models that augment models that have not been structured
+   *  For models that augment models that have not been structured
         with the NMDA, the modeler will have to consider the structure
         of the base model and the guidelines listed above.  Where
         possible, such models should move to new revisions of the base
@@ -2252,16 +2253,16 @@ can be extracted correctly.
    state subtrees, whenever possible.
 
 ~~~ yang
-     module example-foo {
-       namespace "urn:example.com:params:xml:ns:yang:example-foo";
-       prefix "foo";
+  module example-foo {
+    namespace "urn:example.com:params:xml:ns:yang:example-foo";
+    prefix "foo";
 
-       container foo {
-         // configuration data child nodes
-         // operational value in operational state datastore only
-         // may contain "config false" nodes as needed
-       }
+    container foo {
+      // configuration data child nodes
+      // operational value in operational state datastore only
+      // may contain "config false" nodes as needed
     }
+ }
 ~~~
 
 ####  Example: Convert an Old Non-NMDA Module
@@ -2273,42 +2274,42 @@ can be extracted correctly.
    Old Module:
 
 ~~~ yang
-     module example-foo {
-       namespace "urn:example.com:params:xml:ns:yang:example-foo";
-       prefix "foo";
+  module example-foo {
+    namespace "urn:example.com:params:xml:ns:yang:example-foo";
+    prefix "foo";
 
-       container foo {
-         // configuration data child nodes
-       }
-
-       container foo-state {
-         config false;
-         // operational state child nodes
-       }
+    container foo {
+      // configuration data child nodes
     }
+
+    container foo-state {
+      config false;
+      // operational state child nodes
+    }
+ }
 ~~~
 
     Converted NMDA Module:
 
 ~~~ yang
-     module example-foo {
-       namespace "urn:example.com:params:xml:ns:yang:example-foo";
-       prefix "foo";
+  module example-foo {
+    namespace "urn:example.com:params:xml:ns:yang:example-foo";
+    prefix "foo";
 
-       container foo {
-         // configuration data child nodes
-         // operational value in operational state datastore only
-         // may contain "config false" nodes as needed
-         // will contain any data nodes from old foo-state
-       }
-
-       // keep original foo-state but change status to deprecated
-       container foo-state {
-         config false;
-         status deprecated;
-         // operational state child nodes
-       }
+    container foo {
+      // configuration data child nodes
+      // operational value in operational state datastore only
+      // may contain "config false" nodes as needed
+      // will contain any data nodes from old foo-state
     }
+
+    // keep original foo-state but change status to deprecated
+    container foo-state {
+      config false;
+      status deprecated;
+      // operational state child nodes
+    }
+ }
 ~~~
 
 ####  Example: Create a Temporary NMDA Module
@@ -2318,19 +2319,19 @@ can be extracted correctly.
    with configuration data nodes (to be NMDA compliant).
 
 ~~~ yang
-     module example-foo-state {
-       namespace "urn:example.com:params:xml:ns:yang:example-foo-state";
-       prefix "foo-s";
+  module example-foo-state {
+    namespace "urn:example.com:params:xml:ns:yang:example-foo-state";
+    prefix "foo-s";
 
-       // import new or converted module; not used in this example
-       import example-foo { prefix foo; }
+    // import new or converted module; not used in this example
+    import example-foo { prefix foo; }
 
-       container foo-state {
-         config false;
-         status deprecated;
-         // operational state child nodes
-       }
-    }
+    container foo-state {
+      config false;
+      status deprecated;
+      // operational state child nodes
+     }
+  }
 ~~~
 
 ##  Performance Considerations
@@ -2415,15 +2416,15 @@ can be extracted correctly.
    the "interface" parameter, only the "reset" operation itself:
 
 ~~~ yang
-      rpc reset {
-        input {
-          leaf interface {
-            type if:interface-ref;
-            mandatory true;
-            description "The interface to reset.";
-          }
-        }
-      }
+   rpc reset {
+     input {
+       leaf interface {
+         type if:interface-ref;
+         mandatory true;
+         description "The interface to reset.";
+       }
+     }
+   }
 ~~~
 
    However, NACM can enforce access control for individual interface
@@ -2432,12 +2433,12 @@ can be extracted correctly.
    the "reset" action for that interface instance:
 
 ~~~ yang
-      container interfaces {
-        list interface {
-          ...
-          action reset { }
-        }
-      }
+   container interfaces {
+     list interface {
+       ...
+       action reset { }
+     }
+   }
 ~~~
 
 ##  Updating YANG Modules (Published versus Unpublished)
@@ -2773,7 +2774,7 @@ registry]:
 
    *  Copyright Notice -- verify that the document has the appropriate
       text regarding the rights that document contributors provide to
-      the IETF Trust {{?RFC5378}}.  Verify that it contains the full IETF
+      the IETF Trust {{!RFC5378}}.  Verify that it contains the full IETF
       Trust copyright notice at the beginning of the document.  The IETF
       Trust Legal Provisions (TLP) can be found at:
 
