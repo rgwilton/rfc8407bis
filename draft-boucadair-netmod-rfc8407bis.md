@@ -48,7 +48,7 @@ normative:
    W3C.REC-xpath:
               title: "XML Path Language (XPath) Version 1.0"
               author:
-                name: James Clark, Steve DeRose 
+                name: James Clark, Steve DeRose
                 date: November 1999
               target: http://www.w3.org/TR/1999/REC-xpath-19991116
 
@@ -2236,7 +2236,7 @@ can be extracted correctly.
 
    * Change the module name by appending "-state" to the original module name
    * Change the namespace by appending "-state" to the original namespace value
-   * Change the prefix by appending "-s" to the original prefix value 
+   * Change the prefix by appending "-s" to the original prefix value
    * Add an import to the original module (e.g., for typedef definitions)
    * Retain or create only the top-level nodes that have a "config"
       statement value "false".  These subtrees represent "config false"
