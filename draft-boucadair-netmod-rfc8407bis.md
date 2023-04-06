@@ -46,9 +46,9 @@ normative:
               target: https://www.ietf.org/standards/ids/guidelines/
 
    W3C.REC-xpath:
-              title: "xxxxx"
+              title: "XML Path Language (XPath) Version 1.0"
               author:
-                name: XXXXX
+                name: James Clark, Steve DeRose 
                 date: November 1999
               target: http://www.w3.org/TR/1999/REC-xpath-19991116
 
@@ -58,6 +58,7 @@ informative:
               title: "YANG Module Names"
               author:
                 org: IANA
+              date: false
               target: https://www.iana.org/assignments/yang-parameters/
 
    IANA-XML:
@@ -101,12 +102,12 @@ informative:
 
    IANA-YANG-PARAMETERS:
               title: "YANG Parameters"
-              target: https://github.com/llhotka/iana-yang
+              target: https://www.iana.org/assignments/yang-parameters
 
 --- abstract
 
    This memo provides guidelines for authors and reviewers of
-   specifications containing YANG modules.  Recommendations and
+   specifications containing YANG modules, including IANA-maintained modules.  Recommendations and
    procedures are defined, which are intended to increase
    interoperability and usability of Network Configuration Protocol
    (NETCONF) and RESTCONF protocol implementations that utilize YANG
@@ -170,23 +171,27 @@ informative:
 
    The following terms are used throughout this document:
 
-   o  published: A stable release of a module or submodule.  For
+   published:
+   : A stable release of a module or submodule.  For
       example, the "Request for Comments" described in Section 2.1 of
       {{?RFC2026}} is considered a stable publication.
 
-   o  unpublished: An unstable release of a module or submodule.  For
+   unpublished:
+   : An unstable release of a module or submodule.  For
       example the "Internet-Draft" described in Section 2.2 of {{?RFC2026}}
       is considered an unstable publication that is a work in progress,
       subject to change at any time.
 
-   o  YANG fragment: A set of YANG statements that are not intended to
+   YANG fragment:
+   : A set of YANG statements that are not intended to
       represent a complete YANG module or submodule.  These statements
       are not intended for actual use, except to provide an example of
       YANG statement usage.  The invalid syntax "..." is sometimes used
       to indicate that additional YANG statements would be present in a
       real YANG module.
 
-   o  YANG tree diagram: A diagram representing the contents of a YANG
+   YANG tree diagram:
+   : A diagram representing the contents of a YANG
       module, as defined in {{?RFC8340}}.  It is also called a "tree
       diagram".
 
@@ -195,32 +200,23 @@ informative:
    The following terms are defined in {{!RFC6241}} and are not redefined
    here:
 
-   o  capabilities
-
-   o  client
-
-   o  operation
-
-   o  server
+   * capabilities
+   * client
+   * operation
+   * server
 
 ##  YANG Terms
 
    The following terms are defined in {{!RFC7950}} and are not redefined
    here:
 
-   o  data node
-
-   o  module
-
-   o  namespace
-
-   o  submodule
-
-   o  version
-
-   o  YANG
-
-   o  YIN
+   * data node
+   * module
+   * namespace
+   * submodule
+   * version
+   * YANG
+   * YIN
 
    Note that the term 'module' may be used as a generic term for a YANG
    module or submodule.  When describing properties that are specific to
@@ -231,14 +227,11 @@ informative:
    The following terms are defined in {{!RFC8342}} and are not redefined
    here:
 
-   o  configuration
-
-   o  conventional configuration datastore
-
-   o  datastore
-   o  operational state
-
-   o  operational state datastore
+   * configuration
+   * conventional configuration datastore
+   * datastore
+   * operational state
+   * operational state datastore
 
 ## Requirements Notation
 
@@ -254,24 +247,18 @@ informative:
 
    The following sections MUST be present in an I-D containing a module:
 
-   o  Narrative sections
-
-   o  Definition sections
-
-   o  Security Considerations section
-
-   o  IANA Considerations section
-
-   o  References section
+   * Narrative sections
+   * Definition sections
+   * Security Considerations section
+   * IANA Considerations section
+   * References section
 
    There are three usage scenarios for YANG that can appear in an I-D or
    RFC:
 
-   o  normative module or submodule
-
-   o  example module or submodule
-
-   o  example YANG fragment not part of any module or submodule
+   * normative module or submodule
+   * example module or submodule
+   * example YANG fragment not part of any module or submodule
 
    The guidelines in this document refer mainly to a normative module or
    submodule but may be applicable to example modules and YANG fragments
@@ -284,7 +271,7 @@ informative:
    online at:
 
 ~~~
-       <https://trustee.ietf.org/license-info/>
+    <https://trustee.ietf.org/license-info/>
 ~~~
 
 ##  Code Components
@@ -327,8 +314,8 @@ informative:
 ###  Example Modules
 
 ~~~
-   Example modules are not code components.  The <CODE BEGINS>
-   convention MUST NOT be used for example modules.
+  Example modules are not code components.  The <CODE BEGINS>
+  convention MUST NOT be used for example modules.
 ~~~
 
    An example module SHOULD be named using the term "example", followed
@@ -386,12 +373,12 @@ informative:
    in the following example:
 
 ~~~
-      [note: '\' line wrapping for formatting only]
+   [note: '\' line wrapping for formatting only]
 
-      <myleaf xmlns="tag:example.com,2017:example-two">\
-        this is a long value so the line needs to wrap to stay\
-        within 72 characters\
-      </myleaf>
+   <myleaf xmlns="tag:example.com,2017:example-two">\
+     this is a long value so the line needs to wrap to stay\
+     within 72 characters\
+    </myleaf>
 ~~~
 
 ##  Definitions Section
@@ -433,22 +420,22 @@ informative:
    This section MUST be patterned after the latest approved template
    (available at <https://trac.ietf.org/trac/ops/wiki/yang-security-
    guidelines>).  {{sec-security-template}} contains the security considerations
-   template dated 2013-05-08 and last updated on 2018-07-02.  Authors
+   template dated 2013-05-08 and last updated on 2018-10-18.  Authors
    MUST check the web page at the URL listed above in case there is a
    more recent version available.
 
    In particular:
 
-   o  Writable data nodes that could be especially disruptive if abused
+   * Writable data nodes that could be especially disruptive if abused
       MUST be explicitly listed by name, and the associated security
       risks MUST be explained.
 
-   o  Readable data nodes that contain especially sensitive information
+   * Readable data nodes that contain especially sensitive information
       or that raise significant privacy concerns MUST be explicitly
       listed by name, and the reasons for the sensitivity/privacy
       concerns MUST be explained.
 
-   o  Operations (i.e., YANG "rpc" statements) that are potentially
+   * Operations (i.e., YANG "rpc" statements) that are potentially
       harmful to system behavior or that raise significant privacy
       concerns MUST be explicitly listed by name, and the reasons for
       the sensitivity/privacy concerns MUST be explained.
@@ -456,34 +443,35 @@ informative:
 ###  Security Considerations Section Template {#sec-security-template}
 
 ~~~
-   <CODE BEGINS>
+<CODE BEGINS>
 
    X.  Security Considerations
 
    The YANG module specified in this document defines a schema for data
    that is designed to be accessed via network management protocols such
-   as NETCONF {{!RFC6241}} or RESTCONF {{!RFC8040}}.  The lowest NETCONF layer
+   as NETCONF [RFC6241] or RESTCONF [RFC8040].  The lowest NETCONF layer
    is the secure transport layer, and the mandatory-to-implement secure
    transport is Secure Shell (SSH) [RFC6242].  The lowest RESTCONF layer
    is HTTPS, and the mandatory-to-implement secure transport is TLS
-   {{!RFC8446}}.
+   [RFC8446].
 
-   The NETCONF access control model {{?RFC8341}} provides the means to
-   restrict access for particular NETCONF or RESTCONF users to a
-   preconfigured subset of all available NETCONF or RESTCONF protocol
-   operations and content.
+   The Network Configuration Access Control Model (NACM) [RFC8341]
+   provides the means to restrict access for particular NETCONF or
+   RESTCONF users to a preconfigured subset of all available NETCONF or
+   RESTCONF protocol operations and content.
 
     -- if you have any writable data nodes (those are all the
     -- "config true" nodes, and remember, that is the default)
     -- describe their specific sensitivity or vulnerability.
 
    There are a number of data nodes defined in this YANG module that are
-   writable/creatable/deletable (i.e., "config true", which is the
+   writable/creatable/deletable (i.e., config true, which is the
    default).  These data nodes may be considered sensitive or vulnerable
    in some network environments.  Write operations (e.g., edit-config)
-   to these data nodes without proper protection can have a negative
-   effect on network operations.  These are the subtrees and data nodes
-   and their sensitivity/vulnerability:
+   and delete operations to these data nodes without proper protection
+   or authentication can have a negative effect on network operations.
+   These are the subtrees and data nodes and their sensitivity/
+   vulnerability:
 
    <list subtrees and data nodes and state why they are sensitive>
 
@@ -575,7 +563,7 @@ informative:
    'pyang' YANG compiler is freely available from GitHub:
 
 ~~~
-     <https://github.com/mbj4668/pyang>
+  <https://github.com/mbj4668/pyang>
 ~~~
 
    If the 'pyang' compiler is used to validate a normative module, then
@@ -589,7 +577,7 @@ informative:
    The "yanglint" program is also freely available from GitHub.
 
 ~~~
-      <https://github.com/CESNET/libyang>
+   <https://github.com/CESNET/libyang>
 ~~~
 
    This tool can be used to validate XPath statements within YANG
@@ -602,20 +590,20 @@ informative:
    extraction is freely available at:
 
 ~~~
-     <https://github.com/mbj4668/rfcstrip>
+   <https://github.com/mbj4668/rfcstrip>
 ~~~
 
 ~~~
-   This tool can be used to verify that the "<CODE BEGINS>" and "<CODE
-   ENDS>" tags are used correctly and that the normative YANG modules
-   can be extracted correctly.
+This tool can be used to verify that the "<CODE BEGINS>" and "<CODE
+ENDS>" tags are used correctly and that the normative YANG modules
+can be extracted correctly.
 ~~~
 
    The "xym" tool is freely available on GitHub and can be used to
    extract YANG modules from a document.
 
 ~~~
-      <https://github.com/xym-tool/xym>
+   <https://github.com/xym-tool/xym>
 ~~~
 
 ##  Module Usage Examples
@@ -712,30 +700,17 @@ informative:
 
    YANG defines the following rules for prefix usage:
 
-   o  Prefixes are never used for built-in data types and YANG keywords.
-
-   o  A prefix MUST be used for any external statement (i.e., a
-      statement defined with the YANG "extension" statement).
-
-   o  The proper module prefix MUST be used for all identifiers imported
-      from other modules.
-
-   o  The proper module prefix MUST be used for all identifiers included
-      from a submodule.
+   * Prefixes are never used for built-in data types and YANG keywords.
+   * A prefix MUST be used for any external statement (i.e., a statement defined with the YANG "extension" statement).
+   * The proper module prefix MUST be used for all identifiers imported from other modules.
+   * The proper module prefix MUST be used for all identifiers included from a submodule.
 
    The following guidelines apply to prefix usage of the current (local)
    module:
 
-   o  The local module prefix SHOULD be used instead of no prefix in all
-      path expressions.
-
-   o  The local module prefix MUST be used instead of no prefix in all
-      "default" statements for an "identityref" or "instance-identifier"
-      data type.
-
-   o  The local module prefix MAY be used for references to typedefs,
-      groupings, extensions, features, and identities defined in the
-      module.
+   * The local module prefix SHOULD be used instead of no prefix in all path expressions.
+   * The local module prefix MUST be used instead of no prefix in all "default" statements for an "identityref" or "instance-identifier" data type.
+   * The local module prefix MAY be used for references to typedefs, groupings, extensions, features, and identities defined in the module.
 
    Prefix values SHOULD be short but are also likely to be unique.
    Prefix values SHOULD NOT conflict with known modules that have been
@@ -1547,22 +1522,24 @@ informative:
    In general, the "boolean" data type SHOULD be used instead of the
    "empty" data type, as shown in the example below:
 
-~~~ yang
    Incorrect:
 
+~~~ yang
       leaf flag1 {
         type empty;
       }
+~~~
 
    Correct:
 
+~~~ yang
       leaf flag2 {
         type boolean;
         default false;
       }
 ~~~
 
-###  Reusable Type Definitions
+##  Reusable Type Definitions
 
    If an appropriate derived type exists in any standard module, such as
    {{?RFC6991}}, then it SHOULD be used instead of defining a new derived
@@ -1596,58 +1573,34 @@ informative:
    The following guidelines apply to reusable groupings, in order to
    make them as robust as possible:
 
-   o  Clearly identify the purpose of the grouping in the "description"
-      statement.
-
-   o  There are five different XPath contexts in YANG (rpc/input, rpc/
-      output, notification, "config true" data nodes, and all data
+   * Clearly identify the purpose of the grouping in the "description" statement.
+   * There are five different XPath contexts in YANG (rpc/input, rpc/output, notification, "config true" data nodes, and all data
       nodes).  Clearly identify which XPath contexts are applicable or
       excluded for the grouping.
-
-   o  Do not reference data outside the grouping in any "path", "must",
-      or "when" statements.
-
-   o  Do not include a "default" substatement on a leaf or choice unless
-      the value applies on all possible contexts.
-
-   o  Do not include a "config" substatement on a data node unless the
-      value applies on all possible contexts.
-
-   o  Clearly identify any external dependencies in the grouping
-      "description" statement, such as nodes referenced by an absolute
-      path from a "path", "must", or "when" statement.
+   * Do not reference data outside the grouping in any "path", "must", or "when" statements.
+   * Do not include a "default" substatement on a leaf or choice unless the value applies on all possible contexts.
+   * Do not include a "config" substatement on a data node unless the value applies on all possible contexts.
+   * Clearly identify any external dependencies in the grouping "description" statement, such as nodes referenced by an absolute path from a "path", "must", or "when" statement.
 
 ##  Data Definitions
 
    The "description" statement MUST be present in the following YANG
    statements:
 
-   o  anyxml
-
-   o  augment
-
-   o  choice
-
-   o  container
-
-   o  extension
-
-   o  feature
-
-   o  grouping
-
-   o  identity
-
-   o  leaf
-
-   o  leaf-list
-   o  list
-
-   o  notification
-
-   o  rpc
-
-   o  typedef
+   * anyxml
+   * augment
+   * choice
+   * container
+   * extension
+   * feature
+   * grouping
+   * identity
+   * leaf
+   * leaf-list
+   * list
+   * notification
+   * rpc
+   * typedef
 
    If the data definition semantics are defined in an external document,
    (other than another YANG module indicated by an import statement),
@@ -1698,9 +1651,9 @@ informative:
    beyond this purpose, although YANG allows it (e.g., a "must"
    statement within the non-presence container).
 
-~~~ yang
    Example using container wrappers:
 
+~~~ yang
        container top {
           container foos {
              list foo { ... }
@@ -1711,10 +1664,9 @@ informative:
        }
 ~~~
 
-
-~~~
    Example without container wrappers:
 
+~~~
        container top {
           list foo { ... }
           list bar { ... }
@@ -1736,14 +1688,10 @@ informative:
 
    Use of top-level objects needs to be considered carefully:
 
-   o  top-level siblings are not ordered
-
-   o  top-level siblings are not static and depend on the modules that
-      are loaded
-   o  for subtree filtering, retrieval of a top-level leaf-list will be
-      treated as a content-match node for all top-level-siblings
-
-   o  a top-level list with many instances may impact performance
+  * top-level siblings are not ordered
+  * top-level siblings are not static and depend on the modules that are loaded
+  * for subtree filtering, retrieval of a top-level leaf-list will be treated as a content-match node for all top-level-siblings
+  * a top-level list with many instances may impact performance
 
 ##  Operation Definitions
 
@@ -1806,8 +1754,8 @@ informative:
    then consider moving those objects to a separate module, instead of
    using a YANG feature.  Note that the set of features within a module
    is easily discovered by the reader, but the set of related modules
-   within the entire YANG library is not as easy to identity.  Module
-   names with a common prefix can help readers identity the set of
+   within the entire YANG library is not as easy to identify.  Module
+   names with a common prefix can help readers identify the set of
    related modules, but this assumes the reader will have discovered and
    installed all the relevant modules.
 
@@ -1823,9 +1771,9 @@ informative:
    "if-feature" statement SHOULD be used in the dependent "feature"
    statement.
 
-~~~
    For example, feature2 requires implementation of feature1:
 
+~~~
       feature feature1 {
         description "Some protocol feature";
       }
@@ -1997,9 +1945,9 @@ informative:
    platform limitations.  It is better to use a "deviation" statement
    for the platforms that have a hard resource limit.
 
-~~~
    Example documenting platform resource limits:
 
+~~~
      Wrong: (max-elements in the list itself)
 
         container backups {
@@ -2011,9 +1959,9 @@ informative:
         }
 ~~~
 
-~~~
      Correct: (max-elements in a deviation)
 
+~~~
         deviation /bk:backups/bk:backup {
           deviate add {
              max-elements  10;
@@ -2030,21 +1978,21 @@ informative:
 
    The following guidelines apply to the usage of YANG extensions:
 
-   o  The semantics of the extension MUST NOT contradict any YANG
+   * The semantics of the extension MUST NOT contradict any YANG
       statements.  Extensions can add semantics not covered by the
       normal YANG statements.
 
-   o  The module containing the extension statement MUST clearly
+   * The module containing the extension statement MUST clearly
       identify the conformance requirements for the extension.  It
       should be clear whether all implementations of the YANG module
       containing the extension need to also implement the extension.  If
       not, identify what conditions apply that would require
       implementation of the extension.
 
-   o  The extension MUST clearly identify where it can be used within
+   * The extension MUST clearly identify where it can be used within
       other YANG statements.
 
-   o  The extension MUST clearly identify if YANG statements or other
+   * The extension MUST clearly identify if YANG statements or other
       extensions are allowed or required within the extension as
       substatements.
 
@@ -2055,16 +2003,19 @@ informative:
    ways to extend the functionality of a module, based on the degree of
    coupling between the old and new functionality:
 
-   o  inline: update the module with new protocol-accessible objects.
+   inline:
+   : update the module with new protocol-accessible objects.
       The naming and data organization of the original objects is used.
       The new objects are in the original module namespace.
 
-   o  augment: create a new module with new protocol-accessible objects
+   augment:
+   : create a new module with new protocol-accessible objects
       that augment the original data structure.  The naming and data
       organization of the original objects is used.  The new objects are
       in the new module namespace.
 
-   o  mirror: create new objects in a new module or the original module,
+   mirror:
+   : create new objects in a new module or the original module,
       except use a new naming scheme and data location.  The naming can
       be coupled in different ways.  Tight coupling is achieved with a
       "leafref" data type, with the "require-instance" substatement set
@@ -2089,9 +2040,9 @@ informative:
    The following example shows the use of the "leafref" data type for
    data correlation purposes:
 
-~~~
    Not preferred:
 
+~~~
       list foo {
          key name;
          leaf name {
@@ -2110,9 +2061,9 @@ informative:
       }
 ~~~
 
-~~~
    Preferred:
 
+~~~
       list foo {
          key name;
          leaf name {
@@ -2283,24 +2234,16 @@ informative:
    To create the temporary non-NMDA model from an NMDA model, the
    following steps can be taken:
 
-   o  Change the module name by appending "-state" to the original
-      module name
-
-   o  Change the namespace by appending "-state" to the original
-      namespace value
-
-   o  Change the prefix by appending "-s" to the original prefix value
-
-   o  Add an import to the original module (e.g., for typedef
-      definitions)
-
-   o  Retain or create only the top-level nodes that have a "config"
+   * Change the module name by appending "-state" to the original module name
+   * Change the namespace by appending "-state" to the original namespace value
+   * Change the prefix by appending "-s" to the original prefix value 
+   * Add an import to the original module (e.g., for typedef definitions)
+   * Retain or create only the top-level nodes that have a "config"
       statement value "false".  These subtrees represent "config false"
       data nodes that were combined into the configuration subtree;
       therefore, they are not available to non-NMDA aware clients.  Set
       the "status" statement to "deprecated" for each new node.
-
-   o  The module description SHOULD clearly identify the module as a
+   * The module description SHOULD clearly identify the module as a
       temporary non-NMDA module
 
 ####  Example: Create a New NMDA Module
@@ -2327,9 +2270,9 @@ informative:
    change the status to "deprecated".  At some point, usually after 1
    year, the status MAY be changed to "obsolete".
 
-~~~ yang
-    Old Module:
+   Old Module:
 
+~~~ yang
      module example-foo {
        namespace "urn:example.com:params:xml:ns:yang:example-foo";
        prefix "foo";
@@ -2345,9 +2288,9 @@ informative:
     }
 ~~~
 
-~~~ yang
     Converted NMDA Module:
 
+~~~ yang
      module example-foo {
        namespace "urn:example.com:params:xml:ns:yang:example-foo";
        prefix "foo";
@@ -2397,20 +2340,11 @@ informative:
    performance requirements for YANG validation, the following
    information MAY be considered when designing YANG data models:
 
-   o  Lists are generally more expensive than containers
-
-   o  "when" statement evaluation is generally more expensive than
-      "if-feature" or "choice" statements
-
-   o  "must" statements are generally more expensive than "min-entries",
-      "max-entries", "mandatory", or "unique" statements
-
-   o  "identityref" leafs are generally more expensive than
-      "enumeration" leafs
-
-   o  "leafref" and "instance-identifier" types with "require-instance"
-      set to true are generally more expensive than if
-      "require-instance" is set to false
+   * Lists are generally more expensive than containers
+   * "when" statement evaluation is generally more expensive than "if-feature" or "choice" statements
+   * "must" statements are generally more expensive than "min-entries", "max-entries", "mandatory", or "unique" statements
+   * "identityref" leafs are generally more expensive than "enumeration" leafs
+   * "leafref" and "instance-identifier" types with "require-instance" set to true are generally more expensive than if "require-instance" is set to false
 
 ##  Open Systems Considerations
 
@@ -2613,7 +2547,7 @@ informative:
    for interoperability, e.g., when values are deprecated or are
    associated with a new meaning.
 
-      > Note: {{Style}} provides XSLT 1.0 stylesheets and other tools for
+      Note: {{Style}} provides XSLT 1.0 stylesheets and other tools for
       translating IANA registries to YANG modules.  The tools can be
       used to generate up-to-date revisions of an IANA-maintained module
       based upon the XML representation of an IANA registry.
@@ -2683,97 +2617,97 @@ informative:
 ###  Template for IANA-Maintained Modules with Identities {#sec-temp-id}
 
 ~~~~
-   <CODE BEGINS>
+<CODE BEGINS>
 
-   This document defines the initial version of the IANA-maintained
-   "iana-foo" YANG module.  The most recent version of the YANG module
-   is available from the "YANG Parameters" registry
-   [IANA-YANG-PARAMETERS].
+This document defines the initial version of the IANA-maintained
+"iana-foo" YANG module.  The most recent version of the YANG module
+is available from the "YANG Parameters" registry
+[IANA-YANG-PARAMETERS].
 
-   IANA is requested to add this note to the registry:
+IANA is requested to add this note to the registry:
 
-      New values must not be directly added to the "iana-foo" YANG
-      module.  They must instead be added to the "foo" registry.
+   New values must not be directly added to the "iana-foo" YANG
+   module.  They must instead be added to the "foo" registry.
 
-   When a value is added to the "foo" registry, a new "identity"
-   statement must be added to the "iana-foo" YANG module.  The name of
-   the "identity" is the lower-case of the name provided in the
-   registry.  The "identity" statement should have the following sub-
-   statements defined:
+When a value is added to the "foo" registry, a new "identity"
+statement must be added to the "iana-foo" YANG module.  The name of
+the "identity" is the lower-case of the name provided in the
+registry.  The "identity" statement should have the following sub-
+statements defined:
 
-   "base":        Contains 'name-base-identity-defined-in-foo'.
+ "base":        Contains 'name-base-identity-defined-in-foo'.
 
-   "status":      Include only if a registration has been deprecated or
-                  obsoleted.  IANA "deprecated" maps to YANG status
-                  "deprecated", and IANA "obsolete" maps to YANG status
-                  "obsolete".
+ "status":      Include only if a registration has been deprecated or
+                obsoleted.  IANA "deprecated" maps to YANG status
+                "deprecated", and IANA "obsolete" maps to YANG status
+                "obsolete".
 
-   "description":  Replicates the description from the registry.
+ "description":  Replicates the description from the registry.
 
-   "reference":   Replicates the reference(s) from the registry with the
-                  title of the document(s) added.
+ "reference":   Replicates the reference(s) from the registry with the
+                title of the document(s) added.
 
-   Unassigned or reserved values are not present in the module.
+Unassigned or reserved values are not present in the module.
 
-   When the "iana-foo" YANG module is updated, a new "revision"
-   statement with a unique revision date must be added in front of the
-   existing revision statements.
+When the "iana-foo" YANG module is updated, a new "revision"
+statement with a unique revision date must be added in front of the
+existing revision statements.
 
-   IANA is requested to add this note to [reference-to-the-iana-foo-
-   registry]:
+IANA is requested to add this note to [reference-to-the-iana-foo-
+registry]:
 
-      When this registry is modified, the YANG module "iana-foo"
-      [IANA_FOO_URL] must be updated as defined in RFCXXXX.
+   When this registry is modified, the YANG module "iana-foo"
+   [IANA_FOO_URL] must be updated as defined in RFCXXXX.
 
-   <CODE ENDS>
+<CODE ENDS>
 ~~~~
 
 ###  Template for IANA-Maintained Modules with Enumerations {#sec-temp-enum}
 
 ~~~~
-   <CODE BEGINS>
+<CODE BEGINS>
 
-   This document defines the initial version of the IANA-maintained
-   "iana-foo" YANG module.  The most recent version of the YANG module
-   is available from the "YANG Parameters" registry
-   [IANA-YANG-PARAMETERS].
+This document defines the initial version of the IANA-maintained
+"iana-foo" YANG module.  The most recent version of the YANG module
+is available from the "YANG Parameters" registry
+[IANA-YANG-PARAMETERS].
 
-   IANA is requested to add this note to the registry:
+IANA is requested to add this note to the registry:
 
-      New values must not be directly added to the "iana-foo" YANG
-      module.  They must instead be added to the "foo" registry.
+    New values must not be directly added to the "iana-foo" YANG
+    module.  They must instead be added to the "foo" registry.
 
-   When a value is added to the "foo" registry, a new "enum" statement
-   must be added to the "iana-foo" YANG module.  The "enum" statement,
-   and sub-statements thereof, should be defined:
+When a value is added to the "foo" registry, a new "enum" statement
+must be added to the "iana-foo" YANG module.  The "enum" statement,
+and sub-statements thereof, should be defined:
 
-   "enum":        Replicates a name from the registry.
+ "enum":        Replicates a name from the registry.
 
-   "value":       Contains the decimal value of the IANA-assigned value.
+ "value":       Contains the decimal value of the IANA-assigned value.
 
-   "status":      Is included only if a registration has been deprecated
-                  or obsoleted.  IANA "deprecated" maps to YANG status
-                  "deprecated", and IANA "obsolete" maps to YANG status
-                  "obsolete".
+ "status":      Is included only if a registration has been deprecated
+                or obsoleted.  IANA "deprecated" maps to YANG status
+                "deprecated", and IANA "obsolete" maps to YANG status
+                "obsolete".
 
-   "description":  Replicates the description from the registry.
+ "description":  Replicates the description from the registry.
 
-   "reference":   Replicates the reference(s) from the registry with the
-                  title of the document(s) added.
+ "reference":   Replicates the reference(s) from the registry with the
+                title of the document(s) added.
 
-   Unassigned or reserved values are not present in the module.
+Unassigned or reserved values are not present in the module.
 
-   When the "iana-foo" YANG module is updated, a new "revision"
-   statement with a unique revision date must be added in front of the
-   existing revision statements.
+When the "iana-foo" YANG module is updated, a new "revision"
+statement with a unique revision date must be added in front of the
+existing revision statements.
 
-   IANA is requested to add this note to [reference-to-the-iana-foo-
-   registry]:
+IANA is requested to add this note to [reference-to-the-iana-foo-
+registry]:
 
-      When this registry is modified, the YANG module "iana-foo"
-      [IANA_FOO_URL] must be updated as defined in RFCXXXX.
+    When this registry is modified, the YANG module "iana-foo"
+    [IANA_FOO_URL] must be updated as defined in RFCXXXX.
 
-   <CODE ENDS>
+<CODE ENDS>
 ~~~~
 
 
@@ -2784,11 +2718,9 @@ informative:
    IANA to reference this document.
 
 ~~~
-       URI: urn:ietf:params:xml:ns:yang:ietf-template
-
-       Registrant Contact: The IESG.
-
-       XML: N/A, the requested URI is an XML namespace.
+     URI: urn:ietf:params:xml:ns:yang:ietf-template
+     Registrant Contact: The IESG.
+     XML: N/A, the requested URI is an XML namespace.
 ~~~
 
    The following assignment was detailed in {{?RFC6087}} and has been
@@ -2828,18 +2760,18 @@ informative:
    requirements.  The following checklist may be helpful when reviewing
    an I-D:
 
-   o  I-D Boilerplate -- verify that the document contains the required
+   *  I-D Boilerplate -- verify that the document contains the required
       I-D boilerplate (see <https://www.ietf.org/id-info/
       guidelines.html>), including the appropriate statement to permit
       publication as an RFC, and that the I-D boilerplate does not
       contain references or section numbers.
 
-   o  Abstract -- verify that the abstract does not contain references,
+   *  Abstract -- verify that the abstract does not contain references,
       that it does not have a section number, and that its content
       follows the guidelines in <https://www.ietf.org/id-info/
       guidelines.html>.
 
-   o  Copyright Notice -- verify that the document has the appropriate
+   *  Copyright Notice -- verify that the document has the appropriate
       text regarding the rights that document contributors provide to
       the IETF Trust {{?RFC5378}}.  Verify that it contains the full IETF
       Trust copyright notice at the beginning of the document.  The IETF
@@ -2847,13 +2779,13 @@ informative:
 
       <https://trustee.ietf.org/license-info/>
 
-   o  Security Considerations section -- verify that the document uses
+   *  Security Considerations section -- verify that the document uses
       the latest approved template from the Operations and Management
       (OPS) area website (see <https://trac.ietf.org/area/ops/trac/wiki/
       yang-security-guidelines>) and that the guidelines therein have
       been followed.
 
-   o  IANA Considerations section -- this section must always be
+   *  IANA Considerations section -- this section must always be
       present.  For each module within the document, ensure that the
       IANA Considerations section contains entries for the following
       IANA registries:
@@ -2864,7 +2796,7 @@ informative:
          namespace, and RFC number, according to the rules specified in
          {{!RFC6020}}.
 
-   o  References -- verify that the references are properly divided
+   *  References -- verify that the references are properly divided
       between normative and informative references, that RFCs 2119 and
       8174 are included as normative references if the terminology
       defined therein is used in the document, that all references
@@ -2879,7 +2811,7 @@ informative:
       contains reference or "description" statements that refer to an
       I-D, then the I-D is included as an informative reference.
 
-   o  License -- verify that the document contains the Simplified BSD
+   *  License -- verify that the document contains the Revised BSD
       License in each YANG module or submodule.  Some guidelines related
       to this requirement are described in Section 3.1.  Make sure that
       the correct year is used in all copyright dates.  Use the approved
@@ -2887,11 +2819,11 @@ informative:
 
       <https://trustee.ietf.org/license-info/>
 
-   o  Other Issues -- check for any issues mentioned in
+   *  Other Issues -- check for any issues mentioned in
       <https://www.ietf.org/id-info/checklist.html> that are not covered
       elsewhere.
 
-   o  Technical Content -- review the actual technical content for
+   *  Technical Content -- review the actual technical content for
       compliance with the guidelines in this document.  The use of a
       YANG module compiler is recommended when checking for syntax
       errors.  A list of freely available tools and other information,
@@ -2954,10 +2886,10 @@ informative:
 
         Redistribution and use in source and binary forms, with or
         without modification, is permitted pursuant to, and subject
-        to the license terms contained in, the Simplified BSD License
+        to the license terms contained in, the Revised BSD License
         set forth in Section 4.c of the IETF Trust's Legal Provisions
         Relating to IETF Documents
-        (http://trustee.ietf.org/license-info).
+        (https://trustee.ietf.org/license-info).
 
         This version of this YANG module is part of RFC XXXX; see
         the RFC itself for full legal notices.";
