@@ -2735,7 +2735,7 @@ informative:
    <CODE ENDS>
 ~~~~
 
-##  Template for IANA-Maintained Modules with Enumerations {#sec-temp-enum} 
+##  Template for IANA-Maintained Modules with Enumerations {#sec-temp-enum}
 
 ~~~~
    <CODE BEGINS>
