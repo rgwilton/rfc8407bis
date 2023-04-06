@@ -442,8 +442,9 @@ convention MUST NOT be used for example modules.
 
 ###  Security Considerations Section Template {#sec-security-template}
 
-
+~~~
 <CODE BEGINS>
+~~~
 
   X.  Security Considerations
 
@@ -501,7 +502,9 @@ convention MUST NOT be used for example modules.
 
   <list RPC operations and state why they are sensitive>
 
+~~~
 <CODE ENDS>
+~~~
 
 
 ##  IANA Considerations Section {#sec-iana-cons}
