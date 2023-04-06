@@ -15,9 +15,9 @@ v: 3
 area: "Operations and Management"
 workgroup: "Network Modeling"
 keyword:
- - NETCONF
- - RESTCONF
- - Automation
+ - ddd
+ - ddd
+ - ddd
 
 stand_alone: yes
 pi: [toc, sortrefs, symrefs, strict, comments, docmapping]
@@ -293,22 +293,22 @@ informative:
    "ietf-foo" module:
 
 ~~~
-<CODE BEGINS> file "ietf-foo@2016-03-20.yang"
+   <CODE BEGINS> file "ietf-foo@2016-03-20.yang"
 
-module ietf-foo {
-  namespace "urn:ietf:params:xml:ns:yang:ietf-foo";
-  prefix "foo";
-  organization "...";
-  contact "...";
-  description "...";
-  revision 2016-03-20 {
-    description "Latest revision";
-     reference "RFC XXXX: Foo Protocol";
-  }
-  // ... more statements
-}
+       module ietf-foo {
+         namespace "urn:ietf:params:xml:ns:yang:ietf-foo";
+         prefix "foo";
+         organization "...";
+         contact "...";
+         description "...";
+         revision 2016-03-20 {
+           description "Latest revision";
+           reference "RFC XXXX: Foo Protocol";
+         }
+         // ... more statements
+       }
 
-<CODE ENDS>
+   <CODE ENDS>
 ~~~
 
 ###  Example Modules
@@ -444,68 +444,65 @@ convention MUST NOT be used for example modules.
 
 ~~~
 <CODE BEGINS>
-~~~
 
-  X.  Security Considerations
+X.  Security Considerations
 
-  The YANG module specified in this document defines a schema for data
-  that is designed to be accessed via network management protocols such
-  as NETCONF [RFC6241] or RESTCONF [RFC8040].  The lowest NETCONF layer
-  is the secure transport layer, and the mandatory-to-implement secure
-  transport is Secure Shell (SSH) {{!RFC6242}}.  The lowest RESTCONF layer
-  is HTTPS, and the mandatory-to-implement secure transport is TLS
-  {{!RFC8446}}.
+The YANG module specified in this document defines a schema for data
+that is designed to be accessed via network management protocols such
+as NETCONF [RFC6241] or RESTCONF [RFC8040].  The lowest NETCONF layer
+is the secure transport layer, and the mandatory-to-implement secure
+transport is Secure Shell (SSH) [RFC6242].  The lowest RESTCONF layer
+is HTTPS, and the mandatory-to-implement secure transport is TLS
+[RFC8446].
 
-  The Network Configuration Access Control Model (NACM) [RFC8341]
-  provides the means to restrict access for particular NETCONF or
-  RESTCONF users to a preconfigured subset of all available NETCONF or
-  RESTCONF protocol operations and content.
+The Network Configuration Access Control Model (NACM) [RFC8341]
+provides the means to restrict access for particular NETCONF or
+RESTCONF users to a preconfigured subset of all available NETCONF or
+RESTCONF protocol operations and content.
 
-   -- if you have any writable data nodes (those are all the
-   -- "config true" nodes, and remember, that is the default)
-   -- describe their specific sensitivity or vulnerability.
+ -- if you have any writable data nodes (those are all the
+ -- "config true" nodes, and remember, that is the default)
+ -- describe their specific sensitivity or vulnerability.
 
-  There are a number of data nodes defined in this YANG module that are
-  writable/creatable/deletable (i.e., config true, which is the
-  default).  These data nodes may be considered sensitive or vulnerable
-  in some network environments.  Write operations (e.g., edit-config)
-  and delete operations to these data nodes without proper protection
-  or authentication can have a negative effect on network operations.
-  These are the subtrees and data nodes and their sensitivity/
-  vulnerability:
+There are a number of data nodes defined in this YANG module that are
+writable/creatable/deletable (i.e., config true, which is the
+default).  These data nodes may be considered sensitive or vulnerable
+in some network environments.  Write operations (e.g., edit-config)
+and delete operations to these data nodes without proper protection
+or authentication can have a negative effect on network operations.
+These are the subtrees and data nodes and their sensitivity/
+vulnerability:
 
-  <list subtrees and data nodes and state why they are sensitive>
+   <list subtrees and data nodes and state why they are sensitive>
 
-   -- for all YANG modules you must evaluate whether any readable data
-   -- nodes (those are all the "config false" nodes, but also all other
-   -- nodes, because they can also be read via operations like get or
-   -- get-config) are sensitive or vulnerable (for instance, if they
-   -- might reveal customer information or violate personal privacy
-   -- laws such as those of the European Union if exposed to
-   -- unauthorized parties)
+  -- for all YANG modules you must evaluate whether any readable data
+  -- nodes (those are all the "config false" nodes, but also all other
+  -- nodes, because they can also be read via operations like get or
+  -- get-config) are sensitive or vulnerable (for instance, if they
+  -- might reveal customer information or violate personal privacy
+  -- laws such as those of the European Union if exposed to
+  -- unauthorized parties)
 
-   Some of the readable data nodes in this YANG module may be considered
-   sensitive or vulnerable in some network environments.  It is thus
-   important to control read access (e.g., via get, get-config, or
-   notification) to these data nodes.  These are the subtrees and data
-   nodes and their sensitivity/vulnerability:
+ Some of the readable data nodes in this YANG module may be considered
+ sensitive or vulnerable in some network environments.  It is thus
+ important to control read access (e.g., via get, get-config, or
+ notification) to these data nodes.  These are the subtrees and data
+ nodes and their sensitivity/vulnerability:
 
-  <list subtrees and data nodes and state why they are sensitive>
+   <list subtrees and data nodes and state why they are sensitive>
 
    -- if your YANG module has defined any RPC operations
    -- describe their specific sensitivity or vulnerability.
 
-  Some of the RPC operations in this YANG module may be considered
-  sensitive or vulnerable in some network environments.  It is thus
-  important to control access to these operations.  These are the
-  operations and their sensitivity/vulnerability:
+Some of the RPC operations in this YANG module may be considered
+sensitive or vulnerable in some network environments.  It is thus
+important to control access to these operations.  These are the
+operations and their sensitivity/vulnerability:
 
-  <list RPC operations and state why they are sensitive>
+   <list RPC operations and state why they are sensitive>
 
-~~~
 <CODE ENDS>
 ~~~
-
 
 ##  IANA Considerations Section {#sec-iana-cons}
 
@@ -566,7 +563,7 @@ convention MUST NOT be used for example modules.
    'pyang' YANG compiler is freely available from GitHub:
 
 ~~~
-<https://github.com/mbj4668/pyang>
+  <https://github.com/mbj4668/pyang>
 ~~~
 
    If the 'pyang' compiler is used to validate a normative module, then
@@ -580,7 +577,7 @@ convention MUST NOT be used for example modules.
    The "yanglint" program is also freely available from GitHub.
 
 ~~~
-<https://github.com/CESNET/libyang>
+   <https://github.com/CESNET/libyang>
 ~~~
 
    This tool can be used to validate XPath statements within YANG
@@ -593,7 +590,7 @@ convention MUST NOT be used for example modules.
    extraction is freely available at:
 
 ~~~
-<https://github.com/mbj4668/rfcstrip>
+   <https://github.com/mbj4668/rfcstrip>
 ~~~
 
 ~~~
@@ -606,7 +603,7 @@ can be extracted correctly.
    extract YANG modules from a document.
 
 ~~~
-<https://github.com/xym-tool/xym>
+   <https://github.com/xym-tool/xym>
 ~~~
 
 ##  Module Usage Examples
@@ -1098,8 +1095,8 @@ can be extracted correctly.
    not specify placeholder objects like the "reserved" example below:
 
 ~~~ yang
-    leaf reserved {
-      type string;
+   leaf reserved {
+     type string;
       description
         "This object has no purpose at this time, but a future
          revision of this module might define a purpose
@@ -1374,7 +1371,7 @@ can be extracted correctly.
 ~~~ yang
     typedef yang-identifier {
       type string {
-        length "1..max";
+       length "1..max";
         pattern '[a-zA-Z_][a-zA-Z0-9\-_.]*';
         pattern '.|..|[^xX].*|.[^mM].*|..[^lL].*';
       }
@@ -1899,7 +1896,7 @@ can be extracted correctly.
     }
 
     augment "/if:interfaces/if:interface" {
-       when "if:type = 'mymod:some-new-iftype'";
+      when "if:type = 'mymod:some-new-iftype'";
 
        leaf mandatory-leaf {
           type string;
@@ -1951,7 +1948,7 @@ can be extracted correctly.
    Example documenting platform resource limits:
 
 
-      Wrong: (max-elements in the list itself)
+     Wrong: (max-elements in the list itself)
 
 ~~~
      container backups {
@@ -1963,7 +1960,7 @@ can be extracted correctly.
      }
 ~~~
 
-      Correct: (max-elements in a deviation)
+     Correct: (max-elements in a deviation)
 
 ~~~
      deviation /bk:backups/bk:backup {
@@ -2522,7 +2519,7 @@ can be extracted correctly.
    maintained module.  For example, {{?RFC9244}} defines an IANA-maintained
    module that uses enumerations for the following reason:
 
-     "The DOTS telemetry module (Section 10.1) uses "enumerations" rather
+    > "The DOTS telemetry module (Section 10.1) uses "enumerations" rather
      than "identities" to define units, samples, and intervals because
      otherwise the namespace identifier "ietf-dots-telemetry" must be
      included when a telemetry attribute is included (e.g., in a
@@ -2552,9 +2549,9 @@ can be extracted correctly.
    associated with a new meaning.
 
       Note: {{Style}} provides XSLT 1.0 stylesheets and other tools for
-        translating IANA registries to YANG modules.  The tools can be
-        used to generate up-to-date revisions of an IANA-maintained module
-        based upon the XML representation of an IANA registry.
+      translating IANA registries to YANG modules.  The tools can be
+      used to generate up-to-date revisions of an IANA-maintained module
+      based upon the XML representation of an IANA registry.
 
    If an IANA-maintained module is imported by another module, a
    normative reference with the IANA URL from where to retrieve the
