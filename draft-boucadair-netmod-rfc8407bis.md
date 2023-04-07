@@ -790,7 +790,7 @@ previously published.
 | ordered-by   | system        |
 | status       | current       |
 | yin-element  | false         |
-{: title="Statement Defaults"}
+{: title="Statement Defaults" cols="r r"}
 
 ##  Conditional Statements
 
@@ -2753,7 +2753,7 @@ registration in Appendix B.
 | Namespace | urn:ietf:params:xml:ns:yang:ietf-template |
 | Prefix    | temp                                      |
 | Reference | RFC XXXX                                  |
-{: title="YANG Registry Assignment"}
+{: title="YANG Registry Assignment" cols="r r"}
 
 #  Security Considerations
 
