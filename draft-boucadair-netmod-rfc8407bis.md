@@ -170,6 +170,7 @@ informative:
    * Updated the YANG security considerations template to reflect the latest version maintained in the Wiki.
    * Added code markers for the security template.
    * Added a statement that the RFCs that are listed in the security template are to be listed as normative references in documents that use the template.
+   * Added a note that folding should be done as per {{!RFC8792}}.
    * Added guidelines for IANA-maintained modules.
 
 #  Terminology
@@ -347,43 +348,37 @@ convention MUST NOT be used for example modules.
 
 ##  Narrative Sections
 
-   The narrative part MUST include an overview section that describes
-   the scope and field of application of the module(s) defined by the
-   specification and that specifies the relationship (if any) of these
-   modules to other standards, particularly to standards containing
-   other YANG modules.  The narrative part SHOULD include one or more
-   sections to briefly describe the structure of the modules defined in
-   the specification.
+The narrative part MUST include an overview section that describes
+the scope and field of application of the module(s) defined by the
+specification and that specifies the relationship (if any) of these
+modules to other standards, particularly to standards containing
+other YANG modules.  The narrative part SHOULD include one or more
+sections to briefly describe the structure of the modules defined in
+the specification.
 
-   If the module or modules defined by the specification imports
-   definitions from other modules (except for those defined in {{!RFC7950}}
-   or {{?RFC6991}}) or are always implemented in conjunction with other
-   modules, then those facts MUST be noted in the overview section; any
-   special interpretations of definitions in other modules MUST be noted
-   as well.  Refer to Section 2.3 of {{?RFC8349}} for an example of this
-   overview section.
+If the module or modules defined by the specification imports
+definitions from other modules (except for those defined in {{!RFC7950}}
+or {{?RFC6991}}) or are always implemented in conjunction with other
+modules, then those facts MUST be noted in the overview section; any
+special interpretations of definitions in other modules MUST be noted
+as well.  Refer to {{Section 2.3 of ?RFC8349}} for an example of this
+overview section.
 
-   If the document contains a YANG module(s) that is compliant with NMDA
-   {{!RFC8342}}, then the Introduction section should mention this fact.
+If the document contains a YANG module(s) that is compliant with NMDA
+{{!RFC8342}}, then the Introduction section should mention this fact.
 
-   Example:
+Example:
 
-      The YANG data model in this document conforms to the Network
-      Management Datastore Architecture defined in
-      RFC 8342.
+   The YANG data model in this document conforms to the Network
+   Management Datastore Architecture defined in {{!RFC8342}}.
 
-   Consistent indentation SHOULD be used for all examples, including
-   YANG fragments and protocol message instance data.  If line wrapping
-   is done for formatting purposes, then this SHOULD be noted, as shown
-   in the following example:
+Consistent indentation SHOULD be used for all examples, including
+YANG fragments and protocol message instance data.  If line wrapping
+is done for formatting purposes, then this SHOULD be noted following {{!RFC8792}}, as shown
+in the following example:
 
 ~~~
-   [note: '\' line wrapping for formatting only]
-
-   <myleaf xmlns="tag:example.com,2017:example-two">\
-     this is a long value so the line needs to wrap to stay\
-     within 72 characters\
-   </myleaf>
+{::include-fold ../examples/long-line-ex.xml}
 ~~~
 
 ##  Definitions Section
@@ -514,20 +509,19 @@ Note:
 
 ##  IANA Considerations Section {#sec-iana-cons}
 
-   In order to comply with IESG policy as set forth in <https://www.ietf.org/
-   id-info/checklist.html>, every I-D that is
-   submitted to the IESG for publication MUST contain an IANA
-   Considerations section.  The requirements for this section vary
-   depending on what actions are required of the IANA.  If there are no
-   IANA considerations applicable to the document, then the IANA
-   Considerations section will state that "This document has no IANA
-   actions".  Refer to the guidelines in {{!RFC8126}} for more details.
+In order to comply with IESG policy as set forth in <https://www.ietf.org/id-info/checklist.html>, every I-D that is
+submitted to the IESG for publication MUST contain an IANA
+Considerations section.  The requirements for this section vary
+depending on what actions are required of the IANA.  If there are no
+IANA considerations applicable to the document, then the IANA
+Considerations section will state that "This document has no IANA
+actions".  Refer to the guidelines in {{!RFC8126}} for more details.
 
-   Each normative YANG module MUST be registered in both the "IETF XML
-   Registry" {{!RFC3688}} {{IANA-XML}} and the "YANG Module Names" registry
-   {{!RFC6020}} {{IANA-MOD-NAMES}}.  This applies to new modules and updated
-   modules.  An example of an update registration for the
-   "ietf-template" module can be found in {{sec-iana}}.
+Each normative YANG module MUST be registered in both the "IETF XML
+Registry" {{!RFC3688}} {{IANA-XML}} and the "YANG Module Names" registry
+{{!RFC6020}} {{IANA-MOD-NAMES}}.  This applies to new modules and updated
+modules.  An example of an update registration for the
+"ietf-template" module can be found in {{sec-iana}}.
 
 ###  Documents That Create a New Namespace
 
@@ -567,38 +561,38 @@ Note:
 
 ##  Validation Tools {#sec-tools}
 
-   All modules need to be validated before submission in an I-D.  The
-   'pyang' YANG compiler is freely available from GitHub:
+All modules need to be validated before submission in an I-D.  The
+'pyang' YANG compiler is freely available from GitHub:
 
 ~~~
-<https://github.com/mbj4668/pyang>
+   <https://github.com/mbj4668/pyang>
 ~~~
 
-   If the 'pyang' compiler is used to validate a normative module, then
-   the "--ietf" command-line option MUST be used to identify any IETF
-   guideline issues.
+If the 'pyang' compiler is used to validate a normative module, then
+the "--ietf" command-line option MUST be used to identify any IETF
+guideline issues.
 
-   If the 'pyang' compiler is used to validate an example module, then
-   the "--ietf" command-line option MAY be used to identify any IETF
-   guideline issues.
+If the 'pyang' compiler is used to validate an example module, then
+the "--ietf" command-line option MAY be used to identify any IETF
+guideline issues.
 
-   The "yanglint" program is also freely available from GitHub.
+The "yanglint" program is also freely available from GitHub.
 
 ~~~
-<https://github.com/CESNET/libyang>
+   <https://github.com/CESNET/libyang>
 ~~~
 
-   This tool can be used to validate XPath statements within YANG
-   modules.
+This tool can be used to validate XPath statements within YANG
+modules.
 
 ##  Module Extraction Tools
 
-   A version of 'rfcstrip' that will extract YANG modules from an I-D or
-   RFC is available.  The 'rfcstrip' tool that supports YANG module
-   extraction is freely available at:
+A version of 'rfcstrip' that will extract YANG modules from an I-D or
+RFC is available.  The 'rfcstrip' tool that supports YANG module
+extraction is freely available at:
 
 ~~~
-<https://github.com/mbj4668/rfcstrip>
+   <https://github.com/mbj4668/rfcstrip>
 ~~~
 
 ~~~
@@ -607,77 +601,77 @@ ENDS>" tags are used correctly and that the normative YANG modules
 can be extracted correctly.
 ~~~
 
-   The "xym" tool is freely available on GitHub and can be used to
-   extract YANG modules from a document.
+The "xym" tool is freely available on GitHub and can be used to
+extract YANG modules from a document.
 
 ~~~
-<https://github.com/xym-tool/xym>
+   <https://github.com/xym-tool/xym>
 ~~~
 
 ##  Module Usage Examples
 
-   Each specification that defines one or more modules SHOULD contain
-   usage examples, either throughout the document or in an appendix.
-   This includes example instance document snippets in an appropriate
-   encoding (e.g., XML and/or JSON) to demonstrate the intended usage of
-   the YANG module(s).  Example modules MUST be validated.  Refer to
-   {{sec-tools}} for tools that validate YANG modules.  If IP addresses
-   are used, then a mix of either IPv4 and IPv6 addresses or IPv6
-   addresses exclusively SHOULD be used in the examples.
+Each specification that defines one or more modules SHOULD contain
+usage examples, either throughout the document or in an appendix.
+This includes example instance document snippets in an appropriate
+encoding (e.g., XML and/or JSON) to demonstrate the intended usage of
+the YANG module(s).  Example modules MUST be validated.  Refer to
+{{sec-tools}} for tools that validate YANG modules.  If IP addresses
+are used, then a mix of either IPv4 and IPv6 addresses or IPv6
+addresses exclusively SHOULD be used in the examples.
 
 #  YANG Usage Guidelines {#sec-usage-guidelines}
 
-   Modules in IETF Standards Track specifications MUST comply with all
-   syntactic and semantic requirements of YANG 1.1 {{!RFC7950}}.  See the
-   exception for YANG 1.0 in Section 3.6.  The guidelines in this
-   section are intended to supplement the YANG specification {{!RFC7950}},
-   which is intended to define a minimum set of conformance
-   requirements.
+Modules in IETF Standards Track specifications MUST comply with all
+syntactic and semantic requirements of YANG 1.1 {{!RFC7950}}.  See the
+exception for YANG 1.0 in Section 3.6.  The guidelines in this
+section are intended to supplement the YANG specification {{!RFC7950}},
+which is intended to define a minimum set of conformance
+requirements.
 
-   In order to promote interoperability and establish a set of practices
-   based on previous experience, the following sections establish usage
-   guidelines for specific YANG constructs.
+In order to promote interoperability and establish a set of practices
+based on previous experience, the following sections establish usage
+guidelines for specific YANG constructs.
 
-   Only guidelines that clarify or restrict the minimum conformance
-   requirements are included here.
+Only guidelines that clarify or restrict the minimum conformance
+requirements are included here.
 
 ##  Module Naming Conventions
 
-   Normative modules contained in Standards Track documents MUST be
-   named according to the guidelines in the IANA Considerations section
-   of {{!RFC7950}}.
+Normative modules contained in Standards Track documents MUST be
+named according to the guidelines in the IANA Considerations section
+of {{!RFC7950}}.
 
-   A distinctive word or abbreviation (e.g., protocol name or working
-   group abbreviation) SHOULD be used in the module name.  If new
-   definitions are being defined to extend one or more existing modules,
-   then the same word or abbreviation should be reused, instead of
-   creating a new one.
+A distinctive word or abbreviation (e.g., protocol name or working
+group abbreviation) SHOULD be used in the module name.  If new
+definitions are being defined to extend one or more existing modules,
+then the same word or abbreviation should be reused, instead of
+creating a new one.
 
-   All published module names MUST be unique.  For a YANG module
-   published in an RFC, this uniqueness is guaranteed by IANA.  For
-   unpublished modules, the authors need to check that no other work in
-   progress is using the same module name.
+All published module names MUST be unique.  For a YANG module
+published in an RFC, this uniqueness is guaranteed by IANA.  For
+unpublished modules, the authors need to check that no other work in
+progress is using the same module name.
 
-   Example modules are non-normative and SHOULD be named with the prefix
-   "example-".
+Example modules are non-normative and SHOULD be named with the prefix
+"example-".
 
-   It is suggested that a stable prefix be selected that represents the
-   entire organization.  All normative YANG modules published by the
-   IETF MUST begin with the prefix "ietf-".  Another standards
-   organization, such as the IEEE, might use the prefix "ieee-" for all
-   YANG modules.
+It is suggested that a stable prefix be selected that represents the
+entire organization.  All normative YANG modules published by the
+IETF MUST begin with the prefix "ietf-".  Another standards
+organization, such as the IEEE, might use the prefix "ieee-" for all
+YANG modules.
 
-   Once a module name is published, it MUST NOT be reused, even if the
-   RFC containing the module is reclassified to "Historic" status.  A
-   module name cannot be changed in YANG, and this would be treated as a
-   new module, not a name change.
+Once a module name is published, it MUST NOT be reused, even if the
+RFC containing the module is reclassified to "Historic" status.  A
+module name cannot be changed in YANG, and this would be treated as a
+new module, not a name change.
 
 ## Prefixes
 
-   All YANG definitions are scoped by the module containing the
-   definition being referenced.  This allows definitions from multiple
-   modules to be used, even if the names are not unique.  In the example
-   below, the identifier "foo" is used in all three modules:
+All YANG definitions are scoped by the module containing the
+definition being referenced.  This allows definitions from multiple
+modules to be used, even if the names are not unique.  In the example
+below, the identifier "foo" is used in all three modules:
 
 ~~~ yang
     module example-foo {
@@ -706,23 +700,23 @@ can be extracted correctly.
     }
 ~~~
 
-   YANG defines the following rules for prefix usage:
+YANG defines the following rules for prefix usage:
 
-   * Prefixes are never used for built-in data types and YANG keywords.
-   * A prefix MUST be used for any external statement (i.e., a statement defined with the YANG "extension" statement).
-   * The proper module prefix MUST be used for all identifiers imported from other modules.
-   * The proper module prefix MUST be used for all identifiers included from a submodule.
+* Prefixes are never used for built-in data types and YANG keywords.
+* A prefix MUST be used for any external statement (i.e., a statement defined with the YANG "extension" statement).
+* The proper module prefix MUST be used for all identifiers imported from other modules.
+* The proper module prefix MUST be used for all identifiers included from a submodule.
 
-   The following guidelines apply to prefix usage of the current (local)
-   module:
+The following guidelines apply to prefix usage of the current (local)
+module:
 
-   * The local module prefix SHOULD be used instead of no prefix in all path expressions.
-   * The local module prefix MUST be used instead of no prefix in all "default" statements for an "identityref" or "instance-identifier" data type.
-   * The local module prefix MAY be used for references to typedefs, groupings, extensions, features, and identities defined in the module.
+* The local module prefix SHOULD be used instead of no prefix in all path expressions.
+* The local module prefix MUST be used instead of no prefix in all "default" statements for an "identityref" or "instance-identifier" data type.
+* The local module prefix MAY be used for references to typedefs, groupings, extensions, features, and identities defined in the module.
 
-   Prefix values SHOULD be short but are also likely to be unique.
-   Prefix values SHOULD NOT conflict with known modules that have been
-   previously published.
+Prefix values SHOULD be short but are also likely to be unique.
+Prefix values SHOULD NOT conflict with known modules that have been
+previously published.
 
 ##  Identifiers
 
@@ -1209,25 +1203,25 @@ leaf reserved {
    A standard namespace statement value SHOULD have the following form:
 
 ~~~
-<URN prefix string>:<module-name>
+    <URN prefix string>:<module-name>
 ~~~
 
    The following URN prefix string SHOULD be used for published and
    unpublished YANG modules:
 
 ~~~
-urn:ietf:params:xml:ns:yang:
+    urn:ietf:params:xml:ns:yang:
 ~~~
 
    The following example URNs would be valid namespace statement values
    for Standards Track modules:
 
 ~~~
-urn:ietf:params:xml:ns:yang:ietf-netconf-partial-lock
+    urn:ietf:params:xml:ns:yang:ietf-netconf-partial-lock
 
-urn:ietf:params:xml:ns:yang:ietf-netconf-state
+    urn:ietf:params:xml:ns:yang:ietf-netconf-state
 
-urn:ietf:params:xml:ns:yang:ietf-netconf
+    urn:ietf:params:xml:ns:yang:ietf-netconf
 ~~~
 
    Note that a different URN prefix string SHOULD be used for modules
@@ -1243,17 +1237,17 @@ urn:ietf:params:xml:ns:yang:ietf-netconf
    Example URIs using URLs per {{!RFC3986}}:
 
 ~~~
-https://example.com/ns/example-interfaces
+    https://example.com/ns/example-interfaces
 
-https://example.com/ns/example-system
+    https://example.com/ns/example-system
 ~~~
 
    Example URIs using tags per {{?RFC4151}}:
 
 ~~~
-tag:example.com,2017:example-interfaces
+    tag:example.com,2017:example-interfaces
 
-tag:example.com,2017:example-system
+    tag:example.com,2017:example-system
 ~~~
 
 ##  Top-Level Data Definitions
@@ -1375,7 +1369,7 @@ tag:example.com,2017:example-system
 ~~~ yang
     typedef yang-identifier {
       type string {
-       length "1..max";
+        length "1..max";
         pattern '[a-zA-Z_][a-zA-Z0-9\-_.]*';
         pattern '.|..|[^xX].*|.[^mM].*|..[^lL].*';
       }
