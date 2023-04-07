@@ -288,18 +288,18 @@ informative:
 
 ##  Code Components
 
-~~~
+
    Each normative YANG module or submodule contained within an I-D or
-   RFC is considered to be a code component.  The strings "<CODE
-   BEGINS>" and "<CODE ENDS>" MUST be used to identify each code
+   RFC is considered to be a code component.  The strings ``"<CODE
+   BEGINS>" and "<CODE ENDS>"`` MUST be used to identify each code
    component.
 
-   The "<CODE BEGINS>" tag SHOULD be followed by a string identifying
+   The ``"<CODE BEGINS>"`` tag SHOULD be followed by a string identifying
    the file name specified in Section 5.2 of [RFC7950].  The name string
    form that includes the revision date SHOULD be used.  The revision
    date MUST match the date used in the most recent revision of the
    module.
-~~~
+
 
    The following example is for the "2016-03-20" revision of the
    "ietf-foo" module:
@@ -790,7 +790,7 @@ previously published.
 | ordered-by   | system        |
 | status       | current       |
 | yin-element  | false         |
-{: title="Statement Defaults" cols="r r"}
+{: title="Statement Defaults" cols="l l"}
 
 ##  Conditional Statements
 
@@ -2753,7 +2753,7 @@ registration in Appendix B.
 | Namespace | urn:ietf:params:xml:ns:yang:ietf-template |
 | Prefix    | temp                                      |
 | Reference | RFC XXXX                                  |
-{: title="YANG Registry Assignment" cols="r r"}
+{: title="YANG Registry Assignment" cols="l l"}
 
 #  Security Considerations
 
