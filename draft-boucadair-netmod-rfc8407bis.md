@@ -1092,14 +1092,14 @@ previously published.
    not specify placeholder objects like the "reserved" example below:
 
 ~~~ yang
-     leaf reserved {
-       type string;
-       description
-         "This object has no purpose at this time, but a future
-          revision of this module might define a purpose
-          for this object.";
-       }
-     }
+    leaf reserved {
+      type string;
+      description
+        "This object has no purpose at this time, but a future
+         revision of this module might define a purpose
+         for this object.";
+      }
+    }
 ~~~
 
 ##  Module Header, Meta, and Revision Statements
@@ -1881,19 +1881,19 @@ previously published.
 ~~~
   module example-module {
 
-   yang-version 1.1;
-   namespace "tag:example.com,2017:example-module";
-   prefix mymod;
+    yang-version 1.1;
+    namespace "tag:example.com,2017:example-module";
+    prefix mymod;
 
-   import iana-if-type { prefix iana; }
-   import ietf-interfaces { prefix if; }
+    import iana-if-type { prefix iana; }
+    import ietf-interfaces { prefix if; }
 
-   identity some-new-iftype {
-      base iana:iana-interface-type;
-   }
+    identity some-new-iftype {
+       base iana:iana-interface-type;
+    }
 
-   augment "/if:interfaces/if:interface" {
-     when "if:type = 'mymod:some-new-iftype'";
+    augment "/if:interfaces/if:interface" {
+      when "if:type = 'mymod:some-new-iftype'";
 
       leaf mandatory-leaf {
          type string;
@@ -2450,7 +2450,7 @@ previously published.
    be unstable.  For example, in the IETF, the RFC document is used for
    published work, and the I-D is used for unpublished work.
 
-# Guidelines for IANA-Maintained Modules
+# IANA-Maintained Modules
 
 ## Context
 
