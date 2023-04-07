@@ -131,8 +131,9 @@ informative:
    This document defines a set of usage guidelines for documents
    containing YANG 1.1 {{!RFC7950}} and YANG 1.0 {{!RFC6020}} data models.
    YANG is used to define the data structures, protocol operations, and
-   notification content used within a NETCONF and/or RESTCONF server.  A
-   NETCONF or RESTCONF server that supports a particular YANG module
+   notification content used within a NETCONF and/or RESTCONF server.
+   YANG is also used to define abstract data structures {{!RFC8791}}.
+   A NETCONF or RESTCONF server that supports a particular YANG module
    will support client NETCONF and/or RESTCONF operation requests, as
    indicated by the specific content defined in the YANG module.
 
@@ -184,12 +185,12 @@ informative:
 
    published:
    : A stable release of a module or submodule.  For
-      example, the "Request for Comments" described in Section 2.1 of
-      {{?RFC2026}} is considered a stable publication.
+      example, the "Request for Comments" described in
+      {{Section 2.1 of ?RFC2026}} is considered a stable publication.
 
    unpublished:
    : An unstable release of a module or submodule.  For
-      example the "Internet-Draft" described in Section 2.2 of {{?RFC2026}}
+      example the "Internet-Draft" described in {{Section 2.2 of ?RFC2026}}
       is considered an unstable publication that is a work in progress,
       subject to change at any time.
 
@@ -251,12 +252,12 @@ informative:
 #  General Documentation Guidelines
 
    YANG modules under review are likely to be contained in Internet-
-   Drafts (I-Ds).  All guidelines for I-D authors [ID-Guidelines] MUST
+   Drafts (I-Ds).  All guidelines for I-D authors {{ID-Guidelines}} MUST
    be followed.  The guidelines for RFCs should be followed and are
    defined in the following: {{?RFC7322}} (and any future RFCs that
    obsolete it), {{RFC-STYLE}}, and {{?RFC7841}}.
 
-   The following sections MUST be present in an I-D containing a module:
+   The following sections MUST be present in an I-D containing a YANG module:
 
    * Narrative sections
    * Definition sections
@@ -337,8 +338,8 @@ convention MUST NOT be used for example modules.
 
 ##  Terminology Section
 
-   A terminology section MUST be present if any terms are defined in the
-   document or if any terms are imported from other documents.
+A terminology section MUST be present if any terms are defined in the
+document or if any terms are imported from other documents.
 
 ##  Tree Diagrams
 
@@ -422,7 +423,8 @@ See {{sec-usage-guidelines}} for guidelines on YANG usage.
    section that discusses security considerations relevant to those
    modules.
 
-   Unless the modules comply with {{!RFC8791}}, this section MUST be patterned after the latest approved template
+   Unless the modules comply with {{!RFC8791}}, the security section MUST
+   be patterned after the latest approved template
    (available at <https://trac.ietf.org/trac/ops/wiki/yang-security-
    guidelines>).  {{sec-security-template}} contains the security considerations
    template dated 2013-05-08 and last updated on 2018-10-18.  Authors
@@ -532,39 +534,39 @@ modules.  An example of an update registration for the
 
 ###  Documents That Create a New Namespace
 
-   If an I-D defines a new namespace that is to be administered by the
-   IANA, then the document MUST include an IANA Considerations section
-   that specifies how the namespace is to be administered.
+If an I-D defines a new namespace that is to be administered by the
+IANA, then the document MUST include an IANA Considerations section
+that specifies how the namespace is to be administered.
 
-   Specifically, if any YANG module namespace statement value contained
-   in the document is not already registered with IANA, then a new entry
-   in the "ns" subregistry within the "IETF XML Registry" MUST be
-   requested from the IANA.
+Specifically, if any YANG module namespace statement value contained
+in the document is not already registered with IANA, then a new entry
+in the "ns" subregistry within the "IETF XML Registry" MUST be
+requested from the IANA.
 
 ### Documents That Extend an Existing Namespace
 
-   It is possible to extend an existing namespace using a YANG submodule
-   that belongs to an existing module already administered by IANA.  In
-   this case, the document containing the main module MUST be updated to
-   use the latest revision of the submodule.
+It is possible to extend an existing namespace using a YANG submodule
+that belongs to an existing module already administered by IANA.  In
+this case, the document containing the main module MUST be updated to
+use the latest revision of the submodule.
 
 ## References Sections
 
-   For every import or include statement that appears in a module
-   contained in the specification that identifies a module in a separate
-   document, a corresponding normative reference to that document MUST
-   appear in the Normative References section.  The reference MUST
-   correspond to the specific module version actually used within the
-   specification.
+For every import or include statement that appears in a module
+contained in the specification that identifies a module in a separate
+document, a corresponding normative reference to that document MUST
+appear in the Normative References section.  The reference MUST
+correspond to the specific module version actually used within the
+specification.
 
-   For every normative reference statement that appears in a module
-   contained in the specification that identifies a separate document, a
-   corresponding normative reference to that document SHOULD appear in
-   the Normative References section.  The reference SHOULD correspond to
-   the specific document version actually used within the specification.
-   If the reference statement identifies an informative reference that
-   identifies a separate document, a corresponding informative reference
-   to that document MAY appear in the Informative References section.
+For every normative reference statement that appears in a module
+contained in the specification that identifies a separate document, a
+corresponding normative reference to that document SHOULD appear in
+the Normative References section.  The reference SHOULD correspond to
+the specific document version actually used within the specification.
+If the reference statement identifies an informative reference that
+identifies a separate document, a corresponding informative reference
+to that document MAY appear in the Informative References section.
 
 ##  Validation Tools {#sec-tools}
 
@@ -595,7 +597,8 @@ The "yanglint" program is also freely available from GitHub.
 This tool can be used to validate XPath statements within YANG
 modules.
 
-To check that JSON-encoded examples {{?RFC7951}} comply with the target data models, "yangson" program should be used. The "yangson" program is freely available from GitHub.
+To check that JSON-encoded examples {{?RFC7951}} comply with the target data models,
+"yangson" program should be used. The "yangson" program is freely available from GitHub.
 
 ~~~
   <https://github.com/CZ-NIC/yangson>
@@ -634,7 +637,8 @@ encoding (e.g., XML and/or JSON) to demonstrate the intended usage of
 the YANG module(s).  Example modules MUST be validated.  Refer to
 {{sec-tools}} for tools that validate YANG modules and examples.  If IP addresses
 are used, then a mix of either IPv4 and IPv6 addresses or IPv6
-addresses exclusively SHOULD be used in the examples. IPv4 and IPv6 addresses/prefixes reserved for documentation are defined {{?RFC5737}} and {{?RFC3849}}.
+addresses exclusively SHOULD be used in the examples. IPv4 and IPv6 addresses/prefixes
+reserved for documentation are defined {{?RFC5737}} and {{?RFC3849}}.
 
 #  YANG Usage Guidelines {#sec-usage-guidelines}
 
@@ -1164,7 +1168,7 @@ previously published.
      description
        "Initial version";
      reference
-       "RFC 8341: Network Configuration
+       "RFC 6536: Network Configuration Protocol (NETCONF)
                   Access Control Model";
    }
 ~~~
@@ -1185,18 +1189,17 @@ previously published.
    revision "2017-12-11" {
      description
        "Added support for YANG 1.1 actions and notifications tied to
-        data nodes.  Clarify how NACM extensions can be used by other
+        data nodes. Clarify how NACM extensions can be used by other
         data models.";
      reference
-       "RFC 8407: Network Configuration Protocol (NETCONF)
-                  Access Control Model";
+       "RFC YYYY: Network Configuration Access Control Model";
    }
 
    revision "2012-02-22" {
      description
        "Initial version";
      reference
-       "RFC 8341: Network Configuration
+       "RFC 6536: Network Configuration Protocol (NETCONF)
                   Access Control Model";
    }
 ~~~
