@@ -168,9 +168,13 @@ informative:
    * Implemented errata 5693, 5800, and 6899.
    * Updated the URL of the IETF authors guidelines.
    * Updated the YANG security considerations template to reflect the latest version maintained in the Wiki.
+   * Added statements that the security template is not required for modules that follow {{!RFC8791}}.
    * Added code markers for the security template.
    * Added a statement that the RFCs that are listed in the security template are to be listed as normative references in documents that use the template.
-   * Added a note that folding should be done as per {{!RFC8792}}.
+   * Added a note that folding of the examples should be done as per {{!RFC8792}} conventions.
+   * Added a note that RFC8792-folding of YANG modules can be used if and only if native YANG features (e.g., break line, "+").
+   * Added a mention about checks to ensure that YANG modules fit into the line limits of an I-D.
+   * Added new text about checks of JSON encoded examples.
    * Added guidelines for IANA-maintained modules.
 
 #  Terminology
@@ -337,14 +341,13 @@ convention MUST NOT be used for example modules.
 
 ##  Tree Diagrams
 
-   YANG tree diagrams provide a concise representation of a YANG module
-   and SHOULD be included to help readers understand YANG module
-   structure.  Guidelines on tree diagrams can be found in Section 3 of
-   {{?RFC8340}}.
+YANG tree diagrams provide a concise representation of a YANG module
+and SHOULD be included to help readers understand YANG module
+structure.  Guidelines on tree diagrams can be found in {{Section 3 of ?RFC8340}}.
 
-   If YANG tree diagrams are used, then an informative reference to the
-   YANG tree diagrams specification MUST be included in the document.
-   Refer to Section 2.2 of {{?RFC8349}} for an example of such a reference.
+If YANG tree diagrams are used, then an informative reference to the
+YANG tree diagrams specification MUST be included in the document.
+Refer to Section 2.2 of {{?RFC8349}} for an example of such a reference.
 
 ##  Narrative Sections
 
@@ -379,6 +382,8 @@ in the following example:
 ~~~
 {::include-fold ./examples/long-line-ex.txt}
 ~~~
+
+Native YANG features (e.g., breaking line, "+") SHOULD be used to fit a module into the line limits. Exceptionally, RFC8792-folding of YANG modules MAY be used if and only if native YANG features are not sufficient.
 
 ##  Definitions Section
 
@@ -416,7 +421,7 @@ See {{sec-usage-guidelines}} for guidelines on YANG usage.
    section that discusses security considerations relevant to those
    modules.
 
-   This section MUST be patterned after the latest approved template
+   Unless the modules comply with {{!RFC8791}}, this section MUST be patterned after the latest approved template
    (available at <https://trac.ietf.org/trac/ops/wiki/yang-security-
    guidelines>).  {{sec-security-template}} contains the security considerations
    template dated 2013-05-08 and last updated on 2018-10-18.  Authors
@@ -438,6 +443,8 @@ See {{sec-usage-guidelines}} for guidelines on YANG usage.
       harmful to system behavior or that raise significant privacy
       concerns MUST be explicitly listed by name, and the reasons for
       the sensitivity/privacy concerns MUST be explained.
+
+Documents that define exclusively modules following the extension in {{!RFC8791}} are not required to include the security template in {{sec-security-template}}.
 
 ###  Security Considerations Section Template {#sec-security-template}
 
@@ -575,6 +582,9 @@ If the 'pyang' compiler is used to validate an example module, then
 the "--ietf" command-line option MAY be used to identify any IETF
 guideline issues.
 
+To ensure that a module fits into the line limits of an I-D, the command
+"pyang -f yang --keep-comments --yang-line-length 69" should be used.
+
 The "yanglint" program is also freely available from GitHub.
 
 ~~~
@@ -583,6 +593,13 @@ The "yanglint" program is also freely available from GitHub.
 
 This tool can be used to validate XPath statements within YANG
 modules.
+
+To check that JSON-encoded examples {{?RFC7951}} comply with the target data models, "yangson" program should be used. The "yangson" program is freely available from GitHub.
+
+~~~
+  <https://github.com/CZ-NIC/yangson>
+~~~
+
 
 ##  Module Extraction Tools
 
