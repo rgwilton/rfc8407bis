@@ -385,9 +385,7 @@ in the following example:
 {::include-fold ./examples/long-line-ex.txt}
 ~~~
 
-Native YANG features (e.g., breaking line, "+") SHOULD be used to fit
-a module into the line limits. Exceptionally, RFC8792-folding of YANG
-modules MAY be used if and only if native YANG features are not sufficient.
+Native YANG features (e.g., breaking line, "+") SHOULD be used to fit a module into the line limits. Exceptionally, RFC8792-folding of YANG modules MAY be used if and only if native YANG features are not sufficient.
 
 ##  Definitions Section
 
@@ -449,9 +447,7 @@ See {{sec-usage-guidelines}} for guidelines on YANG usage.
       concerns MUST be explicitly listed by name, and the reasons for
       the sensitivity/privacy concerns MUST be explained.
 
-Documents that define exclusively modules following the extension in
-{{!RFC8791}} are not required to use the security template in
-{{sec-security-template}}.
+Documents that define exclusively modules following the extension in {{!RFC8791}} are not required to include the security template in {{sec-security-template}}.
 
 ###  Security Considerations Section Template {#sec-security-template}
 
@@ -518,12 +514,11 @@ operations and their sensitivity/vulnerability:
 ~~~
 
 Note:
-: {{!RFC8446}}, {{!RFC6241}}, {{!RFC6242}}, {{!RFC8341}}, and {{!RFC8040}}
-(or future RFCs that replace any of them) have to be listed as normative references.
+: {{!RFC8446}}, {{!RFC6241}}, {{!RFC6242}}, {{!RFC8341}}, and {{!RFC8040}} (or future RFCs that replaces any of them) have to be listed as normative references.
 
 ##  IANA Considerations Section {#sec-iana-cons}
 
-In order to comply with IESG policy as set forth in [<https://www.ietf.org/id-info/checklist.html>](https://www.ietf.org/id-info/checklist.html), every I-D that is
+In order to comply with IESG policy as set forth in <https://www.ietf.org/id-info/checklist.html>, every I-D that is
 submitted to the IESG for publication MUST contain an IANA
 Considerations section.  The requirements for this section vary
 depending on what actions are required of the IANA.  If there are no
@@ -2779,19 +2774,22 @@ into the management system.
    an I-D:
 
    *  I-D Boilerplate -- verify that the document contains the required
-      I-D boilerplate (see [<https://www.ietf.org/id-info/guidelines.html>](https://www.ietf.org/id-info/guidelines.html)), including the appropriate statement to permit
+      I-D boilerplate (see <https://www.ietf.org/id-info/
+      guidelines.html>), including the appropriate statement to permit
       publication as an RFC, and that the I-D boilerplate does not
       contain references or section numbers.
 
    *  Abstract -- verify that the abstract does not contain references,
       that it does not have a section number, and that its content
-      follows the guidelines in [<https://www.ietf.org/id-info/guidelines.html>](https://www.ietf.org/id-info/guidelines.html).
+      follows the guidelines in <https://www.ietf.org/id-info/
+      guidelines.html>.
 
    *  Copyright Notice -- verify that the document has the appropriate
       text regarding the rights that document contributors provide to
       the IETF Trust {{!RFC5378}}.  Verify that it contains the full IETF
       Trust copyright notice at the beginning of the document.  The IETF
-      Trust Legal Provisions (TLP) can be found at: [https://trustee.ietf.org/license-info/](https://trustee.ietf.org/license-info/)
+      Trust Legal Provisions (TLP) can be found at: https://trustee.ietf.org/
+      license-info/
 
    *  Security Considerations section -- verify that the document uses
       the latest approved template from the Operations and Management
@@ -2839,11 +2837,9 @@ into the management system.
       compliance with the guidelines in this document.  The use of a
       YANG module compiler is recommended when checking for syntax
       errors.  A list of freely available tools and other information,
-      including formatting advice, can be found at:
-
-      [<https://trac.ietf.org/trac/netconf/wiki>](https://trac.ietf.org/trac/netconf/wiki)
-      and
-      [<https://trac.ietf.org/trac/netmod/wiki>](https://trac.ietf.org/trac/netmod/wiki)
+      including formatting advice, can be found at: <https://trac.ietf.org/trac/
+      netconf/wiki> and <https://trac.ietf.org/
+      trac/netmod/wiki>
 
       Checking for correct syntax, however, is only part of the job.
       It is just as important to actually read the YANG module document
