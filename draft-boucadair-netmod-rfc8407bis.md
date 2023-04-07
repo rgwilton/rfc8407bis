@@ -178,7 +178,7 @@ informative:
    * Added code markers for the security template.
    * Added a statement that the RFCs that are listed in the security template are to be listed as normative references in documents that use the template.
    * Added a note that folding of the examples should be done as per {{!RFC8792}} conventions.
-   * Added a note that RFC8792-folding of YANG modules can be used if and only if native YANG features (e.g., break line, "+").
+   * Added a note that RFC8792-folding of YANG modules can be used if and only if native YANG features (e.g., break line, "+") are not sufficient.
    * Added a mention about checks to ensure that YANG modules fit into the line limits of an I-D.
    * Added new text about checks of JSON encoded examples.
    * Added pointers to the IPv4/IPv6 addresses/prefixes that reserved for documentation.
