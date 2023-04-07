@@ -378,38 +378,38 @@ is done for formatting purposes, then this SHOULD be noted following {{!RFC8792}
 in the following example:
 
 ~~~
-{::include-fold ../examples/long-line-ex.xml}
+{::include-fold ./examples/long-line-ex.txt}
 ~~~
 
 ##  Definitions Section
 
-   This section contains the module(s) defined by the specification.
-   These modules SHOULD be written using the YANG 1.1 {{!RFC7950}} syntax.
-   YANG 1.0 {{!RFC6020}} syntax MAY be used if no YANG 1.1 constructs or
-   semantics are needed in the module.  If any of the imported YANG
-   modules are written using YANG 1.1, then the module MUST be written
-   using YANG 1.1.
+This section contains the module(s) defined by the specification.
+These modules SHOULD be written using the YANG 1.1 {{!RFC7950}} syntax.
+YANG 1.0 {{!RFC6020}} syntax MAY be used if no YANG 1.1 constructs or
+semantics are needed in the module.  If any of the imported YANG
+modules are written using YANG 1.1, then the module MUST be written
+using YANG 1.1.
 
-   A YIN syntax version of the module MAY also be present in the
-   document.  There MAY also be other types of modules present in the
-   document, such as Structure of Management Information Version 2
-   (SMIv2), which are not affected by these guidelines.
+A YIN syntax version of the module MAY also be present in the
+document.  There MAY also be other types of modules present in the
+document, such as Structure of Management Information Version 2
+(SMIv2), which are not affected by these guidelines.
 
-   Note that if the module itself is considered normative and not an
-   example module or example YANG fragment, then all YANG statements
-   within a YANG module are considered normative.  The use of keywords
-   defined in {{!RFC2119}} and {{!RFC8174}} apply to YANG "description"
-   statements in normative modules exactly as they would in any other
-   normative section.
+Note that if the module itself is considered normative and not an
+example module or example YANG fragment, then all YANG statements
+within a YANG module are considered normative.  The use of keywords
+defined in {{!RFC2119}} and {{!RFC8174}} apply to YANG "description"
+statements in normative modules exactly as they would in any other
+normative section.
 
-   Example YANG modules and example YANG fragments MUST NOT contain any
-   normative text, including any all-uppercase reserved words from
-   {{!RFC2119}} and {{!RFC8174}}.
+Example YANG modules and example YANG fragments MUST NOT contain any
+normative text, including any all-uppercase reserved words from
+{{!RFC2119}} and {{!RFC8174}}.
 
-   Consistent indentation and formatting SHOULD be used in all YANG
-   statements within a module.
+Consistent indentation and formatting SHOULD be used in all YANG
+statements within a module.
 
-   See {{sec-usage-guidelines}} for guidelines on YANG usage.
+See {{sec-usage-guidelines}} for guidelines on YANG usage.
 
 ##  Security Considerations Section
 
