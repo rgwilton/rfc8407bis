@@ -52,6 +52,8 @@ normative:
                 - name: James Clark
                 - name: Steve DeRose
               date: November 1999
+              seriesinfo:
+                "W3C": Recommendation REC-xpath-19991116
 
 informative:
 
@@ -2778,7 +2780,9 @@ into the management system.
       text regarding the rights that document contributors provide to
       the IETF Trust {{!RFC5378}}.  Verify that it contains the full IETF
       Trust copyright notice at the beginning of the document.  The IETF
-      Trust Legal Provisions (TLP) can be found at: ``https://trustee.ietf.org/license-info/``
+      Trust Legal Provisions (TLP) can be found at:
+
+      ``https://trustee.ietf.org/license-info/``
 
    *  Security Considerations section -- verify that the document uses
       the latest approved template from the Operations and Management
@@ -2790,13 +2794,13 @@ into the management system.
       IANA Considerations section contains entries for the following
       IANA registries:
 
-         XML Namespace Registry:
-         : Register the YANG module namespace.
+          XML Namespace Registry:
+          : Register the YANG module namespace.
 
-         YANG Module Registry:
-         : Register the YANG module name, prefix,
-         namespace, and RFC number, according to the rules specified in
-         {{!RFC6020}}.
+          YANG Module Registry:
+          : Register the YANG module name, prefix,
+          namespace, and RFC number, according to the rules specified in
+          {{!RFC6020}}.
 
    *  References -- verify that the references are properly divided
       between normative and informative references, that RFCs 2119 and
@@ -2817,7 +2821,9 @@ into the management system.
       License in each YANG module or submodule.  Some guidelines related
       to this requirement are described in Section 3.1.  Make sure that
       the correct year is used in all copyright dates.  Use the approved
-      text from the latest TLP document, which can be found at: ``<https://trustee.ietf.org/license-info/>``
+      text from the latest TLP document, which can be found at:
+
+      ``<https://trustee.ietf.org/license-info/>``
 
    *  Other Issues -- check for any issues mentioned in ``<https://www.ietf.org/id-info/checklist.html>`` that are not covered elsewhere.
 
@@ -2825,7 +2831,13 @@ into the management system.
       compliance with the guidelines in this document.  The use of a
       YANG module compiler is recommended when checking for syntax
       errors.  A list of freely available tools and other information,
-      including formatting advice, can be found at: ``<https://trac.ietf.org/trac/netconf/wiki>`` and ``<https://trac.ietf.org/trac/netmod/wiki>``
+      including formatting advice, can be found at:
+
+      ``<https://trac.ietf.org/trac/netconf/wiki>``
+
+      and
+
+      ``<https://trac.ietf.org/trac/netmod/wiki>``
 
       Checking for correct syntax, however, is only part of the job.
       It is just as important to actually read the YANG module document
