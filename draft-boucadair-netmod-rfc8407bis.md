@@ -131,7 +131,7 @@ informative:
    over time.
 
    This document defines a set of usage guidelines for documents
-   containing YANG 1.1 {{!RFC7950}} and YANG 1.0 {{!RFC6020}} data models.
+   containing YANG 1.1 {{!RFC7950}} and YANG 1.0 {{!RFC6020}} data models, including IANA-maintained modules.
    YANG is used to define the data structures, protocol operations, and
    notification content used within a NETCONF and/or RESTCONF server.
    YANG is also used to define abstract data structures {{!RFC8791}}.
@@ -158,6 +158,9 @@ informative:
    These guidelines are intended to be used by authors and reviewers to
    improve the readability and interoperability of published YANG data
    models.
+
+   {{sec-iana-mm}} updates {{!RFC8126}} by providing guidance for writing the
+   IANA considerations for RFCs that specify IANA-maintained modules.
 
    Note that this document is not a YANG tutorial, and the reader is
    expected to know the YANG data modeling language before implementing
@@ -2493,15 +2496,11 @@ previously published.
    registry, this document encourages the use of IANA-maintained
    modules.
 
-   This section provides a set of guidelines for YANG module authors
+   The following section provides a set of guidelines for YANG module authors
    related to the design of IANA-maintained modules.  These guidelines
    are meant to leverage existing IANA registries and use YANG as
    another format to present the content of these registries when
    appropriate.
-
-   {{sec-iana-mm}} updates {{!RFC8126}} by providing guidance for writing the
-   IANA considerations for RFCs that specify IANA-maintained modules.
-
 
 ##  Guidelines for IANA-Maintained Modules
 
@@ -2517,7 +2516,7 @@ previously published.
    one single IANA-maintained module that covers all sub-registries if
    maintaining that single module is manageable (e.g., very few values
    are present or expected to be present for each sub-registry).  An
-   example of such a module is documented in Section 5.2 of {{?RFC9132}}.
+   example of such a module is documented in {{Section 5.2 of ?RFC9132}}.
 
    An IANA-maintained module may use identities (e.g., {{?RFC8675}}) or
    enumerations (e.g., {{?RFC9108}}).  The decision about which type to use
@@ -2545,7 +2544,7 @@ previously published.
    For both cases, the document that defines an IANA-maintained module
    MUST include a note indicating that the document is only documenting
    the initial version of the module and that the authoritative version
-   is to be retrieved from the IANA registry.  It is RECOMMENDED to
+   is to be retrieved from the IANA registry. It is RECOMMENDED to
    include the URL from where to retrieve the recent version of the
    module.  When a script is used, the Internet-Draft that defines an
    IANA-maintained module SHOULD include an appendix with the initial
@@ -2782,7 +2781,7 @@ into the management system.
       Trust copyright notice at the beginning of the document.  The IETF
       Trust Legal Provisions (TLP) can be found at:
 
-      ``https://trustee.ietf.org/license-info/``
+      ``<https://trustee.ietf.org/license-info/>``
 
    *  Security Considerations section -- verify that the document uses
       the latest approved template from the Operations and Management
@@ -2794,13 +2793,12 @@ into the management system.
       IANA Considerations section contains entries for the following
       IANA registries:
 
-          XML Namespace Registry:
-          : Register the YANG module namespace.
+         XML Namespace Registry:
+         : Register the YANG module namespace.
 
-          YANG Module Registry:
-          : Register the YANG module name, prefix,
-          namespace, and RFC number, according to the rules specified in
-          {{!RFC6020}}.
+         YANG Module Registry:
+         : Register the YANG module name, prefix, namespace, and RFC
+           number, according to the rules specified in {{!RFC6020}}.
 
    *  References -- verify that the references are properly divided
       between normative and informative references, that RFCs 2119 and
