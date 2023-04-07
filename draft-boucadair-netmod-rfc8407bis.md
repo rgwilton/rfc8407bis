@@ -181,7 +181,8 @@ informative:
    * Added a note that RFC8792-folding of YANG modules can be used if and only if native YANG features (e.g., break line, "+").
    * Added a mention about checks to ensure that YANG modules fit into the line limits of an I-D.
    * Added new text about checks of JSON encoded examples.
-   * Added pointers to the IPv4/IPv6 addresses/prefixes that reserved for documentation
+   * Added pointers to the IPv4/IPv6 addresses/prefixes that reserved for documentation.
+   * Updated the IANA considerations to encourage registration requests to indicate whether a module is maintained by IANA or not.
    * Added guidelines for IANA-maintained modules.
 
 #  Terminology
@@ -2757,7 +2758,7 @@ registration in Appendix B.
 | Prefix    | temp                                      |
 | Maintained by IANA?    | N                            |
 | Reference | RFC XXXX                                  |
-{: title="YANG Registry Assignment" cols="l l"}
+{: title="YANG Registry Assignment" cols="r l"}
 
 #  Security Considerations
 
