@@ -2802,9 +2802,11 @@ into the management system.
       IANA Considerations section contains entries for the following
       IANA registries:
 
-         XML Namespace Registry: Register the YANG module namespace.
+         XML Namespace Registry:
+         : Register the YANG module namespace.
 
-         YANG Module Registry: Register the YANG module name, prefix,
+         YANG Module Registry:
+         : Register the YANG module name, prefix,
          namespace, and RFC number, according to the rules specified in
          {{!RFC6020}}.
 
