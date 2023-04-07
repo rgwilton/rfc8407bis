@@ -175,6 +175,7 @@ informative:
    * Added a note that RFC8792-folding of YANG modules can be used if and only if native YANG features (e.g., break line, "+").
    * Added a mention about checks to ensure that YANG modules fit into the line limits of an I-D.
    * Added new text about checks of JSON encoded examples.
+   * Added pointers to the IPv4/IPv6 addresses/prefixes that reserved for documentation
    * Added guidelines for IANA-maintained modules.
 
 #  Terminology
@@ -631,9 +632,9 @@ usage examples, either throughout the document or in an appendix.
 This includes example instance document snippets in an appropriate
 encoding (e.g., XML and/or JSON) to demonstrate the intended usage of
 the YANG module(s).  Example modules MUST be validated.  Refer to
-{{sec-tools}} for tools that validate YANG modules.  If IP addresses
+{{sec-tools}} for tools that validate YANG modules and examples.  If IP addresses
 are used, then a mix of either IPv4 and IPv6 addresses or IPv6
-addresses exclusively SHOULD be used in the examples.
+addresses exclusively SHOULD be used in the examples. IPv4 and IPv6 addresses/prefixes reserved for documentation are defined {{?RFC5737}} and {{?RFC3849}}.
 
 #  YANG Usage Guidelines {#sec-usage-guidelines}
 
