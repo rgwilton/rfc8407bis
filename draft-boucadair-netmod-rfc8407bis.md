@@ -368,9 +368,8 @@ If the document contains a YANG module(s) that is compliant with NMDA
 {{!RFC8342}}, then the Introduction section should mention this fact.
 
 Example:
-
-   The YANG data model in this document conforms to the Network
-   Management Datastore Architecture defined in {{!RFC8342}}.
+: The YANG data model in this document conforms to the Network
+  Management Datastore Architecture defined in {{!RFC8342}}.
 
 Consistent indentation SHOULD be used for all examples, including
 YANG fragments and protocol message instance data.  If line wrapping
@@ -565,7 +564,7 @@ All modules need to be validated before submission in an I-D.  The
 'pyang' YANG compiler is freely available from GitHub:
 
 ~~~
-   <https://github.com/mbj4668/pyang>
+  <https://github.com/mbj4668/pyang>
 ~~~
 
 If the 'pyang' compiler is used to validate a normative module, then
@@ -579,7 +578,7 @@ guideline issues.
 The "yanglint" program is also freely available from GitHub.
 
 ~~~
-   <https://github.com/CESNET/libyang>
+  <https://github.com/CESNET/libyang>
 ~~~
 
 This tool can be used to validate XPath statements within YANG
@@ -592,7 +591,7 @@ RFC is available.  The 'rfcstrip' tool that supports YANG module
 extraction is freely available at:
 
 ~~~
-   <https://github.com/mbj4668/rfcstrip>
+  <https://github.com/mbj4668/rfcstrip>
 ~~~
 
 ~~~
@@ -840,16 +839,16 @@ previously published.
    configuration data.
 
 ~~~ yang
-       notification foo {
-         leaf mtu {
-           // NOT okay because when-stmt context is this notification
-           when "/if:interfaces/if:interface[name='eth0']";
-           type leafref {
-             // Okay because path-stmt has a different context
-             path "/if:interfaces/if:interface/if:mtu";
-           }
-         }
-       }
+    notification foo {
+      leaf mtu {
+        // NOT okay because when-stmt context is this notification
+        when "/if:interfaces/if:interface[name='eth0']";
+        type leafref {
+          // Okay because path-stmt has a different context
+          path "/if:interfaces/if:interface/if:mtu";
+        }
+      }
+    }
 ~~~
 
    It is especially important to consider the XPath evaluation context
@@ -1093,14 +1092,14 @@ previously published.
    not specify placeholder objects like the "reserved" example below:
 
 ~~~ yang
-leaf reserved {
-  type string;
-  description
-    "This object has no purpose at this time, but a future
-     revision of this module might define a purpose
-     for this object.";
-  }
-}
+     leaf reserved {
+       type string;
+       description
+         "This object has no purpose at this time, but a future
+          revision of this module might define a purpose
+          for this object.";
+       }
+     }
 ~~~
 
 ##  Module Header, Meta, and Revision Statements
@@ -1374,7 +1373,7 @@ leaf reserved {
         pattern '.|..|[^xX].*|.[^mM].*|..[^lL].*';
       }
       ...
-   }
+    }
 ~~~
 
    For numeric data types, if the values allowed by the intended
@@ -1718,14 +1717,14 @@ leaf reserved {
    values for the resource instance.  For example:
 
 ~~~ yang
-    notification interface-up {
-      description "Sent when an interface is activated.";
-      leaf name {
-        type leafref {
-          path "/if:interfaces/if:interface/if:name";
-        }
+  notification interface-up {
+    description "Sent when an interface is activated.";
+    leaf name {
+      type leafref {
+        path "/if:interfaces/if:interface/if:name";
       }
     }
+  }
 ~~~
 
    Note that there are no formal YANG statements to identify any data
@@ -1880,28 +1879,28 @@ leaf reserved {
    not add a mandatory data node.
 
 ~~~
-module example-module {
+  module example-module {
 
- yang-version 1.1;
- namespace "tag:example.com,2017:example-module";
- prefix mymod;
+   yang-version 1.1;
+   namespace "tag:example.com,2017:example-module";
+   prefix mymod;
 
- import iana-if-type { prefix iana; }
- import ietf-interfaces { prefix if; }
+   import iana-if-type { prefix iana; }
+   import ietf-interfaces { prefix if; }
 
- identity some-new-iftype {
-    base iana:iana-interface-type;
- }
+   identity some-new-iftype {
+      base iana:iana-interface-type;
+   }
 
- augment "/if:interfaces/if:interface" {
-   when "if:type = 'mymod:some-new-iftype'";
+   augment "/if:interfaces/if:interface" {
+     when "if:type = 'mymod:some-new-iftype'";
 
-    leaf mandatory-leaf {
-       type string;
-       mandatory true;
+      leaf mandatory-leaf {
+         type string;
+         mandatory true;
+      }
     }
   }
-}
 ~~~
 
    Note that this practice is safe only for creating data resources.  It
@@ -1945,10 +1944,9 @@ module example-module {
 
    Example documenting platform resource limits:
 
-
-     Wrong: (max-elements in the list itself)
-
 ~~~
+  Wrong: (max-elements in the list itself)
+
      container backups {
        list backup {
           ...
@@ -1958,9 +1956,9 @@ module example-module {
      }
 ~~~
 
-     Correct: (max-elements in a deviation)
-
 ~~~
+  Correct: (max-elements in a deviation)
+
      deviation /bk:backups/bk:backup {
        deviate add {
           max-elements  10;
@@ -2713,8 +2711,8 @@ registry]:
 #  IANA Considerations {#sec-iana}
 
 The following registration in the "ns" subregistry of the "IETF XML
-Registry" {{!RFC3688}} was detailed in {{?RFC6087}} and has been updated by
-IANA to reference this document.
+Registry" {{!RFC3688}} was detailed in {{?RFC6087}}. This document requests IANA
+to update this registration to reference this document.
 
 ~~~
      URI: urn:ietf:params:xml:ns:yang:ietf-template
