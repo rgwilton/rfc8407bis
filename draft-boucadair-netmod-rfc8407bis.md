@@ -295,7 +295,7 @@ informative:
    component.
 
    The ``"<CODE BEGINS>"`` tag SHOULD be followed by a string identifying
-   the file name specified in Section 5.2 of [RFC7950].  The name string
+   the file name specified in Section 5.2 of {{!RFC7950}}.  The name string
    form that includes the revision date SHOULD be used.  The revision
    date MUST match the date used in the most recent revision of the
    module.
@@ -325,16 +325,14 @@ informative:
 
 ###  Example Modules
 
-~~~
-Example modules are not code components.  The <CODE BEGINS>
+Example modules are not code components.  The ``<CODE BEGINS>``
 convention MUST NOT be used for example modules.
-~~~
 
-   An example module SHOULD be named using the term "example", followed
-   by a hyphen, followed by a descriptive name, e.g., "example-toaster".
+An example module SHOULD be named using the term "example", followed
+by a hyphen, followed by a descriptive name, e.g., "example-toaster".
 
-   See {{sec-namespace-assignments}} regarding the namespace guidelines for example
-   modules.
+See {{sec-namespace-assignments}} regarding the namespace guidelines for example
+modules.
 
 ##  Terminology Section
 
@@ -518,7 +516,7 @@ Note:
 
 ##  IANA Considerations Section {#sec-iana-cons}
 
-In order to comply with IESG policy as set forth in <https://www.ietf.org/id-info/checklist.html>, every I-D that is
+In order to comply with IESG policy as set forth in ``<https://www.ietf.org/id-info/checklist.html>``, every I-D that is
 submitted to the IESG for publication MUST contain an IANA
 Considerations section.  The requirements for this section vary
 depending on what actions are required of the IANA.  If there are no
@@ -615,11 +613,9 @@ extraction is freely available at:
   <https://github.com/mbj4668/rfcstrip>
 ~~~
 
-~~~
-This tool can be used to verify that the "<CODE BEGINS>" and "<CODE
-ENDS>" tags are used correctly and that the normative YANG modules
+This tool can be used to verify that the ``"<CODE BEGINS>"`` and ``"<CODE
+ENDS>"`` tags are used correctly and that the normative YANG modules
 can be extracted correctly.
-~~~
 
 The "xym" tool is freely available on GitHub and can be used to
 extract YANG modules from a document.
@@ -886,7 +882,7 @@ previously published.
 
    The "position" and "last" functions SHOULD NOT be used.  This applies
    to implicit use of the "position" function as well (e.g.,
-   '//chapter[42]').  A server is only required to maintain the relative
+   ``'//chapter[42]'``).  A server is only required to maintain the relative
    XML document order of all instances of a particular user-ordered list
    or leaf-list.  The "position" and "last" functions MAY be used if
    they are evaluated in a context where the context node is a user-
@@ -1012,7 +1008,7 @@ previously published.
 
    Wildcard expansion is done within a server against all the nodes from
    all namespaces, so it is possible for a "must" or "when" expression
-   that uses the '*' operator to always evaluate to false if processed
+   that uses the ``'*'`` operator to always evaluate to false if processed
    within a single YANG module.  In such cases, the "description"
    statement SHOULD clarify that augmenting objects are expected to
    match the wildcard expansion.
@@ -1624,13 +1620,11 @@ previously published.
    (other than another YANG module indicated by an import statement),
    then a reference statement MUST be present.
 
-~~~
    The "anyxml" construct may be useful to represent an HTML banner
-   containing markup elements, such as "<b>" and "</b>", and MAY be used
+   containing markup elements, such as ``"<b>" and "</b>"``, and MAY be used
    in such cases.  However, this construct SHOULD NOT be used if other
    YANG data node types can be used instead to represent the desired
    syntax and semantics.
-~~~
 
    It has been found that the "anyxml" statement is not implemented
    consistently across all servers.  It is possible that mixed-mode XML
@@ -2239,15 +2233,13 @@ previously published.
    top-level "config false" data nodes that would have been defined in a
    legacy YANG module (before NMDA).
 
-~~~
    A server that needs to support both NMDA and non-NMDA clients can
    advertise both the new NMDA module and the temporary non-NMDA module.
    A non-NMDA client can use separate "foo" and "foo-state" subtrees,
    except the "foo-state" subtree is located in a different (temporary)
    module.  The NMDA module can be used by a non-NMDA client to access
-   the conventional configuration datastores and the deprecated <get>
+   the conventional configuration datastores and the deprecated ``<get>``
    operation to access nested "config false" data nodes.
-~~~
 
    To create the temporary non-NMDA model from an NMDA model, the
    following steps can be taken:
@@ -2774,27 +2766,23 @@ into the management system.
    an I-D:
 
    *  I-D Boilerplate -- verify that the document contains the required
-      I-D boilerplate (see <https://www.ietf.org/id-info/
-      guidelines.html>), including the appropriate statement to permit
+      I-D boilerplate (see ``<https://www.ietf.org/id-info/guidelines.html>``), including the appropriate statement to permit
       publication as an RFC, and that the I-D boilerplate does not
       contain references or section numbers.
 
    *  Abstract -- verify that the abstract does not contain references,
       that it does not have a section number, and that its content
-      follows the guidelines in <https://www.ietf.org/id-info/
-      guidelines.html>.
+      follows the guidelines in ``<https://www.ietf.org/id-info/guidelines.html>``.
 
    *  Copyright Notice -- verify that the document has the appropriate
       text regarding the rights that document contributors provide to
       the IETF Trust {{!RFC5378}}.  Verify that it contains the full IETF
       Trust copyright notice at the beginning of the document.  The IETF
-      Trust Legal Provisions (TLP) can be found at: https://trustee.ietf.org/
-      license-info/
+      Trust Legal Provisions (TLP) can be found at: ``https://trustee.ietf.org/license-info/``
 
    *  Security Considerations section -- verify that the document uses
       the latest approved template from the Operations and Management
-      (OPS) area website (see <https://trac.ietf.org/area/ops/trac/wiki/
-      yang-security-guidelines>) and that the guidelines therein have
+      (OPS) area website (see ``<https://trac.ietf.org/area/ops/trac/wiki/yang-security-guidelines>``) and that the guidelines therein have
       been followed.
 
    *  IANA Considerations section -- this section must always be
@@ -2829,19 +2817,15 @@ into the management system.
       License in each YANG module or submodule.  Some guidelines related
       to this requirement are described in Section 3.1.  Make sure that
       the correct year is used in all copyright dates.  Use the approved
-      text from the latest TLP document, which can be found at: <https://trustee.ietf.org/
-      license-info/>
+      text from the latest TLP document, which can be found at: ``<https://trustee.ietf.org/license-info/>``
 
-   *  Other Issues -- check for any issues mentioned in <https://www.ietf.org/
-      id-info/checklist.html> that are not covered elsewhere.
+   *  Other Issues -- check for any issues mentioned in ``<https://www.ietf.org/id-info/checklist.html>`` that are not covered elsewhere.
 
    *  Technical Content -- review the actual technical content for
       compliance with the guidelines in this document.  The use of a
       YANG module compiler is recommended when checking for syntax
       errors.  A list of freely available tools and other information,
-      including formatting advice, can be found at: <https://trac.ietf.org/trac/
-      netconf/wiki> and <https://trac.ietf.org/
-      trac/netmod/wiki>
+      including formatting advice, can be found at: ``<https://trac.ietf.org/trac/netconf/wiki>`` and ``<https://trac.ietf.org/trac/netmod/wiki>``
 
       Checking for correct syntax, however, is only part of the job.
       It is just as important to actually read the YANG module document
