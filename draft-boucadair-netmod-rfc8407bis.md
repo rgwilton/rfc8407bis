@@ -171,22 +171,28 @@ informative:
    The following changes have been made to the guidelines published in
    {{?RFC8407}}:
 
-   o Implemented errata 5693, 5800, and 6899.
-   o Updated the URL of the IETF authors guidelines.
-   o Updated the YANG security considerations template to reflect the latest version maintained in the Wiki.
-   o Added statements that the security template is not required for modules that follow {{!RFC8791}}.
-   o Added code markers for the security template.
-   o Added a statement that the RFCs that are listed in the security template are to be listed as normative references in documents that use the template.
-   o Added a note that folding of the examples should be done as per {{!RFC8792}} conventions.
-   o Added a note that RFC8792-folding of YANG modules can be used if and only if native YANG features (e.g., break line, "+").
-   o Added a mention about checks to ensure that YANG modules fit into the line limits of an I-D.
-   o Added new text about checks of JSON encoded examples.
-   o Added pointers to the IPv4/IPv6 addresses/prefixes that reserved for documentation
-   o Added guidelines for IANA-maintained modules.
+   * Implemented errata 5693, 5800, and 6899.
+   * Updated the URL of the IETF authors guidelines.
+   * Updated the YANG security considerations template to reflect the latest version maintained in the Wiki.
+   * Added statements that the security template is not required for modules that follow {{!RFC8791}}.
+   * Added code markers for the security template.
+   * Added a statement that the RFCs that are listed in the security template are to be listed as normative references in documents that use the template.
+   * Added a note that folding of the examples should be done as per {{!RFC8792}} conventions.
+   * Added a note that RFC8792-folding of YANG modules can be used if and only if native YANG features (e.g., break line, "+").
+   * Added a mention about checks to ensure that YANG modules fit into the line limits of an I-D.
+   * Added new text about checks of JSON encoded examples.
+   * Added pointers to the IPv4/IPv6 addresses/prefixes that reserved for documentation
+   * Added guidelines for IANA-maintained modules.
 
 #  Terminology
 
    The following terms are used throughout this document:
+
+  IANA-maintained module:
+  : A YANG module that is maintained by IANA.
+
+  IETF module:
+  : A YANG module that is published by the IETF and which is not maintained by IANA.
 
    published:
    : A stable release of a module or submodule.  For
@@ -300,7 +306,7 @@ informative:
    component.
 
    The ``"<CODE BEGINS>"`` tag SHOULD be followed by a string identifying
-   the file name specified in Section 5.2 of {{!RFC7950}}.  The name string
+   the file name specified in {{Section 5.2 of !RFC7950}}.  The name string
    form that includes the revision date SHOULD be used.  The revision
    date MUST match the date used in the most recent revision of the
    module.
@@ -352,7 +358,7 @@ structure.  Guidelines on tree diagrams can be found in {{Section 3 of ?RFC8340}
 
 If YANG tree diagrams are used, then an informative reference to the
 YANG tree diagrams specification MUST be included in the document.
-Refer to Section 2.2 of {{?RFC8349}} for an example of such a reference.
+Refer to {{Section 2.2 of ?RFC8349}} for an example of such a reference.
 
 ##  Narrative Sections
 
@@ -524,16 +530,21 @@ Note:
 In order to comply with IESG policy as set forth in ``<https://www.ietf.org/id-info/checklist.html>``, every I-D that is
 submitted to the IESG for publication MUST contain an IANA
 Considerations section.  The requirements for this section vary
-depending on what actions are required of the IANA.  If there are no
+depending on what actions are required of the IANA. If there are no
 IANA considerations applicable to the document, then the IANA
 Considerations section will state that "This document has no IANA
 actions".  Refer to the guidelines in {{!RFC8126}} for more details.
 
 Each normative YANG module MUST be registered in both the "IETF XML
 Registry" {{!RFC3688}} {{IANA-XML}} and the "YANG Module Names" registry
-{{!RFC6020}} {{IANA-MOD-NAMES}}.  This applies to new modules and updated
-modules.  An example of an update registration for the
+{{!RFC6020}} {{IANA-MOD-NAMES}}. The registration request in the "YANG Module Names" registry
+should indicate whether the module is IANA-maintained or not. This applies to new modules and updated
+modules. An example of an update registration for the
 "ietf-template" module can be found in {{sec-iana}}.
+
+
+
+Additional IANA considerations applicable to IANA-maintained modules are provided in {{sec-iana-mm}}.
 
 ###  Documents That Create a New Namespace
 
@@ -744,8 +755,7 @@ previously published.
 
    Identifiers for all YANG identifiers in published modules MUST be
    between 1 and 64 characters in length.  These include any construct
-   specified as an "identifier-arg-str" token in the ABNF in Section 14
-   of {{!RFC7950}}.
+   specified as an "identifier-arg-str" token in the ABNF in {{Section 14 of !RFC7950}}.
 
 ###  Identifier Naming Conventions
 
@@ -776,10 +786,10 @@ previously published.
 
 ## Defaults
 
-   In general, it is suggested that substatements containing very common
-   default values SHOULD NOT be present.  The following substatements
-   are commonly used with the default value, which would make the module
-   difficult to read if used everywhere they are allowed.
+In general, it is suggested that substatements containing very common
+default values SHOULD NOT be present.  The following substatements
+are commonly used with the default value, which would make the module
+difficult to read if used everywhere they are allowed.
 
 
 | Statement    | Default Value |
@@ -795,48 +805,48 @@ previously published.
 
 ##  Conditional Statements
 
-   A module may be conceptually partitioned in several ways, using the
-   "if-feature" and/or "when" statements.
+A module may be conceptually partitioned in several ways, using the
+"if-feature" and/or "when" statements.
 
-   Data model designers need to carefully consider all modularity
-   aspects, including the use of YANG conditional statements.
+Data model designers need to carefully consider all modularity
+aspects, including the use of YANG conditional statements.
 
-   If a data definition is optional, depending on server support for a
-   NETCONF or RESTCONF protocol capability, then a YANG "feature"
-   statement SHOULD be defined.  The defined "feature" statement SHOULD
-   then be used in the conditional "if-feature" statement referencing
-   the optional data definition.
+If a data definition is optional, depending on server support for a
+NETCONF or RESTCONF protocol capability, then a YANG "feature"
+statement SHOULD be defined.  The defined "feature" statement SHOULD
+then be used in the conditional "if-feature" statement referencing
+the optional data definition.
 
-   If any notification data, or any data definition, for a non-
-   configuration data node is not mandatory, then the server may or may
-   not be required to return an instance of this data node.  If any
-   conditional requirements exist for returning the data node in a
-   notification payload or retrieval request, they MUST be documented
-   somewhere.  For example, a "when" or "if-feature" statement could
-   apply to the data node, or the conditional requirements could be
-   explained in a "description" statement within the data node or one of
-   its ancestors (if any).
+If any notification data, or any data definition, for a non-
+configuration data node is not mandatory, then the server may or may
+not be required to return an instance of this data node.  If any
+conditional requirements exist for returning the data node in a
+notification payload or retrieval request, they MUST be documented
+somewhere.  For example, a "when" or "if-feature" statement could
+apply to the data node, or the conditional requirements could be
+explained in a "description" statement within the data node or one of
+its ancestors (if any).
 
-   If any "if-feature" statements apply to a list node, then the same
-   "if-feature" statements MUST apply to any key leaf nodes for the
-   list.  There MUST NOT be any "if-feature" statements applied to any
-   key leafs that do not also apply to the parent list node.
+If any "if-feature" statements apply to a list node, then the same
+"if-feature" statements MUST apply to any key leaf nodes for the
+list.  There MUST NOT be any "if-feature" statements applied to any
+key leafs that do not also apply to the parent list node.
 
-   There SHOULD NOT be any "when" statements applied to a key leaf node.
-   It is possible that a "when" statement for an ancestor node of a key
-   leaf will have the exact node-set result as the key leaf.  In such a
-   case, the "when" statement for the key leaf is redundant and SHOULD
-   be avoided.
+There SHOULD NOT be any "when" statements applied to a key leaf node.
+It is possible that a "when" statement for an ancestor node of a key
+leaf will have the exact node-set result as the key leaf.  In such a
+case, the "when" statement for the key leaf is redundant and SHOULD
+be avoided.
 
 ##  XPath Usage
 
-   This section describes guidelines for using the XML Path Language
-   (XPath) {{W3C.REC-xpath}} within YANG modules.
+This section describes guidelines for using the XML Path Language
+(XPath) {{W3C.REC-xpath}} within YANG modules.
 
 ###  XPath Evaluation Contexts
 
-   YANG defines five separate contexts for evaluation of XPath
-   statements:
+YANG defines five separate contexts for evaluation of XPath
+statements:
 
    1.  The "running" datastore: collection of all YANG configuration
        data nodes.  The document root is the conceptual container (e.g.,
@@ -857,9 +867,9 @@ previously published.
    5.  RPC Output: The document root is the conceptual "output" node,
        which is the parent of all RPC output parameter definitions.
 
-   Note that these XPath contexts cannot be mixed.  For example, a
-   "when" statement in a notification context cannot reference
-   configuration data.
+Note that these XPath contexts cannot be mixed.  For example, a
+"when" statement in a notification context cannot reference
+configuration data.
 
 ~~~ yang
     notification foo {
@@ -874,58 +884,58 @@ previously published.
     }
 ~~~
 
-   It is especially important to consider the XPath evaluation context
-   for XPath expressions defined in groupings.  An XPath expression
-   defined in a grouping may not be portable, meaning it cannot be used
-   in multiple contexts and produce proper results.
+It is especially important to consider the XPath evaluation context
+for XPath expressions defined in groupings.  An XPath expression
+defined in a grouping may not be portable, meaning it cannot be used
+in multiple contexts and produce proper results.
 
-   If the XPath expressions defined in a grouping are intended for a
-   particular context, then this context SHOULD be identified in the
-   "description" statement for the grouping.
+If the XPath expressions defined in a grouping are intended for a
+particular context, then this context SHOULD be identified in the
+"description" statement for the grouping.
 
 ###  Function Library
 
-   The "position" and "last" functions SHOULD NOT be used.  This applies
-   to implicit use of the "position" function as well (e.g.,
-   ``'//chapter[42]'``).  A server is only required to maintain the relative
-   XML document order of all instances of a particular user-ordered list
-   or leaf-list.  The "position" and "last" functions MAY be used if
-   they are evaluated in a context where the context node is a user-
-   ordered "list" or "leaf-list".
+The "position" and "last" functions SHOULD NOT be used.  This applies
+to implicit use of the "position" function as well (e.g.,
+``'//chapter[42]'``).  A server is only required to maintain the relative
+XML document order of all instances of a particular user-ordered list
+or leaf-list.  The "position" and "last" functions MAY be used if
+they are evaluated in a context where the context node is a user-
+ordered "list" or "leaf-list".
 
-   The "id" function SHOULD NOT be used.  The "ID" attribute is not
-   present in YANG documents, so this function has no meaning.  The YANG
-   compiler SHOULD return an empty string for this function.
+The "id" function SHOULD NOT be used.  The "ID" attribute is not
+present in YANG documents, so this function has no meaning.  The YANG
+compiler SHOULD return an empty string for this function.
 
-   The "namespace-uri" and "name" functions SHOULD NOT be used.
-   Expanded names in XPath are different than YANG.  A specific
-   canonical representation of a YANG-expanded name does not exist.
+The "namespace-uri" and "name" functions SHOULD NOT be used.
+Expanded names in XPath are different than YANG.  A specific
+canonical representation of a YANG-expanded name does not exist.
 
-   The "lang" function SHOULD NOT be used.  This function does not apply
-   to YANG because there is no "lang" attribute set with the document.
-   The YANG compiler SHOULD return 'false' for this function.
+The "lang" function SHOULD NOT be used.  This function does not apply
+to YANG because there is no "lang" attribute set with the document.
+The YANG compiler SHOULD return 'false' for this function.
 
-   The "local-name", "namespace-uri", "name", "string", and "number"
-   functions SHOULD NOT be used if the argument is a node-set.  If so,
-   the function result will be determined by the document order of the
-   node-set.  Since this order can be different on each server, the
-   function results can also be different.  Any function call that
-   implicitly converts a node-set to a string will also have this issue.
+The "local-name", "namespace-uri", "name", "string", and "number"
+functions SHOULD NOT be used if the argument is a node-set.  If so,
+the function result will be determined by the document order of the
+node-set.  Since this order can be different on each server, the
+function results can also be different.  Any function call that
+implicitly converts a node-set to a string will also have this issue.
 
-   The "local-name" function SHOULD NOT be used to reference local names
-   outside of the YANG module that defines the must or when expression
-   containing the "local-name" function.  Example of a "local-name"
-   function that should not be used:
+The "local-name" function SHOULD NOT be used to reference local names
+outside of the YANG module that defines the must or when expression
+containing the "local-name" function.  Example of a "local-name"
+function that should not be used:
 
 ~~~ yang
    /*[local-name()='foo']
 ~~~
 
-   The "derived-from-or-self" function SHOULD be used instead of an
-   equality expression for identityref values.  This allows the
-   identities to be conceptually augmented.
+The "derived-from-or-self" function SHOULD be used instead of an
+equality expression for identityref values.  This allows the
+identities to be conceptually augmented.
 
-   Example:
+Example:
 
 ~~~ yang
    // do not use
@@ -2741,10 +2751,11 @@ registry to point to the RFC number that will be assigned to this document as it
 registration in Appendix B.
 
 | Field     | Value                                     |
-|:---------:|:----------------------------------------:|
+|:---------:|:-----------------------------------------:|
 | Name      | ietf-template                             |
 | Namespace | urn:ietf:params:xml:ns:yang:ietf-template |
 | Prefix    | temp                                      |
+| Maintained by IANA?    | N                            |
 | Reference | RFC XXXX                                  |
 {: title="YANG Registry Assignment" cols="l l"}
 
