@@ -171,18 +171,18 @@ informative:
    The following changes have been made to the guidelines published in
    {{?RFC8407}}:
 
-   * Implemented errata 5693, 5800, and 6899.
-   * Updated the URL of the IETF authors guidelines.
-   * Updated the YANG security considerations template to reflect the latest version maintained in the Wiki.
-   * Added statements that the security template is not required for modules that follow {{!RFC8791}}.
-   * Added code markers for the security template.
-   * Added a statement that the RFCs that are listed in the security template are to be listed as normative references in documents that use the template.
-   * Added a note that folding of the examples should be done as per {{!RFC8792}} conventions.
-   * Added a note that RFC8792-folding of YANG modules can be used if and only if native YANG features (e.g., break line, "+").
-   * Added a mention about checks to ensure that YANG modules fit into the line limits of an I-D.
-   * Added new text about checks of JSON encoded examples.
-   * Added pointers to the IPv4/IPv6 addresses/prefixes that reserved for documentation
-   * Added guidelines for IANA-maintained modules.
+   o Implemented errata 5693, 5800, and 6899.
+   o Updated the URL of the IETF authors guidelines.
+   o Updated the YANG security considerations template to reflect the latest version maintained in the Wiki.
+   o Added statements that the security template is not required for modules that follow {{!RFC8791}}.
+   o Added code markers for the security template.
+   o Added a statement that the RFCs that are listed in the security template are to be listed as normative references in documents that use the template.
+   o Added a note that folding of the examples should be done as per {{!RFC8792}} conventions.
+   o Added a note that RFC8792-folding of YANG modules can be used if and only if native YANG features (e.g., break line, "+").
+   o Added a mention about checks to ensure that YANG modules fit into the line limits of an I-D.
+   o Added new text about checks of JSON encoded examples.
+   o Added pointers to the IPv4/IPv6 addresses/prefixes that reserved for documentation
+   o Added guidelines for IANA-maintained modules.
 
 #  Terminology
 
