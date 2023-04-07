@@ -6,6 +6,7 @@ This is the working area for the individual Internet-Draft, "Guidelines for Auth
 * [Datatracker Page](https://datatracker.ietf.org/doc/draft-boucadair-netmod-rfc8407bis-latest)
 * [Individual Draft](https://datatracker.ietf.org/doc/html/draft-boucadair-netmod-rfc8407bis-latest)
 * [Compare Editor's Copy to Individual Draft](https://boucadair.github.io/rfc8407bis/#go.draft-boucadair-netmod-rfc8407bis-latest.diff)
+* [Compare Editor's Copy to RFC8407](https://author-tools.ietf.org/diff?doc_1=rfc8407&url_2=https://boucadair.github.io/rfc8407bis/draft-boucadair-netmod-rfc8407bis.txt)
 
 
 ## Contributing
