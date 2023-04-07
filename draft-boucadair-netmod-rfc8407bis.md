@@ -164,8 +164,11 @@ informative:
    The following changes have been made to the guidelines published in
    {{?RFC8407}}:
 
-   * Implement errata 5693, 5800, and 6899.
-   * Add guidelines for IANA-maintained modules.
+   * Implemented errata 5693, 5800, and 6899.
+   * Updated the URL of the IETF authors guidelines.
+   * Updated the YANG security considerations template to reflect the latest version maintained in the Wiki.
+   * Added code markers for the security template.
+   * Added guidelines for IANA-maintained modules.
 
 #  Terminology
 
@@ -293,22 +296,22 @@ informative:
    "ietf-foo" module:
 
 ~~~
-   <CODE BEGINS> file "ietf-foo@2016-03-20.yang"
+<CODE BEGINS> file "ietf-foo@2016-03-20.yang"
 
-       module ietf-foo {
-         namespace "urn:ietf:params:xml:ns:yang:ietf-foo";
-         prefix "foo";
-         organization "...";
-         contact "...";
-         description "...";
-         revision 2016-03-20 {
-           description "Latest revision";
-           reference "RFC XXXX: Foo Protocol";
-         }
-         // ... more statements
-       }
+    module ietf-foo {
+      namespace "urn:ietf:params:xml:ns:yang:ietf-foo";
+      prefix "foo";
+      organization "...";
+      contact "...";
+      description "...";
+      revision 2016-03-20 {
+        description "Latest revision";
+        reference "RFC XXXX: Foo Protocol";
+      }
+      // ... more statements
+    }
 
-   <CODE ENDS>
+<CODE ENDS>
 ~~~
 
 ###  Example Modules
@@ -473,41 +476,41 @@ or authentication can have a negative effect on network operations.
 These are the subtrees and data nodes and their sensitivity/
 vulnerability:
 
-   <list subtrees and data nodes and state why they are sensitive>
+<list subtrees and data nodes and state why they are sensitive>
 
-  -- for all YANG modules you must evaluate whether any readable data
-  -- nodes (those are all the "config false" nodes, but also all other
-  -- nodes, because they can also be read via operations like get or
-  -- get-config) are sensitive or vulnerable (for instance, if they
-  -- might reveal customer information or violate personal privacy
-  -- laws such as those of the European Union if exposed to
-  -- unauthorized parties)
+ -- for all YANG modules you must evaluate whether any readable data
+ -- nodes (those are all the "config false" nodes, but also all other
+ -- nodes, because they can also be read via operations like get or
+ -- get-config) are sensitive or vulnerable (for instance, if they
+ -- might reveal customer information or violate personal privacy
+ -- laws such as those of the European Union if exposed to
+ -- unauthorized parties)
 
- Some of the readable data nodes in this YANG module may be considered
- sensitive or vulnerable in some network environments.  It is thus
- important to control read access (e.g., via get, get-config, or
- notification) to these data nodes.  These are the subtrees and data
- nodes and their sensitivity/vulnerability:
+Some of the readable data nodes in this YANG module may be considered
+sensitive or vulnerable in some network environments.  It is thus
+important to control read access (e.g., via get, get-config, or
+notification) to these data nodes.  These are the subtrees and data
+nodes and their sensitivity/vulnerability:
 
-   <list subtrees and data nodes and state why they are sensitive>
+<list subtrees and data nodes and state why they are sensitive>
 
-   -- if your YANG module has defined any RPC operations
-   -- describe their specific sensitivity or vulnerability.
+ -- if your YANG module has defined any RPC operations
+ -- describe their specific sensitivity or vulnerability.
 
 Some of the RPC operations in this YANG module may be considered
 sensitive or vulnerable in some network environments.  It is thus
 important to control access to these operations.  These are the
 operations and their sensitivity/vulnerability:
 
-   <list RPC operations and state why they are sensitive>
+<list RPC operations and state why they are sensitive>
 
 <CODE ENDS>
 ~~~
 
 ##  IANA Considerations Section {#sec-iana-cons}
 
-   In order to comply with IESG policy as set forth in
-   <https://www.ietf.org/id-info/checklist.html>, every I-D that is
+   In order to comply with IESG policy as set forth in <https://www.ietf.org/
+   id-info/checklist.html>, every I-D that is
    submitted to the IESG for publication MUST contain an IANA
    Considerations section.  The requirements for this section vary
    depending on what actions are required of the IANA.  If there are no
@@ -563,7 +566,7 @@ operations and their sensitivity/vulnerability:
    'pyang' YANG compiler is freely available from GitHub:
 
 ~~~
-  <https://github.com/mbj4668/pyang>
+<https://github.com/mbj4668/pyang>
 ~~~
 
    If the 'pyang' compiler is used to validate a normative module, then
@@ -577,7 +580,7 @@ operations and their sensitivity/vulnerability:
    The "yanglint" program is also freely available from GitHub.
 
 ~~~
-   <https://github.com/CESNET/libyang>
+<https://github.com/CESNET/libyang>
 ~~~
 
    This tool can be used to validate XPath statements within YANG
@@ -590,7 +593,7 @@ operations and their sensitivity/vulnerability:
    extraction is freely available at:
 
 ~~~
-   <https://github.com/mbj4668/rfcstrip>
+<https://github.com/mbj4668/rfcstrip>
 ~~~
 
 ~~~
@@ -603,7 +606,7 @@ can be extracted correctly.
    extract YANG modules from a document.
 
 ~~~
-   <https://github.com/xym-tool/xym>
+<https://github.com/xym-tool/xym>
 ~~~
 
 ##  Module Usage Examples
@@ -1095,14 +1098,14 @@ can be extracted correctly.
    not specify placeholder objects like the "reserved" example below:
 
 ~~~ yang
-   leaf reserved {
-     type string;
-      description
-        "This object has no purpose at this time, but a future
-         revision of this module might define a purpose
-         for this object.";
-      }
-    }
+leaf reserved {
+  type string;
+  description
+    "This object has no purpose at this time, but a future
+     revision of this module might define a purpose
+     for this object.";
+  }
+}
 ~~~
 
 ##  Module Header, Meta, and Revision Statements
@@ -1205,25 +1208,25 @@ can be extracted correctly.
    A standard namespace statement value SHOULD have the following form:
 
 ~~~
-   <URN prefix string>:<module-name>
+<URN prefix string>:<module-name>
 ~~~
 
    The following URN prefix string SHOULD be used for published and
    unpublished YANG modules:
 
 ~~~
-    urn:ietf:params:xml:ns:yang:
+urn:ietf:params:xml:ns:yang:
 ~~~
 
    The following example URNs would be valid namespace statement values
    for Standards Track modules:
 
 ~~~
-    urn:ietf:params:xml:ns:yang:ietf-netconf-partial-lock
+urn:ietf:params:xml:ns:yang:ietf-netconf-partial-lock
 
-    urn:ietf:params:xml:ns:yang:ietf-netconf-state
+urn:ietf:params:xml:ns:yang:ietf-netconf-state
 
-    urn:ietf:params:xml:ns:yang:ietf-netconf
+urn:ietf:params:xml:ns:yang:ietf-netconf
 ~~~
 
    Note that a different URN prefix string SHOULD be used for modules
@@ -1239,17 +1242,17 @@ can be extracted correctly.
    Example URIs using URLs per {{!RFC3986}}:
 
 ~~~
-    https://example.com/ns/example-interfaces
+https://example.com/ns/example-interfaces
 
-    https://example.com/ns/example-system
+https://example.com/ns/example-system
 ~~~
 
    Example URIs using tags per {{?RFC4151}}:
 
 ~~~
-    tag:example.com,2017:example-interfaces
+tag:example.com,2017:example-interfaces
 
-    tag:example.com,2017:example-system
+tag:example.com,2017:example-system
 ~~~
 
 ##  Top-Level Data Definitions
@@ -1882,28 +1885,28 @@ can be extracted correctly.
    not add a mandatory data node.
 
 ~~~
-  module example-module {
+module example-module {
 
-    yang-version 1.1;
-    namespace "tag:example.com,2017:example-module";
-    prefix mymod;
+ yang-version 1.1;
+ namespace "tag:example.com,2017:example-module";
+ prefix mymod;
 
-    import iana-if-type { prefix iana; }
-    import ietf-interfaces { prefix if; }
+ import iana-if-type { prefix iana; }
+ import ietf-interfaces { prefix if; }
 
-    identity some-new-iftype {
-       base iana:iana-interface-type;
-    }
+ identity some-new-iftype {
+    base iana:iana-interface-type;
+ }
 
-    augment "/if:interfaces/if:interface" {
-      when "if:type = 'mymod:some-new-iftype'";
+ augment "/if:interfaces/if:interface" {
+   when "if:type = 'mymod:some-new-iftype'";
 
-       leaf mandatory-leaf {
-          type string;
-          mandatory true;
-       }
+    leaf mandatory-leaf {
+       type string;
+       mandatory true;
     }
   }
+}
 ~~~
 
    Note that this practice is safe only for creating data resources.  It
@@ -2776,9 +2779,8 @@ registry]:
       text regarding the rights that document contributors provide to
       the IETF Trust {{!RFC5378}}.  Verify that it contains the full IETF
       Trust copyright notice at the beginning of the document.  The IETF
-      Trust Legal Provisions (TLP) can be found at:
-
-      https://trustee.ietf.org/license-info/
+      Trust Legal Provisions (TLP) can be found at: https://trustee.ietf.org/
+      license-info/
 
    *  Security Considerations section -- verify that the document uses
       the latest approved template from the Operations and Management
@@ -2816,23 +2818,19 @@ registry]:
       License in each YANG module or submodule.  Some guidelines related
       to this requirement are described in Section 3.1.  Make sure that
       the correct year is used in all copyright dates.  Use the approved
-      text from the latest TLP document, which can be found at:
+      text from the latest TLP document, which can be found at: <https://trustee.ietf.org/
+      license-info/>
 
-      <https://trustee.ietf.org/license-info/>
-
-   *  Other Issues -- check for any issues mentioned in
-      <https://www.ietf.org/id-info/checklist.html> that are not covered
-      elsewhere.
+   *  Other Issues -- check for any issues mentioned in <https://www.ietf.org/
+   *  id-info/checklist.html> that are not covered elsewhere.
 
    *  Technical Content -- review the actual technical content for
       compliance with the guidelines in this document.  The use of a
       YANG module compiler is recommended when checking for syntax
       errors.  A list of freely available tools and other information,
-      including formatting advice, can be found at:
-
-      <https://trac.ietf.org/trac/netconf/wiki>
-       and
-      <https://trac.ietf.org/trac/netmod/wiki>
+      including formatting advice, can be found at: <https://trac.ietf.org/trac/
+      netconf/wiki> and <https://trac.ietf.org/
+      trac/netmod/wiki>
 
       Checking for correct syntax, however, is only part of the job.
       It is just as important to actually read the YANG module document
