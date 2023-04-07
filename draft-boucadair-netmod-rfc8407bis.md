@@ -2551,7 +2551,7 @@ module example-module {
    for interoperability, e.g., when values are deprecated or are
    associated with a new meaning.
 
-      Note: {{Style}} provides XSLT 1.0 stylesheets and other tools for
+      Note: [Style] provides XSLT 1.0 stylesheets and other tools for
       translating IANA registries to YANG modules.  The tools can be
       used to generate up-to-date revisions of an IANA-maintained module
       based upon the XML representation of an IANA registry.
