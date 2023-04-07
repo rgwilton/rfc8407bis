@@ -15,9 +15,9 @@ v: 3
 area: "Operations and Management"
 workgroup: "Network Modeling"
 keyword:
- - ddd
- - ddd
- - ddd
+ - NETCONF
+ - RESTCONF
+ - Automation
 
 stand_alone: yes
 pi: [toc, sortrefs, symrefs, strict, comments, docmapping]
@@ -2754,7 +2754,7 @@ registry]:
 
 # Module Review Checklist
 
-   This section is adapted from RFC 4181.
+   This section is adapted from {{?RFC4181}}.
 
    The purpose of a YANG module review is to review the YANG module for
    both technical correctness and adherence to IETF documentation
@@ -2778,7 +2778,7 @@ registry]:
       Trust copyright notice at the beginning of the document.  The IETF
       Trust Legal Provisions (TLP) can be found at:
 
-      <https://trustee.ietf.org/license-info/>
+      https://trustee.ietf.org/license-info/
 
    *  Security Considerations section -- verify that the document uses
       the latest approved template from the Operations and Management
@@ -2844,82 +2844,82 @@ registry]:
 # YANG Module Template
 
 ~~~
-   <CODE BEGINS> file "ietf-template@2016-03-20.yang"
+<CODE BEGINS> file "ietf-template@2016-03-20.yang"
 
-   module ietf-template {
-     yang-version 1.1;
+module ietf-template {
+  yang-version 1.1;
 
-     // replace this string with a unique namespace URN value
+  // replace this string with a unique namespace URN value
 
-     namespace "urn:ietf:params:xml:ns:yang:ietf-template";
+  namespace "urn:ietf:params:xml:ns:yang:ietf-template";
 
-     // replace this string, and try to pick a unique prefix
+  // replace this string, and try to pick a unique prefix
 
-     prefix temp;
+  prefix temp;
 
-     // import statements here: e.g.,
-     // import ietf-yang-types { prefix yang; }
-     // import ietf-inet-types { prefix inet; }
-     // identify the IETF working group if applicable
+  // import statements here: e.g.,
+  // import ietf-yang-types { prefix yang; }
+  // import ietf-inet-types { prefix inet; }
+  // identify the IETF working group if applicable
 
-     organization
-       "IETF NETMOD (NETCONF Data Modeling Language) Working Group";
+  organization
+    "IETF NETMOD (NETCONF Data Modeling Language) Working Group";
 
-     // update this contact statement with your info
+  // update this contact statement with your info
 
-     contact
-       "WG Web:   <http://datatracker.ietf.org/wg/your-wg-name/>
-        WG List:  <mailto:your-wg-name@ietf.org>
+  contact
+    "WG Web:   <http://datatracker.ietf.org/wg/your-wg-name/>
+     WG List:  <mailto:your-wg-name@ietf.org>
 
-        Editor:   your-name
-                  <mailto:your-email@example.com>";
+     Editor:   your-name
+               <mailto:your-email@example.com>";
 
-     // replace the first sentence in this description statement.
-     // replace the copyright notice with the most recent
-     // version, if it has been updated since the publication
-     // of this document
+  // replace the first sentence in this description statement.
+  // replace the copyright notice with the most recent
+  // version, if it has been updated since the publication
+  // of this document
 
-     description
-       "This module defines a template for other YANG modules.
+  description
+    "This module defines a template for other YANG modules.
 
-        Copyright (c) <insert year> IETF Trust and the persons
-        identified as authors of the code.  All rights reserved.
+     Copyright (c) <insert year> IETF Trust and the persons
+     identified as authors of the code.  All rights reserved.
 
-        Redistribution and use in source and binary forms, with or
-        without modification, is permitted pursuant to, and subject
-        to the license terms contained in, the Revised BSD License
-        set forth in Section 4.c of the IETF Trust's Legal Provisions
-        Relating to IETF Documents
-        (https://trustee.ietf.org/license-info).
+     Redistribution and use in source and binary forms, with or
+     without modification, is permitted pursuant to, and subject
+     to the license terms contained in, the Revised BSD License
+     set forth in Section 4.c of the IETF Trust's Legal Provisions
+     Relating to IETF Documents
+     (https://trustee.ietf.org/license-info).
 
-        This version of this YANG module is part of RFC XXXX; see
-        the RFC itself for full legal notices.";
+     This version of this YANG module is part of RFC XXXX; see
+     the RFC itself for full legal notices.";
 
-     // RFC Ed.: replace XXXX with actual RFC number and remove
-     // this note
+  // RFC Ed.: replace XXXX with actual RFC number and remove
+  // this note
 
-     // replace '2016-03-20' with the module publication date
-     // the format is (year-month-day)
+  // replace '2016-03-20' with the module publication date
+  // the format is (year-month-day)
 
-     revision 2016-03-20 {
-       description
-         "what changed in this revision";
-       reference "RFC XXXX: <Replace With Document Title>";
-     }
+  revision 2016-03-20 {
+    description
+      "what changed in this revision";
+    reference "RFC XXXX: <Replace With Document Title>";
+  }
 
-     // extension statements
-     // feature statements
-     // identity statements
-     // typedef statements
-     // grouping statements
-     // data definition statements
-     // augment statements
-     // rpc statements
-     // notification statements
-     // DO NOT put deviation statements in a published module
-   }
+  // extension statements
+  // feature statements
+  // identity statements
+  // typedef statements
+  // grouping statements
+  // data definition statements
+  // augment statements
+  // rpc statements
+  // notification statements
+  // DO NOT put deviation statements in a published module
+}
 
-   <CODE ENDS>
+<CODE ENDS>
 ~~~
 
 # Acknowledgments
