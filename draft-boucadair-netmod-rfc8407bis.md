@@ -765,21 +765,17 @@ can be extracted correctly.
    are commonly used with the default value, which would make the module
    difficult to read if used everywhere they are allowed.
 
-~~~
-                     +--------------+---------------+
-                     | Statement    | Default Value |
-                     +--------------+---------------+
-                     | config       | true          |
-                     | mandatory    | false         |
-                     | max-elements | unbounded     |
-                     | min-elements | 0             |
-                     | ordered-by   | system        |
-                     | status       | current       |
-                     | yin-element  | false         |
-                     +--------------+---------------+
 
-                            Statement Defaults
-~~~
+| Statement    | Default Value |
+|:------------:|:-------------:|
+| config       | true          |
+| mandatory    | false         |
+| max-elements | unbounded     |
+| min-elements | 0             |
+| ordered-by   | system        |
+| status       | current       |
+| yin-element  | false         |
+{: title="Statement Defaults"}
 
 ##  Conditional Statements
 
@@ -2527,7 +2523,7 @@ module example-module {
    maintained module.  For example, {{?RFC9244}} defines an IANA-maintained
    module that uses enumerations for the following reason:
 
-    > "The DOTS telemetry module (Section 10.1) uses "enumerations" rather
+     "The DOTS telemetry module (Section 10.1) uses "enumerations" rather
      than "identities" to define units, samples, and intervals because
      otherwise the namespace identifier "ietf-dots-telemetry" must be
      included when a telemetry attribute is included (e.g., in a
@@ -2722,9 +2718,9 @@ registry]:
 
 #  IANA Considerations {#sec-iana}
 
-   The following registration in the "ns" subregistry of the "IETF XML
-   Registry" {{!RFC3688}} was detailed in {{?RFC6087}} and has been updated by
-   IANA to reference this document.
+The following registration in the "ns" subregistry of the "IETF XML
+Registry" {{!RFC3688}} was detailed in {{?RFC6087}} and has been updated by
+IANA to reference this document.
 
 ~~~
      URI: urn:ietf:params:xml:ns:yang:ietf-template
@@ -2732,31 +2728,26 @@ registry]:
      XML: N/A, the requested URI is an XML namespace.
 ~~~
 
-   The following assignment was detailed in {{?RFC6087}} and has been
-   updated by IANA in the "YANG Module Names" registry.  This document
-   has also been added as a reference for the "YANG Module Names"
-   registry itself as it contains the template necessary for
-   registration in Appendix B.
+The following assignment was detailed in {{?RFC6087}} and has been
+updated by IANA in the "YANG Module Names" registry to reference {{?RFC8407}}.  This document
+requests IANA to update the reference for the "YANG Module Names"
+registry to point to the RFC number that will be assigned to this document as it contains the template necessary for
+registration in Appendix B.
 
-~~~
-         +-----------+-------------------------------------------+
-         | Field     | Value                                     |
-         +-----------+-------------------------------------------+
-         | Name      | ietf-template                             |
-         | Namespace | urn:ietf:params:xml:ns:yang:ietf-template |
-         | Prefix    | temp                                      |
-         | Reference | RFC 8407                                  |
-         +-----------+-------------------------------------------+
-
-                         YANG Registry Assignment
-~~~
+| Field     | Value                                     |
+|:---------:|:----------------------------------------:|
+| Name      | ietf-template                             |
+| Namespace | urn:ietf:params:xml:ns:yang:ietf-template |
+| Prefix    | temp                                      |
+| Reference | RFC XXXX                                  |
+{: title="YANG Registry Assignment"}
 
 #  Security Considerations
 
-   This document defines documentation guidelines for NETCONF or
-   RESTCONF content defined with the YANG data modeling language;
-   therefore, it does not introduce any new or increased security risks
-   into the management system.
+This document defines documentation guidelines for NETCONF or
+RESTCONF content defined with the YANG data modeling language;
+therefore, it does not introduce any new or increased security risks
+into the management system.
 
 --- back
 
