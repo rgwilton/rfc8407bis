@@ -171,7 +171,7 @@ informative:
    The following changes have been made to the guidelines published in
    {{?RFC8407}}:
 
-   * Implemented errata 5693, 5800, and 6899.
+   * Implemented errata 5693, 5800, 6899, and 7416.
    * Updated the URL of the IETF authors guidelines.
    * Updated the YANG security considerations template to reflect the latest version maintained in the Wiki.
    * Added statements that the security template is not required for modules that follow {{!RFC8791}}.
@@ -190,7 +190,7 @@ informative:
    The following terms are used throughout this document:
 
   IANA-maintained module:
-  : A YANG module that is maintained by IANA.
+  : A YANG module that is maintained by IANA (e.g., "iana-tunnel-type" {{?RFC8675}} or "iana-pseudowire-types" {{?RFC9291}}).
 
   IETF module:
   : A YANG module that is published by the IETF and which is not maintained by IANA.
