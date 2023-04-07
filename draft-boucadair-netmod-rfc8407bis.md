@@ -46,11 +46,12 @@ normative:
               target: https://authors.ietf.org/en/content-guidelines-overview
 
    W3C.REC-xpath:
+              target: http://www.w3.org/TR/1999/REC-xpath-19991116
               title: "XML Path Language (XPath) Version 1.0"
               author:
-                name: James Clark, Steve DeRose
-                date: November 1999
-              target: http://www.w3.org/TR/1999/REC-xpath-19991116
+                - name: James Clark
+                - name: Steve DeRose
+              date: November 1999
 
 informative:
 
@@ -168,6 +169,7 @@ informative:
    * Updated the URL of the IETF authors guidelines.
    * Updated the YANG security considerations template to reflect the latest version maintained in the Wiki.
    * Added code markers for the security template.
+   * Added a statement that the RFCs that are listed in the security template are to be listed as normative references in documents that use the template.
    * Added guidelines for IANA-maintained modules.
 
 #  Terminology
@@ -506,6 +508,9 @@ operations and their sensitivity/vulnerability:
 
 <CODE ENDS>
 ~~~
+
+Note:
+: {{!RFC8446}}, {{!RFC6241}}, {{!RFC6242}}, {{!RFC8341}}, and {{!RFC8040}} (or future RFCs that replaces any of them) have to be listed as normative references.
 
 ##  IANA Considerations Section {#sec-iana-cons}
 
@@ -2822,7 +2827,7 @@ registry]:
       license-info/>
 
    *  Other Issues -- check for any issues mentioned in <https://www.ietf.org/
-   *  id-info/checklist.html> that are not covered elsewhere.
+      id-info/checklist.html> that are not covered elsewhere.
 
    *  Technical Content -- review the actual technical content for
       compliance with the guidelines in this document.  The use of a
