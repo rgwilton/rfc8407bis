@@ -2218,7 +2218,6 @@ Example:
         non-normative appendix.  The use of the non-NMDA module will
         allow temporary bridging of the time period until NMDA
         implementations are available.
-
    *   For published models, the model should be republished with an
         NMDA-compatible structure, deprecating non-NMDA constructs.  For
         example, the "ietf-interfaces" model in {{?RFC7223}} has been
@@ -2229,7 +2228,6 @@ Example:
         avoid the cost of duplicating the state nodes, while enabling
         non-NMDA-capable implementations to utilize them for access to
         the operational values.
-
     *   For models that augment models that have not been structured
         with the NMDA, the modeler will have to consider the structure
         of the base model and the guidelines listed above.  Where
