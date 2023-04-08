@@ -435,8 +435,7 @@ See {{sec-usage-guidelines}} for guidelines on YANG usage.
 
    Unless the modules comply with {{!RFC8791}}, the security section MUST
    be patterned after the latest approved template
-   (available at <https://trac.ietf.org/trac/ops/wiki/yang-security-
-   guidelines>).  {{sec-security-template}} contains the security considerations
+   (available at ``<https://trac.ietf.org/trac/ops/wiki/yang-security-guidelines>``).  {{sec-security-template}} contains the security considerations
    template dated 2013-05-08 and last updated on 2018-10-18.  Authors
    MUST check the web page at the URL listed above in case there is a
    more recent version available.
@@ -2208,7 +2207,7 @@ Example:
    The remaining are options that MAY be followed during the time that
    NMDA mechanisms are being defined.
 
-   *  Modules that require immediate support for the NMDA features
+   a.   Modules that require immediate support for the NMDA features
         SHOULD be structured for NMDA.  A temporary non-NMDA version of
         this type of module MAY exist, as either an existing model or a
         model created by hand or with suitable tools that mirror the
@@ -2219,7 +2218,7 @@ Example:
         allow temporary bridging of the time period until NMDA
         implementations are available.
 
-   *  For published models, the model should be republished with an
+   b.   For published models, the model should be republished with an
         NMDA-compatible structure, deprecating non-NMDA constructs.  For
         example, the "ietf-interfaces" model in {{?RFC7223}} has been
         restructured as an NMDA-compatible model in {{?RFC8343}}.  The
@@ -2230,7 +2229,7 @@ Example:
         non-NMDA-capable implementations to utilize them for access to
         the operational values.
 
-   *  For models that augment models that have not been structured
+   c.  For models that augment models that have not been structured
         with the NMDA, the modeler will have to consider the structure
         of the base model and the guidelines listed above.  Where
         possible, such models should move to new revisions of the base
