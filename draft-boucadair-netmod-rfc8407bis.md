@@ -2207,7 +2207,8 @@ Example:
    The remaining are options that MAY be followed during the time that
    NMDA mechanisms are being defined.
 
-   a.   Modules that require immediate support for the NMDA features
+{: counter="bar" style="format (%c)"}
+   *    Modules that require immediate support for the NMDA features
         SHOULD be structured for NMDA.  A temporary non-NMDA version of
         this type of module MAY exist, as either an existing model or a
         model created by hand or with suitable tools that mirror the
@@ -2218,7 +2219,7 @@ Example:
         allow temporary bridging of the time period until NMDA
         implementations are available.
 
-   b.   For published models, the model should be republished with an
+   *   For published models, the model should be republished with an
         NMDA-compatible structure, deprecating non-NMDA constructs.  For
         example, the "ietf-interfaces" model in {{?RFC7223}} has been
         restructured as an NMDA-compatible model in {{?RFC8343}}.  The
@@ -2229,7 +2230,7 @@ Example:
         non-NMDA-capable implementations to utilize them for access to
         the operational values.
 
-   c.  For models that augment models that have not been structured
+    *   For models that augment models that have not been structured
         with the NMDA, the modeler will have to consider the structure
         of the base model and the guidelines listed above.  Where
         possible, such models should move to new revisions of the base
