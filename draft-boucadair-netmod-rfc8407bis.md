@@ -182,6 +182,7 @@ informative:
    - Added a mention about checks to ensure that YANG modules fit into the line limits of an I-D.
    - Added new text about checks of JSON encoded examples.
    - Added pointers to the IPv4/IPv6 addresses/prefixes that reserved for documentation.
+   - Updated many examples to be aligned woth the consistent indentation recommendation.
    - Updated the IANA considerations to encourage registration requests to indicate whether a module is maintained by IANA or not.
    - Added guidelines for IANA-maintained modules.
 
@@ -728,7 +729,7 @@ below, the identifier "foo" is used in all three modules:
       import example-bar { prefix b; }
 
       augment "/f:foo" {
-         leaf foo { type b:foo; }
+        leaf foo { type b:foo; }
       }
     }
 ~~~
@@ -1005,12 +1006,12 @@ Example:
 
 ~~~ yang
    augment "/rt:active-route/rt:input/rt:destination-address" {
-      when "rt:address-family='v4ur:ipv4-unicast'" {
-        description
-          "This augment is valid only for IPv4 unicast.";
-      }
-      // nodes defined here within the augment-stmt
-      // cannot be referenced in the when-stmt
+     when "rt:address-family='v4ur:ipv4-unicast'" {
+       description
+         "This augment is valid only for IPv4 unicast.";
+     }
+     // nodes defined here within the augment-stmt
+     // cannot be referenced in the when-stmt
    }
 ~~~
 
@@ -1050,9 +1051,9 @@ Example:
 ~~~ yang
      leaf foo1 {
        type enumeration {
-          enum one;
-          enum two;
-          enum three;
+         enum one;
+         enum two;
+         enum three;
        }
      }
 
@@ -1074,10 +1075,10 @@ Example:
 ~~~ yang
      leaf foo1 {
        type enumeration {
-          enum one;
-          enum two;
-          enum three;
-          enum four;
+         enum one;
+         enum two;
+         enum three;
+         enum four;
        }
      }
 ~~~
@@ -1418,7 +1419,7 @@ Example:
 ~~~ yang
     typedef dscp {
       type uint8 {
-         range "0..63";
+        range "0..63";
       }
       ...
     }
@@ -1919,15 +1920,15 @@ Example:
     import ietf-interfaces { prefix if; }
 
     identity some-new-iftype {
-       base iana:iana-interface-type;
+      base iana:iana-interface-type;
     }
 
     augment "/if:interfaces/if:interface" {
       when "if:type = 'mymod:some-new-iftype'";
 
       leaf mandatory-leaf {
-         type string;
-         mandatory true;
+        type string;
+        mandatory true;
       }
     }
   }
@@ -1979,9 +1980,9 @@ Example:
 
      container backups {
        list backup {
-          ...
-          max-elements  10;
-          ...
+         ...
+         max-elements  10;
+         ...
        }
      }
 ~~~
@@ -1991,7 +1992,7 @@ Example:
 
      deviation /bk:backups/bk:backup {
        deviate add {
-          max-elements  10;
+         max-elements  10;
        }
      }
 ~~~
@@ -2073,7 +2074,7 @@ Example:
    list foo {
       key name;
       leaf name {
-        type string;
+         type string;
       }
       ...
    }
@@ -2082,7 +2083,7 @@ Example:
       key name;
       config false;
       leaf name {
-        type string;
+         type string;
       }
       ...
    }
@@ -2094,7 +2095,7 @@ Example:
    list foo {
       key name;
       leaf name {
-        type string;
+         type string;
       }
       ...
    }
@@ -2103,14 +2104,14 @@ Example:
       key name;
       config false;
       leaf name {
-        type leafref {
-          path "/foo/name";
-          require-instance false;
-        }
+         type leafref {
+            path "/foo/name";
+            require-instance false;
+         }
       }
       leaf addon {
-        type string;
-        mandatory true;
+         type string;
+         mandatory true;
       }
    }
 ~~~
