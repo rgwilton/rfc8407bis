@@ -172,6 +172,7 @@ informative:
    {{?RFC8407}}:
 
    - Implemented errata 5693, 5800, 6899, and 7416.
+   - Updated the terminology.
    - Updated the URL of the IETF authors guidelines.
    - Updated the YANG security considerations template to reflect the latest version maintained in the Wiki.
    - Added statements that the security template is not required for modules that follow {{!RFC8791}}.
@@ -182,7 +183,7 @@ informative:
    - Added a mention about checks to ensure that YANG modules fit into the line limits of an I-D.
    - Added new text about checks of JSON encoded examples.
    - Added pointers to the IPv4/IPv6 addresses/prefixes that reserved for documentation.
-   - Updated many examples to be aligned woth the consistent indentation recommendation.
+   - Updated many examples to be aligned with the consistent indentation recommendation.
    - Updated the IANA considerations to encourage registration requests to indicate whether a module is maintained by IANA or not.
    - Added guidelines for IANA-maintained modules.
 
