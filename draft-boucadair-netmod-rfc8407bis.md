@@ -35,6 +35,11 @@ author:
     country: France
     email: mohamed.boucadair@orange.com
 
+ -
+    fullname: Qin Wu
+    organization: Huawei
+    country: China
+    email: bill.wu@huawei.com
 
 normative:
 
