@@ -25,11 +25,6 @@ pi: [toc, sortrefs, symrefs, strict, comments, docmapping]
 author:
 
  -
-   fullname: Andy Bierman
-   organization: YumaWorks
-   email: andy@yumaworks.com
-
- -
     fullname: Mohamed Boucadair
     organization: Orange
     country: France
@@ -2955,8 +2950,12 @@ module ietf-template {
    Randy Presuhn for the comments.  Lou Berger suggested to include more
    details about IANA considerations.
 
+The author of RFC 8407:
+: Andy Bierman
+: YumaWorks
+: email: andy@yumaworks.com
 
-From RFC 8407:
+Acknowledgments from RFC 8407:
 
    : The structure and contents of this document are adapted from
      "Guidelines for Authors and Reviewers of MIB Documents" {{?RFC4181}}, by
