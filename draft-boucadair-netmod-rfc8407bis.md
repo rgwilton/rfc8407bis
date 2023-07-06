@@ -396,7 +396,9 @@ in the following example:
 {::include-fold ./examples/long-line-ex.txt}
 ~~~
 
-Native YANG features (e.g., breaking line, "+") SHOULD be used to fit a module into the line limits. Exceptionally, RFC8792-folding of YANG modules MAY be used if and only if native YANG features are not sufficient.
+Native YANG features (e.g., breaking line, "+") SHOULD be used to fit a module into the line limits.
+Exceptionally, RFC8792-folding of YANG modules MAY be used if and only if native YANG features are not sufficient.
+A similar approach (e.g., use "--yang-line-length 69" or split a tree into subtrees) SHOULD be followed for tree diagrams.
 
 ##  Definitions Section
 
