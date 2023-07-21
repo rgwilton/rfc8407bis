@@ -2748,11 +2748,8 @@ to update this registration to reference this document.
      XML: N/A, the requested URI is an XML namespace.
 ~~~
 
-The following assignment was detailed in {{?RFC6087}} and has been
-updated by IANA in the "YANG Module Names" registry to reference {{?RFC8407}}.  This document
-requests IANA to update the reference for the "YANG Module Names"
-registry to point to the RFC number that will be assigned to this document as it contains the template necessary for
-registration in Appendix B.
+This document requests IANA to register the following YANG module in the "YANG Module
+Names" subregistry {{!RFC6020}} within the "YANG Parameters" registry.
 
 | Field     | Value                                     |
 |:---------:|:-----------------------------------------:|
@@ -2762,6 +2759,12 @@ registration in Appendix B.
 | Maintained by IANA?    | N                            |
 | Reference | RFC XXXX                                  |
 {: title="YANG Registry Assignment" cols="r l"}
+
+Also, This document requests IANA to update the reference for
+   the "YANG Module Names" registry to point to the RFC number that will
+   be assigned to this document as it contains the template necessary
+   for registration in Appendix B.
+
 
 #  Security Considerations
 
