@@ -2749,7 +2749,7 @@ to update this registration to reference this document.
 ~~~
 
 This document requests IANA to register the following YANG module in the "YANG Module
-Names" subregistry {{!RFC6020}} within the "YANG Parameters" registry.
+Names" registry {{!RFC6020}} within the "YANG Parameters" registry group.
 
 | Field     | Value                                     |
 |:---------:|:-----------------------------------------:|
