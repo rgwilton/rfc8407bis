@@ -2801,7 +2801,7 @@ into the management system.
 
       ``<https://trustee.ietf.org/license-info/>``
 
-   *  Security Considerations section -- verify that the document uses
+   *  Security Considerations section -- If none of the modules in the document use YANG data structure, verify that the document uses
       the latest approved template from the Operations and Management
       (OPS) area website (see ``<https://trac.ietf.org/area/ops/trac/wiki/yang-security-guidelines>``) and that the guidelines therein have
       been followed.
@@ -2865,7 +2865,7 @@ into the management system.
 # YANG Module Template
 
 ~~~
-<CODE BEGINS> file "ietf-template@2016-03-20.yang"
+<CODE BEGINS> file "ietf-template@2023-07-26.yang"
 
 module ietf-template {
   yang-version 1.1;
@@ -2919,10 +2919,10 @@ module ietf-template {
   // RFC Ed.: replace XXXX with actual RFC number and remove
   // this note
 
-  // replace '2016-03-20' with the module publication date
+  // replace '2023-07-26' with the module publication date
   // the format is (year-month-day)
 
-  revision 2016-03-20 {
+  revision 2023-07-26 {
     description
       "what changed in this revision";
     reference "RFC XXXX: <Replace With Document Title>";
