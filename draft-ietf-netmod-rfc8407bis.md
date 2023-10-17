@@ -653,7 +653,7 @@ the YANG module(s).  Example modules MUST be validated.  Refer to
 {{sec-tools}} for tools that validate YANG modules and examples.  If IP addresses
 are used, then a mix of either IPv4 and IPv6 addresses or IPv6
 addresses exclusively SHOULD be used in the examples. IPv4 and IPv6 addresses/prefixes
-reserved for documentation are defined {{?RFC5737}} and {{?RFC3849}}.
+reserved for documentation are defined in {{?RFC5737}} and {{?RFC3849}}.
 
 #  YANG Usage Guidelines {#sec-usage-guidelines}
 
