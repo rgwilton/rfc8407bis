@@ -6,7 +6,7 @@ bcp: 216
 obsoletes: 8407
 updates: 8126
 
-docname: draft-boucadair-netmod-rfc8407bis-latest
+docname: draft-ietf-netmod-rfc8407bis-latest
 submissiontype: IETF
 number:
 date:
