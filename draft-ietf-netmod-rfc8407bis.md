@@ -841,6 +841,19 @@ leaf will have the exact node-set result as the key leaf.  In such a
 case, the "when" statement for the key leaf is redundant and SHOULD
 be avoided.
 
+Some modules use "case + when" construct such as shown in the example below.
+Such a construct MUST be avoided by removing the "when" statement
+or using a "container" outside the "choice".
+
+~~~~ yang
+  case yang-datastore {
+    when 'derived-from-or-self(ex:source-type, "yang-datastore")';
+    description
+      "Example data source for local or remote YANG datastore.";
+    ...
+  }
+~~~~
+
 ##  XPath Usage
 
 This section describes guidelines for using the XML Path Language
