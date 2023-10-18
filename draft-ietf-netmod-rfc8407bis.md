@@ -192,7 +192,10 @@ informative:
    - Updated many examples to be aligned with the consistent indentation recommendation.
    - Updated the IANA considerations to encourage registration requests to indicate whether a module is maintained by IANA or not.
    - Added guidelines for IANA-maintained modules.
+   - Elaborate the guidance of the use of values reserved for documentation in examples.
+   - Recommend the use of "example:" for URI examples.
    - Added a new section "Defining Standard Tags" ({{sec-tags}}) to echo the guidance in {{!RFC8819}}.
+
 
 #  Terminology
 
@@ -658,10 +661,20 @@ usage examples, either throughout the document or in an appendix.
 This includes example instance document snippets in an appropriate
 encoding (e.g., XML and/or JSON) to demonstrate the intended usage of
 the YANG module(s).  Example modules MUST be validated.  Refer to
-{{sec-tools}} for tools that validate YANG modules and examples.  If IP addresses
+{{sec-tools}} for tools that validate YANG modules and examples. If IP addresses
 are used, then a mix of either IPv4 and IPv6 addresses or IPv6
-addresses exclusively SHOULD be used in the examples. IPv4 and IPv6 addresses/prefixes
-reserved for documentation are defined in {{?RFC5737}} and {{?RFC3849}}.
+addresses exclusively SHOULD be used in the examples.
+
+For some types (IP addresses, domain names, etc.), the IETF has reserved values for
+documentation use. Authors SHOULD use these reserved values in the usage examples. Examples of reserved values are listed below:
+
+* IPv4 and IPv6 addresses/prefixes reserved for documentation are defined in {{?RFC5737}} and {{?RFC3849}}.
+* The Enterprise Number 32473 reserved for documentation use is defined in {{?RFC5612}}.
+* Autonomous System Numbers (ASNs) reserved for documentation use are defined in {{?RFC5398}}.
+* Reserved domain names for documentation are defined in {{?RFC2606}}.
+
+URI examples SHOULD be prefixed with "example:".
+
 
 #  YANG Usage Guidelines {#sec-usage-guidelines}
 
