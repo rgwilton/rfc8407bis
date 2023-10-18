@@ -107,6 +107,13 @@ informative:
               title: "YANG Parameters"
               target: https://www.iana.org/assignments/yang-parameters
 
+   IANA-TAGS:
+              title: "YANG Module Tags"
+              author:
+                org: IANA
+              date: false
+              target: https://www.iana.org/assignments/yang-module-tags/
+
 --- abstract
 
    This memo provides guidelines for authors and reviewers of
@@ -187,6 +194,8 @@ informative:
    - Added guidelines for IANA-maintained modules.
    - Elaborate the guidance of the use of values reserved for documentation in examples.
    - Recommend the use of "example:" for URI examples.
+   - Added a new section "Defining Standard Tags" ({{sec-tags}}) to echo the guidance in {{!RFC8819}}.
+
 
 #  Terminology
 
@@ -461,7 +470,7 @@ See {{sec-usage-guidelines}} for guidelines on YANG usage.
       concerns MUST be explicitly listed by name, and the reasons for
       the sensitivity/privacy concerns MUST be explained.
 
-Documents that define exclusively modules following the extension in {{!RFC8791}} are not required to include the security template in {{sec-security-template}}.
+Documents that define exclusively modules following the extension in {{!RFC8791}} are not required to include the security template in {{sec-security-template}}. Likewise, the template is not required for modules that define YANG extensions such as {{?RFC7952}}.
 
 ###  Security Considerations Section Template {#sec-security-template}
 
@@ -787,6 +796,9 @@ previously published.
    and are only meant to be unique within the set of sibling nodes
    defined in the same module namespace.
 
+   List identifiers SHOULD be singular with the surrounding container name plural.
+   Similarly, "leaf-list" identifiers SHOULD be singular.
+
    It is permissible to use common identifiers such as "name" or "id" in
    data definition statements, especially if these data nodes share a
    common data type.
@@ -852,6 +864,19 @@ It is possible that a "when" statement for an ancestor node of a key
 leaf will have the exact node-set result as the key leaf.  In such a
 case, the "when" statement for the key leaf is redundant and SHOULD
 be avoided.
+
+Some modules use "case + when" construct such as shown in the example below.
+Such a construct MUST be avoided by removing the "when" statement
+or using a "container" outside the "choice".
+
+~~~~ yang
+  case yang-datastore {
+    when 'derived-from-or-self(ex:source-type, "yang-datastore")';
+    description
+      "Example data source for local or remote YANG datastore.";
+    ...
+  }
+~~~~
 
 ##  XPath Usage
 
@@ -2493,6 +2518,33 @@ Example:
    is considered to be stable and unpublished work that is considered to
    be unstable.  For example, in the IETF, the RFC document is used for
    published work, and the I-D is used for unpublished work.
+
+## Defining Standard Tags {#sec-tags}
+
+{{RFC8819}} specifies a method for associating tags with YANG modules. Tags may
+be defined and associated at module design time, at implementation time, or via
+user administrative control. Design-time tags are indicated using the module-tag
+extension statement.
+
+A module MAY indicate, using module-tag extension statements, a set of
+tags that are to be automatically associated with it (i.e., not added through configuration).
+
+~~~~ yang
+module example-module {
+  namespace "https://example.com/yang/example";
+  prefix "ex";
+  //...
+  import module-tags { prefix tags; }
+
+  tags:module-tag "ietf:some-new-tag";
+  tags:module-tag "ietf:some-other-tag";
+  // ...
+}
+~~~~
+
+Authors can use existing standard tags or use new tags defined in the model definition,
+as appropriate. For IETF modules, new tags MUST be assigned in the IANA "IETF YANG Module Tags"
+registry within the "YANG Module Tags" registry {{IANA-TAGS}}.
 
 # IANA-Maintained Modules
 
