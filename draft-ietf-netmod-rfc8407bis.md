@@ -183,7 +183,7 @@ informative:
    - Updated the URL of the IETF authors guidelines.
    - Added code markers for the security template.
    - Updated the YANG security considerations template to reflect the latest version maintained in the Wiki.
-   - Added statements that the security template is not required for modules that follow {{!RFC8791}}.
+   - Added statements that the security template is not required for modules that follow {{!RFC8791}} or {{!RFC7952}}.
    - Added a statement that the RFCs that are listed in the security template are to be listed as normative references in documents that use the template.
    - Added a note that folding of the examples should be done as per {{!RFC8792}} conventions.
    - Added a note that RFC8792-folding of YANG modules can be used if and only if native YANG features (e.g., break line, "+") are not sufficient.
@@ -192,9 +192,10 @@ informative:
    - Updated many examples to be aligned with the consistent indentation recommendation.
    - Updated the IANA considerations to encourage registration requests to indicate whether a module is maintained by IANA or not.
    - Added guidelines for IANA-maintained modules.
-   - Elaborate the guidance of the use of values reserved for documentation in examples.
+   - Elaborate the guidance for the use of values reserved for documentation in examples.
    - Recommend the use of "example:" for URI examples.
    - Added a new section "Defining Standard Tags" ({{sec-tags}}) to echo the guidance in {{!RFC8819}}.
+   - Recomment against the use of "case + when" construct.
 
 
 #  Terminology
@@ -447,7 +448,7 @@ See {{sec-usage-guidelines}} for guidelines on YANG usage.
    section that discusses security considerations relevant to those
    modules.
 
-   Unless the modules comply with {{!RFC8791}}, the security section MUST
+   Unless the modules comply with {{!RFC8791}} or define YANG exetnsions (e.g., {{?RFC7952}}), the security section MUST
    be patterned after the latest approved template
    (available at ``<https://trac.ietf.org/trac/ops/wiki/yang-security-guidelines>``).  {{sec-security-template}} contains the security considerations
    template dated 2013-05-08 and last updated on 2018-10-18.  Authors
@@ -470,7 +471,7 @@ See {{sec-usage-guidelines}} for guidelines on YANG usage.
       concerns MUST be explicitly listed by name, and the reasons for
       the sensitivity/privacy concerns MUST be explained.
 
-Documents that define exclusively modules following the extension in {{!RFC8791}} are not required to include the security template in {{sec-security-template}}. Likewise, the template is not required for modules that define YANG extensions such as {{?RFC7952}}.
+Documents that define exclusively modules following the extension in {{!RFC8791}} are not required to include the security template in {{sec-security-template}}. Likewise, following the template is not required for modules that define YANG extensions such as {{?RFC7952}}.
 
 ###  Security Considerations Section Template {#sec-security-template}
 
@@ -2546,9 +2547,9 @@ Authors can use existing standard tags or use new tags defined in the model defi
 as appropriate. For IETF modules, new tags MUST be assigned in the IANA "IETF YANG Module Tags"
 registry within the "YANG Module Tags" registry {{IANA-TAGS}}.
 
-# IANA-Maintained Modules
+## IANA-Maintained Modules
 
-## Context
+### Context
 
    IANA maintains a set of registries that are key for interoperability.
    The content of these registries are usually available using various
@@ -2580,7 +2581,7 @@ registry within the "YANG Module Tags" registry {{IANA-TAGS}}.
    another format to present the content of these registries when
    appropriate.
 
-##  Guidelines for IANA-Maintained Modules
+###  Guidelines for IANA-Maintained Modules
 
    When designing a YANG module for a functionality governed by a
    protocol for which IANA maintains a registry, it is RECOMMENDED to
@@ -2655,7 +2656,7 @@ registry within the "YANG Module Tags" registry {{IANA-TAGS}}.
    to such URLs.  These URLs are expected to be sufficiently permanent
    and stable.
 
-##  Guidance for Writing the IANA Considerations for RFCs Defining IANA-Maintained Modules {#sec-iana-mm}
+###  Guidance for Writing the IANA Considerations for RFCs Defining IANA-Maintained Modules {#sec-iana-mm}
 
    In addition to the IANA considerations in {{sec-iana-cons}},
    the IANA Considerations Section of an RFC that includes an IANA-
@@ -2703,7 +2704,7 @@ registry within the "YANG Module Tags" registry {{IANA-TAGS}}.
    The following templates are to be considered in addition to the
    required information that is provided in {{sec-iana-cons}}.
 
-###  Template for IANA-Maintained Modules with Identities {#sec-temp-id}
+####  Template for IANA-Maintained Modules with Identities {#sec-temp-id}
 
 ~~~~
 <CODE BEGINS>
@@ -2751,7 +2752,7 @@ registry]:
 <CODE ENDS>
 ~~~~
 
-###  Template for IANA-Maintained Modules with Enumerations {#sec-temp-enum}
+####  Template for IANA-Maintained Modules with Enumerations {#sec-temp-enum}
 
 ~~~~
 <CODE BEGINS>
@@ -3010,7 +3011,7 @@ module ietf-template {
 # Acknowledgments
 {:numbered="false"}
 
-   Thanks to Jürgen Schönwälder, Ladislav Lhotka, and Qin Wu for the
+   Thanks to Jürgen Schönwälder and Ladislav Lhotka for the
    discussion and valuable comments.  Special thanks to Ladislav Lhotka
    for sharing more context that led to the design documented in
    {{?RFC9108}}.
@@ -3018,6 +3019,8 @@ module ietf-template {
    Thanks to Andy Bierman, Italo Busi, Benoit Claise, Tom Petch, and
    Randy Presuhn for the comments.  Lou Berger suggested to include more
    details about IANA considerations.
+
+   {{sec-tags}} is inspired from RFC 8819.
 
 The author of RFC 8407:
 : Andy Bierman
