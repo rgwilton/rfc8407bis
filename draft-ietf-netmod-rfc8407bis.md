@@ -459,7 +459,7 @@ See {{sec-usage-guidelines}} for guidelines on YANG usage.
       concerns MUST be explicitly listed by name, and the reasons for
       the sensitivity/privacy concerns MUST be explained.
 
-Documents that define exclusively modules following the extension in {{!RFC8791}} are not required to include the security template in {{sec-security-template}}.
+Documents that define exclusively modules following the extension in {{!RFC8791}} are not required to include the security template in {{sec-security-template}}. Likewise, the template is not required for modules that define YANG extensions such as {{?RFC7952}}.
 
 ###  Security Considerations Section Template {#sec-security-template}
 
