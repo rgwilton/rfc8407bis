@@ -193,11 +193,12 @@ informative:
    - Updated the IANA considerations to encourage registration requests to indicate whether a module is maintained by IANA or not.
    - Added guidelines for IANA-maintained modules.
    - Elaborate the guidance for the use of values reserved for documentation in examples.
-   - Recommend the use of "example:" for URI examples.
+   - Recommended the use of "example:" for URI examples.
    - Added a new section "Defining Standard Tags" ({{sec-tags}}) to echo the guidance in {{!RFC8819}}.
-   - Recomment against the use of "case + when" construct.
+   - Recommended against the use of "case + when" construct.
    - Added a discussion about the prefix pattern to use for example modules.
    - Added a statement for NMDA to be listed as normative reference.
+   - Added a new section about YANG module classification.
 
 
 #  Terminology
@@ -413,6 +414,29 @@ in the following example:
 Native YANG features (e.g., breaking line, "+") SHOULD be used to fit a module into the line limits.
 Exceptionally, RFC8792-folding of YANG modules MAY be used if and only if native YANG features are not sufficient.
 A similar approach (e.g., use "--yang-line-length 69" or split a tree into subtrees) SHOULD be followed for tree diagrams.
+
+### YANG Module Classification
+
+The narrative section SHOULD include a mention about the classification
+of a given model. Such a mention is meant to ease positioning the
+module in the overall operational ecosystem. Specifically, the following types
+from {{?RFC8309}} and {{?RFC8969}} can be used:
+
+Service Model:
+: Describes a service and the parameters of the service in a
+  portable way that can be used uniformly and independent of the
+  equipment and operating environment.
+: Examples of service models are the L3VPN Service Model (L3SM) {{?RFC8299}} and the L2VPN Service Model (L2SM) {{?RFC8466}}.
+
+Network Model:
+: Describes a network-level abstraction (or a subset of aspects of a network infrastructure), including devices and their subsystems, and relevant protocols operating at the link and network layers across multiple devices. This model corresponds to the network configuration model discussed in {{?RFC8309}}.
+: It can be used by a network operator to allocate resources (e.g., tunnel resource, topology resource) for the service or schedule resources to meet the service requirements defined in a service model.
+: Examples of network models are the L3VPN Network Model (L3NM) {{?RFC9182}} or the L2VPN Network Model (L2NM) {{?RFC9291}}.
+
+Device Model:
+: Refers to the Network Element YANG data model described in {{?RFC8199}} or the device configuration model discussed in {{?RFC8309}}.
+: Device models are also used to refer to model a function embedded in a device (e.g., Access Control Lists (ACLs) {{?RFC8519}}).
+
 
 ##  Definitions Section
 
