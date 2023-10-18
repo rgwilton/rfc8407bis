@@ -777,7 +777,7 @@ previously published.
 
    List identifiers SHOULD be singular with the surrounding container name plural.
    Similarly, "leaf-list" identifiers SHOULD be singular.
-   
+
    It is permissible to use common identifiers such as "name" or "id" in
    data definition statements, especially if these data nodes share a
    common data type.
