@@ -107,6 +107,13 @@ informative:
               title: "YANG Parameters"
               target: https://www.iana.org/assignments/yang-parameters
 
+   IANA-TAGS:
+              title: "YANG Module Tags"
+              author:
+                org: IANA
+              date: false
+              target: https://www.iana.org/assignments/yang-module-tags/
+
 --- abstract
 
    This memo provides guidelines for authors and reviewers of
@@ -185,6 +192,7 @@ informative:
    - Updated many examples to be aligned with the consistent indentation recommendation.
    - Updated the IANA considerations to encourage registration requests to indicate whether a module is maintained by IANA or not.
    - Added guidelines for IANA-maintained modules.
+   - Added a new section "Defining Standard Tags" ({{sec-tags}}) to echo the guidance in {{!RFC8819}}.
 
 #  Terminology
 
@@ -2481,6 +2489,33 @@ Example:
    is considered to be stable and unpublished work that is considered to
    be unstable.  For example, in the IETF, the RFC document is used for
    published work, and the I-D is used for unpublished work.
+
+## Defining Standard Tags {#sec-tags}
+
+{{RFC8819}} specifies a method for associating tags with YANG modules. Tags may
+be defined and associated at module design time, at implementation time, or via
+user administrative control. Design-time tags are indicated using the module-tag
+extension statement.
+
+A module MAY indicate, using module-tag extension statements, a set of
+tags that are to be automatically associated with it (i.e., not added through configuration).
+
+~~~~ yang
+module example-module {
+  namespace "https://example.com/yang/example";
+  prefix "ex";
+  //...
+  import module-tags { prefix tags; }
+
+  tags:module-tag "ietf:some-new-tag";
+  tags:module-tag "ietf:some-other-tag";
+  // ...
+}
+~~~~
+
+Authors can use existing standard tags or use new tags defined in the model definition,
+as appropriate. For IETF modules, new tags MUST be assigned in the IANA "IETF YANG Module Tags"
+registry within the "YANG Module Tags" registry {{IANA-TAGS}}.
 
 # IANA-Maintained Modules
 
