@@ -189,13 +189,15 @@ informative:
    - Added a note that RFC8792-folding of YANG modules can be used if and only if native YANG features (e.g., break line, "+") are not sufficient.
    - Added tool validation checks to ensure that YANG modules fit into the line limits of an I-D.
    - Added tool validation checks of JSON-encoded examples.
-   - Updated many examples to be aligned with the consistent indentation recommendation.
+   - Updated many examples to be aligned with the consistent indentation recommendation (internal consistency).
    - Updated the IANA considerations to encourage registration requests to indicate whether a module is maintained by IANA or not.
    - Added guidelines for IANA-maintained modules.
    - Elaborate the guidance for the use of values reserved for documentation in examples.
    - Recommend the use of "example:" for URI examples.
    - Added a new section "Defining Standard Tags" ({{sec-tags}}) to echo the guidance in {{!RFC8819}}.
    - Recomment against the use of "case + when" construct.
+   - Added a discussion about the prefix pattern to use for example modules.
+   - Added a statement for NMDA to be listed as normative reference.
 
 
 #  Terminology
@@ -259,7 +261,7 @@ informative:
    module or submodule.  When describing properties that are specific to
    submodules, the term 'submodule' is used instead.
 
-##  NMDA Terms
+##  Network Management Datastore Architecture (NMDA) Terms
 
    The following terms are defined in {{!RFC8342}} and are not redefined
    here:
@@ -329,7 +331,7 @@ informative:
    The following example is for the "2016-03-20" revision of the
    "ietf-foo" module:
 
-~~~
+~~~ yang
 <CODE BEGINS> file "ietf-foo@2016-03-20.yang"
 
     module ietf-foo {
@@ -340,7 +342,7 @@ informative:
       description "...";
       revision 2016-03-20 {
         description "Latest revision";
-        reference "RFC XXXX: Foo Protocol";
+        reference "RFC FFFF: Foo Protocol";
       }
       // ... more statements
     }
@@ -392,8 +394,8 @@ special interpretations of definitions in other modules MUST be noted
 as well.  Refer to {{Section 2.3 of ?RFC8349}} for an example of this
 overview section.
 
-If the document contains a YANG module(s) that is compliant with NMDA
-{{!RFC8342}}, then the Introduction section should mention this fact.
+If the document contains a YANG module that is compliant with Network Management Datastore Architecture (NMDA)
+{{!RFC8342}}, then the Introduction section should mention this fact with {{!RFC8342}} listed as a normative reference.
 
 Example:
 : The YANG data model in this document conforms to the Network
@@ -538,7 +540,7 @@ operations and their sensitivity/vulnerability:
 ~~~
 
 Note:
-: {{!RFC8446}}, {{!RFC6241}}, {{!RFC6242}}, {{!RFC8341}}, and {{!RFC8040}} (or future RFCs that replace any of them) have to be listed as normative references.
+: {{!RFC8446}}, {{!RFC6241}}, {{!RFC6242}}, {{!RFC8341}}, and {{!RFC8040}} (or future RFCs that replace any of them) MUST be listed as normative references.
 
 ##  IANA Considerations Section {#sec-iana-cons}
 
@@ -556,8 +558,6 @@ Registry" {{!RFC3688}} {{IANA-XML}} and the "YANG Module Names" registry
 should indicate whether the module is IANA-maintained or not. This applies to new modules and updated
 modules. An example of an update registration for the
 "ietf-template" module can be found in {{sec-iana}}.
-
-
 
 Additional IANA considerations applicable to IANA-maintained modules are provided in {{sec-iana-mm}}.
 
@@ -662,12 +662,12 @@ usage examples, either throughout the document or in an appendix.
 This includes example instance document snippets in an appropriate
 encoding (e.g., XML and/or JSON) to demonstrate the intended usage of
 the YANG module(s).  Example modules MUST be validated.  Refer to
-{{sec-tools}} for tools that validate YANG modules and examples. If IP addresses
-are used, then a mix of either IPv4 and IPv6 addresses or IPv6
-addresses exclusively SHOULD be used in the examples.
+{{sec-tools}} for tools that validate YANG modules and examples. If IP addresses/prefixes
+are used, then a mix of either IPv4 and IPv6 addresses/prefixes or IPv6
+addresses/prefixes exclusively SHOULD be used in the examples.
 
 For some types (IP addresses, domain names, etc.), the IETF has reserved values for
-documentation use. Authors SHOULD use these reserved values in the usage examples. Examples of reserved values are listed below:
+documentation use. Authors SHOULD use these reserved values in the usage examples if these types are used. Examples of reserved values are listed below:
 
 * IPv4 and IPv6 addresses/prefixes reserved for documentation are defined in {{?RFC5737}} and {{?RFC3849}}.
 * The Enterprise Number 32473 reserved for documentation use is defined in {{?RFC5612}}.
@@ -776,9 +776,14 @@ Prefix values SHOULD be short but are also likely to be unique.
 Prefix values SHOULD NOT conflict with known modules that have been
 previously published.
 
+For convenience, prefix values of example modules MAY be prefixed with "ex"
+or similar patterns. In doing so, readers of example modules or tree diagrams
+that mix both example and standard modules can easily identify example parts.
+
+
 ##  Identifiers
 
-   Identifiers for all YANG identifiers in published modules MUST be
+   All YANG identifiers in published modules MUST be
    between 1 and 64 characters in length.  These include any construct
    specified as an "identifier-arg-str" token in the ABNF in {{Section 14 of !RFC7950}}.
 
@@ -815,7 +820,7 @@ previously published.
 ## Defaults
 
 In general, it is suggested that substatements containing very common
-default values SHOULD NOT be present.  The following substatements
+default values SHOULD NOT be present.  The substatements listed in {{stat-def}}
 are commonly used with the default value, which would make the module
 difficult to read if used everywhere they are allowed.
 
@@ -829,7 +834,7 @@ difficult to read if used everywhere they are allowed.
 | ordered-by   | system        |
 | status       | current       |
 | yin-element  | false         |
-{: title="Statement Defaults" cols="l l"}
+{: #stat-def title="Statement Defaults" cols="l l"}
 
 ##  Conditional Statements
 
@@ -1841,7 +1846,7 @@ Example:
 
    For example, feature2 requires implementation of feature1:
 
-~~~
+~~~ yang
    feature feature1 {
      description "Some protocol feature";
    }
@@ -1905,7 +1910,7 @@ Example:
    container called "ethernet" is added to the "interface" list only for
    entries of the type "ethernetCsmacd".
 
-~~~
+~~~ yang
      augment "/if:interfaces/if:interface" {
          when "if:type = 'ianaift:ethernetCsmacd'";
 
@@ -1949,7 +1954,7 @@ Example:
    this type, so it would never select this type; therefore, it would
    not add a mandatory data node.
 
-~~~
+~~~ yang
   module example-module {
 
     yang-version 1.1;
@@ -1989,7 +1994,7 @@ Example:
 
 ##  Deviation Statements
 
-   Per RFC 7950, Section 7.20.3, the YANG "deviation" statement is not
+   Per {{Section 7.20.3 of !RFC7950}}, the YANG "deviation" statement is not
    allowed to appear in IETF YANG modules, but it can be useful for
    documenting server capabilities.  Deviation statements are not
    reusable and typically not shared across all platforms.
@@ -2015,7 +2020,7 @@ Example:
 
    Example documenting platform resource limits:
 
-~~~
+~~~ yang
   Wrong: (max-elements in the list itself)
 
      container backups {
@@ -2027,7 +2032,7 @@ Example:
      }
 ~~~
 
-~~~
+~~~ yang
   Correct: (max-elements in a deviation)
 
      deviation /bk:backups/bk:backup {
@@ -2110,7 +2115,7 @@ Example:
 
    Not preferred:
 
-~~~
+~~~ yang
    list foo {
       key name;
       leaf name {
@@ -2131,7 +2136,7 @@ Example:
 
    Preferred:
 
-~~~
+~~~ yang
    list foo {
       key name;
       leaf name {
@@ -2164,7 +2169,7 @@ Example:
    considered to be part of any datastore, which made the YANG XPath
    definition much more complicated.
 
-   Operational state is now modeled using YANG according to the new NMDA
+   Operational state is now modeled using YANG according to the NMDA
    {{!RFC8342}} and conceptually contained in the operational state
    datastore, which also includes the operational values of
    configuration data.  There is no longer any need to duplicate data
@@ -2183,7 +2188,7 @@ Example:
    dynamic entries and allows configuration and operational state to be
    retrieved together with minimal message overhead.
 
-~~~
+~~~ yang
    container foo {
      ...
      // contains "config true" and "config false" nodes that have
@@ -2511,7 +2516,7 @@ Example:
 
    YANG modules can change over time.  Typically, new data model
    definitions are needed to support new features.  YANG update rules
-   defined in Section 11 of {{!RFC7950}} MUST be followed for published
+   defined in {{Section 11 of !RFC7950}} MUST be followed for published
    modules.  They MAY be followed for unpublished modules.
 
    The YANG update rules only apply to published module revisions.  Each
@@ -2823,7 +2828,7 @@ Names" registry {{!RFC6020}} within the "YANG Parameters" registry group.
 | Prefix    | temp                                      |
 | Maintained by IANA?    | N                            |
 | Reference | RFC XXXX                                  |
-{: title="YANG Registry Assignment" cols="r l"}
+{: #reg title="YANG Registry Assignment" cols="r l"}
 
 Also, This document requests IANA to update the reference for
    the "YANG Module Names" registry to point to the RFC number that will
