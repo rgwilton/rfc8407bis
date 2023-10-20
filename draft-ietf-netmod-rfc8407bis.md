@@ -903,7 +903,7 @@ or using a "container" outside the "choice".
 
 ~~~~ yang
   case yang-datastore {
-    when 'derived-from-or-self(ex:source-type, "yang-datastore")';
+    when 'derived-from-or-self(ex:source-type, "ex:yang-datastore")';
     description
       "Example data source for local or remote YANG datastore.";
     ...
