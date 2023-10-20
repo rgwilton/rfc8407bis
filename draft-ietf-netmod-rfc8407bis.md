@@ -199,6 +199,8 @@ informative:
    - Added a discussion about the prefix pattern to use for example modules.
    - Added a statement for NMDA to be listed as normative reference.
    - Added a new section about YANG module classification.
+   - Fixed an inconsistency in Section 4.6.2 where the example mentions identities, but uses them without their prefix as per Section 4.6.4.
+   - Fixed an inconsistency in Section 4.6.4 fails to use derived-from-or-self() mentioned back in Section 4.6.2.
 
 
 #  Terminology
@@ -1008,11 +1010,14 @@ identities to be conceptually augmented.
 Example:
 
 ~~~ yang
-   // do not use
-   when "md-name-format = 'name-format-null'";
+ // assume "ex" is the prefix of the module where the identity
+ // name-format-null is defined
 
-   // this is preferred
-   when "derived-from-or-self(md-name-format, 'name-format-null')";
+ // do not use
+ when "md-name-format = 'name-format-null'";
+
+ // this is preferred
+ when "derived-from-or-self(md-name-format, 'ex:name-format-null')";
 ~~~
 
 ###  Axes
@@ -1074,14 +1079,14 @@ Example:
    Example:
 
 ~~~ yang
-   augment "/rt:active-route/rt:input/rt:destination-address" {
-     when "rt:address-family='v4ur:ipv4-unicast'" {
-       description
-         "This augment is valid only for IPv4 unicast.";
-     }
-     // nodes defined here within the augment-stmt
-     // cannot be referenced in the when-stmt
-   }
+augment "/rt:active-route/rt:input/rt:destination-address" {
+  when 'derived-from-or-self(rt:address-family, "v4ur:ipv4-unicast")' {
+    description
+      "This augment is valid only for IPv4 unicast.";
+  }
+  // nodes defined here within the augment-stmt
+  // cannot be referenced in the when-stmt
+}
 ~~~
 
 ###  Wildcards
@@ -3050,6 +3055,8 @@ module ietf-template {
    details about IANA considerations.
 
    {{sec-tags}} is inspired from RFC 8819.
+
+   Michal Vaško reported an inconsistency in Sections 4.6.2 and 4.6.4.
 
 The author of RFC 8407:
 : Andy Bierman
