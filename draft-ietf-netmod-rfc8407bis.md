@@ -526,7 +526,7 @@ RESTCONF protocol operations and content.
  -- describe their specific sensitivity or vulnerability.
 
 There are a number of data nodes defined in this YANG module that are
-writable/creatable/deletable (i.e., config true, which is the
+writable/creatable/deletable (i.e., "config true", which is the
 default).  These data nodes may be considered sensitive or vulnerable
 in some network environments.  Write operations (e.g., edit-config)
 and delete operations to these data nodes without proper protection
@@ -985,7 +985,7 @@ canonical representation of a YANG-expanded name does not exist.
 
 The "lang" function SHOULD NOT be used.  This function does not apply
 to YANG because there is no "lang" attribute set with the document.
-The YANG compiler SHOULD return 'false' for this function.
+The YANG compiler SHOULD return "false" for this function.
 
 The "local-name", "namespace-uri", "name", "string", and "number"
 functions SHOULD NOT be used if the argument is a node-set.  If so,
@@ -2445,7 +2445,7 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
    * "when" statement evaluation is generally more expensive than "if-feature" or "choice" statements
    * "must" statements are generally more expensive than "min-entries", "max-entries", "mandatory", or "unique" statements
    * "identityref" leafs are generally more expensive than "enumeration" leafs
-   * "leafref" and "instance-identifier" types with "require-instance" set to true are generally more expensive than if "require-instance" is set to false
+   * "leafref" and "instance-identifier" types with "require-instance" set to "true" are generally more expensive than if "require-instance" is set to "false"
 
 ##  Open Systems Considerations
 
