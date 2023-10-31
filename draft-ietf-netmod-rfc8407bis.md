@@ -201,7 +201,7 @@ informative:
    - Added a new section about YANG module classification.
    - Fixed an inconsistency in Section 4.6.2 where the example mentions identities, but uses them without their prefix as per Section 4.6.4.
    - Fixed an inconsistency in Section 4.6.4 fails to use derived-from-or-self() mentioned back in Section 4.6.2.
-
+   - Added a new section for modeling abstract data structures.
 
 #  Terminology
 
@@ -2580,6 +2580,18 @@ module example-module {
 Authors can use existing standard tags or use new tags defined in the model definition,
 as appropriate. For IETF modules, new tags MUST be assigned in the IANA "IETF YANG Module Tags"
 registry within the "YANG Module Tags" registry {{IANA-TAGS}}.
+
+## Modeling Abstract Data Structures
+
+For contexts where YANG is used to model abstract data structures (e.g., protocol messages), the use of {{!RFC8791}}
+is RECOMMENDED compared to the "yang-data" extension statement {{!RFC8040}}.
+
+> Examples of modules that rely upon {{!RFC8791}} are {{?RFC9132}} or {{?RFC9195}}.
+
+Abstract data structures can be augmented using the "augment-structure" statement {{!RFC8791}}.
+
+> Examples of modules that augment abstract data structures are {{?RFC9244}} and {{?RFC9362}}.
+
 
 ## IANA-Maintained Modules
 
