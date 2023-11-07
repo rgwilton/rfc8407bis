@@ -3058,6 +3058,8 @@ module ietf-template {
 
    Michal Vaško reported an inconsistency in Sections 4.6.2 and 4.6.4.
 
+   Thanks to Xufeng Liu for reviewing the document.
+
 The author of RFC 8407:
 : Andy Bierman
 : YumaWorks
