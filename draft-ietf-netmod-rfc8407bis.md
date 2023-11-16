@@ -142,7 +142,7 @@ informative:
 
    The standardization of network configuration interfaces for use with
    network configuration management protocols, such as the Network
-   Configuration Protocol {{!RFC6241}} and the RESTCONF protocol {{!RFC8040}},
+   Configuration Protocol (NETCONF) {{!RFC6241}} and the RESTCONF protocol {{!RFC8040}},
    requires a modular set of data models that can be reused and extended
    over time.
 
@@ -182,7 +182,7 @@ informative:
    expected to know the YANG data modeling language before implementing
    the guidance in this document.
 
-##  Changes since RFC 8407
+##  Changes Since RFC 8407
 
    The following changes have been made to the guidelines published in
    {{?RFC8407}}:
@@ -209,12 +209,12 @@ informative:
    - Added a statement for NMDA to be listed as normative reference.
    - Added a new section about YANG module classification.
    - Fixed an inconsistency in Section 4.6.2 where the example mentions identities, but uses them without their prefix as per Section 4.6.4.
-   - Fixed an inconsistency in Section 4.6.4 fails to use derived-from-or-self() mentioned back in Section 4.6.2.
+   - Fixed an inconsistency in Section 4.6.4 which fails to use "derived-from-or-self()" mentioned back in Section 4.6.2.
    - Added a new section for modeling abstract data structures.
 
 #  Terminology
 
-   The following terms are used throughout this document:
+  The following terms are used throughout this document:
 
   IANA-maintained module:
   : A YANG module that is maintained by IANA (e.g., "iana-tunnel-type" {{?RFC8675}} or "iana-pseudowire-types" {{?RFC9291}}).
@@ -447,7 +447,7 @@ Network Model:
 Device Model:
 : Refers to the Network Element YANG data model described in {{?RFC8199}} or the device configuration model discussed in {{?RFC8309}}.
 : Device models are also used to refer to model a function embedded in a device (e.g., Access Control Lists (ACLs) {{?RFC8519}}).
-: A comprehensive list of devices models is provided in Appendix 4.2 of {{?RFC8969}}.
+: A comprehensive list of device models is provided in {{Appendix 4.2 of ?RFC8969}}.
 
 
 ##  Definitions Section
@@ -489,7 +489,7 @@ See {{sec-usage-guidelines}} for guidelines on YANG usage.
    Unless the modules comply with {{!RFC8791}} or define YANG exetnsions (e.g., {{?RFC7952}}), the security section MUST
    be patterned after the latest approved template
    (available at ``<https://trac.ietf.org/trac/ops/wiki/yang-security-guidelines>``).  {{sec-security-template}} contains the security considerations
-   template dated 2013-05-08 and last updated on 2018-10-18.  Authors
+   template.  Authors
    MUST check the web page at the URL listed above in case there is a
    more recent version available.
 
@@ -669,7 +669,7 @@ To check that JSON-encoded examples {{?RFC7951}} comply with the target data mod
   <https://github.com/CZ-NIC/yangson>
 ~~~
 
-An example of integrating "yangson" in the tooling chain can be found at {{YANGSON-Validate}}.
+An example of integrating "yangson" in a tooling chain can be found at {{YANGSON-Validate}}.
 
 ##  Module Extraction Tools
 
