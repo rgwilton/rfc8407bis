@@ -668,7 +668,7 @@ To check that JSON-encoded examples {{?RFC7951}} comply with the target data mod
   <https://github.com/CZ-NIC/yangson>
 ~~~
 
-An example of integrating "yangson" in the tooling chain be found at {{YANGSON-Validate}}.
+An example of integrating "yangson" in the tooling chain can be found at {{YANGSON-Validate}}.
 
 ##  Module Extraction Tools
 
