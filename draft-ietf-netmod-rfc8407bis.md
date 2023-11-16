@@ -929,7 +929,7 @@ Relaxing validation constraints on state data is meant to reveal deviations of
 the observed behavior vs. intended behavior of a managed entity and hopefully
 trigger corrective actions by a management system. From that perspective,
 it is RECOMMENDED to avoid defining constraints on state data that would hinder
-the detection of abnormal behaviors of a managed entity.
+the detection by a management system of abnormal behaviors of a managed entity.
 
 
 ##  XPath Usage
