@@ -447,6 +447,7 @@ Network Model:
 Device Model:
 : Refers to the Network Element YANG data model described in {{?RFC8199}} or the device configuration model discussed in {{?RFC8309}}.
 : Device models are also used to refer to model a function embedded in a device (e.g., Access Control Lists (ACLs) {{?RFC8519}}).
+: A comprehensive list of devices models is provided in Appendix 4.2 of {{?RFC8969}}.
 
 
 ##  Definitions Section
