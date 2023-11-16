@@ -114,6 +114,15 @@ informative:
               date: false
               target: https://www.iana.org/assignments/yang-module-tags/
 
+   YANGSON-Validate:
+              title: "YANG Validation Makefile"
+              author:
+                ins: J. Zhang
+                name: Jingxuan Jensen Zhang
+                org: Tongji University
+              date: 11/2023
+              target: https://github.com/ietf-wg-alto/draft-ietf-alto-oam-yang/blob/main/tools/yang.mk
+
 --- abstract
 
    This memo provides guidelines for authors and reviewers of
@@ -659,6 +668,7 @@ To check that JSON-encoded examples {{?RFC7951}} comply with the target data mod
   <https://github.com/CZ-NIC/yangson>
 ~~~
 
+An example of integrating "yangson" in the tooling chain be found at {{YANGSON-Validate}}.
 
 ##  Module Extraction Tools
 
