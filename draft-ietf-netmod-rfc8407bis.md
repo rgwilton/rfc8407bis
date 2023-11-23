@@ -921,6 +921,17 @@ or using a "container" outside the "choice".
   }
 ~~~~
 
+{{Section 8.1 of !RFC7950}} includes a provision for defining a constraint
+on state data and specifies that the constraint must be true in a valid state data.
+However, {{Section 5.3 of !RFC8342}} softens that behavior by allowing semantic
+constraints to be violated under some circumstances to help detecting anomalies.
+Relaxing validation constraints on state data is meant to reveal deviations of
+the observed behavior vs. intended behavior of a managed entity and hopefully
+trigger corrective actions by a management system. From that perspective,
+it is RECOMMENDED to avoid defining constraints on state data that would hinder
+the detection by a management system of abnormal behaviors of a managed entity.
+
+
 ##  XPath Usage
 
 This section describes guidelines for using the XML Path Language
