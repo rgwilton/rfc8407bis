@@ -201,7 +201,7 @@ informative:
    - Updated many examples to be aligned with the consistent indentation recommendation (internal consistency).
    - Updated the IANA considerations to encourage registration requests to indicate whether a module is maintained by IANA or not.
    - Added guidelines for IANA-maintained modules.
-   - Elaborate the guidance for the use of values reserved for documentation in examples.
+   - Elaborated the guidance for the use of values reserved for documentation in examples.
    - Recommended the use of "example:" for URI examples.
    - Added a new section "Defining Standard Tags" ({{sec-tags}}) to echo the guidance in {{!RFC8819}}.
    - Recommended against the use of "case + when" construct.
@@ -211,6 +211,7 @@ informative:
    - Fixed an inconsistency in Section 4.6.2 where the example mentions identities, but uses them without their prefix as per Section 4.6.4.
    - Fixed an inconsistency in Section 4.6.4 which fails to use "derived-from-or-self()" mentioned back in Section 4.6.2.
    - Added a new section for modeling abstract data structures.
+   - Added a discussion about "must + error-message" constructs for state data.
 
 #  Terminology
 
