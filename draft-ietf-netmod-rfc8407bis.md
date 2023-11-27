@@ -496,11 +496,11 @@ See {{sec-usage-guidelines}} for guidelines on YANG usage.
 
    In particular:
 
-   * Writable data nodes that could be especially disruptive if abused
+   * Writable data nodes that could be disruptive if abused
       MUST be explicitly listed by name, and the associated security
       risks MUST be explained.
 
-   * Readable data nodes that contain especially sensitive information
+   * Readable data nodes that contain sensitive information
       or that raise significant privacy concerns MUST be explicitly
       listed by name, and the reasons for the sensitivity/privacy
       concerns MUST be explained.
