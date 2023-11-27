@@ -3095,6 +3095,8 @@ module ietf-template {
 
    Thanks to Xufeng Liu for reviewing the document.
 
+   Thanks to Rach Salz and Michael Richardson for the SAAG review.
+
 The author of RFC 8407:
 : Andy Bierman
 : YumaWorks
