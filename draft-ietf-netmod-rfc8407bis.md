@@ -1343,7 +1343,7 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
        The yang-identifier definition has been aligned with YANG 1.1.
        Several pattern statements have been improved.";
     reference
-     "RFC XXXX: Common YANG Data Types";
+     "RFC YYYY: Common YANG Data Types";
   }
 
   revision 2013-07-15 {
