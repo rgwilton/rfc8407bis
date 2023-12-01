@@ -1267,18 +1267,45 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
    the module.  Modules are often extracted from their original
    documents, and it is useful for developers and operators to know how
    to find the original source document in a consistent manner.  The
-   "revision" statement MAY have a "description" substatement.
+   "revision" statement MAY have a "description" substatement. For convenience,
+   the description text of a new published revision may summarize any changes made
+   to a module compared to the previous published revision. Typically, that list
+   is a YANG-specific subset of the summary of changes listing any changes made from the RFC
+   being updated or obsoleted as per {{ID-Guidelines}}.
 
    The following example shows the revision statement for a published
    YANG module:
 
 ~~~ yang
-   revision "2012-02-22" {
+   revision 2010-09-24 {
      description
-       "Initial version";
+       "Initial revision.";
+   reference
+     "RFC 6021: Common YANG Data Types";
+   }
+~~~
+
+   The following example shows the revision statements for a published
+   YANG module that updates a published module. The new revision statement
+   summarizes the changes compared to the previous published revision.
+
+~~~ yang
+  revision 2013-07-15 {
+    description
+      "This revision adds the following new data types:
+       - yang:yang-identifier
+       - yang:hex-string
+       - yang:uuid
+       - yang:dotted-quad";
      reference
-       "RFC 6536: Network Configuration Protocol (NETCONF)
-                  Access Control Model";
+       "RFC 6991: Common YANG Data Types";
+   }
+
+   revision 2010-09-24 {
+     description
+       "Initial revision.";
+   reference
+     "RFC 6021: Common YANG Data Types";
    }
 ~~~
 
@@ -1291,25 +1318,50 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
    revision date of that new module version MUST be updated to a date
    later than that of the previous version.
 
-   The following example shows the two revision statements for an
-   unpublished update to a published YANG module:
+   The following example shows the revision statements for an
+   unpublished update to a published YANG module. The latest revision statement
+   of the unpublished module summarizes the changes compared to the previous revision.
 
 ~~~ yang
-   revision "2017-12-11" {
-     description
-       "Added support for YANG 1.1 actions and notifications tied to
-        data nodes. Clarify how NACM extensions can be used by other
-        data models.";
+  revision 2023-01-23 {
+    description
+     "This revision adds the following new data types:
+      - yang:date-with-zone-offset
+      - yang:date-no-zone
+      - yang:time-with-zone-offset
+      - yang:time-no-zone
+      - yang:hours32
+      - yang:minutes32
+      - yang:seconds32
+      - yang:centiseconds32
+      - yang:milliseconds32
+      - yang:microseconds32
+      - yang:microseconds64
+      - yang:nanoseconds32
+      - yang:nanoseconds64
+      - yang:language-tag
+       The yang-identifier definition has been aligned with YANG 1.1.
+       Several pattern statements have been improved.";
+    reference
+     "RFC YYYY: Common YANG Data Types";
+  }
+
+  revision 2013-07-15 {
+    description
+      "This revision adds the following new data types:
+       - yang:yang-identifier
+       - yang:hex-string
+       - yang:uuid
+       - yang:dotted-quad";
      reference
-       "RFC YYYY: Network Configuration Access Control Model";
+       "RFC 6991: Common YANG Data Types";
    }
 
-   revision "2012-02-22" {
+   revision 2010-09-24 {
      description
-       "Initial version";
-     reference
-       "RFC 6536: Network Configuration Protocol (NETCONF)
-                  Access Control Model";
+       "Initial revision.";
+   reference
+     "RFC 6021: Common YANG Data Types";
    }
 ~~~
 
