@@ -212,6 +212,7 @@ informative:
    - Fixed an inconsistency in Section 4.6.4 which fails to use "derived-from-or-self()" mentioned back in Section 4.6.2.
    - Added a new section for modeling abstract data structures.
    - Added a discussion about "must + error-message" constructs for state data.
+   - Added text about summary of changes in revision statements.
 
 #  Terminology
 
