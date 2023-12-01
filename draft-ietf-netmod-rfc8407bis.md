@@ -1286,7 +1286,8 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
 ~~~
 
    The following example shows the revision statements for a published
-   YANG module that updates a published module:
+   YANG module that updates a published module. The new revision statement
+   summarizes the changes compared to the previous published revision.
 
 ~~~ yang
   revision 2013-07-15 {
@@ -1317,8 +1318,9 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
    revision date of that new module version MUST be updated to a date
    later than that of the previous version.
 
-   The following example shows the revisions statements for an
-   unpublished update to a published YANG module:
+   The following example shows the revision statements for an
+   unpublished update to a published YANG module. The latest revision statement
+   of the unpublished module summarizes the changes compared to the previous revision.
 
 ~~~ yang
   revision 2023-01-23 {
