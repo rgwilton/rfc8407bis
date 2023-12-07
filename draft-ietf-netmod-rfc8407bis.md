@@ -2745,14 +2745,22 @@ Abstract data structures can be augmented using the "augment-structure" statemen
    For both cases, the document that defines an IANA-maintained module
    MUST include a note indicating that the document is only documenting
    the initial version of the module and that the authoritative version
-   is to be retrieved from the IANA registry. It is RECOMMENDED to
+   is to be retrieved from the IANA registry. Also, the IANA-maintained
+   module MUST include the following note indicating the RFC that 
+   registered the initial version of the IANA-maintained module:
+
+   > The initial version of this YANG module is part of RFC IIII;
+     see the RFC itself for full legal notices.
+
+   It is RECOMMENDED to
    include the URL from where to retrieve the recent version of the
    module.  When a script is used, the Internet-Draft that defines an
    IANA-maintained module SHOULD include an appendix with the initial
    full version of the module.  Including such an appendix in pre-RFC
    versions is meant to assess the correctness of the outcome of the
    supplied script.  The authors MUST include a note to the RFC Editor
-   requesting that the appendix be removed before publication as RFC.
+   requesting that the appendix be removed before publication as RFC and
+   that RFC IIII is replaced with the RFC number that is assigned to the document.
    Initial versions of IANA-maintained modules that are published in
    RFCs may be misused despite the appropriate language to refer to the
    IANA registry to retrieve the up-to-date module.  This is problematic
