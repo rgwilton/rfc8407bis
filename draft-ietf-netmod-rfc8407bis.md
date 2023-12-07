@@ -2708,8 +2708,8 @@ Abstract data structures can be augmented using the "augment-structure" statemen
    When designing a YANG module for a functionality governed by a
    protocol for which IANA maintains a registry, it is RECOMMENDED to
    specify an IANA-maintained module that echoes the content of that
-   registry.  This is superior to including that content in an IETF-
-   maintained module.
+   registry.  This is superior to including that content in an
+   IETF-maintained module.
 
    When one or multiple sub-registries are available under the same
    registry, it is RECOMMENDED to define an IANA-maintained module for
@@ -2726,8 +2726,8 @@ Abstract data structures can be augmented using the "augment-structure" statemen
    For example, identities are useful if the registry entries are
    organized hierarchically, possibly including multiple inheritances.
    It is RECOMMENDED that the reasoning for the design choice is
-   documented in the companion specification that registers an IANA-
-   maintained module.  For example, {{?RFC9244}} defines an IANA-maintained
+   documented in the companion specification that registers an
+   IANA-maintained module.  For example, {{?RFC9244}} defines an IANA-maintained
    module that uses enumerations for the following reason:
 
      "The DOTS telemetry module (Section 10.1) uses "enumerations" rather
@@ -2863,7 +2863,8 @@ Unassigned or reserved values are not present in the module.
 
 When the "iana-foo" YANG module is updated, a new "revision"
 statement with a unique revision date must be added in front of the
-existing revision statements.
+existing revision statements. The "revision" statement must have a
+"reference" substatement that to the published module (i.e, [IANA_FOO_URL]).
 
 IANA is requested to add this note to [reference-to-the-iana-foo-
 registry]:
@@ -2911,7 +2912,8 @@ Unassigned or reserved values are not present in the module.
 
 When the "iana-foo" YANG module is updated, a new "revision"
 statement with a unique revision date must be added in front of the
-existing revision statements.
+existing revision statements. The "revision" statement must have a
+"reference" substatement that to the published module (i.e, [IANA_FOO_URL]).
 
 IANA is requested to add this note to [reference-to-the-iana-foo-
 registry]:
