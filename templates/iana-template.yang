@@ -63,7 +63,7 @@ module iana-template {
 
   revision date-revision {
     description
-      "Indicates the list of chnages";
+      "Indicates the list of changes";
     reference
       "URL of the latest version of the module";
   }
@@ -71,11 +71,11 @@ module iana-template {
   // replace 'date-initial' with the module publication date
   // the format is (year-month-day)
 
-  revision date-initiam {
+  revision date-initial {
     description
       "Initial version";
     reference
-      "URL of this published version of the module
+      "URL of the published initial version of the module
        RFC IIII: RFC Title";
 
   // RFC Ed.: Update with the RFC number and title 
