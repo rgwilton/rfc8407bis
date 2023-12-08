@@ -27,6 +27,7 @@ author:
  -
     fullname: Mohamed Boucadair
     organization: Orange
+    role: editor
     country: France
     email: mohamed.boucadair@orange.com
 
