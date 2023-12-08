@@ -93,6 +93,13 @@ informative:
               date: false
               target: https://www.iana.org/assignments/iana-bgp-l2-encaps/iana-bgp-l2-encaps.xhtml
 
+   IANA_BGP-L2_URL-Revision:
+              title: "iana-bfd-types@2021-10-21.yang"
+              author:
+                org: IANA
+              date: false
+              target: https://www.iana.org/assignments/yang-parameters/iana-bfd-types@2021-10-21.yang
+
    IANA_PW-Types_URL:
               title: "iana-pseudowire-types YANG Module"
               author:
@@ -2787,7 +2794,10 @@ Abstract data structures can be augmented using the "augment-structure" statemen
    IANA-maintained module are: {{IANA_BGP-L2_URL}}, {{IANA_PW-Types_URL}},
    and {{IANA_BFD_URL}}. [IANA_FOO_URL] is used in the following to refer
    to such URLs.  These URLs are expected to be sufficiently permanent
-   and stable.
+   and stable. Whenever referencing a specific version of an
+   IANA-maintained module is needed, then URLs such as {{IANA_BGP-L2_URL-Revision}}
+   are used. [IANA_FOO_URL_With_REV] is used in the following to refer
+   to such URLs.
 
 ###  Guidance for Writing the IANA Considerations for RFCs Defining IANA-Maintained Modules {#sec-iana-mm}
 
@@ -2876,7 +2886,7 @@ When the "iana-foo" YANG module is updated, a new "revision"
 statement with a unique revision date must be added in front of the
 existing revision statements. The "revision" statement must have a
 "reference" substatement that points to the published module
-(i.e., [IANA_FOO_URL]).
+(i.e., [IANA_FOO_URL_With_REV]]).
 
 IANA is requested to add this note to [reference-to-the-iana-foo-
 registry]:
@@ -2926,7 +2936,7 @@ When the "iana-foo" YANG module is updated, a new "revision"
 statement with a unique revision date must be added in front of the
 existing revision statements. The "revision" statement must have a
 "reference" substatement that points to the published module
-(i.e., [IANA_FOO_URL]).
+(i.e., [IANA_FOO_URL_With_REV]).
 
 IANA is requested to add this note to [reference-to-the-iana-foo-
 registry]:
