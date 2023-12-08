@@ -2793,11 +2793,11 @@ Abstract data structures can be augmented using the "augment-structure" statemen
 
    Examples of IANA URLs from where to retrieve the latest version of an
    IANA-maintained module are: {{IANA_BGP-L2_URL}}, {{IANA_PW-Types_URL}},
-   and {{IANA_BFD_URL}}. [IANA_FOO_URL] is used in the following to refer
+   and {{IANA_BFD_URL}}. "IANA_FOO_URL" is used in the following to refer
    to such URLs.  These URLs are expected to be sufficiently permanent
    and stable. Whenever referencing a specific version of an
    IANA-maintained module is needed, then URLs such as {{IANA_BGP-L2_URL-Revision}}
-   are used. [IANA_FOO_URL_With_REV] is used in the following to refer
+   are used. "IANA_FOO_URL_With_REV" is used in the following to refer
    to such URLs.
 
    A template for IANA-maintained modules is provided in {{tem-iana}}.
@@ -2889,7 +2889,7 @@ When the "iana-foo" YANG module is updated, a new "revision"
 statement with a unique revision date must be added in front of the
 existing revision statements. The "revision" statement must have a
 "reference" substatement that points to the published module
-(i.e., [IANA_FOO_URL_With_REV]]).
+(i.e., IANA_FOO_URL_With_REV).
 
 IANA is requested to add this note to [reference-to-the-iana-foo-
 registry]:
@@ -2939,7 +2939,7 @@ When the "iana-foo" YANG module is updated, a new "revision"
 statement with a unique revision date must be added in front of the
 existing revision statements. The "revision" statement must have a
 "reference" substatement that points to the published module
-(i.e., [IANA_FOO_URL_With_REV]).
+(i.e., IANA_FOO_URL_With_REV).
 
 IANA is requested to add this note to [reference-to-the-iana-foo-
 registry]:
