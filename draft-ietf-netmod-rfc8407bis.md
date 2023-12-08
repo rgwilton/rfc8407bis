@@ -223,6 +223,7 @@ informative:
    - Added text about summary of changes in revision statements.
    - Added a note to be used for IANA-maintained modules
    - Added a statement to require that revisons of IANA-maintained modules to include a reference statement.
+   - Added a template for IANA-maintained modules
 
 #  Terminology
 
@@ -2799,6 +2800,8 @@ Abstract data structures can be augmented using the "augment-structure" statemen
    are used. [IANA_FOO_URL_With_REV] is used in the following to refer
    to such URLs.
 
+   A template for IANA-maintained modules is provided in {{tem-iana}}.
+
 ###  Guidance for Writing the IANA Considerations for RFCs Defining IANA-Maintained Modules {#sec-iana-mm}
 
    In addition to the IANA considerations in {{sec-iana-cons}},
@@ -3074,7 +3077,7 @@ into the management system.
       sufficiently clear and unambiguous to allow interoperable
       implementations to be created.
 
-# YANG Module Template
+# Template for IETF Modules {#tem-ietf}
 
 ~~~
 <CODE BEGINS> file "ietf-template@2023-07-26.yang"
@@ -3151,6 +3154,16 @@ module ietf-template {
   // notification statements
   // DO NOT put deviation statements in a published module
 }
+
+<CODE ENDS>
+~~~
+
+# Template for IANA-Maintained Modules  {#tem-iana}
+
+~~~
+<CODE BEGINS> file "ietf-template@2023-12-08.yang"
+
+{::include ./templates/iana-template.yang}
 
 <CODE ENDS>
 ~~~
