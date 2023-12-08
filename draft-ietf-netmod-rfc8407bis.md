@@ -2875,7 +2875,8 @@ Unassigned or reserved values are not present in the module.
 When the "iana-foo" YANG module is updated, a new "revision"
 statement with a unique revision date must be added in front of the
 existing revision statements. The "revision" statement must have a
-"reference" substatement that points to the published module (i.e, [IANA_FOO_URL]).
+"reference" substatement that points to the published module
+(i.e., [IANA_FOO_URL]).
 
 IANA is requested to add this note to [reference-to-the-iana-foo-
 registry]:
@@ -2924,7 +2925,8 @@ Unassigned or reserved values are not present in the module.
 When the "iana-foo" YANG module is updated, a new "revision"
 statement with a unique revision date must be added in front of the
 existing revision statements. The "revision" statement must have a
-"reference" substatement that points to the published module (i.e, [IANA_FOO_URL]).
+"reference" substatement that points to the published module
+(i.e., [IANA_FOO_URL]).
 
 IANA is requested to add this note to [reference-to-the-iana-foo-
 registry]:
