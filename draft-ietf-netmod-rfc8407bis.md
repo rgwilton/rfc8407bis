@@ -212,7 +212,6 @@ informative:
    - Elaborated the guidance for the use of values reserved for documentation in examples.
    - Recommended the use of "example:" for URI examples.
    - Added a new section "Defining Standard Tags" ({{sec-tags}}) to echo the guidance in {{!RFC8819}}.
-   - Recommended against the use of "case + when" construct.
    - Added a discussion about the prefix pattern to use for example modules.
    - Added a statement for NMDA to be listed as normative reference.
    - Added a new section about YANG module classification.
@@ -920,19 +919,6 @@ It is possible that a "when" statement for an ancestor node of a key
 leaf will have the exact node-set result as the key leaf.  In such a
 case, the "when" statement for the key leaf is redundant and SHOULD
 be avoided.
-
-Some modules use "case + when" construct such as shown in the example below.
-Such a construct MUST be avoided by removing the "when" statement
-or using a "container" outside the "choice".
-
-~~~~ yang
-  case yang-datastore {
-    when 'derived-from-or-self(ex:source-type, "ex:yang-datastore")';
-    description
-      "Example data source for local or remote YANG datastore.";
-    ...
-  }
-~~~~
 
 {{Section 8.1 of !RFC7950}} includes a provision for defining a constraint
 on state data and specifies that the constraint must be true in a valid state data.
