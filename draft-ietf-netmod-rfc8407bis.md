@@ -922,7 +922,7 @@ case, the "when" statement for the key leaf is redundant and SHOULD
 be avoided.
 
 Some modules use "case + when" construct such as shown in the example below.
-Such a construct MUST be avoided by removing the "when" statement
+Such a construct SHOULD be avoided by removing the "when" statement
 or using a "container" outside the "choice".
 
 ~~~~ yang
