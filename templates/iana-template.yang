@@ -36,8 +36,8 @@ module iana-template {
      Relating to IETF Documents
      (https://trustee.ietf.org/license-info).
 
-     The initial version of this YANG module is part of RFC IIII; see 
-     the RFC itself for full legal notices.
+     The initial version of this YANG module is part of RFC IIII; 
+     see the RFC itself for full legal notices.
 
   // RFC Ed.: replace IIII with actual RFC number and remove
   // this note
