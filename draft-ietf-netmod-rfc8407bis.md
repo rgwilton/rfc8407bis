@@ -2949,20 +2949,35 @@ to update this registration to reference this document.
      XML: N/A, the requested URI is an XML namespace.
 ~~~
 
-This document requests IANA to register the following YANG module in the "YANG Module
+   IANA is requested to register the following URI in the "ns" subregistry within
+   the "IETF XML Registry" {{!RFC3688}}:
+
+~~~~
+   URI:  urn:ietf:params:xml:ns:yang:iana-template
+   Registrant Contact:  The IESG.
+   XML:  N/A; the requested URI is an XML namespace.
+~~~~
+
+This document requests IANA to register the following YANG modules in the "YANG Module
 Names" registry {{!RFC6020}} within the "YANG Parameters" registry group.
 
-| Field     | Value                                     |
-|:---------:|:-----------------------------------------:|
-| Name      | ietf-template                             |
-| Namespace | urn:ietf:params:xml:ns:yang:ietf-template |
-| Prefix    | temp                                      |
-| Maintained by IANA?    | N                            |
-| Reference | RFC XXXX                                  |
-{: #reg title="YANG Registry Assignment" cols="r l"}
+~~~~
+   Name:  ietf-template
+   Maintained by IANA?  N
+   Namespace:  urn:ietf:params:xml:ns:yang:ietf-template
+   Prefix:  temp
+   Reference:  RFC XXXX
+
+   Name:  iana-template
+   Maintained by IANA?  N
+   Namespace:  urn:ietf:params:xml:ns:yang:iana-template
+   Prefix:  iana-foo
+   Reference:  RFC XXXX
+~~~~
 
 Also, This document requests IANA to update the reference for
-   the "YANG Module Names" registry to point to the RFC number that will
+   the "YANG Module Names" registry under the "YANG Parameters" registry group
+   to point to the RFC number that will
    be assigned to this document as it contains the template necessary
    for registration in Appendix B.
 
@@ -3147,7 +3162,7 @@ module ietf-template {
 # Template for IANA-Maintained Modules  {#tem-iana}
 
 ~~~
-<CODE BEGINS> file "ietf-template@2023-12-08.yang"
+<CODE BEGINS> file "iana-template@2023-12-08.yang"
 
 {::include ./templates/iana-template.yang}
 
