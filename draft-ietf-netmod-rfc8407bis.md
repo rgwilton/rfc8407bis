@@ -3164,7 +3164,7 @@ module ietf-template {
 ~~~
 <CODE BEGINS> file "iana-template@2023-12-08.yang"
 
-{::include ./templates/iana-template.yang}
+{::include-fold ./templates/iana-template.yang}
 
 <CODE ENDS>
 ~~~
