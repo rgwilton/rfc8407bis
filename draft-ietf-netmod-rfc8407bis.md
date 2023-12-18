@@ -220,7 +220,6 @@ informative:
    - Added a new section for modeling abstract data structures.
    - Added a discussion about "must + error-message" constructs for state data.
    - Added text about summary of changes in revision statements.
-   - Added a statement to require that revisons of IANA-maintained modules to include a reference statement.
    - Added a template for IANA-maintained modules.
 
 #  Terminology
