@@ -926,12 +926,33 @@ Such a construct SHOULD be avoided by removing the "when" statement
 or using a "container" outside the "choice".
 
 ~~~~ yang
-  case yang-datastore {
-    when 'derived-from-or-self(ex:source-type, "ex:yang-datastore")';
-    description
-      "Example data source for local or remote YANG datastore.";
-    ...
-  }
+    leaf type {
+      type enumeration {
+        enum a;
+        enum b;
+        enum c;
+      }
+      mandatory true;
+    }
+    choice type-choice {
+      case b {
+        container type-b {
+          when "../type = 'b'";
+          leaf foo {
+            type string;
+          }
+        }
+      }
+      case c {
+        container type-c {
+          when "../type = 'c'";
+          leaf bar {
+            mandatory true;
+            type string;
+          }
+        }
+      }
+    }
 ~~~~
 
 {{Section 8.1 of !RFC7950}} includes a provision for defining a constraint
