@@ -921,38 +921,38 @@ leaf will have the exact node-set result as the key leaf.  In such a
 case, the "when" statement for the key leaf is redundant and SHOULD
 be avoided.
 
-Some modules use "case + when" construct such as shown in the example below.
+Some modules use "case + when" construct such as shown in the example depicted in {{ex-case-when}}.
 Such a construct SHOULD be avoided by removing the "when" statement
-or using a "container" outside the "choice".
+or using a "container" outside the "choice" as shown in {{ex-no-when}}.
 
 ~~~~ yang
-    leaf type {
-      type enumeration {
-        enum a;
-        enum b;
-        enum c;
-      }
-      mandatory true;
-    }
-    choice type-choice {
-      case b {
-        container type-b {
-          when "../type = 'b'";
-          leaf foo {
-            type string;
-          }
-        }
-      }
-      case c {
-        container type-c {
-          when "../type = 'c'";
-          leaf bar {
-            mandatory true;
-            type string;
-          }
-        }
+leaf type {
+  type enumeration {
+    enum a;
+    enum b;
+    enum c;
+  }
+  mandatory true;
+}
+choice type-choice {
+  case b {
+    container type-b {
+      when "../type = 'b'";
+      leaf foo {
+        type string;
+       }
+     }
+  }
+  case c {
+    container type-c {
+      when "../type = 'c'";
+      leaf bar {
+        type string;
+        mandatory true;
       }
     }
+  }
+}
 ~~~~
 
 {{Section 8.1 of !RFC7950}} includes a provision for defining a constraint
