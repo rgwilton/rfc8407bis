@@ -921,9 +921,9 @@ leaf will have the exact node-set result as the key leaf.  In such a
 case, the "when" statement for the key leaf is redundant and SHOULD
 be avoided.
 
-Some modules use "case + when" construct such as shown in the example depicted in {{ex-case-when}}.
+Some modules use "case + when" construct such as shown in the example below.
 Such a construct SHOULD be avoided by removing the "when" statement
-or using a "container" outside the "choice" as shown in {{ex-no-when}}.
+or using a "container" outside the "choice".
 
 ~~~~ yang
 leaf type {
