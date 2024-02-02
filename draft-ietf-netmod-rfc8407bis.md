@@ -568,7 +568,7 @@ sensitivities/vulnerabilities:
 Some of the readable data nodes in this YANG module may be considered
 sensitive or vulnerable in some network environments.  It is thus
 important to control read access (e.g., via get, get-config, or
-notification) to these data nodes. Specifically, the following 
+notification) to these data nodes. Specifically, the following
 subtrees and data nodes have particular sensitivities/vulnerabilities:
 
 <list subtrees and data nodes and explain the reasons for
