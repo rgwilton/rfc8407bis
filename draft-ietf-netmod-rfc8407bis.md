@@ -2851,7 +2851,7 @@ IANA is requested to add this note to the registry:
 
 When a value is added to the "foo" registry, a new "identity"
 statement must be added to the "iana-foo" YANG module.  The name of
-the "identity" is the lowercase of the name provided in the
+the "identity" MUST be the name as provided in the
 registry.  The "identity" statement should have the following sub-
 statements defined:
 
