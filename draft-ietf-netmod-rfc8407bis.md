@@ -551,10 +551,11 @@ default).  These data nodes may be considered sensitive or vulnerable
 in some network environments.  Write operations (e.g., edit-config)
 and delete operations to these data nodes without proper protection
 or authentication can have a negative effect on network operations.
-These are the subtrees and data nodes and their sensitivity/
-vulnerability:
+Specifically, the following subtrees and data nodes have particular
+sensitivities/vulnerabilities:
 
-<list subtrees and data nodes and state why they are sensitive>
+<list subtrees and data nodes and explain the associated security
+ risks with a focus on how they can be disruptive if abused>
 
  -- for all YANG modules you must evaluate whether any readable data
  -- nodes (those are all the "config false" nodes, but also all other
@@ -567,20 +568,22 @@ vulnerability:
 Some of the readable data nodes in this YANG module may be considered
 sensitive or vulnerable in some network environments.  It is thus
 important to control read access (e.g., via get, get-config, or
-notification) to these data nodes.  These are the subtrees and data
-nodes and their sensitivity/vulnerability:
+notification) to these data nodes. Specifically, the following
+subtrees and data nodes have particular sensitivities/vulnerabilities:
 
-<list subtrees and data nodes and state why they are sensitive>
+<list subtrees and data nodes and explain the reasons for
+ the sensitivity/privacy concerns>
 
  -- if your YANG module has defined any RPC operations
  -- describe their specific sensitivity or vulnerability.
 
 Some of the RPC operations in this YANG module may be considered
 sensitive or vulnerable in some network environments.  It is thus
-important to control access to these operations.  These are the
-operations and their sensitivity/vulnerability:
+important to control access to these operations.  Specifically,
+the following operations have particular sensitivities/vulnerabilities:
 
-<list RPC operations and state why they are sensitive>
+<list RPC operations and explain the reasons for the sensitivity/privacy
+ concerns>
 
 <CODE ENDS>
 ~~~
