@@ -834,7 +834,7 @@ that mix both example and standard modules can easily identify example parts.
    between 1 and 64 characters in length.  These include any construct
    specified as an "identifier-arg-str" token in the ABNF in {{Section 14 of !RFC7950}}.
 
-###  Identifier Naming Conventions
+###  Identifier Naming Conventions {#sec-id-naming}
 
    Identifiers SHOULD follow a consistent naming pattern throughout the
    module.  Only lowercase letters, numbers, and dashes SHOULD be used
@@ -2814,6 +2814,14 @@ Abstract data structures can be augmented using the "augment-structure" statemen
       "description", and "reference") or a new "enum" statement and sub-
       statements ("value", "status", "description", and "reference").
 
+         - When creating a new "identity" statement name or a new "enum" statement,
+      it is RECOMMENDED to mirror the name (if present) as recorded in the IANA registry.
+
+         - If the name in the IANA registry does not comply with the naming conventions
+      listed in {{sec-id-naming}}, the procedure MUST detail how IANA
+      can generate legal identifiers from such a name. For example, if the name
+      begins with a number, it is RECOMMENDED to spell out the number when used as an identifier (e.g., "3des-cbc" will be  "triple-des-cbc" ({{Section 6.3 of ?RFC4253}})).
+
    *  A note that unassigned or reserved values must not be present in
       the IANA-maintained module.
 
@@ -2829,7 +2837,7 @@ Abstract data structures can be augmented using the "augment-structure" statemen
    template to reflect specifics of their modules (e.g., Multiple
    registries can be listed for a single IANA-maintained module, no
    explicit description (or name) field is listed under the
-   authoritative IANA registry).
+   authoritative IANA registry, or the name does not comply with YANG naming conventions {{sec-id-naming}}).
 
    The following templates are to be considered in addition to the
    required information that is provided in {{sec-iana-cons}}.
