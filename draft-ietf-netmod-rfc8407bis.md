@@ -2837,7 +2837,7 @@ Abstract data structures can be augmented using the "augment-structure" statemen
    template to reflect specifics of their modules (e.g., Multiple
    registries can be listed for a single IANA-maintained module, no
    explicit description (or name) field is listed under the
-   authoritative IANA registry, or the name does not comply with YANG naming conventions {{sec-id-naming}}).
+   authoritative IANA registry, or the name does not comply with YANG naming conventions ({{sec-id-naming}})).
 
    The following templates are to be considered in addition to the
    required information that is provided in {{sec-iana-cons}}.
