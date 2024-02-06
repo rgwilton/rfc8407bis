@@ -3187,7 +3187,7 @@ module ietf-template {
    {{?RFC9108}}.
 
    Thanks to Andy Bierman, Italo Busi, Benoit Claise, Tom Petch,
-   Randy Presuhn, and Martin Björklund for the comments.  Lou Berger suggested to include more
+   Randy Presuhn, Martin Björklund, Dale R. Worley, and Kent Watsen for the comments.  Lou Berger suggested to include more
    details about IANA considerations.
 
    {{sec-tags}} is inspired from RFC 8819.
