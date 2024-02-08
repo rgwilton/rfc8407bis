@@ -1513,6 +1513,10 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
     }
 ~~~
 
+   If the set of the data type contents requires some hierarchy or
+   the allocation of the values is distributed, then an "identityref"
+   data type SHOULD be used.
+
    Note that any module can declare an identity with base "foo-type"
    that is valid for the "foo" leaf.  Identityref values are considered
    to be qualified names.
@@ -3187,7 +3191,7 @@ module ietf-template {
    {{?RFC9108}}.
 
    Thanks to Andy Bierman, Italo Busi, Benoit Claise, Tom Petch,
-   Randy Presuhn, Martin Björklund, Dale R. Worley, and Kent Watsen for the comments.  Lou Berger suggested to include more
+   Randy Presuhn, Martin Björklund, Dale R. Worley, Kent Watsen, and Joel Halpern for the comments.  Lou Berger suggested to include more
    details about IANA considerations.
 
    {{sec-tags}} is inspired from RFC 8819.
