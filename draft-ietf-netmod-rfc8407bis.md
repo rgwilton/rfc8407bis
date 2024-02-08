@@ -1474,10 +1474,10 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
    "int64") SHOULD NOT be used unless negative values are allowed for
    the desired semantics.
 
-### Fixed-Value Extensibility
+### Fixed-Value Extensibility {#sec-fve}
 
    If the set of values is fixed and the data type contents are
-   controlled by a single naming authority, then an enumeration data
+   controlled by a single naming authority (e.g., IANA), then an enumeration data
    type SHOULD be used.
 
 ~~~ yang
@@ -2717,15 +2717,15 @@ Abstract data structures can be augmented using the "augment-structure" statemen
    are present or expected to be present for each sub-registry).  An
    example of such a module is documented in {{Section 5.2 of ?RFC9132}}.
 
-   An IANA-maintained module may use identities (e.g., {{?RFC8675}}) or
-   enumerations (e.g., {{?RFC9108}}).  The decision about which type to use
+   An IANA-maintained module may use the "identityref" data type (e.g., {{?RFC8675}}) or
+   an enumeration data type (e.g., {{?RFC9108}}). Consistent with {{sec-fve}}, the default recommendation is to use an enumeration data type. The decision about which type to use
    is left to the module designers and should be made based upon
    specifics related to the intended use of the IANA-maintained module.
    For example, identities are useful if the registry entries are
    organized hierarchically, possibly including multiple inheritances.
    It is RECOMMENDED that the reasoning for the design choice is
    documented in the companion specification that registers an
-   IANA-maintained module.  For example, {{?RFC9244}} defines an IANA-maintained
+   IANA-maintained module. For example, {{?RFC9244}} defines an IANA-maintained
    module that uses enumerations for the following reason:
 
      "The DOTS telemetry module (Section 10.1) uses "enumerations" rather
