@@ -221,9 +221,7 @@ informative:
    - Added a new section for modeling abstract data structures.
    - Added a discussion about "must + error-message" constructs for state data.
    - Added text about summary of changes in revision statements.
-   - Added a note to be used for IANA-maintained modules
-   - Added a statement to require that revisons of IANA-maintained modules to include a reference statement.
-   - Added a template for IANA-maintained modules
+   - Added a template for IANA-maintained modules.
 
 #  Terminology
 
@@ -531,6 +529,8 @@ Documents that define exclusively modules following the extension in {{!RFC8791}
 
 X.  Security Considerations
 
+This section uses the template described in Section 3.7 of [RFCXXXX].
+
 The YANG module specified in this document defines a schema for data
 that is designed to be accessed via network management protocols such
 as NETCONF [RFC6241] or RESTCONF [RFC8040].  The lowest NETCONF layer
@@ -554,10 +554,11 @@ default).  These data nodes may be considered sensitive or vulnerable
 in some network environments.  Write operations (e.g., edit-config)
 and delete operations to these data nodes without proper protection
 or authentication can have a negative effect on network operations.
-These are the subtrees and data nodes and their sensitivity/
-vulnerability:
+Specifically, the following subtrees and data nodes have particular
+sensitivities/vulnerabilities:
 
-<list subtrees and data nodes and state why they are sensitive>
+<list subtrees and data nodes and explain the associated security
+ risks with a focus on how they can be disruptive if abused>
 
  -- for all YANG modules you must evaluate whether any readable data
  -- nodes (those are all the "config false" nodes, but also all other
@@ -570,20 +571,22 @@ vulnerability:
 Some of the readable data nodes in this YANG module may be considered
 sensitive or vulnerable in some network environments.  It is thus
 important to control read access (e.g., via get, get-config, or
-notification) to these data nodes.  These are the subtrees and data
-nodes and their sensitivity/vulnerability:
+notification) to these data nodes. Specifically, the following
+subtrees and data nodes have particular sensitivities/vulnerabilities:
 
-<list subtrees and data nodes and state why they are sensitive>
+<list subtrees and data nodes and explain the reasons for
+ the sensitivity/privacy concerns>
 
  -- if your YANG module has defined any RPC operations
  -- describe their specific sensitivity or vulnerability.
 
 Some of the RPC operations in this YANG module may be considered
 sensitive or vulnerable in some network environments.  It is thus
-important to control access to these operations.  These are the
-operations and their sensitivity/vulnerability:
+important to control access to these operations.  Specifically,
+the following operations have particular sensitivities/vulnerabilities:
 
-<list RPC operations and state why they are sensitive>
+<list RPC operations and explain the reasons for the sensitivity/
+ privacy concerns>
 
 <CODE ENDS>
 ~~~
@@ -833,39 +836,39 @@ that mix both example and standard modules can easily identify example parts.
 
 ##  Identifiers
 
-   All YANG identifiers in published modules MUST be
-   between 1 and 64 characters in length.  These include any construct
-   specified as an "identifier-arg-str" token in the ABNF in {{Section 14 of !RFC7950}}.
+All YANG identifiers in published modules MUST be
+between 1 and 64 characters in length.  These include any construct
+specified as an "identifier-arg-str" token in the ABNF in {{Section 14 of !RFC7950}}.
 
-###  Identifier Naming Conventions
+###  Identifier Naming Conventions {#sec-id-naming}
 
-   Identifiers SHOULD follow a consistent naming pattern throughout the
-   module.  Only lowercase letters, numbers, and dashes SHOULD be used
-   in identifier names.  Uppercase characters, the period character, and
-   the underscore character MAY be used if the identifier represents a
-   well-known value that uses these characters.  YANG does not permit
-   any other characters in YANG identifiers.
+Identifiers SHOULD follow a consistent naming pattern throughout the
+module.  Only lowercase letters, numbers, and dashes SHOULD be used
+in identifier names.  Uppercase characters, the period character, and
+the underscore character MAY be used if the identifier represents a
+well-known value that uses these characters.  YANG does not permit
+any other characters in YANG identifiers.
 
-   Identifiers SHOULD include complete words and/or well-known acronyms
-   or abbreviations.  Child nodes within a container or list SHOULD NOT
-   replicate the parent identifier.  YANG identifiers are hierarchical
-   and are only meant to be unique within the set of sibling nodes
-   defined in the same module namespace.
+Identifiers SHOULD include complete words and/or well-known acronyms
+or abbreviations.  Child nodes within a container or list SHOULD NOT
+replicate the parent identifier.  YANG identifiers are hierarchical
+and are only meant to be unique within the set of sibling nodes
+defined in the same module namespace.
 
-   List identifiers SHOULD be singular with the surrounding container name plural.
-   Similarly, "leaf-list" identifiers SHOULD be singular.
+List identifiers SHOULD be singular with the surrounding container name plural.
+Similarly, "leaf-list" identifiers SHOULD be singular.
 
-   It is permissible to use common identifiers such as "name" or "id" in
-   data definition statements, especially if these data nodes share a
-   common data type.
+It is permissible to use common identifiers such as "name" or "id" in
+data definition statements, especially if these data nodes share a
+common data type.
 
-   Identifiers SHOULD NOT carry any special semantics that identify data
-   modeling properties.  Only YANG statements and YANG extension
-   statements are designed to convey machine-readable data modeling
-   properties.  For example, naming an object "config" or "state" does
-   not change whether it is configuration data or state data.  Only
-   defined YANG statements or YANG extension statements can be used to
-   assign semantics in a machine-readable format in YANG.
+Identifiers SHOULD NOT carry any special semantics that identify data
+modeling properties.  Only YANG statements and YANG extension
+statements are designed to convey machine-readable data modeling
+properties.  For example, naming an object "config" or "state" does
+not change whether it is configuration data or state data.  Only
+defined YANG statements or YANG extension statements can be used to
+assign semantics in a machine-readable format in YANG.
 
 ## Defaults
 
@@ -1548,10 +1551,10 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
    "int64") SHOULD NOT be used unless negative values are allowed for
    the desired semantics.
 
-### Fixed-Value Extensibility
+### Fixed-Value Extensibility {#sec-fve}
 
    If the set of values is fixed and the data type contents are
-   controlled by a single naming authority, then an enumeration data
+   controlled by a single naming authority (e.g., IANA), then an enumeration data
    type SHOULD be used.
 
 ~~~ yang
@@ -1563,7 +1566,7 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
     }
 ~~~
 
-   If extensibility of enumerated values is required, then the
+   If distributed extensibility or hierarchical organization of enumerated values is required, then the
    "identityref" data type SHOULD be used instead of an enumeration or
    other built-in type.
 
@@ -2791,15 +2794,15 @@ Abstract data structures can be augmented using the "augment-structure" statemen
    are present or expected to be present for each sub-registry).  An
    example of such a module is documented in {{Section 5.2 of ?RFC9132}}.
 
-   An IANA-maintained module may use identities (e.g., {{?RFC8675}}) or
-   enumerations (e.g., {{?RFC9108}}).  The decision about which type to use
-   is left to the module designers and should be made based upon
+   An IANA-maintained module may use the "identityref" data type (e.g., {{?RFC8675}}) or
+   an enumeration data type (e.g., {{?RFC9108}}). See {{sec-fve}} for a guidance on which data type to use. The decision about which type to use
+   should be made based upon
    specifics related to the intended use of the IANA-maintained module.
    For example, identities are useful if the registry entries are
    organized hierarchically, possibly including multiple inheritances.
    It is RECOMMENDED that the reasoning for the design choice is
    documented in the companion specification that registers an
-   IANA-maintained module.  For example, {{?RFC9244}} defines an IANA-maintained
+   IANA-maintained module. For example, {{?RFC9244}} defines an IANA-maintained
    module that uses enumerations for the following reason:
 
      "The DOTS telemetry module (Section 10.1) uses "enumerations" rather
@@ -2866,11 +2869,11 @@ Abstract data structures can be augmented using the "augment-structure" statemen
 ###  Guidance for Writing the IANA Considerations for RFCs Defining IANA-Maintained Modules {#sec-iana-mm}
 
    In addition to the IANA considerations in {{sec-iana-cons}},
-   the IANA Considerations Section of an RFC that includes an IANA-
-   maintained module MUST provide the required instructions for IANA to
+   the IANA Considerations Section of an RFC that includes an
+   IANA-maintained module MUST provide the required instructions for IANA to
    automatically perform the maintenance of that IANA module.  These
-   instructions describe how to proceed with updates to the IANA-
-   maintained module that are triggered by a change to the authoritative
+   instructions describe how to proceed with updates to the
+   IANA-maintained module that are triggered by a change to the authoritative
    registry.  Concretely, the IANA Considerations Section SHALL at least
    provide the following information:
 
@@ -2891,6 +2894,14 @@ Abstract data structures can be augmented using the "augment-structure" statemen
       "description", and "reference") or a new "enum" statement and sub-
       statements ("value", "status", "description", and "reference").
 
+         - When creating a new "identity" statement name or a new "enum" statement,
+      it is RECOMMENDED to mirror the name (if present) as recorded in the IANA registry.
+
+         - If the name in the IANA registry does not comply with the naming conventions
+      listed in {{sec-id-naming}}, the procedure MUST detail how IANA
+      can generate legal identifiers from such a name. For example, if the name
+      begins with a number, it is RECOMMENDED to spell out the number when used as an identifier (e.g., "3des-cbc" will be  "triple-des-cbc" ({{Section 6.3 of ?RFC4253}})).
+
    *  A note that unassigned or reserved values must not be present in
       the IANA-maintained module.
 
@@ -2901,12 +2912,12 @@ Abstract data structures can be augmented using the "augment-structure" statemen
    *  An instruction about how to generate the "revision" statement.
 
    A template for the IANA Considerations is provided in {{sec-temp-id}} for
-   IANA-maintained modules with identities and {{sec-temp-enum}} for IANA-
-   maintained modules with enumerations.  Authors may modify the
+   IANA-maintained modules with identities and {{sec-temp-enum}} for
+   IANA-maintained modules with enumerations.  Authors may modify the
    template to reflect specifics of their modules (e.g., Multiple
    registries can be listed for a single IANA-maintained module, no
    explicit description (or name) field is listed under the
-   authoritative IANA registry).
+   authoritative IANA registry, or the name does not comply with YANG naming conventions ({{sec-id-naming}})).
 
    The following templates are to be considered in addition to the
    required information that is provided in {{sec-iana-cons}}.
@@ -2928,7 +2939,7 @@ IANA is requested to add this note to the registry:
 
 When a value is added to the "foo" registry, a new "identity"
 statement must be added to the "iana-foo" YANG module.  The name of
-the "identity" is the lower-case of the name provided in the
+the "identity" MUST be the name as provided in the
 registry.  The "identity" statement should have the following sub-
 statements defined:
 
@@ -2949,14 +2960,14 @@ Unassigned or reserved values are not present in the module.
 When the "iana-foo" YANG module is updated, a new "revision"
 statement with a unique revision date must be added in front of the
 existing revision statements. The "revision" statement must have a
-"reference" substatement that points to the published module
-(i.e., IANA_FOO_URL_With_REV).
+"reference" substatement that points specifically to the published
+module (i.e., IANA_FOO_URL_With_REV).
 
 IANA is requested to add this note to [reference-to-the-iana-foo-
 registry]:
 
    When this registry is modified, the YANG module "iana-foo"
-   [IANA_FOO_URL] must be updated as defined in RFCXXXX.
+   [IANA_FOO_URL] must be updated as defined in RFC IIII.
 
 <CODE ENDS>
 ~~~~
@@ -2999,14 +3010,14 @@ Unassigned or reserved values are not present in the module.
 When the "iana-foo" YANG module is updated, a new "revision"
 statement with a unique revision date must be added in front of the
 existing revision statements. The "revision" statement must have a
-"reference" substatement that points to the published module
-(i.e., IANA_FOO_URL_With_REV).
+"reference" substatement that points specifically to the published
+module (i.e., IANA_FOO_URL_With_REV).
 
 IANA is requested to add this note to [reference-to-the-iana-foo-
 registry]:
 
     When this registry is modified, the YANG module "iana-foo"
-    [IANA_FOO_URL] must be updated as defined in RFCXXXX.
+    [IANA_FOO_URL] must be updated as defined in RFC IIII.
 
 <CODE ENDS>
 ~~~~
@@ -3015,7 +3026,7 @@ registry]:
 #  IANA Considerations {#sec-iana}
 
 The following registration in the "ns" subregistry of the "IETF XML
-Registry" {{!RFC3688}} was detailed in {{?RFC6087}}. This document requests IANA
+Registry" {{!RFC3688}} was detailed in {{?RFC8407}}. This document requests IANA
 to update this registration to reference this document.
 
 ~~~
@@ -3024,22 +3035,37 @@ to update this registration to reference this document.
      XML: N/A, the requested URI is an XML namespace.
 ~~~
 
-This document requests IANA to register the following YANG module in the "YANG Module
+   IANA is requested to register the following URI in the "ns" subregistry within
+   the "IETF XML Registry" {{!RFC3688}}:
+
+~~~~
+   URI:  urn:ietf:params:xml:ns:yang:iana-template
+   Registrant Contact:  The IESG.
+   XML:  N/A; the requested URI is an XML namespace.
+~~~~
+
+This document requests IANA to register the following YANG modules in the "YANG Module
 Names" registry {{!RFC6020}} within the "YANG Parameters" registry group.
 
-| Field     | Value                                     |
-|:---------:|:-----------------------------------------:|
-| Name      | ietf-template                             |
-| Namespace | urn:ietf:params:xml:ns:yang:ietf-template |
-| Prefix    | temp                                      |
-| Maintained by IANA?    | N                            |
-| Reference | RFC XXXX                                  |
-{: #reg title="YANG Registry Assignment" cols="r l"}
+~~~~
+   Name:  ietf-template
+   Maintained by IANA?  N
+   Namespace:  urn:ietf:params:xml:ns:yang:ietf-template
+   Prefix:  temp
+   Reference:  RFC XXXX
 
-Also, This document requests IANA to update the reference for
-   the "YANG Module Names" registry to point to the RFC number that will
-   be assigned to this document as it contains the template necessary
-   for registration in Appendix B.
+   Name:  iana-template
+   Maintained by IANA?  N
+   Namespace:  urn:ietf:params:xml:ns:yang:iana-template
+   Prefix:  iana-foo
+   Reference:  RFC XXXX
+~~~~
+
+Also, this document requests IANA to update the reference for
+the "YANG Module Names" registry under the "YANG Parameters" registry group
+to point to the RFC number that will
+be assigned to this document as it contains the template necessary
+for registration in Appendix B.
 
 
 #  Security Considerations
@@ -3222,9 +3248,9 @@ module ietf-template {
 # Template for IANA-Maintained Modules  {#tem-iana}
 
 ~~~
-<CODE BEGINS> file "ietf-template@2023-12-08.yang"
+<CODE BEGINS> file "iana-template@2023-12-08.yang"
 
-{::include ./templates/iana-template.yang}
+{::include-fold ./templates/iana-template.yang}
 
 <CODE ENDS>
 ~~~
@@ -3238,12 +3264,13 @@ module ietf-template {
    {{?RFC9108}}.
 
    Thanks to Andy Bierman, Italo Busi, Benoit Claise, Tom Petch,
-   Randy Presuhn, and Martin Björklund for the comments.  Lou Berger suggested to include more
-   details about IANA considerations.
+   Randy Presuhn, Martin Björklund, Acee Lindem, Dale R. Worley, and Kent Watsen for the comments.
 
-   {{sec-tags}} is inspired from RFC 8819.
+   Lou Berger suggested to include more details about IANA considerations.
 
-   Michal Vaško reported an inconsistency in Sections 4.6.2 and 4.6.4.
+   {{sec-tags}} is inspired from {{RFC8819}}.
+
+   Michal Vaško reported an inconsistency in Sections 4.6.2 and 4.6.4 of {{?RFC8407}}.
 
    Thanks to Xufeng Liu for reviewing the document.
 
