@@ -2794,11 +2794,11 @@ Abstract data structures can be augmented using the "augment-structure" statemen
 ###  Guidance for Writing the IANA Considerations for RFCs Defining IANA-Maintained Modules {#sec-iana-mm}
 
    In addition to the IANA considerations in {{sec-iana-cons}},
-   the IANA Considerations Section of an RFC that includes an IANA-
-   maintained module MUST provide the required instructions for IANA to
+   the IANA Considerations Section of an RFC that includes an
+   IANA-maintained module MUST provide the required instructions for IANA to
    automatically perform the maintenance of that IANA module.  These
-   instructions describe how to proceed with updates to the IANA-
-   maintained module that are triggered by a change to the authoritative
+   instructions describe how to proceed with updates to the
+   IANA-maintained module that are triggered by a change to the authoritative
    registry.  Concretely, the IANA Considerations Section SHALL at least
    provide the following information:
 
@@ -2837,8 +2837,8 @@ Abstract data structures can be augmented using the "augment-structure" statemen
    *  An instruction about how to generate the "revision" statement.
 
    A template for the IANA Considerations is provided in {{sec-temp-id}} for
-   IANA-maintained modules with identities and {{sec-temp-enum}} for IANA-
-   maintained modules with enumerations.  Authors may modify the
+   IANA-maintained modules with identities and {{sec-temp-enum}} for
+   IANA-maintained modules with enumerations.  Authors may modify the
    template to reflect specifics of their modules (e.g., Multiple
    registries can be listed for a single IANA-maintained module, no
    explicit description (or name) field is listed under the
@@ -2885,8 +2885,8 @@ Unassigned or reserved values are not present in the module.
 When the "iana-foo" YANG module is updated, a new "revision"
 statement with a unique revision date must be added in front of the
 existing revision statements. The "revision" statement must have a
-"reference" substatement that points specifically to the published module
-(i.e., IANA_FOO_URL_With_REV).
+"reference" substatement that points specifically to the published
+module (i.e., IANA_FOO_URL_With_REV).
 
 IANA is requested to add this note to [reference-to-the-iana-foo-
 registry]:
@@ -2935,8 +2935,8 @@ Unassigned or reserved values are not present in the module.
 When the "iana-foo" YANG module is updated, a new "revision"
 statement with a unique revision date must be added in front of the
 existing revision statements. The "revision" statement must have a
-"reference" substatement that points specifically to the published module
-(i.e., IANA_FOO_URL_With_REV).
+"reference" substatement that points specifically to the published 
+module (i.e., IANA_FOO_URL_With_REV).
 
 IANA is requested to add this note to [reference-to-the-iana-foo-
 registry]:
