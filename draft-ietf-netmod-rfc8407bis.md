@@ -2986,11 +2986,11 @@ Names" registry {{!RFC6020}} within the "YANG Parameters" registry group.
    Reference:  RFC XXXX
 ~~~~
 
-Also, This document requests IANA to update the reference for
-   the "YANG Module Names" registry under the "YANG Parameters" registry group
-   to point to the RFC number that will
-   be assigned to this document as it contains the template necessary
-   for registration in Appendix B.
+Also, this document requests IANA to update the reference for
+the "YANG Module Names" registry under the "YANG Parameters" registry group
+to point to the RFC number that will
+be assigned to this document as it contains the template necessary
+for registration in Appendix B.
 
 
 #  Security Considerations
