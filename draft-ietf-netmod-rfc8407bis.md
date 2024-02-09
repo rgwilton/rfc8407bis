@@ -584,8 +584,8 @@ sensitive or vulnerable in some network environments.  It is thus
 important to control access to these operations.  Specifically,
 the following operations have particular sensitivities/vulnerabilities:
 
-<list RPC operations and explain the reasons for the sensitivity/privacy
- concerns>
+<list RPC operations and explain the reasons for the sensitivity/
+ privacy concerns>
 
 <CODE ENDS>
 ~~~
@@ -2935,7 +2935,7 @@ Unassigned or reserved values are not present in the module.
 When the "iana-foo" YANG module is updated, a new "revision"
 statement with a unique revision date must be added in front of the
 existing revision statements. The "revision" statement must have a
-"reference" substatement that points specifically to the published 
+"reference" substatement that points specifically to the published
 module (i.e., IANA_FOO_URL_With_REV).
 
 IANA is requested to add this note to [reference-to-the-iana-foo-
@@ -3193,9 +3193,9 @@ module ietf-template {
 
    Lou Berger suggested to include more details about IANA considerations.
 
-   {{sec-tags}} is inspired from RFC 8819.
+   {{sec-tags}} is inspired from {{RFC8819}}.
 
-   Michal Vaško reported an inconsistency in Sections 4.6.2 and 4.6.4.
+   Michal Vaško reported an inconsistency in Sections 4.6.2 and 4.6.4 of {{?RFC8407}}.
 
    Thanks to Xufeng Liu for reviewing the document.
 
