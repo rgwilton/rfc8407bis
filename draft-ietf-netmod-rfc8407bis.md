@@ -528,6 +528,8 @@ Documents that define exclusively modules following the extension in {{!RFC8791}
 
 X.  Security Considerations
 
+This section uses the template described in Section 3.7 of [RFCXXXX].
+
 The YANG module specified in this document defines a schema for data
 that is designed to be accessed via network management protocols such
 as NETCONF [RFC6241] or RESTCONF [RFC8040].  The lowest NETCONF layer
