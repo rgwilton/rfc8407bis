@@ -212,7 +212,7 @@ informative:
    - Elaborated the guidance for the use of values reserved for documentation in examples.
    - Recommended the use of "example:" for URI examples.
    - Added a new section "Defining Standard Tags" ({{sec-tags}}) to echo the guidance in {{!RFC8819}}.
-   - Recommended against the use of "case + when" construct.
+   - Recommended against the use of "case + when" construct in some cases.
    - Added a discussion about the prefix pattern to use for example modules.
    - Added a statement for NMDA to be listed as normative reference.
    - Added a new section about YANG module classification.
