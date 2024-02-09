@@ -1489,7 +1489,7 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
     }
 ~~~
 
-   If extensibility of enumerated values is required, then the
+   If distributed extensibility or hierarchical organization of enumerated values is required, then the
    "identityref" data type SHOULD be used instead of an enumeration or
    other built-in type.
 
@@ -1512,10 +1512,6 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
       }
     }
 ~~~
-
-   If the set of the data type contents requires some hierarchy or
-   the allocation of the values is distributed, then an "identityref"
-   data type SHOULD be used.
 
    Note that any module can declare an identity with base "foo-type"
    that is valid for the "foo" leaf.  Identityref values are considered
@@ -2722,8 +2718,8 @@ Abstract data structures can be augmented using the "augment-structure" statemen
    example of such a module is documented in {{Section 5.2 of ?RFC9132}}.
 
    An IANA-maintained module may use the "identityref" data type (e.g., {{?RFC8675}}) or
-   an enumeration data type (e.g., {{?RFC9108}}). Consistent with {{sec-fve}}, the default recommendation is to use an enumeration data type. The decision about which type to use
-   is left to the module designers and should be made based upon
+   an enumeration data type (e.g., {{?RFC9108}}). See {{sec-fve}} for a guidance on which data type to use. The decision about which type to use
+   should be made based upon
    specifics related to the intended use of the IANA-maintained module.
    For example, identities are useful if the registry entries are
    organized hierarchically, possibly including multiple inheritances.
