@@ -835,39 +835,39 @@ that mix both example and standard modules can easily identify example parts.
 
 ##  Identifiers
 
-   All YANG identifiers in published modules MUST be
-   between 1 and 64 characters in length.  These include any construct
-   specified as an "identifier-arg-str" token in the ABNF in {{Section 14 of !RFC7950}}.
+All YANG identifiers in published modules MUST be
+between 1 and 64 characters in length.  These include any construct
+specified as an "identifier-arg-str" token in the ABNF in {{Section 14 of !RFC7950}}.
 
 ###  Identifier Naming Conventions {#sec-id-naming}
 
-   Identifiers SHOULD follow a consistent naming pattern throughout the
-   module.  Only lowercase letters, numbers, and dashes SHOULD be used
-   in identifier names.  Uppercase characters, the period character, and
-   the underscore character MAY be used if the identifier represents a
-   well-known value that uses these characters.  YANG does not permit
-   any other characters in YANG identifiers.
+Identifiers SHOULD follow a consistent naming pattern throughout the
+module.  Only lowercase letters, numbers, and dashes SHOULD be used
+in identifier names.  Uppercase characters, the period character, and
+the underscore character MAY be used if the identifier represents a
+well-known value that uses these characters.  YANG does not permit
+any other characters in YANG identifiers.
 
-   Identifiers SHOULD include complete words and/or well-known acronyms
-   or abbreviations.  Child nodes within a container or list SHOULD NOT
-   replicate the parent identifier.  YANG identifiers are hierarchical
-   and are only meant to be unique within the set of sibling nodes
-   defined in the same module namespace.
+Identifiers SHOULD include complete words and/or well-known acronyms
+or abbreviations.  Child nodes within a container or list SHOULD NOT
+replicate the parent identifier.  YANG identifiers are hierarchical
+and are only meant to be unique within the set of sibling nodes
+defined in the same module namespace.
 
-   List identifiers SHOULD be singular with the surrounding container name plural.
-   Similarly, "leaf-list" identifiers SHOULD be singular.
+List identifiers SHOULD be singular with the surrounding container name plural.
+Similarly, "leaf-list" identifiers SHOULD be singular.
 
-   It is permissible to use common identifiers such as "name" or "id" in
-   data definition statements, especially if these data nodes share a
-   common data type.
+It is permissible to use common identifiers such as "name" or "id" in
+data definition statements, especially if these data nodes share a
+common data type.
 
-   Identifiers SHOULD NOT carry any special semantics that identify data
-   modeling properties.  Only YANG statements and YANG extension
-   statements are designed to convey machine-readable data modeling
-   properties.  For example, naming an object "config" or "state" does
-   not change whether it is configuration data or state data.  Only
-   defined YANG statements or YANG extension statements can be used to
-   assign semantics in a machine-readable format in YANG.
+Identifiers SHOULD NOT carry any special semantics that identify data
+modeling properties.  Only YANG statements and YANG extension
+statements are designed to convey machine-readable data modeling
+properties.  For example, naming an object "config" or "state" does
+not change whether it is configuration data or state data.  Only
+defined YANG statements or YANG extension statements can be used to
+assign semantics in a machine-readable format in YANG.
 
 ## Defaults
 
@@ -2951,7 +2951,7 @@ registry]:
 #  IANA Considerations {#sec-iana}
 
 The following registration in the "ns" subregistry of the "IETF XML
-Registry" {{!RFC3688}} was detailed in {{?RFC6087}}. This document requests IANA
+Registry" {{!RFC3688}} was detailed in {{?RFC8407}}. This document requests IANA
 to update this registration to reference this document.
 
 ~~~
