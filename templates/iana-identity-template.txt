@@ -1,0 +1,41 @@
+This document defines the initial version of the IANA-maintained
+"iana-foo" YANG module.  The most recent version of the YANG module
+is available from the "YANG Parameters" registry
+[IANA-YANG-PARAMETERS].
+
+IANA is requested to add this note to the registry:
+
+   New values must not be directly added to the "iana-foo" YANG
+   module.  They must instead be added to the "foo" registry.
+
+When a value is added to the "foo" registry, a new "identity"
+statement must be added to the "iana-foo" YANG module.  The name of
+the "identity" MUST be the name as provided in the
+registry.  The "identity" statement should have the following sub-
+statements defined:
+
+ "base":        Contains 'name-base-identity-defined-in-foo'.
+
+ "status":      Include only if a registration has been deprecated or
+                obsoleted.  IANA "deprecated" maps to YANG status
+                "deprecated", and IANA "obsolete" maps to YANG status
+                "obsolete".
+
+ "description":  Replicates the description from the registry.
+
+ "reference":   Replicates the reference(s) from the registry with the
+                title of the document(s) added.
+
+Unassigned or reserved values are not present in the module.
+
+When the "iana-foo" YANG module is updated, a new "revision"
+statement with a unique revision date must be added in front of the
+existing revision statements. The "revision" statement must have a
+"reference" substatement that points specifically to the published
+module (i.e., IANA_FOO_URL_With_REV).
+
+IANA is requested to add this note to [reference-to-the-iana-foo-
+registry]:
+
+   When this registry is modified, the YANG module "iana-foo"
+   [IANA_FOO_URL] must be updated as defined in RFC IIII.
