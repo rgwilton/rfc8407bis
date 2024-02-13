@@ -526,66 +526,7 @@ Documents that define exclusively modules following the extension in {{!RFC8791}
 ~~~
 <CODE BEGINS>
 
-X.  Security Considerations
-
-This section uses the template described in Section 3.7 of [RFCXXXX].
-
-The YANG module specified in this document defines a schema for data
-that is designed to be accessed via network management protocols such
-as NETCONF [RFC6241] or RESTCONF [RFC8040].  The lowest NETCONF layer
-is the secure transport layer, and the mandatory-to-implement secure
-transport is Secure Shell (SSH) [RFC6242].  The lowest RESTCONF layer
-is HTTPS, and the mandatory-to-implement secure transport is TLS
-[RFC8446].
-
-The Network Configuration Access Control Model (NACM) [RFC8341]
-provides the means to restrict access for particular NETCONF or
-RESTCONF users to a preconfigured subset of all available NETCONF or
-RESTCONF protocol operations and content.
-
- -- if you have any writable data nodes (those are all the
- -- "config true" nodes, and remember, that is the default)
- -- describe their specific sensitivity or vulnerability.
-
-There are a number of data nodes defined in this YANG module that are
-writable/creatable/deletable (i.e., "config true", which is the
-default).  These data nodes may be considered sensitive or vulnerable
-in some network environments.  Write operations (e.g., edit-config)
-and delete operations to these data nodes without proper protection
-or authentication can have a negative effect on network operations.
-Specifically, the following subtrees and data nodes have particular
-sensitivities/vulnerabilities:
-
-<list subtrees and data nodes and explain the associated security
- risks with a focus on how they can be disruptive if abused>
-
- -- for all YANG modules you must evaluate whether any readable data
- -- nodes (those are all the "config false" nodes, but also all other
- -- nodes, because they can also be read via operations like get or
- -- get-config) are sensitive or vulnerable (for instance, if they
- -- might reveal customer information or violate personal privacy
- -- laws such as those of the European Union if exposed to
- -- unauthorized parties)
-
-Some of the readable data nodes in this YANG module may be considered
-sensitive or vulnerable in some network environments.  It is thus
-important to control read access (e.g., via get, get-config, or
-notification) to these data nodes. Specifically, the following
-subtrees and data nodes have particular sensitivities/vulnerabilities:
-
-<list subtrees and data nodes and explain the reasons for
- the sensitivity/privacy concerns>
-
- -- if your YANG module has defined any RPC operations
- -- describe their specific sensitivity or vulnerability.
-
-Some of the RPC operations in this YANG module may be considered
-sensitive or vulnerable in some network environments.  It is thus
-important to control access to these operations.  Specifically,
-the following operations have particular sensitivities/vulnerabilities:
-
-<list RPC operations and explain the reasons for the sensitivity/
- privacy concerns>
+{::include-fold ./templates/sec-template.txt}
 
 <CODE ENDS>
 ~~~
@@ -2852,47 +2793,7 @@ Abstract data structures can be augmented using the "augment-structure" statemen
 ~~~~
 <CODE BEGINS>
 
-This document defines the initial version of the IANA-maintained
-"iana-foo" YANG module.  The most recent version of the YANG module
-is available from the "YANG Parameters" registry
-[IANA-YANG-PARAMETERS].
-
-IANA is requested to add this note to the registry:
-
-   New values must not be directly added to the "iana-foo" YANG
-   module.  They must instead be added to the "foo" registry.
-
-When a value is added to the "foo" registry, a new "identity"
-statement must be added to the "iana-foo" YANG module.  The name of
-the "identity" MUST be the name as provided in the
-registry.  The "identity" statement should have the following sub-
-statements defined:
-
- "base":        Contains 'name-base-identity-defined-in-foo'.
-
- "status":      Include only if a registration has been deprecated or
-                obsoleted.  IANA "deprecated" maps to YANG status
-                "deprecated", and IANA "obsolete" maps to YANG status
-                "obsolete".
-
- "description":  Replicates the description from the registry.
-
- "reference":   Replicates the reference(s) from the registry with the
-                title of the document(s) added.
-
-Unassigned or reserved values are not present in the module.
-
-When the "iana-foo" YANG module is updated, a new "revision"
-statement with a unique revision date must be added in front of the
-existing revision statements. The "revision" statement must have a
-"reference" substatement that points specifically to the published
-module (i.e., IANA_FOO_URL_With_REV).
-
-IANA is requested to add this note to [reference-to-the-iana-foo-
-registry]:
-
-   When this registry is modified, the YANG module "iana-foo"
-   [IANA_FOO_URL] must be updated as defined in RFC IIII.
+{::include-fold ./templates/iana-identity-template.txt}
 
 <CODE ENDS>
 ~~~~
@@ -2902,47 +2803,7 @@ registry]:
 ~~~~
 <CODE BEGINS>
 
-This document defines the initial version of the IANA-maintained
-"iana-foo" YANG module.  The most recent version of the YANG module
-is available from the "YANG Parameters" registry
-[IANA-YANG-PARAMETERS].
-
-IANA is requested to add this note to the registry:
-
-    New values must not be directly added to the "iana-foo" YANG
-    module.  They must instead be added to the "foo" registry.
-
-When a value is added to the "foo" registry, a new "enum" statement
-must be added to the "iana-foo" YANG module.  The "enum" statement,
-and sub-statements thereof, should be defined:
-
- "enum":        Replicates a name from the registry.
-
- "value":       Contains the decimal value of the IANA-assigned value.
-
- "status":      Is included only if a registration has been deprecated
-                or obsoleted.  IANA "deprecated" maps to YANG status
-                "deprecated", and IANA "obsolete" maps to YANG status
-                "obsolete".
-
- "description":  Replicates the description from the registry.
-
- "reference":   Replicates the reference(s) from the registry with the
-                title of the document(s) added.
-
-Unassigned or reserved values are not present in the module.
-
-When the "iana-foo" YANG module is updated, a new "revision"
-statement with a unique revision date must be added in front of the
-existing revision statements. The "revision" statement must have a
-"reference" substatement that points specifically to the published
-module (i.e., IANA_FOO_URL_With_REV).
-
-IANA is requested to add this note to [reference-to-the-iana-foo-
-registry]:
-
-    When this registry is modified, the YANG module "iana-foo"
-    [IANA_FOO_URL] must be updated as defined in RFC IIII.
+{::include-fold ./templates/iana-enum-template.txt}
 
 <CODE ENDS>
 ~~~~
@@ -3094,78 +2955,7 @@ into the management system.
 ~~~
 <CODE BEGINS> file "ietf-template@2023-07-26.yang"
 
-module ietf-template {
-  yang-version 1.1;
-
-  // replace this string with a unique namespace URN value
-
-  namespace "urn:ietf:params:xml:ns:yang:ietf-template";
-
-  // replace this string, and try to pick a unique prefix
-
-  prefix temp;
-
-  // import statements here: e.g.,
-  // import ietf-yang-types { prefix yang; }
-  // import ietf-inet-types { prefix inet; }
-  // identify the IETF working group if applicable
-
-  organization
-    "IETF NETMOD (NETCONF Data Modeling Language) Working Group";
-
-  // update this contact statement with your info
-
-  contact
-    "WG Web:   <http://datatracker.ietf.org/wg/your-wg-name/>
-     WG List:  <mailto:your-wg-name@ietf.org>
-
-     Editor:   your-name
-               <mailto:your-email@example.com>";
-
-  // replace the first sentence in this description statement.
-  // replace the copyright notice with the most recent
-  // version, if it has been updated since the publication
-  // of this document
-
-  description
-    "This module defines a template for other YANG modules.
-
-     Copyright (c) <insert year> IETF Trust and the persons
-     identified as authors of the code.  All rights reserved.
-
-     Redistribution and use in source and binary forms, with or
-     without modification, is permitted pursuant to, and subject
-     to the license terms contained in, the Revised BSD License
-     set forth in Section 4.c of the IETF Trust's Legal Provisions
-     Relating to IETF Documents
-     (https://trustee.ietf.org/license-info).
-
-     This version of this YANG module is part of RFC XXXX; see
-     the RFC itself for full legal notices.";
-
-  // RFC Ed.: replace XXXX with actual RFC number and remove
-  // this note
-
-  // replace '2023-07-26' with the module publication date
-  // the format is (year-month-day)
-
-  revision 2023-07-26 {
-    description
-      "what changed in this revision";
-    reference "RFC XXXX: <Replace With Document Title>";
-  }
-
-  // extension statements
-  // feature statements
-  // identity statements
-  // typedef statements
-  // grouping statements
-  // data definition statements
-  // augment statements
-  // rpc statements
-  // notification statements
-  // DO NOT put deviation statements in a published module
-}
+{::include-fold ./templates/ietf-template.yang}
 
 <CODE ENDS>
 ~~~
