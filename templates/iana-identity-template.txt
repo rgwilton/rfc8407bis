@@ -1,3 +1,4 @@
+
 This document defines the initial version of the IANA-maintained
 "iana-foo" YANG module.  The most recent version of the YANG module
 is available from the "YANG Parameters" registry
@@ -23,8 +24,8 @@ statements defined:
 
  "description":  Replicates the description from the registry.
 
- "reference":   Replicates the reference(s) from the registry with the
-                title of the document(s) added.
+ "reference":   Replicates the reference(s) from the registry with
+                the title of the document(s) added.
 
 Unassigned or reserved values are not present in the module.
 
@@ -39,3 +40,4 @@ registry]:
 
    When this registry is modified, the YANG module "iana-foo"
    [IANA_FOO_URL] must be updated as defined in RFC IIII.
+
