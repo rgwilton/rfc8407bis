@@ -1,3 +1,4 @@
+
 X.  Security Considerations
 
 This section uses the template described in Section 3.7 of [RFCXXXX].
@@ -43,7 +44,8 @@ Some of the readable data nodes in this YANG module may be considered
 sensitive or vulnerable in some network environments.  It is thus
 important to control read access (e.g., via get, get-config, or
 notification) to these data nodes. Specifically, the following
-subtrees and data nodes have particular sensitivities/vulnerabilities:
+subtrees and data nodes have particular sensitivities/
+vulnerabilities:
 
 <list subtrees and data nodes and explain the reasons for
  the sensitivity/privacy concerns>
@@ -54,7 +56,8 @@ subtrees and data nodes have particular sensitivities/vulnerabilities:
 Some of the RPC operations in this YANG module may be considered
 sensitive or vulnerable in some network environments.  It is thus
 important to control access to these operations.  Specifically,
-the following operations have particular sensitivities/vulnerabilities:
+the following operations have particular sensitivities/
+vulnerabilities:
 
 <list RPC operations and explain the reasons for the sensitivity/
  privacy concerns>
