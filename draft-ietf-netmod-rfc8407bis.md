@@ -212,6 +212,7 @@ informative:
    - Elaborated the guidance for the use of values reserved for documentation in examples.
    - Recommended the use of "example:" for URI examples.
    - Added a new section "Defining Standard Tags" ({{sec-tags}}) to echo the guidance in {{!RFC8819}}.
+   - Recommended against the use of "case + when" construct in some cases.
    - Added a discussion about the prefix pattern to use for example modules.
    - Added a statement for NMDA to be listed as normative reference.
    - Added a new section about YANG module classification.
@@ -863,6 +864,80 @@ It is possible that a "when" statement for an ancestor node of a key
 leaf will have the exact node-set result as the key leaf.  In such a
 case, the "when" statement for the key leaf is redundant and SHOULD
 be avoided.
+
+Some modules use "case + when" construct but provide duplicated information (e.g., the "when" statements are constraining a single case in the choice as shown in the example below).
+Such constructs with duplicated information SHOULD NOT be used.
+
+~~~~ yang
+    leaf type {
+      type enumeration {
+        enum a;
+        enum b;
+        enum c;
+      }
+      mandatory true;
+    }
+    choice type-choice {
+      case b {
+        container type-b {
+          when "../type = 'b'";
+          leaf foo {
+            type string;
+          }
+        }
+      }
+      case c {
+        container type-c {
+          when "../type = 'c'";
+          leaf bar {
+            mandatory true;
+            type string;
+          }
+        }
+      }
+    }
+~~~~
+
+Note that the use of "case + when" is still useful in cases where complementary modelling constraints should be expressed. See the example provided below.
+
+~~~~ yang
+    leaf type {
+      type enumeration {
+        enum a;
+        enum b;
+        enum c;
+      }
+    }
+    choice second-type {
+      mandatory true;
+      case foo {
+        container foo {
+          presence "When present, indicates type foo"
+          leaf foo-attribute {
+            type string;
+          }
+        }
+      }
+      case b {
+        container bar {
+          when "../type = 'a' or ../type = 'b'";
+          presence "When present, indicates type bar"
+          leaf bar-attribute {
+            type string;
+          }
+        }
+      }
+      case c {
+        container baz {
+          when "../type = 'c'";
+          leaf baz-attribute {
+            mandatory true;
+            type string;
+          }
+        }
+      }
+    }
+~~~~
 
 {{Section 8.1 of !RFC7950}} includes a provision for defining a constraint
 on state data and specifies that the constraint must be true in a valid state data.
@@ -2988,6 +3063,8 @@ into the management system.
    Michal Vaško reported an inconsistency in Sections 4.6.2 and 4.6.4 of {{?RFC8407}}.
 
    Thanks to Xufeng Liu for reviewing the document.
+
+   Italo Busi provided the examples of "case + when" construct.
 
    Thanks to Rach Salz and Michael Richardson for the SAAG review.
 
