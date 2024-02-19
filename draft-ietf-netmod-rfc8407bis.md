@@ -26,7 +26,7 @@ author:
  -
     fullname: Andy Bierman
     organization: YumaWorks
-    country:USA
+    country: USA
     email: andy@yumaworks.com
 
  -
