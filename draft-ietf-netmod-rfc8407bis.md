@@ -23,6 +23,11 @@ stand_alone: yes
 pi: [toc, sortrefs, symrefs, strict, comments, docmapping]
 
 author:
+ -
+    fullname: Andy Bierman
+    organization: YumaWorks
+    country:USA
+    email: andy@yumaworks.com
 
  -
     fullname: Mohamed Boucadair
