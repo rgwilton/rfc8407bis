@@ -418,7 +418,7 @@ as well.  Refer to {{Section 2.3 of ?RFC8349}} for an example of this
 overview section.
 
 If the document contains a temporary non-NMDA (Network Management Datastore Architecture) {{!RFC8342}}, then the Introduction
-section should mention this fact with the reasoning that motivated NMDA exceptions.
+section should mention this fact with the reasoning that motivated that design.
 Refer to {{sec-op-state}} for more NMDA-related guidance.
 
 Consistent indentation SHOULD be used for all examples, including
