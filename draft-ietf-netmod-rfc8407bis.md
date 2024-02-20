@@ -417,8 +417,7 @@ special interpretations of definitions in other modules MUST be noted
 as well.  Refer to {{Section 2.3 of ?RFC8349}} for an example of this
 overview section.
 
-If the document contains a YANG module that is non-compliant with Network
-Management Datastore Architecture (NMDA) {{!RFC8342}}, then the Introduction
+If the document contains a temporary non-NMDA (Network Management Datastore Architecture) {{!RFC8342}}, then the Introduction
 section should mention this fact with the reasoning that motivated NMDA exceptions.
 Refer to {{sec-op-state}} for more NMDA-related guidance.
 
