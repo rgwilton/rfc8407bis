@@ -502,7 +502,7 @@ See {{sec-usage-guidelines}} for guidelines on YANG usage.
    section that discusses security considerations relevant to those
    modules.
 
-   Unless the modules comply with {{!RFC8791}} or define YANG exetnsions (e.g., {{?RFC7952}}), the security section MUST
+   Unless the modules comply with {{!RFC8791}} or define YANG extensions (e.g., {{?RFC7952}}), the security section MUST
    be patterned after the latest approved template
    (available at ``<https://trac.ietf.org/trac/ops/wiki/yang-security-guidelines>``).  {{sec-security-template}} contains the security considerations
    template.  Authors
@@ -625,7 +625,7 @@ This tool can be used to validate XPath statements within YANG
 modules.
 
 To check that JSON-encoded examples {{?RFC7951}} comply with the target data models,
-"yangson" program should be used. The "yangson" program is freely available from GitHub.
+programs such as "yangson" should be used. The "yangson" program is freely available from GitHub.
 
 ~~~
   <https://github.com/CZ-NIC/yangson>
