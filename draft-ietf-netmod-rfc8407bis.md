@@ -424,7 +424,7 @@ overview section.
 
 If the document contains major Network Management Datastore Architecture (NMDA) exceptions or include a temporary non-NMDA module {{!RFC8342}}, then the Introduction
 section should mention this fact with the reasoning that motivated that design.
-Refer to {{sec-op-state}} for more NMDA-related guidance. Specifically, {{sec-4.23.2}} includes recommendations for designers to describe and justify any NMDA exceptions in detail as part of the module itself. 
+Refer to {{sec-op-state}} for more NMDA-related guidance. Specifically, {{sec-4.23.2}} includes a recommendation for designers to describe and justify any NMDA exceptions in detail as part of the module itself.
 
 Consistent indentation SHOULD be used for all examples, including
 YANG fragments and protocol message instance data.  If line wrapping
