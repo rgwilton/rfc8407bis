@@ -3055,8 +3055,8 @@ into the management system.
    for sharing more context that led to the design documented in
    {{?RFC9108}}.
 
-   Thanks to Andy Bierman, Italo Busi, Benoit Claise, Tom Petch,
-   Randy Presuhn, Martin Björklund, Acee Lindem, Dale R. Worley, and Kent Watsen for the comments.
+   Thanks to Italo Busi, Benoit Claise, Tom Petch,
+   Randy Presuhn, Martin Björklund, Acee Lindem, Dale R. Worley, Kent Watsen, and Jan Lindblad for the comments.
 
    Lou Berger suggested to include more details about IANA considerations.
 
