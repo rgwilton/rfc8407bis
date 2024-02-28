@@ -401,7 +401,7 @@ and SHOULD be included to help readers understand YANG module
 structure. If the complete tree diagram for a module becomes too long,
 the diagram SHOULD be split into several smaller diagrams. If the complete tree diagram is too long even with groupings unexpanded ({{Section 2.2 of ?RFC8340}}), authors SHOULD NOT include it in the document.
 
-These guidelines take precedende over the generic guidance in {{Section 3 of ?RFC8340}}.
+These guidelines take precedence over the generic guidance in {{Section 3 of ?RFC8340}}.
 
 If YANG tree diagrams are used, then an informative reference to the
 YANG tree diagrams specification MUST be included in the document.
