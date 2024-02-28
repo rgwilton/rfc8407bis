@@ -289,7 +289,7 @@ informative:
    module or submodule.  When describing properties that are specific to
    submodules, the term 'submodule' is used instead.
 
-##  Network Management Datastore Architecture (NMDA) Terms
+##  Network Management Datastore Architecture () Terms
 
    The following terms are defined in {{!RFC8342}} and are not redefined
    here:
@@ -422,9 +422,9 @@ special interpretations of definitions in other modules MUST be noted
 as well.  Refer to {{Section 2.3 of ?RFC8349}} for an example of this
 overview section.
 
-If the document contains a temporary non-NMDA (Network Management Datastore Architecture) {{!RFC8342}}, then the Introduction
+If the document contains major Network Management Datastore Architecture (NMDA) exceptions or include a temporary non-NMDA module {{!RFC8342}}, then the Introduction
 section should mention this fact with the reasoning that motivated that design.
-Refer to {{sec-op-state}} for more NMDA-related guidance.
+Refer to {{sec-op-state}} for more NMDA-related guidance. Specifically, {{sec-4.23.2}} includes recommendations for designers to describe and justify any NMDA exceptions in detail as part of the module itself. 
 
 Consistent indentation SHOULD be used for all examples, including
 YANG fragments and protocol message instance data.  If line wrapping
@@ -2319,7 +2319,7 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
    }
 ~~~
 
-###  Representing Operational Values of Configuration Data
+###  Representing Operational Values of Configuration Data {#sec-4.23.2}
 
    If possible, the same data type SHOULD be used to represent the
    configured value and the operational value, for a given leaf or leaf-
