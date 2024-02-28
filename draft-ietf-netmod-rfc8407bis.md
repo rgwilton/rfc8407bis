@@ -219,7 +219,7 @@ informative:
    - Added a new section "Defining Standard Tags" ({{sec-tags}}) to echo the guidance in {{!RFC8819}}.
    - Recommended against the use of "case + when" construct in some cases.
    - Added a discussion about the prefix pattern to use for example modules.
-   - Added a statement for NMDA to be listed as normative reference.
+   - Updated the NMDA guidance in the narrative text to highlight modules that are not NMDA-compliant.
    - Added a new section about YANG module classification.
    - Fixed an inconsistency in Section 4.6.2 where the example mentions identities, but uses them without their prefix as per Section 4.6.4.
    - Fixed an inconsistency in Section 4.6.4 which fails to use "derived-from-or-self()" mentioned back in Section 4.6.2.
@@ -422,12 +422,9 @@ special interpretations of definitions in other modules MUST be noted
 as well.  Refer to {{Section 2.3 of ?RFC8349}} for an example of this
 overview section.
 
-If the document contains a YANG module that is compliant with Network Management Datastore Architecture (NMDA)
-{{!RFC8342}}, then the Introduction section should mention this fact with {{!RFC8342}} listed as a normative reference.
-
-Example:
-: The YANG data model in this document conforms to the Network
-  Management Datastore Architecture defined in {{!RFC8342}}.
+If the document contains a temporary non-NMDA (Network Management Datastore Architecture) {{!RFC8342}}, then the Introduction
+section should mention this fact with the reasoning that motivated that design.
+Refer to {{sec-op-state}} for more NMDA-related guidance.
 
 Consistent indentation SHOULD be used for all examples, including
 YANG fragments and protocol message instance data.  If line wrapping
@@ -2287,7 +2284,7 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
    }
 ~~~
 
-##  Operational State
+##  Operational State {#sec-op-state}
 
    The modeling of operational state with YANG has been refined over
    time.  At first, only data that has a "config" statement value of
