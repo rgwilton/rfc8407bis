@@ -1018,8 +1018,8 @@ they are evaluated in a context where the context node is a user-
 ordered "list" or "leaf-list".
 
 The "id" function SHOULD NOT be used.  The "ID" attribute is not
-present in YANG documents, so this function has no meaning.  The YANG
-compiler SHOULD return an empty string for this function.
+present in YANG documents, so this function has no meaning.  The
+XPath execution environment SHOULD return an empty string for this function.
 
 The "namespace-uri" and "name" functions SHOULD NOT be used.
 Expanded names in XPath are different than YANG.  A specific
@@ -1027,7 +1027,7 @@ canonical representation of a YANG-expanded name does not exist.
 
 The "lang" function SHOULD NOT be used.  This function does not apply
 to YANG because there is no "lang" attribute set with the document.
-The YANG compiler SHOULD return "false" for this function.
+The XPath execution environment SHOULD return "false" for this function.
 
 The "local-name", "namespace-uri", "name", "string", and "number"
 functions SHOULD NOT be used if the argument is a node-set.  If so,
