@@ -73,7 +73,7 @@ in network environments. Refer to the Security Considerations
 of <RFC-insert-numbers> for information as to which nodes may
 be considered sensitive or vulnerable in network environments.
 
-  -- if your YANG modules does not define any data nodes, then
+  -- if your YANG module does not define any data nodes, then
   -- add the following text
 
 The YANG module defines a set of identities, types, and
