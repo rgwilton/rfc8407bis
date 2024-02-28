@@ -289,7 +289,7 @@ informative:
    module or submodule.  When describing properties that are specific to
    submodules, the term 'submodule' is used instead.
 
-##  Network Management Datastore Architecture () Terms
+##  Network Management Datastore Architecture (NMDA) Terms
 
    The following terms are defined in {{!RFC8342}} and are not redefined
    here:
