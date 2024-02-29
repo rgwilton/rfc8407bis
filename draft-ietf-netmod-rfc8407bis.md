@@ -208,6 +208,7 @@ informative:
    - Added statements that the security template is not required for modules that follow {{!RFC8791}} or {{!RFC7952}}.
    - Added a statement that the RFCs that are listed in the security template are to be listed as normative references in documents that use the template.
    - Added a note that folding of the examples should be done as per {{!RFC8792}} conventions.
+   - Added a recommendation about long trees
    - Added a note that RFC8792-folding of YANG modules can be used if and only if native YANG features (e.g., break line, "+") are not sufficient.
    - Added tool validation checks to ensure that YANG modules fit into the line limits of an I-D.
    - Added tool validation checks of JSON-encoded examples.
