@@ -790,8 +790,8 @@ module:
 * The local module prefix MUST be used instead of no prefix in all "default" statements for an "identityref" or "instance-identifier" data type.
 * The local module prefix MAY be used for references to typedefs, groupings, extensions, features, and identities defined in the module.
 
-Prefix values SHOULD be short but are also likely to be unique.
-Prefix values SHOULD NOT conflict with known modules that have been
+Prefix values should be selected carefully to be unique, and ideally not too long.
+Specifically, prefix values SHOULD NOT conflict with known modules that have been
 previously published.
 
 For convenience, prefix values of example modules MAY be prefixed with "ex"
