@@ -406,7 +406,7 @@ The document SHOULD include the following note if the full tree is not included:
 
 
      -- If no stable pointer to retrieve the tree is included
-     
+
      The full tree diagram of the module can be generated using, e.g.,
      the "pyang" tool. That tree is not included here because it is
      too long (Section 3.4 of [RFCXXXX]). Instead, subtrees are provided
