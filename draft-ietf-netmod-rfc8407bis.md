@@ -409,7 +409,7 @@ The document SHOULD include the following note if the full tree is not included:
 
      The full tree diagram of the module can be generated using,
      e.g., the "pyang" tool. That tree is not included here because
-     it is too long (Section 3.4 of [RFCXXXX]). Instead, subtrees 
+     it is too long (Section 3.4 of [RFCXXXX]). Instead, subtrees
      are provided for the reader's convenience.
 
      -- If a stable pointer to retrieve the tree is included
