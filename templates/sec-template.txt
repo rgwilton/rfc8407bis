@@ -61,3 +61,29 @@ vulnerabilities:
 
 <list RPC operations and explain the reasons for the sensitivity/
  privacy concerns>
+
+   -- if your YANG module reuses groupings from other modules and
+   -- the document that specifies these groupings also
+   -- includes those as data nodes, then add this text to remind
+   -- the specific sensitivity or vulnerability of reused nodes.
+
+This YANG module uses groupings from other YANG modules that
+define nodes that may be considered sensitive or vulnerable
+in network environments. Refer to the Security Considerations
+of <RFC-insert-numbers> for information as to which nodes may
+be considered sensitive or vulnerable in network environments.
+
+  -- if your YANG module does not define any data nodes, then
+  -- add the following text
+
+The YANG module defines a set of identities, types, and
+groupings. These nodes are intended to be reused by other YANG
+modules. The module by itself does not expose any data nodes that
+are writable, data nodes that contain read-only state, or RPCs. 
+As such, there are no additional security issues related to 
+the YANG module that need to be considered.
+
+Modules that use the groupings that are defined in this document
+should identify the corresponding security considerations. For
+example, reusing some of these groupings will expose privacy-related
+information (e.g., 'node-example').
