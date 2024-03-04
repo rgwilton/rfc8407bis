@@ -405,18 +405,19 @@ the diagram SHOULD be split into several smaller diagrams (a.k.a subtrees). For 
 The document SHOULD include the following note if the full tree is not included:
 
 ~~~~
-  -- If no stable pointer to retrieve the tree is included
+     -- If no stable pointer to retrieve the tree is included
 
-  The full tree diagram of the module can be generated using, e.g.,
-  the "pyang" tool. That tree is not included here because it is
-  too long (Section 3.4 of [RFCXXXX]). Instead, subtrees are provided
-  for the reader's convenience.
+     The full tree diagram of the module can be generated using,
+     e.g., the "pyang" tool. That tree is not included here because
+     it is too long (Section 3.4 of [RFCXXXX]). Instead, subtrees 
+     are provided for the reader's convenience.
 
-  -- If a stable pointer to retrieve the tree is included
+     -- If a stable pointer to retrieve the tree is included
 
-  The full tree diagram of the module can be retrieved at [stable_url].
-  That tree is not included here because it is too long (Section 3.4 of
-  [RFCXXXX]). Instead, subtrees are provided for the reader's convenience.
+     The full tree diagram of the module can be retrieved at
+     <stable_url_ref>. That tree is not included here because it is too
+     long (Section 3.4 of [RFCXXXX]). Instead, subtrees are provided
+     for the reader's convenience.
 ~~~~
 
 These guidelines take precedence over the generic guidance in {{Section 3 of ?RFC8340}}.
