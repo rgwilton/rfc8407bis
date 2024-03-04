@@ -208,6 +208,7 @@ informative:
    - Added statements that the security template is not required for modules that follow {{!RFC8791}} or {{!RFC7952}}.
    - Added a statement that the RFCs that are listed in the security template are to be listed as normative references in documents that use the template.
    - Added a note that folding of the examples should be done as per {{!RFC8792}} conventions.
+   - Added a recommendation about long trees
    - Added a note that RFC8792-folding of YANG modules can be used if and only if native YANG features (e.g., break line, "+") are not sufficient.
    - Added tool validation checks to ensure that YANG modules fit into the line limits of an I-D.
    - Added tool validation checks of JSON-encoded examples.
@@ -398,7 +399,28 @@ document or if any terms are imported from other documents.
 
 YANG tree diagrams provide a concise representation of a YANG module
 and SHOULD be included to help readers understand YANG module
-structure.  Guidelines on tree diagrams can be found in {{Section 3 of ?RFC8340}}.
+structure. If the complete tree diagram for a module becomes long (more than 2 pages, typically),
+the diagram SHOULD be split into several smaller diagrams (a.k.a subtrees). For the reader's convenience, a subtree should fit within a page. If the complete tree diagram is too long (more than 5 pages, typically) even with groupings unexpanded ({{Section 2.2 of ?RFC8340}}), the authors SHOULD NOT include it in the document. A stable pointer to retrieve the full tree MAY be included.
+
+The document SHOULD include the following note if the full tree is not included:
+
+~~~~
+     -- If no stable pointer to retrieve the tree is included
+
+     The full tree diagram of the module can be generated using,
+     e.g., the "pyang" tool. That tree is not included here because
+     it is too long (Section 3.4 of [RFCXXXX]). Instead, subtrees
+     are provided for the reader's convenience.
+
+     -- If a stable pointer to retrieve the tree is included
+
+     The full tree diagram of the module can be retrieved at
+     <stable_url_ref>. That tree is not included here because it is too
+     long (Section 3.4 of [RFCXXXX]). Instead, subtrees are provided
+     for the reader's convenience.
+~~~~
+
+These guidelines take precedence over the generic guidance in {{Section 3 of ?RFC8340}}.
 
 If YANG tree diagrams are used, then an informative reference to the
 YANG tree diagrams specification MUST be included in the document.
