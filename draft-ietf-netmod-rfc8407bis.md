@@ -209,7 +209,6 @@ informative:
    - Added a statement that the RFCs that are listed in the security template are to be listed as normative references in documents that use the template.
    - Added a note that folding of the examples should be done as per {{!RFC8792}} conventions.
    - Added a recommendation about long trees.
-   - Updated to prefix recommendation to insist on the uniqueness property.
    - Added a note that RFC8792-folding of YANG modules can be used if and only if native YANG features (e.g., break line, "+") are not sufficient.
    - Added tool validation checks to ensure that YANG modules fit into the line limits of an I-D.
    - Added tool validation checks of JSON-encoded examples.
@@ -791,8 +790,8 @@ module:
 * The local module prefix MUST be used instead of no prefix in all "default" statements for an "identityref" or "instance-identifier" data type.
 * The local module prefix MAY be used for references to typedefs, groupings, extensions, features, and identities defined in the module.
 
-Prefix values should be selected carefully to be unique, and ideally not too long.
-Specifically, prefix values SHOULD NOT conflict with known modules that have been
+Prefix values SHOULD be short but are also likely to be unique.
+Prefix values SHOULD NOT conflict with known modules that have been
 previously published.
 
 For convenience, prefix values of example modules MAY be prefixed with "ex"
