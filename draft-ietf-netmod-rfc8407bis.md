@@ -422,6 +422,8 @@ The document SHOULD include the following note if the full tree is not included:
 
 These guidelines take precedence over the generic guidance in {{Section 3 of ?RFC8340}}.
 
+> The tooling may evolve in the future to provide better rendering of too long trees. This tooling may offer (but not limited to), unfold trees, control of expanded views, ease navigation among various levels of a tree, support of hyperlinks, etc. When such a tooling is available, too long trees can be displayed in the HTML version of documents that include such trees.
+
 If YANG tree diagrams are used, then an informative reference to the
 YANG tree diagrams specification MUST be included in the document.
 Refer to {{Section 2.2 of ?RFC8349}} for an example of such a reference.
