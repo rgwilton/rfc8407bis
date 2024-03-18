@@ -2963,9 +2963,8 @@ to point to the RFC number that will be assigned to this document as it contains
 for registration in Appendix B.
 
 Also, this document requests IANA to add a note to the "YANG Module Names" registry
-to indicate that future registrations should have a prefix value that starts with "ietf-" for IETF modules
-and "iana-" for IANA-maintained modules.
-
+to indicate that future registrations for IANA-maintained modules should have a prefix value that starts with "iana-".
+    
 
 #  Security Considerations
 
