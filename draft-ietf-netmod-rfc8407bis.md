@@ -2964,7 +2964,6 @@ for registration in Appendix B.
 
 Also, this document requests IANA to add a note to the "YANG Module Names" registry
 to indicate that future registrations for IANA-maintained modules should have a prefix value that starts with "iana-".
-    
 
 #  Security Considerations
 
