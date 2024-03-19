@@ -794,7 +794,9 @@ module:
 * The local module prefix MUST be used instead of no prefix in all "default" statements for an "identityref" or "instance-identifier" data type.
 * The local module prefix MAY be used for references to typedefs, groupings, extensions, features, and identities defined in the module.
 
-Prefix values SHOULD be meaningful and preferrably not too long. Prefix values for IANA-maintained modules SHOULD be prefixed with "iana-". Prefix values SHOULD NOT conflict with known modules that have been previously published.
+Prefix values for IANA-maintained modules SHOULD be prefixed with "iana-".
+
+Prefix values SHOULD be short but meaningful to the intended user. Prefix values SHOULD NOT conflict with known modules that have been previously published.
 Examples of meaningful and structured prefix values are provided below:
 
 + "iana-dots-signal" {{?RFC9132}}
