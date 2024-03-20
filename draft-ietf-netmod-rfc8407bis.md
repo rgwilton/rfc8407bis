@@ -210,7 +210,6 @@ informative:
    - Added a note that folding of the examples should be done as per {{!RFC8792}} conventions.
    - Added a recommendation about long trees.
    - Added a recommendation for the use of meaningful prefix values.
-   - Added a recommendation for IANA-maintained modules to use "iana-" in the prefix values.
    - Added a note that RFC8792-folding of YANG modules can be used if and only if native YANG features (e.g., break line, "+") are not sufficient.
    - Added tool validation checks to ensure that YANG modules fit into the line limits of an I-D.
    - Added tool validation checks of JSON-encoded examples.
@@ -794,18 +793,7 @@ module:
 * The local module prefix MUST be used instead of no prefix in all "default" statements for an "identityref" or "instance-identifier" data type.
 * The local module prefix MAY be used for references to typedefs, groupings, extensions, features, and identities defined in the module.
 
-Prefix values for IANA-maintained modules SHOULD be prefixed with "iana-".
-
 Prefix values SHOULD be short but meaningful to the intended user. Prefix values SHOULD NOT conflict with known modules that have been previously published.
-Examples of meaningful and structured prefix values are provided below:
-
-+ "iana-dots-signal" {{?RFC9132}}
-+ "dots-signal"  {{?RFC9132}}
-+ "dots-call-home" {{?RFC9066}}
-+ "dots-mapping" {{?RFC9244}}
-+ "dots-control" {{?RFC9133}}
-+ "dots-telemetry" {{?RFC9244}}
-+ "dots-robust" {{?RFC9362}}
 
 For convenience, prefix values of example modules MAY be prefixed with "ex"
 or similar patterns. In doing so, readers of example modules or tree diagrams
@@ -2964,8 +2952,6 @@ the "YANG Module Names" registry under the "YANG Parameters" registry group
 to point to the RFC number that will be assigned to this document as it contains the template necessary
 for registration in Appendix B.
 
-Also, this document requests IANA to add a note to the "YANG Module Names" registry
-to indicate that future registrations for IANA-maintained modules should have a prefix value that starts with "iana-".
 
 #  Security Considerations
 
