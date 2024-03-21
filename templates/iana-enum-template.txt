@@ -39,8 +39,7 @@ should reflect what changed in the revised version. Typically, the
 description text enumerates the changes (e.g., list of the new 
 registration entries). 
 
-  --- If the changes are triggered by an RFC, the description may
-  --- also include, insert this text:
+  --- If the changes are triggered by an RFC, insert this text:
 
  The description text should include this text: "Applied updates as
  specified by RFC XXXX.".
