@@ -47,7 +47,7 @@ enumerates the changes (e.g., list of the new registration entries).
 
   --- If the changes are triggered following other IANA registration
   --- policy (Section 4 of [RFC8126]) but not all the values in the
-  --- are not covered by the same policy, insert this text:
+  --- registry are covered by the same policy, insert this text:
 
  The "description" substatement should include this text: 
  "Applied updated as specified by the registration policy 
