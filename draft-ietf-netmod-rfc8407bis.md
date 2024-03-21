@@ -2876,7 +2876,7 @@ Abstract data structures can be augmented using the "augment-structure" statemen
       IANA-maintained module.  Absent such an indication, experimental
       values MUST NOT be listed in the IANA-maintained module.
 
-   *  An instruction about how to generate the "revision" statement. The "description" substatement should reflect what changed in the revised version. Typically, the description text enumerates the changes (e.g., list of the new registration entries). If the changes are triggered by an RFC, the description may also include text such as "Applied updates as specified by RFC XXXX.". If the changes are triggered following other IANA registration policy ({{Section  4 of !RFC8126}}), the description may also include "Applied updated as specified by <Some_IANA_policy>".
+   *  An instruction about how to generate the "revision" statement. The "description" substatement should reflect what changed in the revised version. Typically, the description text enumerates the changes (e.g., list of the new registration entries). If the changes are triggered by an RFC, the description may also include text such as "Applied updates as specified by RFC XXXX.". If the changes are triggered following other IANA registration policy ({{Section 4 of !RFC8126}}), the description may also include "Applied updated as specified by <Some_IANA_policy>".
 
    A template for the IANA Considerations is provided in {{sec-temp-id}} for
    IANA-maintained modules with identities and {{sec-temp-enum}} for
