@@ -44,6 +44,12 @@ registration entries).
  The description text should include this text: "Applied updates as
  specified by RFC XXXX.".
 
+  --- If the changes are triggered following other IANA registration
+  --- policy (Section 4 of [RFC8126]), insert this text:
+
+ The description text should include this text: "Applied updated as 
+ specified by the registration policy <Some_IANA_policy>".
+
 IANA is requested to add this note to [reference-to-the-iana-foo-
 registry]:
 
