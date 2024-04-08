@@ -206,7 +206,7 @@ informative:
    - Added code markers for the security template.
    - Updated the YANG security considerations template to reflect the latest version maintained in the Wiki.
    - Added statements that the security template is not required for modules that follow {{!RFC8791}} or {{!RFC7952}}.
-   - Added a statement that the RFCs that are listed in the security template are to be listed as normative references in documents that use the template.
+   - Added a statement about how to cite the RFCs that are listed in the security template.
    - Added a note that folding of the examples should be done as per {{!RFC8792}} conventions.
    - Added a recommendation about long trees.
    - Added a recommendation for the use of meaningful prefix values.
@@ -560,7 +560,8 @@ Documents that define exclusively modules following the extension in {{!RFC8791}
 ~~~
 
 Note:
-: {{!RFC8446}}, {{!RFC6241}}, {{!RFC6242}}, {{!RFC8341}}, and {{!RFC8040}} (or future RFCs that replace any of them) MUST be listed as normative references.
+: {{!RFC8341}} (or a future RFC that replaces it) MUST be listed as normative references.
+: By default, {{!RFC8446}}, {{!RFC6241}}, {{!RFC6242}}, and {{!RFC8040}} (or future RFCs that replace any of them) are listed as informative references unless normatively cited in other sections of a document.
 
 ##  IANA Considerations Section {#sec-iana-cons}
 
