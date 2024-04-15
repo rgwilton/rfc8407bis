@@ -12,3 +12,11 @@ revision 2019-11-16 {
   reference
     "RFC 8675: A YANG Data Model for Tunnel Interface Types";
 }
+...
+identity ipsectunnelmode {
+  base ift:tunnel;
+  description
+    "IpSec tunnel mode encapsulation.";
+  reference
+    "RFC 4301: Security Architecture for the Internet Protocol";
+}
