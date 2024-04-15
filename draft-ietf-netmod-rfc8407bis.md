@@ -127,6 +127,13 @@ informative:
               date: false
               target: https://www.iana.org/assignments/yang-module-tags/
 
+   IANA_Tunnel_Type_URL:
+              title: "iana-tunnel-type YANG Module"
+              author:
+                org: IANA
+              date: false
+              target: https://www.iana.org/assignments/iana-tunnel-type/iana-tunnel-type.xhtml
+
    YANGSON-Validate:
               title: "YANG Validation Makefile"
               author:
@@ -2893,7 +2900,7 @@ Abstract data structures can be augmented using the "augment-structure" statemen
 {::include-fold ./templates/iana-example.txt}
 ~~~~
 
-Duplicating the same reference at the high level and at the level of a new addition might be redundant. For example, the following does not provide access to a specific (OLD) revision of the module when future revisions are made:
+Duplicating the same reference at the high level and at the level of a new addition might be redundant. For example, the following does not provide access to a specific (OLD) revision of the module when future revisions are made {{IANA_Tunnel_Type_URL}}:
 
 ~~~~ yang
 {::include-fold ./templates/iana-current-but-wrong.txt}
