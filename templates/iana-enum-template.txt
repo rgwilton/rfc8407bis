@@ -34,7 +34,24 @@ When the "iana-foo" YANG module is updated, a new "revision"
 statement with a unique revision date must be added in front of the
 existing revision statements. The "revision" statement must have a
 "reference" substatement that points specifically to the published
-module (i.e., IANA_FOO_URL_With_REV).
+module (i.e., IANA_FOO_URL_With_REV). If the updates are triggered
+by an RFC, that RFC must also be included in the "reference" 
+substatement. The "description" substatement should reflect what
+changed in the revised version. Typically, the description text
+enumerates the changes (e.g., list of the new registration entries). 
+
+  --- If the changes are triggered by an RFC, insert this text:
+
+ The "description" substatement should include this text:
+ "Applied updates as specified by RFC XXXX.".
+
+  --- If the changes are triggered following other IANA registration
+  --- policy (Section 4 of [RFC8126]) but not all the values in the
+  --- registry are covered by the same policy, insert this text:
+
+ The "description" substatement should include this text: 
+ "Applied updated as specified by the registration policy 
+  <Some_IANA_policy>".
 
 IANA is requested to add this note to [reference-to-the-iana-foo-
 registry]:
