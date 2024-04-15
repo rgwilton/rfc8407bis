@@ -2893,16 +2893,16 @@ Abstract data structures can be augmented using the "augment-structure" statemen
 {::include-fold ./templates/iana-example.txt}
 ~~~~
 
-Duplicating the same reference at the high level and at the level of the new additions to a module maight be redundant. For example, the following does not provide access to a specific revision of the module when future revisions are made to the module:
+Duplicating the same reference at the high level and at the level of a new addition might be redundant. For example, the following does not provide access to a specific (OLD) revision of the module when future revisions are made:
 
 ~~~~ yang
-{::include-fold ./templates/iana-template-correct.txt}
+{::include-fold ./templates/iana-current-but-wrong.txt}
 ~~~~
 
 The following example shows how to generate the "revision" statements following the guidance in {{sec-temp-id}}:
 
 ~~~~ yang
-{::include-fold ./templates/iana-current-but-wrong.txt}
+{::include-fold ./templates/iana-template-correct.txt}
 ~~~~
 
    The following templates are to be considered in addition to the
