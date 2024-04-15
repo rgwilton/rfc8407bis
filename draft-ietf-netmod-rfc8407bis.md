@@ -2886,11 +2886,23 @@ Abstract data structures can be augmented using the "augment-structure" statemen
    explicit description (or name) field is listed under the
    authoritative IANA registry, or the name does not comply with YANG naming conventions ({{sec-id-naming}})).
 
-   An example of  "revision" statements that are generated following the guidance in {{sec-temp-id}}
+   An example of "revision" statements that are generated following the guidance in {{sec-temp-id}}
    is provided below:
 
 ~~~~ yang
 {::include-fold ./templates/iana-example.txt}
+~~~~
+
+Duplicating the same reference at the high level and at the level of the new additions to a module maight be redundant. For example, the following does not provide access to a specific revision of the module when future revisions are made to the module:
+
+~~~~ yang
+{::include-fold ./templates/iana-template-correct.txt}
+~~~~
+
+The following example shows how to generate the "revision" statements following the guidance in {{sec-temp-id}}:
+
+~~~~ yang
+{::include-fold ./templates/iana-current-but-wrong.txt}
 ~~~~
 
    The following templates are to be considered in addition to the
