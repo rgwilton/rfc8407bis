@@ -49,7 +49,7 @@ enumerates the changes (e.g., list of the new registration entries).
   --- registry are covered by the same policy, insert this text:
 
  The "description" substatement should include this text: 
- "Applied updated as specified by the registration policy 
+ "Applied updates as specified by the registration policy 
   <Some_IANA_policy>".
 
 IANA is requested to add this note to [reference-to-the-iana-foo-
