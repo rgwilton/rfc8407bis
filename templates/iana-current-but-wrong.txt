@@ -14,10 +14,10 @@ revision 2019-11-16 {
 
 ...
 
-  identity ipsectunnelmode {
-    base ift:tunnel;
-    description
-      "IpSec tunnel mode encapsulation.";
-    reference
-      "RFC 4301: Security Architecture for the Internet Protocol";
-  }
+identity ipsectunnelmode {
+  base ift:tunnel;
+  description
+    "IpSec tunnel mode encapsulation.";
+  reference
+    "RFC 4301: Security Architecture for the Internet Protocol";
+}
