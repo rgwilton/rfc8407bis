@@ -1,0 +1,14 @@
+revision 2021-04-23 {
+  description
+    "Registered tunnelType 19.";
+  reference
+    "https://www.iana.org/assignments/yang-parameters/iana-tunnel-type@2021-04-23.yang
+     RFC 4301: Security Architecture for the Internet Protocol";
+}
+
+revision 2019-11-16 {
+  description
+    "Initial revision.";
+  reference
+    "RFC 8675: A YANG Data Model for Tunnel Interface Types";
+}
