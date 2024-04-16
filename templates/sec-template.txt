@@ -5,9 +5,12 @@ This section uses the template described in Section 3.7 of [RFCXXXX].
 
 The YANG module specified in this document defines a schema for data
 that is designed to be accessed via network management protocols such
-as NETCONF [RFC6241] or RESTCONF [RFC8040]. Both of these protocols
-have mandatory-to-implement secure transport layers (e.g., Secure
-Shell (SSH) [RFC6242] or TLS [RFC8446]) with mutual authentication.
+as NETCONF [RFC6241] or RESTCONF [RFC8040]. These network management 
+protocols are required to use a secure transport layer and mutual
+authentication, e.g., SSH [RFC6242] without the "none" authentication
+option, Transport Layer Security (TLS) [RFC8446] with mutual X.509 
+authentication, and HTTPS with HTTP authentication (Section 11 of
+[RFC9110]).
 
 The Network Configuration Access Control Model (NACM) [RFC8341]
 provides the means to restrict access for particular NETCONF or
