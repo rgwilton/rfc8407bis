@@ -56,11 +56,12 @@ changed (e.g., deprecated, discouraged, or obsoleted).
  "Applied updates as specified by the registration policy 
   <Some_IANA_policy>".
 
-The "reference" substatement points specifically to the published module
-(i.e., IANA_FOO_URL_With_REV). It may also point to an authoritative  
-event triggering the update to the YANG module. In all cases, this event
-is cited from the underlying IANA registry. If the update is triggered by
-an RFC, that RFC must also be included in the "reference" substatement.
+The "reference" substatement points specifically to the published
+module (i.e., IANA_FOO_URL_With_REV). It may also point to an 
+authoritative event triggering the update to the YANG module. In all
+cases, this event is cited from the underlying IANA registry. If the
+update is triggered by an RFC, that RFC must also be included in
+the "reference" substatement.
 
 IANA is requested to add this note to [reference-to-the-iana-foo-
 registry]:
