@@ -1304,7 +1304,10 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
 
    The "description" statement MUST be present.  For modules published
    within IETF documents, the appropriate IETF Trust Copyright text MUST
-   be present, as described in Section 3.1.
+   be present, as described in Section 3.1 and contain the following statement:
+
+      All revisions of IETF and IANA published modules can be found at the YANG
+      Parameters registry: https://www.iana.org/assignments/yang-parameters.
 
    If the module relies on information contained in other documents,
    which are not the same documents implied by the import statements
