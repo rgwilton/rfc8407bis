@@ -3122,6 +3122,8 @@ into the management system.
 
    Thanks to Rach Salz and Michael Richardson for the SAAG review.
 
+   Kent Watsen contributed text to the security and IANA-maintained module templates.
+
 The author of RFC 8407:
 : Andy Bierman
 : YumaWorks
