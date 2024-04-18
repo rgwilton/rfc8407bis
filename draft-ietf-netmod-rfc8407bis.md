@@ -209,9 +209,10 @@ informative:
 
    - Implemented errata 5693, 5800, 6899, and 7416.
    - Updated the terminology.
+   - Added a note about notation conventions.
    - Updated the URL of the IETF authors guidelines.
    - Added code markers for the security template.
-   - Updated the YANG security considerations template to reflect the latest version maintained in the Wiki.
+   - Updated the YANG security considerations template to better insist on the key secure transport features.
    - Added statements that the security template is not required for modules that follow {{!RFC8791}} or {{!RFC7952}}.
    - Added a statement about how to cite the RFCs that are listed in the security template.
    - Added a note that folding of the examples should be done as per {{!RFC8792}} conventions.
@@ -237,8 +238,11 @@ informative:
    - Added text about summary of changes in revision statements.
    - Added a template for IANA-maintained modules.
 
-#  Terminology
+#  Terminology & Notation Conventions
 
+  Some of the templates defined in the document uses "--" to easily identify
+  specific instructions to the authors.
+  
   The following terms are used throughout this document:
 
   IANA-maintained module:
