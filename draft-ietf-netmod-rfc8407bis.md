@@ -241,8 +241,10 @@ informative:
 #  Terminology & Notation Conventions
 
   Some of the templates defined in the document uses "--" to easily identify
-  specific instructions to the authors.
-  
+  specific instructions to the authors. Text prefixed with "--" must not be
+  copied as such when using a template. Note that for YANG templates, "//"
+  is used to convey such instructions.
+
   The following terms are used throughout this document:
 
   IANA-maintained module:
