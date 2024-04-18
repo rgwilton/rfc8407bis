@@ -568,7 +568,7 @@ Documents that define exclusively modules following the extension in {{!RFC8791}
 
 Note:
 : {{!RFC8341}} (or a future RFC that replaces it) MUST be listed as normative references.
-: By default, {{!RFC8446}}, {{!RFC6241}}, {{!RFC6242}}, and {{!RFC8040}} (or future RFCs that replace any of them) are listed as informative references unless normatively cited in other sections of the document that specifies the YANG module.
+: By default, {{!RFC6241}}, {{!RFC6242}}, {{!RFC8040}}, {{!RFC8446}}, and {{?RFC9110}} (or future RFCs that replace any of them) are listed as informative references unless normatively cited in other sections of the document that specifies the YANG module.
 
 ##  IANA Considerations Section {#sec-iana-cons}
 
