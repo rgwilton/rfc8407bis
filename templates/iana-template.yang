@@ -67,9 +67,11 @@ module iana-template {
 
   revision date-revision {
     description
-      "Indicates the list of changes";
+      "Indicates the list of changes per Section 4.30.3 of RFCAAAA.";
     reference
-      "URL of the latest version of the module";
+      "URL of the latest version of the module
+       (if any) list the authoritative event (e.g., RFC) that 
+       triggered the update to the YANG module";
   }
 
   // replace 'date-initial' with the module publication date
