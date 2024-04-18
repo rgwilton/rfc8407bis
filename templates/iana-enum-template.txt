@@ -41,17 +41,17 @@ such as udpates to existing entries (e.g., update a description or
 a reference) or notes which "enums" were added or had their status
 changed (e.g., deprecated, discouraged, or obsoleted).
 
-  --- When such a description is not feasible, the description varies
-  --- on how the update is triggered.
+  -- When such a description is not feasible, the description varies
+  -- on how the update is triggered.
 
-  --- If the update is triggered by an RFC, insert this text:
+  -- If the update is triggered by an RFC, insert this text:
 
  The "description" substatement should include this text:
  "Applied updates as specified by RFC XXXX.".
 
-  --- If the update is triggered following other IANA registration
-  --- policy (Section 4 of [RFC8126]) but not all the values in the
-  --- registry are covered by the same policy, insert this text:
+  -- If the update is triggered following other IANA registration
+  -- policy (Section 4 of [RFC8126]) but not all the values in the
+  -- registry are covered by the same policy, insert this text:
 
  The "description" substatement should include this text: 
  "Applied updates as specified by the registration policy 
