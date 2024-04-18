@@ -202,6 +202,8 @@ informative:
    expected to know the YANG data modeling language before implementing
    the guidance in this document.
 
+> Note to the RFC Editor: Please replace "AAAA" through the document with the RFC number assigned to this document.
+
 ##  Changes Since RFC 8407
 
    The following changes have been made to the guidelines published in
@@ -423,14 +425,14 @@ The document SHOULD include the following note if the full tree is not included:
 
      The full tree diagram of the module can be generated using,
      e.g., the "pyang" tool. That tree is not included here because
-     it is too long (Section 3.4 of [RFCXXXX]). Instead, subtrees
+     it is too long (Section 3.4 of [RFCAAAA]). Instead, subtrees
      are provided for the reader's convenience.
 
      -- If a stable pointer to retrieve the tree is included
 
      The full tree diagram of the module can be retrieved at
      <stable_url_ref>. That tree is not included here because it is too
-     long (Section 3.4 of [RFCXXXX]). Instead, subtrees are provided
+     long (Section 3.4 of [RFCAAAA]). Instead, subtrees are provided
      for the reader's convenience.
 ~~~~
 
@@ -2973,13 +2975,13 @@ Names" registry {{!RFC6020}} within the "YANG Parameters" registry group.
    Maintained by IANA?  N
    Namespace:  urn:ietf:params:xml:ns:yang:ietf-template
    Prefix:  temp
-   Reference:  RFC XXXX
+   Reference:  RFC AAAA
 
    Name:  iana-template
    Maintained by IANA?  N
    Namespace:  urn:ietf:params:xml:ns:yang:iana-template
    Prefix:  iana-foo
-   Reference:  RFC XXXX
+   Reference:  RFC AAAA
 ~~~~
 
 Also, this document requests IANA to update the reference for
