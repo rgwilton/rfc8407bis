@@ -595,7 +595,7 @@ should indicate whether the module is IANA-maintained or not. This applies to ne
 modules. An example of an update registration for the
 "ietf-template" module can be found in {{sec-iana}}.
 
-Additional IANA considerations applicable to IANA-maintained modules are provided in {{sec-iana-mm}}.
+Additional IANA considerations applicable to IANA-maintained modules (including instructions to maintain them) are provided in {{sec-iana-mm}}.
 
 ###  Documents That Create a New Namespace
 
