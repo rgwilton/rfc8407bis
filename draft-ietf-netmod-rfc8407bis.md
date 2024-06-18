@@ -939,6 +939,36 @@ Such constructs with duplicated information SHOULD NOT be used.
     }
 ~~~~
 
+The following example removes the duplicated information:
+
+~~~~ yang
+    leaf type {
+      type enumeration {
+        enum a;
+        enum b;
+        enum c;
+      }
+      mandatory true;
+    }
+    choice type-choice {
+      case b {
+        container type-b {
+          leaf foo {
+            type string;
+          }
+        }
+      }
+      case c {
+        container type-c {
+          leaf bar {
+            mandatory true;
+            type string;
+          }
+        }
+      }
+    }
+~~~~
+
 Note that the use of "case + when" is still useful in cases where complementary modelling constraints should be expressed. See the example provided below.
 
 ~~~~ yang
