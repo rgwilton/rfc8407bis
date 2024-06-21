@@ -232,6 +232,9 @@ Table of Contents
 
    *  Updated the URL of the IETF authors guidelines.
 
+   *  Update the guidance so that the "file name" after the <CODE
+      BEGINS> tag is mandatory.
+
    *  Added code markers for the security template.
 
    *  Updated the YANG security considerations template to better insist
@@ -242,6 +245,8 @@ Table of Contents
 
    *  Added a statement about how to cite the RFCs that are listed in
       the security template.
+
+   *  Added a template for IANA registrations.
 
    *  Added a note that folding of the examples should be done as per
       [RFC8792] conventions.
@@ -446,8 +451,8 @@ Table of Contents
    BEGINS>" and "<CODE ENDS>" MUST be used to identify each code
    component.
 
-   The "<CODE BEGINS>" tag SHOULD be followed by a string identifying
-   the file name specified in Section 5.2 of [RFC7950].  The name string
+   The "<CODE BEGINS>" tag MUST be followed by a string identifying the
+   file name specified in Section 5.2 of [RFC7950].  The name string
    form that includes the revision date SHOULD be used.  The revision
    date MUST match the date used in the most recent revision of the
    module.
@@ -885,13 +890,11 @@ Table of Contents
    modules.
 
    To check that JSON-encoded examples [RFC7951] comply with the target
-   data models, programs such as "yangson" should be used.  The
-   "yangson" program is freely available from GitHub.
+   data models, programs such as "yangson" or "yanglint" should be used.
+   Both programs are freely available from GitHub.
 
      <https://github.com/CZ-NIC/yangson>
-
-   An example of integrating "yangson" in a tooling chain can be found
-   at [YANGSON-Validate].
+     <https://github.com/CESNET/libyang>
 
 3.11.  Module Extraction Tools
 
@@ -3766,11 +3769,6 @@ Table of Contents
 
    [Style]    "IANA YANG", n.d., <https://github.com/llhotka/iana-yang>.
 
-   [YANGSON-Validate]
-              Zhang, J., "YANG Validation Makefile", January 2023,
-              <https://github.com/ietf-wg-alto/draft-ietf-alto-oam-
-              yang/blob/main/tools/yang.mk>.
-
 Appendix A.  Module Review Checklist
 
    This section is adapted from [RFC4181].
@@ -3800,11 +3798,11 @@ Appendix A.  Module Review Checklist
       <https://trustee.ietf.org/license-info/>
 
    *  Security Considerations section -- If none of the modules in the
-      document use YANG data structure, verify that the document uses
-      the latest approved template from the Operations and Management
-      (OPS) area website (see <https://trac.ietf.org/area/ops/trac/wiki/
-      yang-security-guidelines>) and that the guidelines therein have
-      been followed.
+      document falls under the exceptions in Section 3.7 (e.g., use YANG
+      data structure), verify that the document uses the latest approved
+      template from the Operations and Management (OPS) area website
+      (see <https://trac.ietf.org/area/ops/trac/wiki/yang-security-
+      guidelines>) and that the guidelines therein have been followed.
 
    *  IANA Considerations section -- this section must always be
       present.  For each module within the document, ensure that the
@@ -4061,7 +4059,8 @@ Acknowledgments
    Michal Vaško reported an inconsistency in Sections 4.6.2 and 4.6.4 of
    [RFC8407].
 
-   Thanks to Xufeng Liu for reviewing the document.
+   Thanks to Xufeng Liu for reviewing the document, including a
+   YANGDOCTORS review.
 
    Italo Busi provided the examples of "case + when" construct.
 
