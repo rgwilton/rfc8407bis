@@ -232,7 +232,7 @@ Table of Contents
 
    *  Updated the URL of the IETF authors guidelines.
 
-   *  Update the guidance so that the "file name" after the <CODE
+   *  Updated the guidance so that the "file name" after the <CODE
       BEGINS> tag is mandatory.
 
    *  Added code markers for the security template.
