@@ -2676,8 +2676,38 @@ Such constructs with duplicated information <span class="bcp14">SHOULD NOT</span
     }
 </pre><a href="#section-4.5-8" class="pilcrow">¶</a>
 </div>
-<p id="section-4.5-9">Note that the use of "case + when" is still useful in cases where complementary modelling constraints should be expressed. See the example provided below.<a href="#section-4.5-9" class="pilcrow">¶</a></p>
+<p id="section-4.5-9">The following example removes the duplicated information:<a href="#section-4.5-9" class="pilcrow">¶</a></p>
 <div class="lang-yang sourcecode" id="section-4.5-10">
+<pre>
+    leaf type {
+      type enumeration {
+        enum a;
+        enum b;
+        enum c;
+      }
+      mandatory true;
+    }
+    choice type-choice {
+      case b {
+        container type-b {
+          leaf foo {
+            type string;
+          }
+        }
+      }
+      case c {
+        container type-c {
+          leaf bar {
+            mandatory true;
+            type string;
+          }
+        }
+      }
+    }
+</pre><a href="#section-4.5-10" class="pilcrow">¶</a>
+</div>
+<p id="section-4.5-11">Note that the use of "case + when" is still useful in cases where complementary modelling constraints should be expressed. See the example provided below.<a href="#section-4.5-11" class="pilcrow">¶</a></p>
+<div class="lang-yang sourcecode" id="section-4.5-12">
 <pre>
     leaf type {
       type enumeration {
@@ -2715,9 +2745,9 @@ Such constructs with duplicated information <span class="bcp14">SHOULD NOT</span
         }
       }
     }
-</pre><a href="#section-4.5-10" class="pilcrow">¶</a>
+</pre><a href="#section-4.5-12" class="pilcrow">¶</a>
 </div>
-<p id="section-4.5-11"><span><a href="https://rfc-editor.org/rfc/rfc7950#section-8.1" class="relref">Section 8.1</a> of [<a href="#RFC7950" class="cite xref">RFC7950</a>]</span> includes a provision for defining a constraint
+<p id="section-4.5-13"><span><a href="https://rfc-editor.org/rfc/rfc7950#section-8.1" class="relref">Section 8.1</a> of [<a href="#RFC7950" class="cite xref">RFC7950</a>]</span> includes a provision for defining a constraint
 on state data and specifies that the constraint must be true in a valid state data.
 However, <span><a href="https://rfc-editor.org/rfc/rfc8342#section-5.3" class="relref">Section 5.3</a> of [<a href="#RFC8342" class="cite xref">RFC8342</a>]</span> softens that behavior by allowing semantic
 constraints to be violated under some circumstances to help detecting anomalies.
@@ -2725,7 +2755,7 @@ Relaxing validation constraints on state data is meant to reveal deviations of
 the observed behavior vs. intended behavior of a managed entity and hopefully
 trigger corrective actions by a management system. From that perspective,
 it is <span class="bcp14">RECOMMENDED</span> to avoid defining constraints on state data that would hinder
-the detection by a management system of abnormal behaviors of a managed entity.<a href="#section-4.5-11" class="pilcrow">¶</a></p>
+the detection by a management system of abnormal behaviors of a managed entity.<a href="#section-4.5-13" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="xpath-usage">
