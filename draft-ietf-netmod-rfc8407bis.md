@@ -134,14 +134,6 @@ informative:
               date: false
               target: https://www.iana.org/assignments/iana-tunnel-type/iana-tunnel-type.xhtml
 
-   YANGSON-Validate:
-              title: "YANG Validation Makefile"
-              author:
-                ins: J. Zhang
-                name: Jingxuan Jensen Zhang
-                org: Tongji University
-              date: 11/2023
-              target: https://github.com/ietf-wg-alto/draft-ietf-alto-oam-yang/blob/main/tools/yang.mk
 
 --- abstract
 
@@ -213,10 +205,12 @@ informative:
    - Updated the terminology.
    - Added a note about notation conventions.
    - Updated the URL of the IETF authors guidelines.
+   - Update the guidance so that the "file name" after the ``<CODE BEGINS>`` tag is mandatory.
    - Added code markers for the security template.
    - Updated the YANG security considerations template to better insist on the key secure transport features.
    - Added statements that the security template is not required for modules that follow {{!RFC8791}} or {{!RFC7952}}.
    - Added a statement about how to cite the RFCs that are listed in the security template.
+   - Added a template for IANA registrations.
    - Added a note that folding of the examples should be done as per {{!RFC8792}} conventions.
    - Added a recommendation about long trees.
    - Added a recommendation for the use of meaningful prefix values.
@@ -366,7 +360,7 @@ informative:
    BEGINS>" and "<CODE ENDS>"`` MUST be used to identify each code
    component.
 
-   The ``"<CODE BEGINS>"`` tag SHOULD be followed by a string identifying
+   The ``"<CODE BEGINS>"`` tag MUST be followed by a string identifying
    the file name specified in {{Section 5.2 of !RFC7950}}.  The name string
    form that includes the revision date SHOULD be used.  The revision
    date MUST match the date used in the most recent revision of the
@@ -533,7 +527,7 @@ statements within a module.
 
 See {{sec-usage-guidelines}} for guidelines on YANG usage.
 
-##  Security Considerations Section
+##  Security Considerations Section {#sec-sec-cons-sec}
 
    Each specification that defines one or more modules MUST contain a
    section that discusses security considerations relevant to those
@@ -685,13 +679,12 @@ This tool can be used to validate XPath statements within YANG
 modules.
 
 To check that JSON-encoded examples {{?RFC7951}} comply with the target data models,
-programs such as "yangson" should be used. The "yangson" program is freely available from GitHub.
+programs such as "yangson" or "yanglint" should be used. Both programs are freely available from GitHub.
 
 ~~~
   <https://github.com/CZ-NIC/yangson>
+  <https://github.com/CESNET/libyang>
 ~~~
-
-An example of integrating "yangson" in a tooling chain can be found at {{YANGSON-Validate}}.
 
 ##  Module Extraction Tools
 
@@ -3077,7 +3070,7 @@ into the management system.
 
       ``<https://trustee.ietf.org/license-info/>``
 
-   *  Security Considerations section -- If none of the modules in the document use YANG data structure, verify that the document uses
+   *  Security Considerations section -- If none of the modules in the document falls under the exceptions in {{sec-sec-cons-sec}} (e.g., use YANG data structure), verify that the document uses
       the latest approved template from the Operations and Management
       (OPS) area website (see ``<https://trac.ietf.org/area/ops/trac/wiki/yang-security-guidelines>``) and that the guidelines therein have
       been followed.
@@ -3175,7 +3168,7 @@ into the management system.
 
    Michal Vaško reported an inconsistency in Sections 4.6.2 and 4.6.4 of {{?RFC8407}}.
 
-   Thanks to Xufeng Liu for reviewing the document.
+   Thanks to Xufeng Liu for reviewing the document, including a YANGDOCTORS review.
 
    Italo Busi provided the examples of "case + when" construct.
 
