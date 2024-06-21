@@ -205,7 +205,7 @@ informative:
    - Updated the terminology.
    - Added a note about notation conventions.
    - Updated the URL of the IETF authors guidelines.
-   - Update the guidance so that the "file name" after the ``<CODE BEGINS>`` tag is mandatory.
+   - Updated the guidance so that the "file name" after the ``<CODE BEGINS>`` tag is mandatory.
    - Added code markers for the security template.
    - Updated the YANG security considerations template to better insist on the key secure transport features.
    - Added statements that the security template is not required for modules that follow {{!RFC8791}} or {{!RFC7952}}.
