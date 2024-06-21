@@ -616,7 +616,8 @@ A registration template is provided below:
       Reference:
 ~~~
 
-Additional IANA considerations applicable to IANA-maintained modules are provided in {{sec-iana-mm}}.
+Additional IANA considerations applicable to IANA-maintained modules (including instructions to maintain them) are provided in {{sec-iana-mm}}.
+
 
 ###  Documents That Create a New Namespace
 
