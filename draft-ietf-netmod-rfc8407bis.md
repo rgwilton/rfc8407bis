@@ -3044,11 +3044,12 @@ for registration in Appendix B.
 
 IANA considerations to register YANG module and submodule names are specified in {{Section 14 of !RFC6020}}. This document amends the guidance on names unicity as follows:
 
+{: vspace="0"}
 OLD:
 : All module and submodule names in the registry MUST be unique.
 : All XML namespaces in the registry MUST be unique.
 
-OLD:
+NEW:
 : Modules and their revisions are maintained in the registry.
 : A module and all its revisions MUST have the same name and namespace.
 : All initial module and submodule names in the registry MUST be unique.
