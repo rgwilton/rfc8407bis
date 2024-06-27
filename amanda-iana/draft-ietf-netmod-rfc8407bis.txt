@@ -27,7 +27,7 @@ Abstract
 
    Also, this document updates RFC 8126 by providing additional
    guidelines for writing the IANA considerations for RFCs that specify
-   IANA-maintained modules.  The document also update RFC 6020 by
+   IANA-maintained modules.  The document also updates RFC 6020 by
    clarifying how modules and their revisions are handled by IANA.
 
 Discussion Venues
@@ -161,8 +161,10 @@ Table of Contents
        4.30.3.  Guidance for Writing the IANA Considerations for RFCs
                Defining IANA-Maintained Modules
    5.  IANA Considerations
-     5.1.  Revisions of Published Modules
-     5.2.  IANA-maintained Modules
+     5.1.  YANG Modules
+     5.2.  Update YANG Parameters Registry
+     5.3.  Revisions of Published Modules
+     5.4.  IANA-Maintained Modules
    6.  Security Considerations
    7.  References
      7.1.  Normative References
@@ -310,7 +312,7 @@ Table of Contents
 
    *  Added a template for IANA-maintained modules.
 
-   *  Update RFC 6020 to record current IANA practices for registring
+   *  Updated RFC 6020 to record current IANA practices for registring
       modules and their revisions.
 
 2.  Terminology & Notation Conventions
@@ -3425,6 +3427,8 @@ Table of Contents
 
 5.  IANA Considerations
 
+5.1.  YANG Modules
+
    The following registration in the "ns" subregistry of the "IETF XML
    Registry" [RFC3688] was detailed in [RFC8407].  This document
    requests IANA to update this registration to reference this document.
@@ -3456,17 +3460,19 @@ Table of Contents
       Prefix:  iana-foo
       Reference:  RFC AAAA
 
+5.2.  Update YANG Parameters Registry
+
    Also, this document requests IANA to update the reference for the
    "YANG Module Names" registry under the "YANG Parameters" registry
    group to point to the RFC number that will be assigned to this
    document as it contains the template necessary for registration in
    Appendix B.
 
-5.1.  Revisions of Published Modules
+5.3.  Revisions of Published Modules
 
    IANA considerations to register YANG module and submodule names are
    specified in Section 14 of [RFC6020].  This document amends the
-   guidance on names unicity as follows
+   guidance on names unicity as follows:
 
    OLD:  All module and submodule names in the registry MUST be unique.
 
@@ -3483,7 +3489,7 @@ Table of Contents
       All XML namespaces of initial modules in the registry MUST be
       unique.
 
-5.2.  IANA-maintained Modules
+5.4.  IANA-Maintained Modules
 
    IANA should refer to Section 4.30.3 for information necessary to
    populate "revision" statements and "identity" and "enum"
