@@ -146,7 +146,7 @@ informative:
 
    Also, this document updates RFC 8126 by
    providing additional guidelines for writing the IANA considerations
-   for RFCs that specify IANA-maintained modules. The document also update RFC 6020
+   for RFCs that specify IANA-maintained modules. The document also updates RFC 6020
    by clarifying how modules and their revisions are handled by IANA.
 
 --- middle
@@ -234,7 +234,7 @@ informative:
    - Added a discussion about "must + error-message" constructs for state data.
    - Added text about summary of changes in revision statements.
    - Added a template for IANA-maintained modules.
-   - Update RFC 6020 to record current IANA practices for registring modules and their revisions.
+   - Updated RFC 6020 to record current IANA practices for registring modules and their revisions.
 
 #  Terminology & Notation Conventions
 
@@ -2995,6 +2995,8 @@ The following example shows how to generate the "revision" statements following 
 
 #  IANA Considerations {#sec-iana}
 
+## YANG Modules
+
 The following registration in the "ns" subregistry of the "IETF XML
 Registry" {{!RFC3688}} was detailed in {{?RFC8407}}. This document requests IANA
 to update this registration to reference this document.
@@ -3031,6 +3033,8 @@ Names" registry {{!RFC6020}} within the "YANG Parameters" registry group.
    Reference:  RFC AAAA
 ~~~~
 
+## Update YANG Parameters Registry
+
 Also, this document requests IANA to update the reference for
 the "YANG Module Names" registry under the "YANG Parameters" registry group
 to point to the RFC number that will be assigned to this document as it contains the template necessary
@@ -3038,7 +3042,7 @@ for registration in Appendix B.
 
 ## Revisions of Published Modules
 
-IANA considerations to register YANG module and submodule names are specified in {{Section 14 of !RFC6020}}. This document amends the guidance on names unicity as follows
+IANA considerations to register YANG module and submodule names are specified in {{Section 14 of !RFC6020}}. This document amends the guidance on names unicity as follows:
 
 OLD:
 : All module and submodule names in the registry MUST be unique.
@@ -3050,7 +3054,8 @@ OLD:
 : All initial module and submodule names in the registry MUST be unique.
 : All XML namespaces of initial modules in the registry MUST be unique.
 
-## IANA-maintained Modules
+
+## IANA-Maintained Modules
 
 IANA should refer to {{sec-iana-mm}} for information necessary to populate "revision" statements and "identity" and "enum" substatements in IANA-maintained modules. These considerations cover both the creation and maintenance of an IANA-mainatined module. In particular, the following should be noted:
 
