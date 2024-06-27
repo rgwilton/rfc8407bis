@@ -3054,7 +3054,7 @@ OLD:
 
 IANA should refer to {{sec-iana-mm}} for information necessary to populate "revision" statements and "identity" and "enum" substatements in IANA-maintained modules. These considerations cover both the creation and maintenance of an IANA-mainatined module. In particular, the following should be noted:
 
-* When an underlying registration is deprecated or obsoleted, a corresponding "status" substatement should be added to the identity or enumeration statement. 
+* When an underlying registration is deprecated or obsoleted, a corresponding "status" substatement should be added to the identity or enumeration statement.
 * The "reference" substatement should point specifically to the published module (i.e., IANA_FOO_URL_With_REV). When the
 registration is triggered by an RFC, that RFC must also be included in the "reference" substatement. It may also point to an
 authoritative event triggering the update to the YANG module. In all cases, the event is cited from the underlying IANA registry.
