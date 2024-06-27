@@ -312,7 +312,7 @@ Table of Contents
 
    *  Added a template for IANA-maintained modules.
 
-   *  Updates RFC 6020 to record current IANA practices for registring
+   *  Updates RFC 6020 to record current IANA practices for registering
       modules and their revisions.
 
 2.  Terminology & Notation Conventions
