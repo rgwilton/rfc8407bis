@@ -3065,11 +3065,11 @@ IANA should refer to {{sec-iana-mm}} for information necessary to populate "revi
 registration is triggered by an RFC, that RFC must also be included in the "reference" substatement. It may also point to an
 authoritative event triggering the update to the YANG module. In all cases, the event is cited from the underlying IANA registry.
 
-In addition, when the module is published, IANA must add the following notes to the YANG Module Names registry and the underlying registry (if applicable), respectively:
+In addition, when the module is published, IANA must add the following notes to the YANG Module Names registry and the underlying registry, respectively:
 
-* "New values must not be directly added to the "iana-foo" YANG module.  They must instead be added to the "foo" registry."
-
-*  "When this registry is modified, the YANG module "iana-foo" [IANA_FOO_URL] must be updated as defined in RFC IIII."
+> "New values must not be directly added to the "iana-foo" YANG module. They must instead be added to the "foo" registry."
+>
+>  "When this registry is modified, the YANG module "iana-foo" [IANA_FOO_URL] must be updated as defined in RFC IIII."
 
 
 #  Security Considerations
@@ -3213,7 +3213,7 @@ into the management system.
 
    Kent Watsen contributed text to the security and IANA-maintained module templates.
 
-   Special thanks to Amanda Baber for thoughtful and careful review of the document.
+   Special thanks to Amanda Baber for the thoughtful and careful review of the document.
 
 The author of RFC 8407:
 : Andy Bierman
