@@ -4,7 +4,7 @@ abbrev: "Guidelines for YANG Documents"
 category: bcp
 bcp: 216
 obsoletes: 8407
-updates: 8126
+updates: 6020, 8126
 
 docname: draft-ietf-netmod-rfc8407bis-latest
 submissiontype: IETF
@@ -146,7 +146,8 @@ informative:
 
    Also, this document updates RFC 8126 by
    providing additional guidelines for writing the IANA considerations
-   for RFCs that specify IANA-maintained modules.
+   for RFCs that specify IANA-maintained modules. The document also update RFC 6020
+   by clarifying how modules and their revisions are handled by IANA.
 
 --- middle
 
@@ -233,6 +234,7 @@ informative:
    - Added a discussion about "must + error-message" constructs for state data.
    - Added text about summary of changes in revision statements.
    - Added a template for IANA-maintained modules.
+   - Update RFC 6020 to record current IANA practices for registring modules and their revisions.
 
 #  Terminology & Notation Conventions
 
@@ -758,7 +760,7 @@ then the same word or abbreviation should be reused, instead of
 creating a new one.
 
 All published module names MUST be unique.  For a YANG module
-published in an RFC, this uniqueness is guaranteed by IANA.  For
+published in an RFC, this uniqueness is guaranteed by IANA ({{Section 14 of !RFC6020}}).  For
 unpublished modules, the authors need to check that no other work in
 progress is using the same module name.
 
@@ -2919,7 +2921,7 @@ Abstract data structures can be augmented using the "augment-structure" statemen
       "enum" statement) to update the IANA-maintained module to reflect
       changes to an authoritative IANA registry.  Typically, these
       details have to include the procedure to create a new "identity"
-      statement name and sub-statements ("base", "status",
+      statement name and substatements ("base", "status",
       "description", and "reference") or a new "enum" statement and sub-
       statements ("value", "status", "description", and "reference").
 
@@ -3033,6 +3035,35 @@ Also, this document requests IANA to update the reference for
 the "YANG Module Names" registry under the "YANG Parameters" registry group
 to point to the RFC number that will be assigned to this document as it contains the template necessary
 for registration in Appendix B.
+
+## Revisions of Published Modules
+
+IANA considerations to register YANG module and submodule names are specified in {{Section 14 of !RFC6020}}. This document amends the guidance on names unicity as follows
+
+OLD:
+: All module and submodule names in the registry MUST be unique.
+: All XML namespaces in the registry MUST be unique.
+
+OLD:
+: Modules and their revisions are maintained in the registry.
+: A module and all its revisions MUST have the same name and namespace.
+: All initial module and submodule names in the registry MUST be unique.
+: All XML namespaces of initial modules in the registry MUST be unique.
+
+## IANA-maintained Modules
+
+IANA should refer to {{sec-iana-mm}} for information necessary to populate "revision" statements and "identity" and "enum" substatements in IANA-maintained modules. These considerations cover both the creation and maintenance of an IANA-mainatined module. In particular, the following should be noted:
+
+* When an underlying registration is deprecated or obsoleted, a corresponding "status" substatement should be added to the identity or enumeration statement. 
+* The "reference" substatement should point specifically to the published module (i.e., IANA_FOO_URL_With_REV). When the
+registration is triggered by an RFC, that RFC must also be included in the "reference" substatement. It may also point to an
+authoritative event triggering the update to the YANG module. In all cases, the event is cited from the underlying IANA registry.
+
+In addition, when the module is published, IANA must add the following notes to the YANG Module Names registry and the underlying registry (if applicable), respectively:
+
+* "New values must not be directly added to the "iana-foo" YANG module.  They must instead be added to the "foo" registry."
+
+*  "When this registry is modified, the YANG module "iana-foo" [IANA_FOO_URL] must be updated as defined in RFC IIII."
 
 
 #  Security Considerations
@@ -3175,6 +3206,8 @@ into the management system.
    Thanks to Rach Salz and Michael Richardson for the SAAG review.
 
    Kent Watsen contributed text to the security and IANA-maintained module templates.
+
+   Special thanks to Amanda Baber for thoughtful and careful review of the document.
 
 The author of RFC 8407:
 : Andy Bierman
