@@ -3516,12 +3516,12 @@ Table of Contents
 
    In addition, when the module is published, IANA must add the
    following notes to the YANG Module Names registry and the underlying
-   registry (if applicable), respectively:
+   registry, respectively:
 
-   *  "New values must not be directly added to the "iana-foo" YANG
+      "New values must not be directly added to the "iana-foo" YANG
       module.  They must instead be added to the "foo" registry."
 
-   *  "When this registry is modified, the YANG module "iana-foo"
+      "When this registry is modified, the YANG module "iana-foo"
       [IANA_FOO_URL] must be updated as defined in RFC IIII."
 
 6.  Security Considerations
@@ -4138,8 +4138,8 @@ Acknowledgments
    Kent Watsen contributed text to the security and IANA-maintained
    module templates.
 
-   Special thanks to Amanda Baber for thoughtful and careful review of
-   the document.
+   Special thanks to Amanda Baber for the thoughtful and careful review
+   of the document.
 
    The author of RFC 8407:  Andy Bierman
 
