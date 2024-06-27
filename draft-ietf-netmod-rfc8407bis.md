@@ -234,7 +234,7 @@ informative:
    - Added a discussion about "must + error-message" constructs for state data.
    - Added text about summary of changes in revision statements.
    - Added a template for IANA-maintained modules.
-   - Updated RFC 6020 to record current IANA practices for registring modules and their revisions.
+   - Updates RFC 6020 to record current IANA practices for registring modules and their revisions.
 
 #  Terminology & Notation Conventions
 
@@ -3065,12 +3065,14 @@ IANA should refer to {{sec-iana-mm}} for information necessary to populate "revi
 registration is triggered by an RFC, that RFC must also be included in the "reference" substatement. It may also point to an
 authoritative event triggering the update to the YANG module. In all cases, the event is cited from the underlying IANA registry.
 
-In addition, when the module is published, IANA must add the following notes to the YANG Module Names registry and the underlying registry, respectively:
+In addition, when the module is published, IANA must add the following notes to:
 
-> "New values must not be directly added to the "iana-foo" YANG module. They must instead be added to the "foo" registry."
->
->  "When this registry is modified, the YANG module "iana-foo" [IANA_FOO_URL] must be updated as defined in RFC IIII."
+{: vspace="0"}
+The YANG Module Names registry:
+: New values must not be directly added to the "iana-foo" YANG module. They must instead be added to the "foo" registry.
 
+The underlying registry:
+: When this registry is modified, the YANG module "iana-foo" [IANA_FOO_URL] must be updated as defined in RFC IIII.
 
 #  Security Considerations
 
