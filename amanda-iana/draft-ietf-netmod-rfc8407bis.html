@@ -1648,7 +1648,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
             <p id="section-1.1-2.32.1">Added a template for IANA-maintained modules.<a href="#section-1.1-2.32.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-1.1-2.33">
-            <p id="section-1.1-2.33.1">Updated RFC 6020 to record current IANA practices for registring modules and their revisions.<a href="#section-1.1-2.33.1" class="pilcrow">¶</a></p>
+            <p id="section-1.1-2.33.1">Updates RFC 6020 to record current IANA practices for registring modules and their revisions.<a href="#section-1.1-2.33.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
 </section>
@@ -5359,13 +5359,19 @@ registration is triggered by an RFC, that RFC must also be included in the "refe
 authoritative event triggering the update to the YANG module. In all cases, the event is cited from the underlying IANA registry.<a href="#section-5.4-2.2.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
-<p id="section-5.4-3">In addition, when the module is published, IANA must add the following notes to the YANG Module Names registry and the underlying registry, respectively:<a href="#section-5.4-3" class="pilcrow">¶</a></p>
-<ul class="normal ulEmpty">
-<li class="normal ulEmpty" id="section-5.4-4.1">
-            <p id="section-5.4-4.1.1">"New values must not be directly added to the "iana-foo" YANG module. They must instead be added to the "foo" registry."<a href="#section-5.4-4.1.1" class="pilcrow">¶</a></p>
-<p id="section-5.4-4.1.2">"When this registry is modified, the YANG module "iana-foo" [IANA_FOO_URL] must be updated as defined in RFC IIII."<a href="#section-5.4-4.1.2" class="pilcrow">¶</a></p>
-</li>
-        </ul>
+<p id="section-5.4-3">In addition, when the module is published, IANA must add the following notes to:<a href="#section-5.4-3" class="pilcrow">¶</a></p>
+<span class="break"></span><dl class="dlNewline" id="section-5.4-4">
+          <dt id="section-5.4-4.1">The YANG Module Names registry:</dt>
+          <dd style="margin-left: 1.5em" id="section-5.4-4.2">
+            <p id="section-5.4-4.2.1">New values must not be directly added to the "iana-foo" YANG module. They must instead be added to the "foo" registry.<a href="#section-5.4-4.2.1" class="pilcrow">¶</a></p>
+</dd>
+          <dd class="break"></dd>
+<dt id="section-5.4-4.3">The underlying registry:</dt>
+          <dd style="margin-left: 1.5em" id="section-5.4-4.4">
+            <p id="section-5.4-4.4.1">When this registry is modified, the YANG module "iana-foo" [IANA_FOO_URL] must be updated as defined in RFC IIII.<a href="#section-5.4-4.4.1" class="pilcrow">¶</a></p>
+</dd>
+        <dd class="break"></dd>
+</dl>
 </section>
 </div>
 </section>
