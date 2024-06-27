@@ -234,7 +234,7 @@ informative:
    - Added a discussion about "must + error-message" constructs for state data.
    - Added text about summary of changes in revision statements.
    - Added a template for IANA-maintained modules.
-   - Updates RFC 6020 to record current IANA practices for registring modules and their revisions.
+   - Updates RFC 6020 to record current IANA practices for registering modules and their revisions.
 
 #  Terminology & Notation Conventions
 
@@ -255,7 +255,7 @@ informative:
    : A stable release of a module or submodule.  For
       example, the "Request for Comments" described in
       {{Section 2.1 of ?RFC2026}} is considered a stable publication.
-
+  
    unpublished:
    : An unstable release of a module or submodule.  For
       example the "Internet-Draft" described in {{Section 2.2 of ?RFC2026}}
@@ -835,8 +835,7 @@ that mix both example and standard modules can easily identify example parts.
 
 ##  Identifiers
 
-All YANG identifiers in published modules MUST be
-between 1 and 64 characters in length.  These include any construct
+All YANG identifiers in published modules MUST be between 1 and 64 characters in length.  These include any construct
 specified as an "identifier-arg-str" token in the ABNF in {{Section 14 of !RFC7950}}.
 
 ###  Identifier Naming Conventions {#sec-id-naming}
