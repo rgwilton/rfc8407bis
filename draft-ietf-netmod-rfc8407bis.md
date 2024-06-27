@@ -255,7 +255,7 @@ informative:
    : A stable release of a module or submodule.  For
       example, the "Request for Comments" described in
       {{Section 2.1 of ?RFC2026}} is considered a stable publication.
-  
+
    unpublished:
    : An unstable release of a module or submodule.  For
       example the "Internet-Draft" described in {{Section 2.2 of ?RFC2026}}
