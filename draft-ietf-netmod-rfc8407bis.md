@@ -3051,8 +3051,8 @@ OLD:
 NEW:
 : Modules and their revisions are maintained in the registry.
 : A module and all its revisions MUST have the same name and namespace.
-: All initial module and submodule names in the registry MUST be unique.
-: All XML namespaces of initial modules in the registry MUST be unique.
+: All initial version module and submodule names in the registry MUST be unique.
+: All XML namespaces of initial version modules in the registry MUST be unique.
 
 
 ## IANA-Maintained Modules
