@@ -3488,12 +3488,12 @@ Table of Contents
       namespace.
 
   
-      All initial module and submodule names in the registry MUST be
-      unique.
+      All initial version module and submodule names in the registry
+      MUST be unique.
 
   
-      All XML namespaces of initial modules in the registry MUST be
-      unique.
+      All XML namespaces of initial version modules in the registry MUST
+      be unique.
 
 5.4.  IANA-Maintained Modules
 
