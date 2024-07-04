@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-07-02T01:18:54.279467+00:00",
+  "timestamp": "2024-07-04T01:18:47.774041+00:00",
   "repo": "netmod-wg/rfc8407bis",
   "labels": [
     {
@@ -1694,24 +1694,26 @@
       "id": "PR_kwDOJTh_ks5zu8ta",
       "title": "Amanda's comments",
       "url": "https://github.com/netmod-wg/rfc8407bis/pull/58",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2024-06-27T07:42:30Z",
-      "updatedAt": "2024-06-27T15:59:24Z",
+      "updatedAt": "2024-07-03T05:31:01Z",
       "baseRepository": "netmod-wg/rfc8407bis",
       "baseRefName": "main",
       "baseRefOid": "4f4473790092376fe639512b6aa44e902024f2bb",
       "headRepository": "netmod-wg/rfc8407bis",
       "headRefName": "amanda-iana",
       "headRefOid": "d4c53738cc5b358dcfc4fd2525a77500dafee6d8",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2024-07-03T05:31:00Z",
+      "mergedAt": "2024-07-03T05:31:00Z",
+      "mergedBy": "boucadair",
+      "mergeCommit": {
+        "oid": "74c2f166e31c7d621b7e92a890f889fd1f25e53e"
+      },
       "comments": [],
       "reviews": []
     }
