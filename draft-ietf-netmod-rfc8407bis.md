@@ -966,21 +966,17 @@ The following example removes the duplicated information:
       }
       mandatory true;
     }
-    choice type-choice {
-      case b {
-        container type-b {
-          leaf foo {
-            type string;
-          }
-        }
+    container type-b {
+      when "../type = 'b'";
+      leaf foo {
+        type string;
       }
-      case c {
-        container type-c {
-          leaf bar {
-            mandatory true;
-            type string;
-          }
-        }
+    }
+    container type-c {
+      when "../type = 'c'";
+      leaf bar {
+        mandatory true;
+        type string;
       }
     }
 ~~~~
