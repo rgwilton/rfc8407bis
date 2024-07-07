@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-07-04T01:18:47.774041+00:00",
+  "timestamp": "2024-07-07T01:25:18.464330+00:00",
   "repo": "netmod-wg/rfc8407bis",
   "labels": [
     {
@@ -1713,6 +1713,34 @@
       "mergedBy": "boucadair",
       "mergeCommit": {
         "oid": "74c2f166e31c7d621b7e92a890f889fd1f25e53e"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 59,
+      "id": "PR_kwDOJTh_ks50gWve",
+      "title": "fix example-when",
+      "url": "https://github.com/netmod-wg/rfc8407bis/pull/59",
+      "state": "MERGED",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2024-07-05T07:14:20Z",
+      "updatedAt": "2024-07-05T07:18:14Z",
+      "baseRepository": "netmod-wg/rfc8407bis",
+      "baseRefName": "main",
+      "baseRefOid": "e769315faaaab26faf5ca974e3e500456598201c",
+      "headRepository": "netmod-wg/rfc8407bis",
+      "headRefName": "fix-example-when",
+      "headRefOid": "74348019d88515faa865814634a5b85ddb9bd79b",
+      "closedAt": "2024-07-05T07:18:12Z",
+      "mergedAt": "2024-07-05T07:18:12Z",
+      "mergedBy": "boucadair",
+      "mergeCommit": {
+        "oid": "644f6de3af2b9c4bf881db5b5551ce63245f3abd"
       },
       "comments": [],
       "reviews": []
