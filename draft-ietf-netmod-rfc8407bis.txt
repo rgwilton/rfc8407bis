@@ -7,8 +7,8 @@ Internet-Draft                                                 YumaWorks
 Obsoletes: 8407 (if approved)                          M. Boucadair, Ed.
 Updates: 6020, 8126 (if approved)                                 Orange
 Intended status: Best Current Practice                             Q. Wu
-Expires: 6 January 2025                                           Huawei
-                                                             5 July 2024
+Expires: 2 February 2025                                          Huawei
+                                                           1 August 2024
 
 
  Guidelines for Authors and Reviewers of Documents Containing YANG Data
@@ -56,7 +56,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 6 January 2025.
+   This Internet-Draft will expire on 2 February 2025.
 
 Copyright Notice
 
@@ -3041,13 +3041,14 @@ Table of Contents
    For example, [RFC9244] defines an IANA-maintained module that uses
    enumerations for the following reason:
 
-    "The DOTS telemetry module (Section 10.1) uses "enumerations" rather
-    than "identities" to define units, samples, and intervals because
-    otherwise the namespace identifier "ietf-dots-telemetry" must be
-    included when a telemetry attribute is included (e.g., in a
-    mitigation efficacy update).  The use of "identities" is thus
-    suboptimal from a message compactness standpoint; one of the key
-    requirements for DOTS messages."
+   |  The DOTS telemetry module (Section 11.1) uses "enumerations"
+   |  rather than "identities" to define units, samples, and intervals
+   |  because otherwise the namespace identifier "ietf-dots-telemetry"
+   |  must be included when a telemetry attribute is included (e.g., in
+   |  a mitigation efficacy update).  The use of "identities" is thus
+   |  suboptimal from the standpoint of message compactness, as message
+   |  compactness is one of the key requirements for DOTS signal channel
+   |  messages.
 
    Designers of IANA-maintained modules MAY supply the full initial
    version of the module in a specification document that registers the
