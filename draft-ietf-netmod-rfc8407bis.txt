@@ -258,6 +258,8 @@ Table of Contents
 
    *  Added a recommendation about long trees.
 
+   *  Fixed a reference bug in Section 4.1.
+
    *  Added a recommendation for the use of meaningful prefix values.
 
    *  Added a note that RFC8792-folding of YANG modules can be used if
@@ -971,7 +973,7 @@ Table of Contents
 
    Normative modules contained in Standards Track documents MUST be
    named according to the guidelines in the IANA Considerations section
-   of [RFC7950].
+   of [RFC6020].
 
    A distinctive word or abbreviation (e.g., protocol name or working
    group abbreviation) SHOULD be used in the module name.  If new
