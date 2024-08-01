@@ -258,6 +258,8 @@ Table of Contents
 
    *  Added a recommendation about long trees.
 
+   *  Fixed a reference bug in Section 4.1.
+
    *  Added a recommendation for the use of meaningful prefix values.
 
    *  Added a note that RFC8792-folding of YANG modules can be used if
