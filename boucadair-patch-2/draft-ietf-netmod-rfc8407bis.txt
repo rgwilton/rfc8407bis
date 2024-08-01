@@ -5,10 +5,10 @@
 Network Modeling                                              A. Bierman
 Internet-Draft                                                 YumaWorks
 Obsoletes: 8407 (if approved)                          M. Boucadair, Ed.
-Updates: 8126 (if approved)                                       Orange
+Updates: 6020, 8126 (if approved)                                 Orange
 Intended status: Best Current Practice                             Q. Wu
-Expires: 20 December 2024                                         Huawei
-                                                            18 June 2024
+Expires: 2 February 2025                                          Huawei
+                                                           1 August 2024
 
 
  Guidelines for Authors and Reviewers of Documents Containing YANG Data
@@ -27,7 +27,8 @@ Abstract
 
    Also, this document updates RFC 8126 by providing additional
    guidelines for writing the IANA considerations for RFCs that specify
-   IANA-maintained modules.
+   IANA-maintained modules.  The document also updates RFC 6020 by
+   clarifying how modules and their revisions are handled by IANA.
 
 Discussion Venues
 
@@ -55,7 +56,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 20 December 2024.
+   This Internet-Draft will expire on 2 February 2025.
 
 Copyright Notice
 
@@ -160,6 +161,10 @@ Table of Contents
        4.30.3.  Guidance for Writing the IANA Considerations for RFCs
                Defining IANA-Maintained Modules
    5.  IANA Considerations
+     5.1.  YANG Modules
+     5.2.  Update YANG Parameters Registry
+     5.3.  Revisions of Published Modules
+     5.4.  IANA-Maintained Modules
    6.  Security Considerations
    7.  References
      7.1.  Normative References
@@ -232,6 +237,9 @@ Table of Contents
 
    *  Updated the URL of the IETF authors guidelines.
 
+   *  Updated the guidance so that the "file name" after the <CODE
+      BEGINS> tag is mandatory.
+
    *  Added code markers for the security template.
 
    *  Updated the YANG security considerations template to better insist
@@ -242,6 +250,8 @@ Table of Contents
 
    *  Added a statement about how to cite the RFCs that are listed in
       the security template.
+
+   *  Added a template for IANA registrations.
 
    *  Added a note that folding of the examples should be done as per
       [RFC8792] conventions.
@@ -301,6 +311,9 @@ Table of Contents
    *  Added text about summary of changes in revision statements.
 
    *  Added a template for IANA-maintained modules.
+
+   *  Updates RFC 6020 to record current IANA practices for registering
+      modules and their revisions.
 
 2.  Terminology & Notation Conventions
 
@@ -446,8 +459,8 @@ Table of Contents
    BEGINS>" and "<CODE ENDS>" MUST be used to identify each code
    component.
 
-   The "<CODE BEGINS>" tag SHOULD be followed by a string identifying
-   the file name specified in Section 5.2 of [RFC7950].  The name string
+   The "<CODE BEGINS>" tag MUST be followed by a string identifying the
+   file name specified in Section 5.2 of [RFC7950].  The name string
    form that includes the revision date SHOULD be used.  The revision
    date MUST match the date used in the most recent revision of the
    module.
@@ -799,8 +812,28 @@ Table of Contents
    An example of an update registration for the "ietf-template" module
    can be found in Section 5.
 
+   A registration template is provided below:
+
+    IANA is requested to register the following URI in the "ns"
+    subregistry within the "IETF XML Registry" [RFC3688]:
+
+       URI:
+       Registrant Contact:  The IESG.
+       XML: N/A; the requested URI is an XML namespace.
+
+    IANA is requested to register the following YANG module in the "YANG
+    Module Names" subregistry [RFC6020] within the "YANG Parameters"
+    registry.
+
+       Name:
+       Maintained by IANA?  Y/N
+       Namespace:
+       Prefix:
+       Reference:
+
    Additional IANA considerations applicable to IANA-maintained modules
-   are provided in Section 4.30.3.
+   (including instructions to maintain them) are provided in
+   Section 4.30.3.
 
 3.8.1.  Documents That Create a New Namespace
 
@@ -865,13 +898,11 @@ Table of Contents
    modules.
 
    To check that JSON-encoded examples [RFC7951] comply with the target
-   data models, programs such as "yangson" should be used.  The
-   "yangson" program is freely available from GitHub.
+   data models, programs such as "yangson" or "yanglint" should be used.
+   Both programs are freely available from GitHub.
 
      <https://github.com/CZ-NIC/yangson>
-
-   An example of integrating "yangson" in a tooling chain can be found
-   at [YANGSON-Validate].
+     <https://github.com/CESNET/libyang>
 
 3.11.  Module Extraction Tools
 
@@ -949,9 +980,10 @@ Table of Contents
    creating a new one.
 
    All published module names MUST be unique.  For a YANG module
-   published in an RFC, this uniqueness is guaranteed by IANA.  For
-   unpublished modules, the authors need to check that no other work in
-   progress is using the same module name.
+   published in an RFC, this uniqueness is guaranteed by IANA
+   (Section 14 of [RFC6020]).  For unpublished modules, the authors need
+   to check that no other work in progress is using the same module
+   name.
 
    Example modules are non-normative and SHOULD be named with the prefix
    "example-".
@@ -1176,21 +1208,17 @@ Table of Contents
          }
          mandatory true;
        }
-       choice type-choice {
-         case b {
-           container type-b {
-             leaf foo {
-               type string;
-             }
-           }
+       container type-b {
+         when "../type = 'b'";
+         leaf foo {
+           type string;
          }
-         case c {
-           container type-c {
-             leaf bar {
-               mandatory true;
-               type string;
-             }
-           }
+       }
+       container type-c {
+         when "../type = 'c'";
+         leaf bar {
+           mandatory true;
+           type string;
          }
        }
 
@@ -3013,13 +3041,14 @@ Table of Contents
    For example, [RFC9244] defines an IANA-maintained module that uses
    enumerations for the following reason:
 
-    "The DOTS telemetry module (Section 10.1) uses "enumerations" rather
-    than "identities" to define units, samples, and intervals because
-    otherwise the namespace identifier "ietf-dots-telemetry" must be
-    included when a telemetry attribute is included (e.g., in a
-    mitigation efficacy update).  The use of "identities" is thus
-    suboptimal from a message compactness standpoint; one of the key
-    requirements for DOTS messages."
+   |  The DOTS telemetry module (Section 11.1) uses "enumerations"
+   |  rather than "identities" to define units, samples, and intervals
+   |  because otherwise the namespace identifier "ietf-dots-telemetry"
+   |  must be included when a telemetry attribute is included (e.g., in
+   |  a mitigation efficacy update).  The use of "identities" is thus
+   |  suboptimal from the standpoint of message compactness, as message
+   |  compactness is one of the key requirements for DOTS signal channel
+   |  messages.
 
    Designers of IANA-maintained modules MAY supply the full initial
    version of the module in a specification document that registers the
@@ -3099,9 +3128,9 @@ Table of Contents
       "enum" statement) to update the IANA-maintained module to reflect
       changes to an authoritative IANA registry.  Typically, these
       details have to include the procedure to create a new "identity"
-      statement name and sub-statements ("base", "status",
-      "description", and "reference") or a new "enum" statement and sub-
-      statements ("value", "status", "description", and "reference").
+      statement name and substatements ("base", "status", "description",
+      and "reference") or a new "enum" statement and sub- statements
+      ("value", "status", "description", and "reference").
 
       -  When creating a new "identity" statement name or a new "enum"
          statement, it is RECOMMENDED to mirror the name (if present) as
@@ -3395,6 +3424,8 @@ Table of Contents
 
 5.  IANA Considerations
 
+5.1.  YANG Modules
+
    The following registration in the "ns" subregistry of the "IETF XML
    Registry" [RFC3688] was detailed in [RFC8407].  This document
    requests IANA to update this registration to reference this document.
@@ -3426,11 +3457,70 @@ Table of Contents
       Prefix:  iana-foo
       Reference:  RFC AAAA
 
+5.2.  Update YANG Parameters Registry
+
    Also, this document requests IANA to update the reference for the
    "YANG Module Names" registry under the "YANG Parameters" registry
    group to point to the RFC number that will be assigned to this
    document as it contains the template necessary for registration in
    Appendix B.
+
+5.3.  Revisions of Published Modules
+
+   IANA considerations to register YANG module and submodule names are
+   specified in Section 14 of [RFC6020].  This document amends the
+   guidance on names unicity as follows:
+
+   OLD:
+      All module and submodule names in the registry MUST be unique.
+
+  
+      All XML namespaces in the registry MUST be unique.
+
+   NEW:
+      Modules and their revisions are maintained in the registry.
+
+  
+      A module and all its revisions MUST have the same name and
+      namespace.
+
+  
+      All initial version module and submodule names in the registry
+      MUST be unique.
+
+  
+      All XML namespaces of initial version modules in the registry MUST
+      be unique.
+
+5.4.  IANA-Maintained Modules
+
+   IANA should refer to Section 4.30.3 for information necessary to
+   populate "revision" statements and "identity" and "enum"
+   substatements in IANA-maintained modules.  These considerations cover
+   both the creation and maintenance of an IANA-mainatined module.  In
+   particular, the following should be noted:
+
+   *  When an underlying registration is deprecated or obsoleted, a
+      corresponding "status" substatement should be added to the
+      identity or enumeration statement.
+
+   *  The "reference" substatement should point specifically to the
+      published module (i.e., IANA_FOO_URL_With_REV).  When the
+      registration is triggered by an RFC, that RFC must also be
+      included in the "reference" substatement.  It may also point to an
+      authoritative event triggering the update to the YANG module.  In
+      all cases, the event is cited from the underlying IANA registry.
+
+   In addition, when the module is published, IANA must add the
+   following notes to:
+
+   The YANG Module Names registry:
+      New values must not be directly added to the "iana-foo" YANG
+      module.  They must instead be added to the "foo" registry.
+
+   The underlying registry:
+      When this registry is modified, the YANG module "iana-foo"
+      [IANA_FOO_URL] must be updated as defined in RFC IIII.
 
 6.  Security Considerations
 
@@ -3746,11 +3836,6 @@ Table of Contents
 
    [Style]    "IANA YANG", n.d., <https://github.com/llhotka/iana-yang>.
 
-   [YANGSON-Validate]
-              Zhang, J., "YANG Validation Makefile", January 2023,
-              <https://github.com/ietf-wg-alto/draft-ietf-alto-oam-
-              yang/blob/main/tools/yang.mk>.
-
 Appendix A.  Module Review Checklist
 
    This section is adapted from [RFC4181].
@@ -3780,11 +3865,11 @@ Appendix A.  Module Review Checklist
       <https://trustee.ietf.org/license-info/>
 
    *  Security Considerations section -- If none of the modules in the
-      document use YANG data structure, verify that the document uses
-      the latest approved template from the Operations and Management
-      (OPS) area website (see <https://trac.ietf.org/area/ops/trac/wiki/
-      yang-security-guidelines>) and that the guidelines therein have
-      been followed.
+      document falls under the exceptions in Section 3.7 (e.g., use YANG
+      data structure), verify that the document uses the latest approved
+      template from the Operations and Management (OPS) area website
+      (see <https://trac.ietf.org/area/ops/trac/wiki/yang-security-
+      guidelines>) and that the guidelines therein have been followed.
 
    *  IANA Considerations section -- this section must always be
       present.  For each module within the document, ensure that the
@@ -4041,7 +4126,8 @@ Acknowledgments
    Michal Vaško reported an inconsistency in Sections 4.6.2 and 4.6.4 of
    [RFC8407].
 
-   Thanks to Xufeng Liu for reviewing the document.
+   Thanks to Xufeng Liu for reviewing the document, including a
+   YANGDOCTORS review.
 
    Italo Busi provided the examples of "case + when" construct.
 
@@ -4049,6 +4135,9 @@ Acknowledgments
 
    Kent Watsen contributed text to the security and IANA-maintained
    module templates.
+
+   Special thanks to Amanda Baber for the thoughtful and careful review
+   of the document.
 
    The author of RFC 8407:  Andy Bierman
 
