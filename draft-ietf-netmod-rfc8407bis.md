@@ -214,6 +214,7 @@ informative:
    - Added a template for IANA registrations.
    - Added a note that folding of the examples should be done as per {{!RFC8792}} conventions.
    - Added a recommendation about long trees.
+   - Fixed a reference bug in {{sec-module-naming-conventions}}.
    - Added a recommendation for the use of meaningful prefix values.
    - Added a note that RFC8792-folding of YANG modules can be used if and only if native YANG features (e.g., break line, "+") are not sufficient.
    - Added tool validation checks to ensure that YANG modules fit into the line limits of an I-D.
@@ -747,7 +748,7 @@ guidelines for specific YANG constructs.
 Only guidelines that clarify or restrict the minimum conformance
 requirements are included here.
 
-##  Module Naming Conventions
+##  Module Naming Conventions {#sec-module-naming-conventions}
 
 Normative modules contained in Standards Track documents MUST be
 named according to the guidelines in the IANA Considerations section
