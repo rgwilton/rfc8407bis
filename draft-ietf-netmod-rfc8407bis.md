@@ -751,7 +751,7 @@ requirements are included here.
 
 Normative modules contained in Standards Track documents MUST be
 named according to the guidelines in the IANA Considerations section
-of {{!RFC7950}}.
+of {{!RFC6020}}.
 
 A distinctive word or abbreviation (e.g., protocol name or working
 group abbreviation) SHOULD be used in the module name.  If new
