@@ -2831,13 +2831,15 @@ Abstract data structures can be augmented using the "augment-structure" statemen
    IANA-maintained module. For example, {{?RFC9244}} defines an IANA-maintained
    module that uses enumerations for the following reason:
 
-     "The DOTS telemetry module (Section 10.1) uses "enumerations" rather
-     than "identities" to define units, samples, and intervals because
-     otherwise the namespace identifier "ietf-dots-telemetry" must be
-     included when a telemetry attribute is included (e.g., in a
-     mitigation efficacy update).  The use of "identities" is thus
-     suboptimal from a message compactness standpoint; one of the key
-     requirements for DOTS messages."
+   {:quote}
+   > The DOTS telemetry module (Section 11.1) uses "enumerations" rather
+   than "identities" to define units, samples, and intervals because
+   otherwise the namespace identifier "ietf-dots-telemetry" must be
+   included when a telemetry attribute is included (e.g., in a
+   mitigation efficacy update).  The use of "identities" is thus
+   suboptimal from the standpoint of message compactness, as message
+   compactness is one of the key requirements for DOTS signal channel
+   messages.
 
    Designers of IANA-maintained modules MAY supply the full initial
    version of the module in a specification document that registers the
