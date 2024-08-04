@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-08-01T01:34:19.229501+00:00",
+  "timestamp": "2024-08-04T01:26:57.439304+00:00",
   "repo": "netmod-wg/rfc8407bis",
   "labels": [
     {
@@ -353,6 +353,30 @@
       "updatedAt": "2023-12-08T07:41:02Z",
       "closedAt": "2023-12-08T07:41:02Z",
       "comments": []
+    },
+    {
+      "number": 60,
+      "id": "I_kwDOJTh_ks6RhGtw",
+      "title": "referenced text from RFC 9244 needs to be updated",
+      "url": "https://github.com/netmod-wg/rfc8407bis/issues/60",
+      "state": "CLOSED",
+      "author": "QiufangMa",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "The referenced text in sec.4.30.2 is stale, see RFC 9244 for the update:\r\nThe DOTS telemetry module ([Section 11.1](https://datatracker.ietf.org/doc/html/rfc9244#module)) uses \"enumerations\" rather than \"identities\" to define units, samples, and intervals because otherwise the namespace identifier \"ietf-dots-telemetry\" must be included when a telemetry attribute is included (e.g., in a mitigation efficacy update). The use of \"identities\" is thus suboptimal from the standpoint of message compactness, as message compactness is one of the key requirements for DOTS signal channel messages.",
+      "createdAt": "2024-08-01T03:32:52Z",
+      "updatedAt": "2024-08-01T08:58:02Z",
+      "closedAt": "2024-08-01T08:58:02Z",
+      "comments": [
+        {
+          "author": "boucadair",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Thanks Qiufang. Fixed now in #61 ",
+          "createdAt": "2024-08-01T08:57:54Z",
+          "updatedAt": "2024-08-01T08:57:54Z"
+        }
+      ]
     }
   ],
   "pulls": [
@@ -1741,6 +1765,62 @@
       "mergedBy": "boucadair",
       "mergeCommit": {
         "oid": "644f6de3af2b9c4bf881db5b5551ce63245f3abd"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 61,
+      "id": "PR_kwDOJTh_ks53FuEz",
+      "title": "fix stale citation",
+      "url": "https://github.com/netmod-wg/rfc8407bis/pull/61",
+      "state": "MERGED",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2024-08-01T08:53:37Z",
+      "updatedAt": "2024-08-01T08:58:03Z",
+      "baseRepository": "netmod-wg/rfc8407bis",
+      "baseRefName": "main",
+      "baseRefOid": "644f6de3af2b9c4bf881db5b5551ce63245f3abd",
+      "headRepository": "netmod-wg/rfc8407bis",
+      "headRefName": "boucadair-patch-2",
+      "headRefOid": "894e827c9a0683d1acfd91bba14ac9b04b9ad725",
+      "closedAt": "2024-08-01T08:58:01Z",
+      "mergedAt": "2024-08-01T08:58:01Z",
+      "mergedBy": "boucadair",
+      "mergeCommit": {
+        "oid": "64ce3e4f63aba365c35c4085221dc570c8d4f39e"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 62,
+      "id": "PR_kwDOJTh_ks53Gn2u",
+      "title": "naming convention fix 6020 not 7950",
+      "url": "https://github.com/netmod-wg/rfc8407bis/pull/62",
+      "state": "MERGED",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2024-08-01T10:49:23Z",
+      "updatedAt": "2024-08-01T16:52:36Z",
+      "baseRepository": "netmod-wg/rfc8407bis",
+      "baseRefName": "main",
+      "baseRefOid": "64ce3e4f63aba365c35c4085221dc570c8d4f39e",
+      "headRepository": "netmod-wg/rfc8407bis",
+      "headRefName": "boucadair-patch-2",
+      "headRefOid": "491e427f1b336d6a5a0f36b4a42c6f5713cec7ba",
+      "closedAt": "2024-08-01T16:52:34Z",
+      "mergedAt": "2024-08-01T16:52:34Z",
+      "mergedBy": "boucadair",
+      "mergeCommit": {
+        "oid": "5a5d8a9cd3ea86d0f4e2a697bded50a979730ecd"
       },
       "comments": [],
       "reviews": []
