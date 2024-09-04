@@ -63,7 +63,7 @@ module iana-template {
 
 
   // replace 'date-revision' with the module publication date
-  // the format is (year-month-day)
+  // the format is (YYYY-MM-DD)
 
   revision date-revision {
     description
@@ -75,7 +75,7 @@ module iana-template {
   }
 
   // replace 'date-initial' with the module publication date
-  // the format is (year-month-day)
+  // the format is (YYYY-MM-DD)
 
   revision date-initial {
     description
