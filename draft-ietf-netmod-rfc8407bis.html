@@ -4954,17 +4954,14 @@ values <span class="bcp14">MUST NOT</span> be listed in the IANA-maintained modu
    authoritative IANA registry, or the name does not comply with YANG naming conventions (<a href="#sec-id-naming" class="auto internal xref">Section 4.3.1</a>)).<a href="#section-4.30.3-3" class="pilcrow">¶</a></p>
 <p id="section-4.30.3-4">An example of "revision" statements that are generated following the guidance in <a href="#sec-temp-id" class="auto internal xref">Section 4.30.3.1</a>
    is provided below:<a href="#section-4.30.3-4" class="pilcrow">¶</a></p>
-<div class="breakable lang-yang sourcecode" id="section-4.30.3-5">
+<div class="lang-yang sourcecode" id="section-4.30.3-5">
 <pre>
-=============== NOTE: '\' line wrapping per RFC 8792 ================
-
   revision 2023-11-27 {
     description
       "Registered RR Type RESINFO 261.";
     reference
-      "https://www.iana.org/assignments/yang-parameters/iana-dns-\
-                                                       class-rr-type"
-    + "@2023-11-27.yang";
+      "https://www.iana.org/assignments/yang-parameters/"
+    + "iana-dns-class-rr-type@2023-11-27.yang";
   }
 
   revision 2023-11-08 {
@@ -4975,27 +4972,24 @@ values <span class="bcp14">MUST NOT</span> be listed in the IANA-maintained modu
     reference
       "RFC 9460: Service Binding and Parameter Specification via the
                  DNS (SVCB and HTTPS Resource Records)
-       https://www.iana.org/assignments/yang-parameters/iana-dns-\
-                                                       class-rr-type"
-    + "@2023-11-08.yang";
+       https://www.iana.org/assignments/yang-parameters/"
+    + "iana-dns-class-rr-type@2023-11-08.yang";
   }
 
   revision 2023-04-25 {
     description
       "Updated reference for 64 and 65.";
     reference
-      "https://www.iana.org/assignments/yang-parameters/iana-dns-\
-                                                       class-rr-type"
-    + "@2023-04-25.yang";
+      "https://www.iana.org/assignments/yang-parameters/"
+    + "iana-dns-class-rr-type@2023-04-25.yang";
   }
 
   revision 2022-05-30 {
     description
       "Updated description, reference for 64 and 65.";
     reference
-      "https://www.iana.org/assignments/yang-parameters/iana-dns-\
-                                                       class-rr-type"
-    + "@2022-05-30.yang";
+      "https://www.iana.org/assignments/yang-parameters/"
+    + "iana-dns-class-rr-type@2022-05-30.yang";
   }
 
   revision 2021-08-31 {

@@ -3167,15 +3167,12 @@ Table of Contents
    An example of "revision" statements that are generated following the
    guidance in Section 4.30.3.1 is provided below:
 
-   =============== NOTE: '\' line wrapping per RFC 8792 ================
-
      revision 2023-11-27 {
        description
          "Registered RR Type RESINFO 261.";
        reference
-         "https://www.iana.org/assignments/yang-parameters/iana-dns-\
-                                                          class-rr-type"
-       + "@2023-11-27.yang";
+         "https://www.iana.org/assignments/yang-parameters/"
+       + "iana-dns-class-rr-type@2023-11-27.yang";
      }
 
      revision 2023-11-08 {
@@ -3186,27 +3183,24 @@ Table of Contents
        reference
          "RFC 9460: Service Binding and Parameter Specification via the
                     DNS (SVCB and HTTPS Resource Records)
-          https://www.iana.org/assignments/yang-parameters/iana-dns-\
-                                                          class-rr-type"
-       + "@2023-11-08.yang";
+          https://www.iana.org/assignments/yang-parameters/"
+       + "iana-dns-class-rr-type@2023-11-08.yang";
      }
 
      revision 2023-04-25 {
        description
          "Updated reference for 64 and 65.";
        reference
-         "https://www.iana.org/assignments/yang-parameters/iana-dns-\
-                                                          class-rr-type"
-       + "@2023-04-25.yang";
+         "https://www.iana.org/assignments/yang-parameters/"
+       + "iana-dns-class-rr-type@2023-04-25.yang";
      }
 
      revision 2022-05-30 {
        description
          "Updated description, reference for 64 and 65.";
        reference
-         "https://www.iana.org/assignments/yang-parameters/iana-dns-\
-                                                          class-rr-type"
-       + "@2022-05-30.yang";
+         "https://www.iana.org/assignments/yang-parameters/"
+       + "iana-dns-class-rr-type@2022-05-30.yang";
      }
 
      revision 2021-08-31 {
