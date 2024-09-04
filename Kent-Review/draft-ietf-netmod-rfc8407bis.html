@@ -20,13 +20,13 @@
    for RFCs that specify IANA-maintained modules. The document also updates RFC 6020
    by clarifying how modules and their revisions are handled by IANA. 
     " name="description">
-<meta content="xml2rfc 3.22.0" name="generator">
+<meta content="xml2rfc 3.23.0" name="generator">
 <meta content="NETCONF" name="keyword">
 <meta content="RESTCONF" name="keyword">
 <meta content="Automation" name="keyword">
 <meta content="draft-ietf-netmod-rfc8407bis-latest" name="ietf.draft">
 <!-- Generator version information:
-  xml2rfc 3.22.0
+  xml2rfc 3.23.0
     Python 3.12.3
     ConfigArgParse 1.7
     google-i18n-address 3.1.0
@@ -37,7 +37,7 @@
     pycountry 22.3.5
     PyYAML 6.0.1
     requests 2.32.3
-    setuptools 69.5.1
+    setuptools 70.3.0
     wcwidth 0.2.13
 -->
 <link href="draft-ietf-netmod-rfc8407bis.xml" rel="alternate" type="application/rfc+xml">
@@ -1037,11 +1037,11 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">Guidelines for YANG Documents</td>
-<td class="right">August 2024</td>
+<td class="right">September 2024</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Bierman, et al.</td>
-<td class="center">Expires 2 February 2025</td>
+<td class="center">Expires 8 March 2025</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1060,12 +1060,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <a href="https://www.rfc-editor.org/rfc/rfc6020" class="eref">6020</a>, <a href="https://www.rfc-editor.org/rfc/rfc8126" class="eref">8126</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2024-08-01" class="published">1 August 2024</time>
+<time datetime="2024-09-04" class="published">4 September 2024</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Best Current Practice</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2025-02-02">2 February 2025</time></dd>
+<dd class="expires"><time datetime="2025-03-08">8 March 2025</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1128,7 +1128,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 2 February 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 8 March 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -4954,7 +4954,7 @@ values <span class="bcp14">MUST NOT</span> be listed in the IANA-maintained modu
    authoritative IANA registry, or the name does not comply with YANG naming conventions (<a href="#sec-id-naming" class="auto internal xref">Section 4.3.1</a>)).<a href="#section-4.30.3-3" class="pilcrow">¶</a></p>
 <p id="section-4.30.3-4">An example of "revision" statements that are generated following the guidance in <a href="#sec-temp-id" class="auto internal xref">Section 4.30.3.1</a>
    is provided below:<a href="#section-4.30.3-4" class="pilcrow">¶</a></p>
-<div class="lang-yang sourcecode" id="section-4.30.3-5">
+<div class="breakable lang-yang sourcecode" id="section-4.30.3-5">
 <pre>
 =============== NOTE: '\' line wrapping per RFC 8792 ================
 
@@ -4963,20 +4963,21 @@ values <span class="bcp14">MUST NOT</span> be listed in the IANA-maintained modu
       "Registered RR Type RESINFO 261.";
     reference
       "https://www.iana.org/assignments/yang-parameters/iana-dns-\
-                                       class-rr-type@2023-11-27.yang"
+                                                       class-rr-type"
+    + "@2023-11-27.yang";
   }
 
   revision 2023-11-08 {
     description
       "Updated description and replaced draft string reference to
-       64 and 65 with RFC 9460: Service Binding and Parameter \
-                                                        Specification
-       via the DNS (SVCB and HTTPS Resource Records).";
+       64 and 65 with RFC 9460: Service Binding and Parameter
+       Specification via the DNS (SVCB and HTTPS Resource Records).";
     reference
       "RFC 9460: Service Binding and Parameter Specification via the
                  DNS (SVCB and HTTPS Resource Records)
        https://www.iana.org/assignments/yang-parameters/iana-dns-\
-                                       class-rr-type@2023-11-08.yang"
+                                                       class-rr-type"
+    + "@2023-11-08.yang";
   }
 
   revision 2023-04-25 {
@@ -4984,7 +4985,8 @@ values <span class="bcp14">MUST NOT</span> be listed in the IANA-maintained modu
       "Updated reference for 64 and 65.";
     reference
       "https://www.iana.org/assignments/yang-parameters/iana-dns-\
-                                       class-rr-type@2023-04-25.yang"
+                                                       class-rr-type"
+    + "@2023-04-25.yang";
   }
 
   revision 2022-05-30 {
@@ -4992,7 +4994,8 @@ values <span class="bcp14">MUST NOT</span> be listed in the IANA-maintained modu
       "Updated description, reference for 64 and 65.";
     reference
       "https://www.iana.org/assignments/yang-parameters/iana-dns-\
-                                       class-rr-type@2022-05-30.yang"
+                                                       class-rr-type"
+    + "@2022-05-30.yang";
   }
 
   revision 2021-08-31 {
