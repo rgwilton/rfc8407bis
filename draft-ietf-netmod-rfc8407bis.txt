@@ -3243,15 +3243,12 @@ Table of Contents
    The following example shows how to generate the "revision" statements
    following the guidance in Section 4.30.3.1:
 
-   =============== NOTE: '\' line wrapping per RFC 8792 ================
-
    revision 2021-04-23 {
      description
        "Registered tunnelType 19.";
      reference
-       "https://www.iana.org/assignments/yang-parameters/iana-tunnel-\
-                                                                   type"
-     + "@2021-04-23.yang
+       "https://www.iana.org/assignments/yang-parameters/"
+     + "iana-tunnel-type@2021-04-23.yang
         RFC 4301: Security Architecture for the Internet Protocol";
    }
 
