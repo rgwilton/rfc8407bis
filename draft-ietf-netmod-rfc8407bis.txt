@@ -7,8 +7,8 @@ Internet-Draft                                                 YumaWorks
 Obsoletes: 8407 (if approved)                          M. Boucadair, Ed.
 Updates: 6020, 8126 (if approved)                                 Orange
 Intended status: Best Current Practice                             Q. Wu
-Expires: 2 February 2025                                          Huawei
-                                                           1 August 2024
+Expires: 8 March 2025                                             Huawei
+                                                        4 September 2024
 
 
  Guidelines for Authors and Reviewers of Documents Containing YANG Data
@@ -56,7 +56,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 2 February 2025.
+   This Internet-Draft will expire on 8 March 2025.
 
 Copyright Notice
 
@@ -3990,7 +3990,7 @@ Appendix B.  Template for IETF Modules
      // this note
 
      // replace '2023-07-26' with the module publication date
-     // the format is (year-month-day)
+     // the format is (YYYY-MM-DD)
 
      revision 2023-07-26 {
        description
@@ -4079,7 +4079,7 @@ Appendix C.  Template for IANA-Maintained Modules
 
 
      // replace 'date-revision' with the module publication date
-     // the format is (year-month-day)
+     // the format is (YYYY-MM-DD)
 
      revision date-revision {
        description
@@ -4091,7 +4091,7 @@ Appendix C.  Template for IANA-Maintained Modules
      }
 
      // replace 'date-initial' with the module publication date
-     // the format is (year-month-day)
+     // the format is (YYYY-MM-DD)
 
      revision date-initial {
        description
