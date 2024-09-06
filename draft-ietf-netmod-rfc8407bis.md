@@ -2931,7 +2931,7 @@ Abstract data structures can be augmented using the "augment-structure" statemen
       can generate legal identifiers from such a name. Specifically, if the name
       begins with a number, it is RECOMMENDED to spell out the number when used as an identifier. IANA should be provided with instructions to perform such task. For example, authors of a module with such identifiers have to indicate whether:
 
-             + "3des-cbc" should be expanded to "three-des-cbc" or rather "triple-des-cbc" to be consistent with {{Section 6.3 of ?RFC4253}}.
+             + "3des-cbc" should be "three-des-cbc" or rather "triple-des-cbc" to be consistent with {{Section 6.3 of ?RFC4253}}.
              + "6to4" should be "sixToFour" as in {{?RFC7224}} or "sixtofour" as in {{?RFC8675}}.
 
 
