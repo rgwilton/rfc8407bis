@@ -2928,8 +2928,12 @@ Abstract data structures can be augmented using the "augment-structure" statemen
 
          - If the name in the IANA registry does not comply with the naming conventions
       listed in {{sec-id-naming}}, the procedure MUST detail how IANA
-      can generate legal identifiers from such a name. For example, if the name
-      begins with a number, it is RECOMMENDED to spell out the number when used as an identifier (e.g., "3des-cbc" will be  "triple-des-cbc" ({{Section 6.3 of ?RFC4253}})).
+      can generate legal identifiers from such a name. Specifically, if the name
+      begins with a number, it is RECOMMENDED to spell out the number when used as an identifier. IANA should be provided with instructions to perform such task. For example, authors of a module with such identifiers have to indicate whether:
+
+             + "3des-cbc" should be expanded to "three-des-cbc" or rather "triple-des-cbc" to be consistent with {{Section 6.3 of ?RFC4253}}.
+             + "6to4" should be "sixToFour" as in {{?RFC7224}} or "sixtofour" as in {{?RFC8675}}.
+
 
    *  A note that unassigned or reserved values must not be present in
       the IANA-maintained module.
