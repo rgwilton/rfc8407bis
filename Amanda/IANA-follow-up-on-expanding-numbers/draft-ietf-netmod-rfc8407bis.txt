@@ -3147,9 +3147,8 @@ Table of Contents
          For example, authors of a module with such identifiers have to
          indicate whether:
 
-         o  "3des-cbc" should be expanded to "three-des-cbc" or rather
-            "triple-des-cbc" to be consistent with Section 6.3 of
-            [RFC4253].
+         o  "3des-cbc" should be "three-des-cbc" or rather "triple-des-
+            cbc" to be consistent with Section 6.3 of [RFC4253].
 
          o  "6to4" should be "sixToFour" as in [RFC7224] or "sixtofour"
             as in [RFC8675].
