@@ -2920,8 +2920,8 @@ Abstract data structures can be augmented using the "augment-structure" statemen
       changes to an authoritative IANA registry.  Typically, these
       details have to include the procedure to create a new "identity"
       statement name and substatements ("base", "status",
-      "description", and "reference") or a new "enum" statement and sub-
-      statements ("value", "status", "description", and "reference").
+      "description", and "reference") or a new "enum" statement and
+      sub-statements ("value", "status", "description", and "reference").
 
          - When creating a new "identity" statement name or a new "enum" statement,
       it is RECOMMENDED to mirror the name (if present) as recorded in the IANA registry.
