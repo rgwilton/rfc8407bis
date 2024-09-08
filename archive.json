@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-09-05T01:26:15.189426+00:00",
+  "timestamp": "2024-09-08T01:39:14.432573+00:00",
   "repo": "netmod-wg/rfc8407bis",
   "labels": [
     {
@@ -1878,6 +1878,32 @@
       "mergeCommit": {
         "oid": "0dc8e4646baa7dc923a0f1d845046dd4714eeff0"
       },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 65,
+      "id": "PR_kwDOJTh_ks56pLD5",
+      "title": "Amanda/IANA follow-up on expanding numbers",
+      "url": "https://github.com/netmod-wg/rfc8407bis/pull/65",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2024-09-06T09:31:31Z",
+      "updatedAt": "2024-09-06T12:49:54Z",
+      "baseRepository": "netmod-wg/rfc8407bis",
+      "baseRefName": "main",
+      "baseRefOid": "73fb3c9dd861027131fd1c2663c799ba51a65ecd",
+      "headRepository": "netmod-wg/rfc8407bis",
+      "headRefName": "Amanda/IANA-follow-up-on-expanding-numbers",
+      "headRefOid": "e795a9fc3d9bff57ac46290ff1140fd1a558bc4d",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
       "comments": [],
       "reviews": []
     }
