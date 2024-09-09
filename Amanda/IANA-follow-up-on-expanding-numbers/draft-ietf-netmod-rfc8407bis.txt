@@ -3153,7 +3153,7 @@ Table of Contents
          o  "6to4" should be "sixToFour" as in [RFC7224] or "sixtofour"
             as in [RFC8675].
 
-      -  If a new registration uses an indentifier that does not comply
+      -  If a new registration uses an identifier that does not comply
          with the naming conventions listed in Section 4.3.1, IANA
          should check if a guidance to generate legal identifiers was
          supplied in the RFC that specified the initial version of the
