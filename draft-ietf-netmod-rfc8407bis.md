@@ -2935,7 +2935,7 @@ Abstract data structures can be augmented using the "augment-structure" statemen
              + "6to4" should be "sixToFour" as in {{?RFC7224}} or "sixtofour" as in {{?RFC8675}}.
 
          - If a new registration uses an identifier that does not comply with the naming conventions
-      listed in {{sec-id-naming}}, IANA should check if a guidance to generate legal identifiers was supplied in the RFC that specified the initial version of the module. If no such guidance is available, IANA should check the latest revision of the IANA-maintained module for similar patterns. If failed, IANA should seek advice from relevant registry experts (e.g., designated experts for a registry with Expert Review policy ({{Section 4.5 of !RFC8126}}) or responsible Area Director for a registry with IETF Review ({{Section 4.8 of !RFC8126}}) or Standards Action  (({{Section 4.9 of !RFC8126}}))).
+      listed in {{sec-id-naming}}, IANA should check if a guidance to generate legal identifiers was supplied in the RFC that specified the initial version of the module. If no such guidance is available, IANA should check the latest revision of the IANA-maintained module for similar patterns. If failed, IANA should seek advice from relevant registry experts (e.g., designated experts for a registry with Expert Review policy ({{Section 4.5 of !RFC8126}}) or responsible Area Director).
 
    *  A note that unassigned or reserved values must not be present in
       the IANA-maintained module.
