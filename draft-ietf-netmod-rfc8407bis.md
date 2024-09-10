@@ -2920,16 +2920,22 @@ Abstract data structures can be augmented using the "augment-structure" statemen
       changes to an authoritative IANA registry.  Typically, these
       details have to include the procedure to create a new "identity"
       statement name and substatements ("base", "status",
-      "description", and "reference") or a new "enum" statement and sub-
-      statements ("value", "status", "description", and "reference").
+      "description", and "reference") or a new "enum" statement and
+      sub-statements ("value", "status", "description", and "reference").
 
          - When creating a new "identity" statement name or a new "enum" statement,
       it is RECOMMENDED to mirror the name (if present) as recorded in the IANA registry.
 
          - If the name in the IANA registry does not comply with the naming conventions
       listed in {{sec-id-naming}}, the procedure MUST detail how IANA
-      can generate legal identifiers from such a name. For example, if the name
-      begins with a number, it is RECOMMENDED to spell out the number when used as an identifier (e.g., "3des-cbc" will be  "triple-des-cbc" ({{Section 6.3 of ?RFC4253}})).
+      can generate legal identifiers from such a name. Specifically, if the name
+      begins with a number, it is RECOMMENDED to spell out the number when used as an identifier. IANA should be provided with instructions to perform such task. For example, authors of a module with such identifiers have to indicate whether:
+
+             + "3des-cbc" should be "three-des-cbc" or rather "triple-des-cbc" to be consistent with {{Section 6.3 of ?RFC4253}}.
+             + "6to4" should be "sixToFour" as in {{?RFC7224}} or "sixtofour" as in {{?RFC8675}}.
+
+         - If a new registration uses an identifier that does not comply with the naming conventions
+      listed in {{sec-id-naming}}, IANA should check if a guidance to generate legal identifiers was supplied in the RFC that specified the initial version of the module. If no such guidance is available, IANA should check the latest revision of the IANA-maintained module for similar patterns. If failed, IANA should seek advice from relevant registry experts (e.g., designated experts for a registry with Expert Review policy ({{Section 4.5 of !RFC8126}}) or responsible Area Director).
 
    *  A note that unassigned or reserved values must not be present in
       the IANA-maintained module.

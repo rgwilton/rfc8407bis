@@ -63,6 +63,12 @@ cases, this event is cited from the underlying IANA registry. If the
 update is triggered by an RFC, that RFC must also be included in
 the "reference" substatement.
 
+  -- If a name in the IANA registry does not comply with the
+  -- YANG naming conventions, add details how IANA can generate 
+  -- legal identifiers. For example, if the name begins with
+  -- a number, indicates a preference to spell out the number when
+  -- used as an identifier.
+
 IANA is requested to add this note to [reference-to-the-iana-foo-
 registry]:
 
