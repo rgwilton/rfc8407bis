@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-09-08T01:39:14.432573+00:00",
+  "timestamp": "2024-09-10T01:34:29.449937+00:00",
   "repo": "netmod-wg/rfc8407bis",
   "labels": [
     {
@@ -1893,13 +1893,13 @@
       "labels": [],
       "body": "",
       "createdAt": "2024-09-06T09:31:31Z",
-      "updatedAt": "2024-09-06T12:49:54Z",
+      "updatedAt": "2024-09-09T14:27:49Z",
       "baseRepository": "netmod-wg/rfc8407bis",
       "baseRefName": "main",
       "baseRefOid": "73fb3c9dd861027131fd1c2663c799ba51a65ecd",
       "headRepository": "netmod-wg/rfc8407bis",
       "headRefName": "Amanda/IANA-follow-up-on-expanding-numbers",
-      "headRefOid": "e795a9fc3d9bff57ac46290ff1140fd1a558bc4d",
+      "headRefOid": "6c9d803e6990e076c3c3d86f008a5b44dbc5946f",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
