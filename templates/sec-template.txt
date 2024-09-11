@@ -8,7 +8,8 @@ designed to be accessed via YANG-based management protocols, such as
 NETCONF [RFC6241] and RESTCONF [RFC8040]. These protocols have 
 mandatory-to-implement secure transport layers (SSH [RFC4252],
 TLS [RFC8446], etc.) and mandatory-to-implement mutual
-authentication.
+authentication. These mandatory-to-implement features are required
+to be used when accessing the data.
 
 The Network Configuration Access Control Model (NACM) [RFC8341]
 provides the means to restrict access for particular NETCONF or
