@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-09-12T01:26:42.265712+00:00",
+  "timestamp": "2024-09-15T01:42:41.718262+00:00",
   "repo": "netmod-wg/rfc8407bis",
   "labels": [
     {
@@ -1921,13 +1921,13 @@
       "labels": [],
       "body": "",
       "createdAt": "2024-09-11T09:42:28Z",
-      "updatedAt": "2024-09-11T09:55:45Z",
+      "updatedAt": "2024-09-12T13:26:28Z",
       "baseRepository": "netmod-wg/rfc8407bis",
       "baseRefName": "main",
       "baseRefOid": "a0d9250cfd5cdf0956ecb7c27a37934cabb03186",
       "headRepository": "netmod-wg/rfc8407bis",
       "headRefName": "sec-comment-from-Kent",
-      "headRefOid": "88cff5dabf737f889c2505732ff9819f73e1499e",
+      "headRefOid": "972970ce16c050d8420f50f07637f4e00770cdd5",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
