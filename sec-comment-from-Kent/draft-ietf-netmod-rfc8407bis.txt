@@ -665,7 +665,7 @@ Table of Contents
    modules.
 
    Unless the modules comply with [RFC8791] or define YANG extensions
-   (e.g., [RFC7952]), the security section MUST be patterned after the
+   (e.g., [RFC7952]), the security section MUST be modeled after the
    latest approved template (available at
    <https://trac.ietf.org/trac/ops/wiki/yang-security-guidelines>).
    Section 3.7.1 contains the security considerations template.  Authors
@@ -3175,7 +3175,7 @@ Table of Contents
    Section 4.30.3.1 for IANA-maintained modules with identities and
    Section 4.30.3.2 for IANA-maintained modules with enumerations.
    Authors may modify the template to reflect specifics of their modules
-   (e.g., Multiple registries can be listed for a single IANA-maintained
+   (e.g., multiple registries can be listed for a single IANA-maintained
    module, no explicit description (or name) field is listed under the
    authoritative IANA registry, or the name does not comply with YANG
    naming conventions (Section 4.3.1)).
@@ -3891,10 +3891,11 @@ Appendix A.  Module Review Checklist
 
    *  Security Considerations section -- If none of the modules in the
       document falls under the exceptions in Section 3.7 (e.g., use YANG
-      data structure), verify that the document uses the latest approved
-      template from the Operations and Management (OPS) area website
-      (see <https://trac.ietf.org/area/ops/trac/wiki/yang-security-
-      guidelines>) and that the guidelines therein have been followed.
+      data structure), verify that the section is modeled after the
+      latest approved template from the Operations and Management (OPS)
+      area website (see <https://trac.ietf.org/area/ops/trac/wiki/yang-
+      security-guidelines>) and that the guidelines therein have been
+      followed.
 
    *  IANA Considerations section -- this section must always be
       present.  For each module within the document, ensure that the
