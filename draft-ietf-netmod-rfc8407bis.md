@@ -236,7 +236,7 @@ informative:
    - Added text about summary of changes in revision statements.
    - Added a template for IANA-maintained modules.
    - Updates RFC 6020 to record current IANA practices for registering modules and their revisions.
-   - Updated the wiki URLs to use the new structure instead of the old trac. 
+   - Updated the wiki URLs to use the new structure instead of the old trac.
 
 #  Terminology & Notation Conventions
 
