@@ -7,8 +7,8 @@ Internet-Draft                                                 YumaWorks
 Obsoletes: 8407 (if approved)                          M. Boucadair, Ed.
 Updates: 6020, 8126 (if approved)                                 Orange
 Intended status: Best Current Practice                             Q. Wu
-Expires: 22 March 2025                                            Huawei
-                                                       18 September 2024
+Expires: 23 March 2025                                            Huawei
+                                                       19 September 2024
 
 
  Guidelines for Authors and Reviewers of Documents Containing YANG Data
@@ -56,7 +56,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 22 March 2025.
+   This Internet-Draft will expire on 23 March 2025.
 
 Copyright Notice
 
@@ -316,6 +316,9 @@ Table of Contents
 
    *  Updates RFC 6020 to record current IANA practices for registering
       modules and their revisions.
+
+   *  Updated the wiki URLs to use the new structure instead of the old
+      trac.
 
 2.  Terminology & Notation Conventions
 
@@ -667,7 +670,7 @@ Table of Contents
    Unless the modules comply with [RFC8791] or define YANG extensions
    (e.g., [RFC7952]), the security section MUST be modeled after the
    latest approved template (available at
-   <https://trac.ietf.org/trac/ops/wiki/yang-security-guidelines>).
+   <https://wiki.ietf.org/group/ops/yang-security-guidelines>).
    Section 3.7.1 contains the security considerations template.  Authors
    MUST check the web page at the URL listed above in case there is a
    more recent version available.
@@ -3893,9 +3896,8 @@ Appendix A.  Module Review Checklist
       document falls under the exceptions in Section 3.7 (e.g., use YANG
       data structure), verify that the section is modeled after the
       latest approved template from the Operations and Management (OPS)
-      area website (see <https://trac.ietf.org/area/ops/trac/wiki/yang-
-      security-guidelines>) and that the guidelines therein have been
-      followed.
+      area website (see <https://wiki.ietf.org/group/ops/yang-security-
+      guidelines>) and that the guidelines therein have been followed.
 
    *  IANA Considerations section -- this section must always be
       present.  For each module within the document, ensure that the
@@ -3941,11 +3943,11 @@ Appendix A.  Module Review Checklist
       errors.  A list of freely available tools and other information,
       including formatting advice, can be found at:
 
-      <https://trac.ietf.org/trac/netconf/wiki>
+      <https://wiki.ietf.org/group/netconf>
 
       and
 
-      <https://trac.ietf.org/trac/netmod/wiki>
+      <https://wiki.ietf.org/group/netmod>
 
       Checking for correct syntax, however, is only part of the job.  It
       is just as important to actually read the YANG module document
