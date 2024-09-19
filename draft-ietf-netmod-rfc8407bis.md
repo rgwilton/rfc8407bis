@@ -236,6 +236,7 @@ informative:
    - Added text about summary of changes in revision statements.
    - Added a template for IANA-maintained modules.
    - Updates RFC 6020 to record current IANA practices for registering modules and their revisions.
+   - Updated the wiki URLs to use the new structure instead of the old trac. 
 
 #  Terminology & Notation Conventions
 
@@ -538,7 +539,7 @@ See {{sec-usage-guidelines}} for guidelines on YANG usage.
 
    Unless the modules comply with {{!RFC8791}} or define YANG extensions (e.g., {{?RFC7952}}), the security section MUST
    be modeled after the latest approved template
-   (available at ``<https://trac.ietf.org/trac/ops/wiki/yang-security-guidelines>``).  {{sec-security-template}} contains the security considerations
+   (available at ``<https://wiki.ietf.org/group/ops/yang-security-guidelines>``).  {{sec-security-template}} contains the security considerations
    template.  Authors
    MUST check the web page at the URL listed above in case there is a
    more recent version available.
@@ -3115,7 +3116,7 @@ into the management system.
 
    *  Security Considerations section -- If none of the modules in the document falls under the exceptions in {{sec-sec-cons-sec}} (e.g., use YANG data structure), verify that the section is modeled after
       the latest approved template from the Operations and Management
-      (OPS) area website (see ``<https://trac.ietf.org/area/ops/trac/wiki/yang-security-guidelines>``) and that the guidelines therein have
+      (OPS) area website (see ``<https://wiki.ietf.org/group/ops/yang-security-guidelines>``) and that the guidelines therein have
       been followed.
 
    *  IANA Considerations section -- this section must always be
@@ -3161,11 +3162,11 @@ into the management system.
       errors.  A list of freely available tools and other information,
       including formatting advice, can be found at:
 
-      ``<https://trac.ietf.org/trac/netconf/wiki>``
+      ``<https://wiki.ietf.org/group/netconf>``
 
       and
 
-      ``<https://trac.ietf.org/trac/netmod/wiki>``
+      ``<https://wiki.ietf.org/group/netmod>``
 
       Checking for correct syntax, however, is only part of the job.
       It is just as important to actually read the YANG module document
