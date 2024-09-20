@@ -236,6 +236,7 @@ informative:
    - Added text about summary of changes in revision statements.
    - Added a template for IANA-maintained modules.
    - Updates RFC 6020 to record current IANA practices for registering modules and their revisions.
+   - Updated the wiki URLs to use the new structure instead of the old trac.
 
 #  Terminology & Notation Conventions
 
@@ -537,8 +538,8 @@ See {{sec-usage-guidelines}} for guidelines on YANG usage.
    modules.
 
    Unless the modules comply with {{!RFC8791}} or define YANG extensions (e.g., {{?RFC7952}}), the security section MUST
-   be patterned after the latest approved template
-   (available at ``<https://trac.ietf.org/trac/ops/wiki/yang-security-guidelines>``).  {{sec-security-template}} contains the security considerations
+   be modeled after the latest approved template
+   (available at ``<https://wiki.ietf.org/group/ops/yang-security-guidelines>``).  {{sec-security-template}} contains the security considerations
    template.  Authors
    MUST check the web page at the URL listed above in case there is a
    more recent version available.
@@ -2949,7 +2950,7 @@ Abstract data structures can be augmented using the "augment-structure" statemen
    A template for the IANA Considerations is provided in {{sec-temp-id}} for
    IANA-maintained modules with identities and {{sec-temp-enum}} for
    IANA-maintained modules with enumerations.  Authors may modify the
-   template to reflect specifics of their modules (e.g., Multiple
+   template to reflect specifics of their modules (e.g., multiple
    registries can be listed for a single IANA-maintained module, no
    explicit description (or name) field is listed under the
    authoritative IANA registry, or the name does not comply with YANG naming conventions ({{sec-id-naming}})).
@@ -3113,9 +3114,9 @@ into the management system.
 
       ``<https://trustee.ietf.org/license-info/>``
 
-   *  Security Considerations section -- If none of the modules in the document falls under the exceptions in {{sec-sec-cons-sec}} (e.g., use YANG data structure), verify that the document uses
+   *  Security Considerations section -- If none of the modules in the document falls under the exceptions in {{sec-sec-cons-sec}} (e.g., use YANG data structure), verify that the section is modeled after
       the latest approved template from the Operations and Management
-      (OPS) area website (see ``<https://trac.ietf.org/area/ops/trac/wiki/yang-security-guidelines>``) and that the guidelines therein have
+      (OPS) area website (see ``<https://wiki.ietf.org/group/ops/yang-security-guidelines>``) and that the guidelines therein have
       been followed.
 
    *  IANA Considerations section -- this section must always be
@@ -3161,11 +3162,11 @@ into the management system.
       errors.  A list of freely available tools and other information,
       including formatting advice, can be found at:
 
-      ``<https://trac.ietf.org/trac/netconf/wiki>``
+      ``<https://wiki.ietf.org/group/netconf>``
 
       and
 
-      ``<https://trac.ietf.org/trac/netmod/wiki>``
+      ``<https://wiki.ietf.org/group/netmod>``
 
       Checking for correct syntax, however, is only part of the job.
       It is just as important to actually read the YANG module document
