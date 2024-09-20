@@ -791,8 +791,8 @@ Table of Contents
    Note:  [RFC8341] (or a future RFC that replaces it) MUST be listed as
       normative references.
 
-      By default, [RFC6241], [RFC6242], [RFC8040], [RFC8446], and
-      [RFC9110] (or future RFCs that replace any of them) are listed as
+      By default, [RFC4252], [RFC6241], [RFC8040], [RFC8446], and
+      [RFC9000] (or future RFCs that replace any of them) are listed as
       informative references unless normatively cited in other sections
       of the document that specifies the YANG module.
 
@@ -3594,10 +3594,6 @@ Table of Contents
               (NETCONF)", RFC 6241, DOI 10.17487/RFC6241, June 2011,
               <https://www.rfc-editor.org/rfc/rfc6241>.
 
-   [RFC6242]  Wasserman, M., "Using the NETCONF Protocol over Secure
-              Shell (SSH)", RFC 6242, DOI 10.17487/RFC6242, June 2011,
-              <https://www.rfc-editor.org/rfc/rfc6242>.
-
    [RFC7950]  Bjorklund, M., Ed., "The YANG 1.1 Data Modeling Language",
               RFC 7950, DOI 10.17487/RFC7950, August 2016,
               <https://www.rfc-editor.org/rfc/rfc7950>.
@@ -3628,10 +3624,6 @@ Table of Contents
               and R. Wilton, "Network Management Datastore Architecture
               (NMDA)", RFC 8342, DOI 10.17487/RFC8342, March 2018,
               <https://www.rfc-editor.org/rfc/rfc8342>.
-
-   [RFC8446]  Rescorla, E., "The Transport Layer Security (TLS) Protocol
-              Version 1.3", RFC 8446, DOI 10.17487/RFC8446, August 2018,
-              <https://www.rfc-editor.org/rfc/rfc8446>.
 
    [RFC8791]  Bierman, A., Björklund, M., and K. Watsen, "YANG Data
               Structure Extensions", RFC 8791, DOI 10.17487/RFC8791,
@@ -3723,6 +3715,10 @@ Table of Contents
               MIB Documents", BCP 111, RFC 4181, DOI 10.17487/RFC4181,
               September 2005, <https://www.rfc-editor.org/rfc/rfc4181>.
 
+   [RFC4252]  Ylonen, T. and C. Lonvick, Ed., "The Secure Shell (SSH)
+              Authentication Protocol", RFC 4252, DOI 10.17487/RFC4252,
+              January 2006, <https://www.rfc-editor.org/rfc/rfc4252>.
+
    [RFC4253]  Ylonen, T. and C. Lonvick, Ed., "The Secure Shell (SSH)
               Transport Layer Protocol", RFC 4253, DOI 10.17487/RFC4253,
               January 2006, <https://www.rfc-editor.org/rfc/rfc4253>.
@@ -3796,6 +3792,10 @@ Table of Contents
               DOI 10.17487/RFC8407, October 2018,
               <https://www.rfc-editor.org/rfc/rfc8407>.
 
+   [RFC8446]  Rescorla, E., "The Transport Layer Security (TLS) Protocol
+              Version 1.3", RFC 8446, DOI 10.17487/RFC8446, August 2018,
+              <https://www.rfc-editor.org/rfc/rfc8446>.
+
    [RFC8466]  Wen, B., Fioccola, G., Ed., Xie, C., and L. Jalil, "A YANG
               Data Model for Layer 2 Virtual Private Network (L2VPN)
               Service Delivery", RFC 8466, DOI 10.17487/RFC8466, October
@@ -3821,14 +3821,14 @@ Table of Contents
               Management with YANG", RFC 8969, DOI 10.17487/RFC8969,
               January 2021, <https://www.rfc-editor.org/rfc/rfc8969>.
 
+   [RFC9000]  Iyengar, J., Ed. and M. Thomson, Ed., "QUIC: A UDP-Based
+              Multiplexed and Secure Transport", RFC 9000,
+              DOI 10.17487/RFC9000, May 2021,
+              <https://www.rfc-editor.org/rfc/rfc9000>.
+
    [RFC9108]  Lhotka, L. and P. Špaček, "YANG Types for DNS Classes and
               Resource Record Types", RFC 9108, DOI 10.17487/RFC9108,
               September 2021, <https://www.rfc-editor.org/rfc/rfc9108>.
-
-   [RFC9110]  Fielding, R., Ed., Nottingham, M., Ed., and J. Reschke,
-              Ed., "HTTP Semantics", STD 97, RFC 9110,
-              DOI 10.17487/RFC9110, June 2022,
-              <https://www.rfc-editor.org/rfc/rfc9110>.
 
    [RFC9132]  Boucadair, M., Ed., Shallow, J., and T. Reddy.K,
               "Distributed Denial-of-Service Open Threat Signaling
@@ -4142,7 +4142,7 @@ Acknowledgments
    and valuable comments.  Special thanks to Ladislav Lhotka for sharing
    more context that led to the design documented in [RFC9108].
 
-   Thanks to Italo Busi, Benoit Claise, Tom Petch, Randy Presuhn, Martin
+   Thanks to Italo Busi, Benoît Claise, Tom Petch, Randy Presuhn, Martin
    Björklund, Acee Lindem, Dale R.  Worley, Kent Watsen, Jan Lindblad,
    and Qiufang Ma for the comments.
 
@@ -4154,8 +4154,8 @@ Acknowledgments
    Michal Vaško reported an inconsistency in Sections 4.6.2 and 4.6.4 of
    [RFC8407].
 
-   Thanks to Xufeng Liu for reviewing the document, including a
-   YANGDOCTORS review.
+   Thanks to Xufeng Liu for reviewing the document, including providing
+   a YANGDOCTORS review.
 
    Italo Busi provided the examples of "case + when" construct.
 
