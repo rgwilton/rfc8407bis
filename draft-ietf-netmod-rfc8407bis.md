@@ -574,7 +574,7 @@ Documents that define exclusively modules following the extension in {{!RFC8791}
 
 Note:
 : {{!RFC8341}} (or a future RFC that replaces it) MUST be listed as normative references.
-: By default, {{!RFC6241}}, {{!RFC6242}}, {{!RFC8040}}, {{!RFC8446}}, and {{?RFC9110}} (or future RFCs that replace any of them) are listed as informative references unless normatively cited in other sections of the document that specifies the YANG module.
+: By default, {{?RFC4252}}, {{!RFC6241}}, {{!RFC8040}}, {{?RFC8446}}, and {{?RFC9000}} (or future RFCs that replace any of them) are listed as informative references unless normatively cited in other sections of the document that specifies the YANG module.
 
 ##  IANA Considerations Section {#sec-iana-cons}
 
@@ -3203,16 +3203,16 @@ into the management system.
    for sharing more context that led to the design documented in
    {{?RFC9108}}.
 
-   Thanks to Italo Busi, Benoit Claise, Tom Petch,
+   Thanks to Italo Busi, Benoît Claise, Tom Petch,
    Randy Presuhn, Martin Björklund, Acee Lindem, Dale R. Worley, Kent Watsen, Jan Lindblad, and Qiufang Ma for the comments.
 
    Lou Berger suggested to include more details about IANA considerations.
 
    {{sec-tags}} is inspired from {{RFC8819}}.
 
-   Michal Vaško reported an inconsistency in Sections 4.6.2 and 4.6.4 of {{?RFC8407}}.
+   Michal Vaško reported an inconsistency in {{Sections 4.6.2 and 4.6.4 of ?RFC8407}}.
 
-   Thanks to Xufeng Liu for reviewing the document, including a YANGDOCTORS review.
+   Thanks to Xufeng Liu for reviewing the document, including providing a YANGDOCTORS review.
 
    Italo Busi provided the examples of "case + when" construct.
 
