@@ -49,7 +49,7 @@ module iana-template {
   // If a script is used, complete with the script information
 
      This version of this YANG module was generated from the
-     corresponding IANA registry using an <script-info>.
+     corresponding IANA registry using a <script-info>.
 
   // RFC Ed.: replace the IANA_FOO_URL and remove this note
 
