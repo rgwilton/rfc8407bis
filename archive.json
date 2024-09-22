@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-09-19T01:35:48.088241+00:00",
+  "timestamp": "2024-09-22T01:43:07.346897+00:00",
   "repo": "netmod-wg/rfc8407bis",
   "labels": [
     {
@@ -1914,24 +1914,26 @@
       "id": "PR_kwDOJTh_ks57Ihlm",
       "title": "Sec comment from Kent",
       "url": "https://github.com/netmod-wg/rfc8407bis/pull/66",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2024-09-11T09:42:28Z",
-      "updatedAt": "2024-09-18T14:50:08Z",
+      "updatedAt": "2024-09-20T06:42:02Z",
       "baseRepository": "netmod-wg/rfc8407bis",
       "baseRefName": "main",
       "baseRefOid": "a0d9250cfd5cdf0956ecb7c27a37934cabb03186",
       "headRepository": "netmod-wg/rfc8407bis",
       "headRefName": "sec-comment-from-Kent",
-      "headRefOid": "174313ed688af459f0ddf2727cf0fb5a7ea762a5",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "570e168604aeac6a813d4c365b6d3fee4f5c6b53",
+      "closedAt": "2024-09-20T06:42:00Z",
+      "mergedAt": "2024-09-20T06:42:00Z",
+      "mergedBy": "boucadair",
+      "mergeCommit": {
+        "oid": "a102c7cb200f2b85df9cb262278a65a573419a3a"
+      },
       "comments": [],
       "reviews": []
     }
