@@ -536,6 +536,9 @@ Table of Contents
       long (Section 3.4 of [RFCAAAA]). Instead, subtrees are provided
       for the reader's convenience.
 
+      When the note above is added to a document, RFC AAAA is listed as
+      an informative reference.
+
    These guidelines take precedence over the generic guidance in
    Section 3 of [RFC8340].
 
@@ -791,10 +794,10 @@ Table of Contents
    Note:  [RFC8341] (or a future RFC that replaces it) MUST be listed as
       normative references.
 
-      By default, [RFC4252], [RFC6241], [RFC8040], [RFC8446], and
-      [RFC9000] (or future RFCs that replace any of them) are listed as
-      informative references unless normatively cited in other sections
-      of the document that specifies the YANG module.
+      By default, [RFC4252], [RFC6241], [RFC8040], [RFC8446], [RFC9000],
+      and [RFCAAAA] (or future RFCs that replace any of them) are listed
+      as informative references unless normatively cited in other
+      sections of the document that specifies the YANG module.
 
 3.8.  IANA Considerations Section
 
@@ -1268,8 +1271,8 @@ Table of Contents
 
    Section 8.1 of [RFC7950] includes provisions for defining constraints
    on state data and specifies that a constraint must be true in a valid
-   state data.  However, Section 5.3 of [RFC8342] softens that behavior
-   by allowing semantic constraints to be violated under some
+   state data tree.  However, Section 5.3 of [RFC8342] softens that
+   behavior by allowing semantic constraints to be violated under some
    circumstances to help detecting anomalies.  Relaxing validation
    constraints on state data is meant to reveal deviations of the
    observed behavior vs. intended behavior of a managed entity and
