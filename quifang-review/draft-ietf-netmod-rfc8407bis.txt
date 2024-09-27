@@ -4168,6 +4168,8 @@ Acknowledgments
    Special thanks to Amanda Baber for the thoughtful and careful review
    of the document.
 
+   Thanks to Qiufang Ma for the careful shepherd review.
+
    The author of RFC 8407:  Andy Bierman
 
       YumaWorks
