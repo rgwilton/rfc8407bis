@@ -997,7 +997,7 @@ Note that the use of "case + when" is still useful in cases where complementary 
       mandatory true;
       case foo {
         container foo {
-          presence "When present, indicates type foo"
+          presence "When present, indicates type foo";
           leaf foo-attribute {
             type string;
           }
@@ -1006,7 +1006,7 @@ Note that the use of "case + when" is still useful in cases where complementary 
       case b {
         container bar {
           when "../type = 'a' or ../type = 'b'";
-          presence "When present, indicates type bar"
+          presence "When present, indicates type bar";
           leaf bar-attribute {
             type string;
           }
@@ -1024,8 +1024,8 @@ Note that the use of "case + when" is still useful in cases where complementary 
     }
 ~~~~
 
-{{Section 8.1 of !RFC7950}} includes a provision for defining a constraint
-on state data and specifies that the constraint must be true in a valid state data.
+{{Section 8.1 of !RFC7950}} includes provisions for defining constraints
+on state data and specifies that a constraint must be true in a valid state data.
 However, {{Section 5.3 of !RFC8342}} softens that behavior by allowing semantic
 constraints to be violated under some circumstances to help detecting anomalies.
 Relaxing validation constraints on state data is meant to reveal deviations of
@@ -1205,7 +1205,8 @@ Example:
 
 ~~~ yang
 augment "/rt:active-route/rt:input/rt:destination-address" {
-  when 'derived-from-or-self(rt:address-family, "v4ur:ipv4-unicast")' {
+  when "derived-from-or-self(rt:address-family, "
+     + "'v4ur:ipv4-unicast')" {
     description
       "This augment is valid only for IPv4 unicast.";
   }
@@ -2234,7 +2235,7 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
      container backups {
        list backup {
          ...
-         max-elements  10;
+         max-elements 10;
          ...
        }
      }
@@ -2245,7 +2246,7 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
 
      deviation /bk:backups/bk:backup {
        deviate add {
-         max-elements  10;
+         max-elements 10;
        }
      }
 ~~~
@@ -2622,7 +2623,7 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
 
    * Lists are generally more expensive than containers
    * "when" statement evaluation is generally more expensive than "if-feature" or "choice" statements
-   * "must" statements are generally more expensive than "min-entries", "max-entries", "mandatory", or "unique" statements
+   * "must" statements are generally more expensive than "min-elements", "max-elements", "mandatory", or "unique" statements
    * "identityref" leafs are generally more expensive than "enumeration" leafs
    * "leafref" and "instance-identifier" types with "require-instance" set to "true" are generally more expensive than if "require-instance" is set to "false"
 
