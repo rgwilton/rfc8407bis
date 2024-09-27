@@ -434,6 +434,8 @@ The document SHOULD include the following note if the full tree is not included:
      for the reader's convenience.
 ~~~~
 
+> When the note above is added to a document, RFC AAAA is listed as an informative reference.
+
 These guidelines take precedence over the generic guidance in {{Section 3 of ?RFC8340}}.
 
 > The tooling may evolve in the future to provide better rendering of too long trees. This tooling may offer (but not limited to), unfold trees, control of expanded views, ease navigation among various levels of a tree, support of hyperlinks, etc. When such a tooling is available, too long trees can be displayed in the HTML version of documents that include such trees.
@@ -574,7 +576,7 @@ Documents that define exclusively modules following the extension in {{!RFC8791}
 
 Note:
 : {{!RFC8341}} (or a future RFC that replaces it) MUST be listed as normative references.
-: By default, {{?RFC4252}}, {{!RFC6241}}, {{!RFC8040}}, {{?RFC8446}}, and {{?RFC9000}} (or future RFCs that replace any of them) are listed as informative references unless normatively cited in other sections of the document that specifies the YANG module.
+: By default, {{?RFC4252}}, {{!RFC6241}}, {{!RFC8040}}, {{?RFC8446}}, {{?RFC9000}}, and [RFCAAAA] (or future RFCs that replace any of them) are listed as informative references unless normatively cited in other sections of the document that specifies the YANG module.
 
 ##  IANA Considerations Section {#sec-iana-cons}
 
@@ -997,7 +999,7 @@ Note that the use of "case + when" is still useful in cases where complementary 
       mandatory true;
       case foo {
         container foo {
-          presence "When present, indicates type foo"
+          presence "When present, indicates type foo";
           leaf foo-attribute {
             type string;
           }
@@ -1006,7 +1008,7 @@ Note that the use of "case + when" is still useful in cases where complementary 
       case b {
         container bar {
           when "../type = 'a' or ../type = 'b'";
-          presence "When present, indicates type bar"
+          presence "When present, indicates type bar";
           leaf bar-attribute {
             type string;
           }
@@ -1024,8 +1026,8 @@ Note that the use of "case + when" is still useful in cases where complementary 
     }
 ~~~~
 
-{{Section 8.1 of !RFC7950}} includes a provision for defining a constraint
-on state data and specifies that the constraint must be true in a valid state data.
+{{Section 8.1 of !RFC7950}} includes provisions for defining constraints
+on state data and specifies that a constraint must be true in a valid state data tree.
 However, {{Section 5.3 of !RFC8342}} softens that behavior by allowing semantic
 constraints to be violated under some circumstances to help detecting anomalies.
 Relaxing validation constraints on state data is meant to reveal deviations of
@@ -1205,7 +1207,8 @@ Example:
 
 ~~~ yang
 augment "/rt:active-route/rt:input/rt:destination-address" {
-  when 'derived-from-or-self(rt:address-family, "v4ur:ipv4-unicast")' {
+  when "derived-from-or-self(rt:address-family, "
+     + "'v4ur:ipv4-unicast')" {
     description
       "This augment is valid only for IPv4 unicast.";
   }
@@ -2114,7 +2117,7 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
    statement and/or "if-feature" statement to make the augmentation
    conditional on some portion of the data model.
 
-   The following example from {{?RFC7223}} shows how a conditional
+   The following example from {{?RFC8343}} shows how a conditional
    container called "ethernet" is added to the "interface" list only for
    entries of the type "ethernetCsmacd".
 
@@ -2234,7 +2237,7 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
      container backups {
        list backup {
          ...
-         max-elements  10;
+         max-elements 10;
          ...
        }
      }
@@ -2245,7 +2248,7 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
 
      deviation /bk:backups/bk:backup {
        deviate add {
-         max-elements  10;
+         max-elements 10;
        }
      }
 ~~~
@@ -2622,7 +2625,7 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
 
    * Lists are generally more expensive than containers
    * "when" statement evaluation is generally more expensive than "if-feature" or "choice" statements
-   * "must" statements are generally more expensive than "min-entries", "max-entries", "mandatory", or "unique" statements
+   * "must" statements are generally more expensive than "min-elements", "max-elements", "mandatory", or "unique" statements
    * "identityref" leafs are generally more expensive than "enumeration" leafs
    * "leafref" and "instance-identifier" types with "require-instance" set to "true" are generally more expensive than if "require-instance" is set to "false"
 
@@ -3221,6 +3224,8 @@ into the management system.
    Kent Watsen contributed text to the security and IANA-maintained module templates.
 
    Special thanks to Amanda Baber for the thoughtful and careful review of the document.
+
+   Thanks to Qiufang Ma for the careful shepherd review.
 
 The author of RFC 8407:
 : Andy Bierman
