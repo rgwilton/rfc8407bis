@@ -3977,7 +3977,7 @@ Appendix B.  Template for IETF Modules
      // identify the IETF working group if applicable
 
      organization
-       "IETF NETMOD (NETCONF Data Modeling Language) Working Group";
+       "IETF NETMOD (Network Modeling) Working Group";
 
      // update this contact statement with your info
 
