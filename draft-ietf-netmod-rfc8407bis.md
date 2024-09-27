@@ -434,6 +434,8 @@ The document SHOULD include the following note if the full tree is not included:
      for the reader's convenience.
 ~~~~
 
+> When the note above is added to a document, RFC AAAA is listed as an informative reference.
+
 These guidelines take precedence over the generic guidance in {{Section 3 of ?RFC8340}}.
 
 > The tooling may evolve in the future to provide better rendering of too long trees. This tooling may offer (but not limited to), unfold trees, control of expanded views, ease navigation among various levels of a tree, support of hyperlinks, etc. When such a tooling is available, too long trees can be displayed in the HTML version of documents that include such trees.
@@ -574,7 +576,7 @@ Documents that define exclusively modules following the extension in {{!RFC8791}
 
 Note:
 : {{!RFC8341}} (or a future RFC that replaces it) MUST be listed as normative references.
-: By default, {{?RFC4252}}, {{!RFC6241}}, {{!RFC8040}}, {{?RFC8446}}, and {{?RFC9000}} (or future RFCs that replace any of them) are listed as informative references unless normatively cited in other sections of the document that specifies the YANG module.
+: By default, {{?RFC4252}}, {{!RFC6241}}, {{!RFC8040}}, {{?RFC8446}}, {{?RFC9000}}, and [RFCAAAA] (or future RFCs that replace any of them) are listed as informative references unless normatively cited in other sections of the document that specifies the YANG module.
 
 ##  IANA Considerations Section {#sec-iana-cons}
 
@@ -1025,7 +1027,7 @@ Note that the use of "case + when" is still useful in cases where complementary 
 ~~~~
 
 {{Section 8.1 of !RFC7950}} includes provisions for defining constraints
-on state data and specifies that a constraint must be true in a valid state data.
+on state data and specifies that a constraint must be true in a valid state data tree.
 However, {{Section 5.3 of !RFC8342}} softens that behavior by allowing semantic
 constraints to be violated under some circumstances to help detecting anomalies.
 Relaxing validation constraints on state data is meant to reveal deviations of
