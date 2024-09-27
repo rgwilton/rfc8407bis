@@ -3977,7 +3977,7 @@ Appendix B.  Template for IETF Modules
      // identify the IETF working group if applicable
 
      organization
-       "IETF NETMOD (Network Modeling) Working Group";
+       "IETF your-wg-name (Expanded WG Name) Working Group";
 
      // update this contact statement with your info
 
