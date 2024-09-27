@@ -7,8 +7,8 @@ Internet-Draft                                                 YumaWorks
 Obsoletes: 8407 (if approved)                          M. Boucadair, Ed.
 Updates: 6020, 8126 (if approved)                                 Orange
 Intended status: Best Current Practice                             Q. Wu
-Expires: 24 March 2025                                            Huawei
-                                                       20 September 2024
+Expires: 31 March 2025                                            Huawei
+                                                       27 September 2024
 
 
  Guidelines for Authors and Reviewers of Documents Containing YANG Data
@@ -56,7 +56,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 24 March 2025.
+   This Internet-Draft will expire on 31 March 2025.
 
 Copyright Notice
 
@@ -536,6 +536,9 @@ Table of Contents
       long (Section 3.4 of [RFCAAAA]). Instead, subtrees are provided
       for the reader's convenience.
 
+      When the note above is added to a document, RFC AAAA is listed as
+      an informative reference.
+
    These guidelines take precedence over the generic guidance in
    Section 3 of [RFC8340].
 
@@ -791,10 +794,10 @@ Table of Contents
    Note:  [RFC8341] (or a future RFC that replaces it) MUST be listed as
       normative references.
 
-      By default, [RFC4252], [RFC6241], [RFC8040], [RFC8446], and
-      [RFC9000] (or future RFCs that replace any of them) are listed as
-      informative references unless normatively cited in other sections
-      of the document that specifies the YANG module.
+      By default, [RFC4252], [RFC6241], [RFC8040], [RFC8446], [RFC9000],
+      and [RFCAAAA] (or future RFCs that replace any of them) are listed
+      as informative references unless normatively cited in other
+      sections of the document that specifies the YANG module.
 
 3.8.  IANA Considerations Section
 
@@ -1240,7 +1243,7 @@ Table of Contents
          mandatory true;
          case foo {
            container foo {
-             presence "When present, indicates type foo"
+             presence "When present, indicates type foo";
              leaf foo-attribute {
                type string;
              }
@@ -1249,7 +1252,7 @@ Table of Contents
          case b {
            container bar {
              when "../type = 'a' or ../type = 'b'";
-             presence "When present, indicates type bar"
+             presence "When present, indicates type bar";
              leaf bar-attribute {
                type string;
              }
@@ -1266,13 +1269,13 @@ Table of Contents
          }
        }
 
-   Section 8.1 of [RFC7950] includes a provision for defining a
-   constraint on state data and specifies that the constraint must be
-   true in a valid state data.  However, Section 5.3 of [RFC8342]
-   softens that behavior by allowing semantic constraints to be violated
-   under some circumstances to help detecting anomalies.  Relaxing
-   validation constraints on state data is meant to reveal deviations of
-   the observed behavior vs. intended behavior of a managed entity and
+   Section 8.1 of [RFC7950] includes provisions for defining constraints
+   on state data and specifies that a constraint must be true in a valid
+   state data tree.  However, Section 5.3 of [RFC8342] softens that
+   behavior by allowing semantic constraints to be violated under some
+   circumstances to help detecting anomalies.  Relaxing validation
+   constraints on state data is meant to reveal deviations of the
+   observed behavior vs. intended behavior of a managed entity and
    hopefully trigger corrective actions by a management system.  From
    that perspective, it is RECOMMENDED to avoid defining constraints on
    state data that would hinder the detection by a management system of
@@ -1443,7 +1446,8 @@ Table of Contents
    Example:
 
    augment "/rt:active-route/rt:input/rt:destination-address" {
-     when 'derived-from-or-self(rt:address-family, "v4ur:ipv4-unicast")' {
+     when "derived-from-or-self(rt:address-family, "
+        + "'v4ur:ipv4-unicast')" {
        description
          "This augment is valid only for IPv4 unicast.";
      }
@@ -2334,7 +2338,7 @@ Table of Contents
    statement and/or "if-feature" statement to make the augmentation
    conditional on some portion of the data model.
 
-   The following example from [RFC7223] shows how a conditional
+   The following example from [RFC8343] shows how a conditional
    container called "ethernet" is added to the "interface" list only for
    entries of the type "ethernetCsmacd".
 
@@ -2449,7 +2453,7 @@ Table of Contents
         container backups {
           list backup {
             ...
-            max-elements  10;
+            max-elements 10;
             ...
           }
         }
@@ -2458,7 +2462,7 @@ Table of Contents
 
         deviation /bk:backups/bk:backup {
           deviate add {
-            max-elements  10;
+            max-elements 10;
           }
         }
 
@@ -2827,8 +2831,8 @@ Table of Contents
    *  "when" statement evaluation is generally more expensive than "if-
       feature" or "choice" statements
 
-   *  "must" statements are generally more expensive than "min-entries",
-      "max-entries", "mandatory", or "unique" statements
+   *  "must" statements are generally more expensive than "min-
+      elements", "max-elements", "mandatory", or "unique" statements
 
    *  "identityref" leafs are generally more expensive than
       "enumeration" leafs
@@ -3976,7 +3980,7 @@ Appendix B.  Template for IETF Modules
      // identify the IETF working group if applicable
 
      organization
-       "IETF NETMOD (NETCONF Data Modeling Language) Working Group";
+       "IETF your-wg-name (Expanded WG Name) Working Group";
 
      // update this contact statement with your info
 
@@ -4073,7 +4077,7 @@ Appendix C.  Template for IANA-Maintained Modules
 
         Redistribution and use in source and binary forms, with or
         without modification, is permitted pursuant to, and subject to
-        the license terms contained in, the Simplified BSD License set
+        the license terms contained in, the Revised BSD License set
         forth in Section 4.c of the IETF Trust's Legal Provisions
         Relating to IETF Documents
         (https://trustee.ietf.org/license-info).
@@ -4166,6 +4170,8 @@ Acknowledgments
 
    Special thanks to Amanda Baber for the thoughtful and careful review
    of the document.
+
+   Thanks to Qiufang Ma for the careful shepherd review.
 
    The author of RFC 8407:  Andy Bierman
 
