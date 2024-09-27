@@ -237,6 +237,7 @@ informative:
    - Added a template for IANA-maintained modules.
    - Updates RFC 6020 to record current IANA practices for registering modules and their revisions.
    - Updated the wiki URLs to use the new structure instead of the old trac.
+   - Fixed an error (invalid statements) in Section 4.24.
 
 #  Terminology & Notation Conventions
 
@@ -434,7 +435,7 @@ The document SHOULD include the following note if the full tree is not included:
      for the reader's convenience.
 ~~~~
 
-> When the note above is added to a document, RFC AAAA is listed as an informative reference.
+When the note above is added to a document, RFC AAAA is listed as an informative reference.
 
 These guidelines take precedence over the generic guidance in {{Section 3 of ?RFC8340}}.
 
@@ -576,7 +577,7 @@ Documents that define exclusively modules following the extension in {{!RFC8791}
 
 Note:
 : {{!RFC8341}} (or a future RFC that replaces it) MUST be listed as normative references.
-: By default, {{?RFC4252}}, {{!RFC6241}}, {{!RFC8040}}, {{?RFC8446}}, {{?RFC9000}}, and [RFCAAAA] (or future RFCs that replace any of them) are listed as informative references unless normatively cited in other sections of the document that specifies the YANG module.
+: By default, {{?RFC4252}}, {{!RFC6241}}, {{!RFC8040}}, {{?RFC8446}}, {{?RFC9000}}, and RFC AAAA (or future RFCs that replace any of them) are listed as informative references unless normatively cited in other sections of the document that specifies the YANG module.
 
 ##  IANA Considerations Section {#sec-iana-cons}
 
