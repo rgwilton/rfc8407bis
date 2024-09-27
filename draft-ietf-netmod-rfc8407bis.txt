@@ -320,6 +320,8 @@ Table of Contents
    *  Updated the wiki URLs to use the new structure instead of the old
       trac.
 
+   *  Fixed an error (invalid statements) in Section 4.24.
+
 2.  Terminology & Notation Conventions
 
    Some of the templates defined in the document uses "--" to easily
@@ -536,8 +538,8 @@ Table of Contents
       long (Section 3.4 of [RFCAAAA]). Instead, subtrees are provided
       for the reader's convenience.
 
-      When the note above is added to a document, RFC AAAA is listed as
-      an informative reference.
+   When the note above is added to a document, RFC AAAA is listed as an
+   informative reference.
 
    These guidelines take precedence over the generic guidance in
    Section 3 of [RFC8340].
@@ -795,7 +797,7 @@ Table of Contents
       normative references.
 
       By default, [RFC4252], [RFC6241], [RFC8040], [RFC8446], [RFC9000],
-      and [RFCAAAA] (or future RFCs that replace any of them) are listed
+      and RFC AAAA (or future RFCs that replace any of them) are listed
       as informative references unless normatively cited in other
       sections of the document that specifies the YANG module.
 
