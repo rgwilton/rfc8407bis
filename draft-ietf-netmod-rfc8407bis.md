@@ -2115,7 +2115,7 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
    statement and/or "if-feature" statement to make the augmentation
    conditional on some portion of the data model.
 
-   The following example from {{?RFC7223}} shows how a conditional
+   The following example from {{?RFC8343}} shows how a conditional
    container called "ethernet" is added to the "interface" list only for
    entries of the type "ethernetCsmacd".
 
