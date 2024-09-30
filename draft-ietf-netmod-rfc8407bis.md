@@ -237,6 +237,7 @@ informative:
    - Added a template for IANA-maintained modules.
    - Updates RFC 6020 to record current IANA practices for registering modules and their revisions.
    - Updated the wiki URLs to use the new structure instead of the old trac.
+   - Added anydata to the list of statement with mandatory description ({{sec-data-def}}).
    - Fixed an error (invalid statements) in Section 4.24.
 
 #  Terminology & Notation Conventions
@@ -1869,11 +1870,12 @@ augment "/rt:active-route/rt:input/rt:destination-address" {
    * Do not include a "config" substatement on a data node unless the value applies on all possible contexts.
    * Clearly identify any external dependencies in the grouping "description" statement, such as nodes referenced by an absolute path from a "path", "must", or "when" statement.
 
-##  Data Definitions
+##  Data Definitions {#sec-data-def}
 
    The "description" statement MUST be present in the following YANG
    statements:
 
+   * anydata
    * anyxml
    * augment
    * choice
