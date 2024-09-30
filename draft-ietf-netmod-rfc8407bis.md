@@ -237,7 +237,7 @@ informative:
    - Added a template for IANA-maintained modules.
    - Updates RFC 6020 to record current IANA practices for registering modules and their revisions.
    - Updated the wiki URLs to use the new structure instead of the old trac.
-   - Added anydata to the list of statement with mandatory description ({{sec-data-def}}).
+   - Added anydata to the list of statements with mandatory description ({{sec-data-def}}).
    - Fixed an error (invalid statements) in Section 4.24.
 
 #  Terminology & Notation Conventions
