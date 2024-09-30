@@ -320,7 +320,7 @@ Table of Contents
    *  Updated the wiki URLs to use the new structure instead of the old
       trac.
 
-   *  Added anydata to the list of statement with mandatory description
+   *  Added anydata to the list of statements with mandatory description
       (Section 4.14).
 
    *  Fixed an error (invalid statements) in Section 4.24.
