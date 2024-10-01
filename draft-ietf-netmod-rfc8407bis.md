@@ -478,7 +478,7 @@ in the following example:
 
 Native YANG features (e.g., breaking line, "+") SHOULD be used to fit a module into the line limits.
 Exceptionally, RFC8792-folding of YANG modules MAY be used if and only if native YANG features are not sufficient.
-A similar approach (e.g., use 'pyang' option "--tree-line-length 69" or split a tree into subtrees) SHOULD be followed for tree diagrams.
+A similar approach (e.g., use "--tree-line-length 69" or split a tree into subtrees) SHOULD be followed for tree diagrams.
 
 ### YANG Module Classification
 
