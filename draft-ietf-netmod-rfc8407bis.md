@@ -439,7 +439,7 @@ When the note above is added to a document, RFC AAAA is listed as an informative
 
 These guidelines take precedence over the generic guidance in {{Section 3 of ?RFC8340}}.
 
-> The tooling may evolve in the future to provide better rendering of too long trees. This tooling may offer (but not limited to), unfold trees, control of expanded views, ease navigation among various levels of a tree, support of hyperlinks, etc. When such a tooling is available, too long trees can be displayed in the HTML version of documents that include such trees.
+> The tooling may evolve in the future to provide better rendering of too long trees. This tooling may offer (but not limited to), unfold trees {{!RFC8792}}, control of expanded views, ease navigation among various levels of a tree, support of hyperlinks, etc. When such a tooling is available, too long trees can be displayed in the HTML version of documents that include such trees.
 
 If YANG tree diagrams are used, then an informative reference to the
 YANG tree diagrams specification MUST be included in the document.
@@ -478,7 +478,7 @@ in the following example:
 
 Native YANG features (e.g., breaking line, "+") SHOULD be used to fit a module into the line limits.
 Exceptionally, RFC8792-folding of YANG modules MAY be used if and only if native YANG features are not sufficient.
-A similar approach (e.g., use "--yang-line-length 69" or split a tree into subtrees) SHOULD be followed for tree diagrams.
+A similar approach (e.g., use 'pyang' option "--tree-line-length 69" or split a tree into subtrees) SHOULD be followed for tree diagrams.
 
 ### YANG Module Classification
 
