@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-09-29T01:44:43.158048+00:00",
+  "timestamp": "2024-10-01T01:46:42.344103+00:00",
   "repo": "netmod-wg/rfc8407bis",
   "labels": [
     {
@@ -1962,6 +1962,32 @@
       "mergeCommit": {
         "oid": "6cf644c880a07089b5734b8fbce5303d04713d04"
       },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 68,
+      "id": "PR_kwDOJTh_ks59IGkR",
+      "title": "anydata with mandatory description",
+      "url": "https://github.com/netmod-wg/rfc8407bis/pull/68",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2024-09-30T14:11:19Z",
+      "updatedAt": "2024-09-30T14:16:02Z",
+      "baseRepository": "netmod-wg/rfc8407bis",
+      "baseRefName": "main",
+      "baseRefOid": "d1edd9088cfd67f65ee98ab1166fa9e5d2256c70",
+      "headRepository": "netmod-wg/rfc8407bis",
+      "headRefName": "anydata-description",
+      "headRefOid": "8b335956bad4ff54b5d51f6ee54fca5e576777b9",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
       "comments": [],
       "reviews": []
     }
