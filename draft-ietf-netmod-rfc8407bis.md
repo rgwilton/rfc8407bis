@@ -423,7 +423,7 @@ The document SHOULD include the following note if the full tree is not included:
      -- If no stable pointer to retrieve the tree is included
 
      The full tree diagram of the module can be generated using,
-     e.g., the "pyang" tool. That tree is not included here because
+     e.g., the 'pyang' tool. That tree is not included here because
      it is too long (Section 3.4 of [RFCAAAA]). Instead, subtrees
      are provided for the reader's convenience.
 
@@ -707,7 +707,7 @@ This tool can be used to verify that the ``"<CODE BEGINS>"`` and ``"<CODE
 ENDS>"`` tags are used correctly and that the normative YANG modules
 can be extracted correctly.
 
-The "xym" tool is freely available on GitHub and can be used to
+The 'xym' tool is freely available on GitHub and can be used to
 extract YANG modules from a document.
 
 ~~~
