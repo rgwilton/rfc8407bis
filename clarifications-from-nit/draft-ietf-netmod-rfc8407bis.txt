@@ -7,8 +7,8 @@ Internet-Draft                                                 YumaWorks
 Obsoletes: 8407 (if approved)                          M. Boucadair, Ed.
 Updates: 6020, 8126 (if approved)                                 Orange
 Intended status: Best Current Practice                             Q. Wu
-Expires: 4 April 2025                                             Huawei
-                                                          1 October 2024
+Expires: 5 April 2025                                             Huawei
+                                                          2 October 2024
 
 
  Guidelines for Authors and Reviewers of Documents Containing YANG Data
@@ -56,7 +56,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 4 April 2025.
+   This Internet-Draft will expire on 5 April 2025.
 
 Copyright Notice
 
@@ -527,7 +527,7 @@ Table of Contents
       -- If no stable pointer to retrieve the tree is included
 
       The full tree diagram of the module can be generated using,
-      e.g., the "pyang" tool. That tree is not included here because
+      e.g., the 'pyang' tool. That tree is not included here because
       it is too long (Section 3.4 of [RFCAAAA]). Instead, subtrees
       are provided for the reader's convenience.
 
@@ -924,7 +924,7 @@ Table of Contents
    ENDS>" tags are used correctly and that the normative YANG modules
    can be extracted correctly.
 
-   The "xym" tool is freely available on GitHub and can be used to
+   The 'xym' tool is freely available on GitHub and can be used to
    extract YANG modules from a document.
 
       <https://github.com/xym-tool/xym>
