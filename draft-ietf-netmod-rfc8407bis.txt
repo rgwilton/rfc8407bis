@@ -7,8 +7,8 @@ Internet-Draft                                                 YumaWorks
 Obsoletes: 8407 (if approved)                          M. Boucadair, Ed.
 Updates: 6020, 8126 (if approved)                                 Orange
 Intended status: Best Current Practice                             Q. Wu
-Expires: 31 March 2025                                            Huawei
-                                                       27 September 2024
+Expires: 14 April 2025                                            Huawei
+                                                         11 October 2024
 
 
  Guidelines for Authors and Reviewers of Documents Containing YANG Data
@@ -56,7 +56,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 31 March 2025.
+   This Internet-Draft will expire on 14 April 2025.
 
 Copyright Notice
 
@@ -320,6 +320,9 @@ Table of Contents
    *  Updated the wiki URLs to use the new structure instead of the old
       trac.
 
+   *  Added anydata to the list of statements with mandatory description
+      (Section 4.14).
+
    *  Fixed an error (invalid statements) in Section 4.24.
 
 2.  Terminology & Notation Conventions
@@ -527,7 +530,7 @@ Table of Contents
       -- If no stable pointer to retrieve the tree is included
 
       The full tree diagram of the module can be generated using,
-      e.g., the "pyang" tool. That tree is not included here because
+      e.g., the 'pyang' tool. That tree is not included here because
       it is too long (Section 3.4 of [RFCAAAA]). Instead, subtrees
       are provided for the reader's convenience.
 
@@ -546,10 +549,10 @@ Table of Contents
 
       The tooling may evolve in the future to provide better rendering
       of too long trees.  This tooling may offer (but not limited to),
-      unfold trees, control of expanded views, ease navigation among
-      various levels of a tree, support of hyperlinks, etc.  When such a
-      tooling is available, too long trees can be displayed in the HTML
-      version of documents that include such trees.
+      unfold trees [RFC8792], control of expanded views, ease navigation
+      among various levels of a tree, support of hyperlinks, etc.  When
+      such a tooling is available, too long trees can be displayed in
+      the HTML version of documents that include such trees.
 
    If YANG tree diagrams are used, then an informative reference to the
    YANG tree diagrams specification MUST be included in the document.
@@ -594,7 +597,7 @@ Table of Contents
    Native YANG features (e.g., breaking line, "+") SHOULD be used to fit
    a module into the line limits.  Exceptionally, RFC8792-folding of
    YANG modules MAY be used if and only if native YANG features are not
-   sufficient.  A similar approach (e.g., use "--yang-line-length 69" or
+   sufficient.  A similar approach (e.g., use "--tree-line-length 69" or
    split a tree into subtrees) SHOULD be followed for tree diagrams.
 
 3.5.1.  YANG Module Classification
@@ -924,7 +927,7 @@ Table of Contents
    ENDS>" tags are used correctly and that the normative YANG modules
    can be extracted correctly.
 
-   The "xym" tool is freely available on GitHub and can be used to
+   The 'xym' tool is freely available on GitHub and can be used to
    extract YANG modules from a document.
 
       <https://github.com/xym-tool/xym>
@@ -2085,6 +2088,8 @@ Table of Contents
 
    The "description" statement MUST be present in the following YANG
    statements:
+
+   *  anydata
 
    *  anyxml
 
