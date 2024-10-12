@@ -7,8 +7,8 @@ Internet-Draft                                                 YumaWorks
 Obsoletes: 8407 (if approved)                          M. Boucadair, Ed.
 Updates: 6020, 8126 (if approved)                                 Orange
 Intended status: Best Current Practice                             Q. Wu
-Expires: 14 April 2025                                            Huawei
-                                                         11 October 2024
+Expires: 15 April 2025                                            Huawei
+                                                         12 October 2024
 
 
  Guidelines for Authors and Reviewers of Documents Containing YANG Data
@@ -56,7 +56,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 14 April 2025.
+   This Internet-Draft will expire on 15 April 2025.
 
 Copyright Notice
 
@@ -521,8 +521,8 @@ Table of Contents
    convenience, a subtree should fit within a page.  If the complete
    tree diagram is too long (more than 5 pages, typically) even with
    groupings unexpanded (Section 2.2 of [RFC8340]), the authors SHOULD
-   NOT include it in the main document.  Instead, authors MAY consider
-   the following options:
+   NOT include it in the main body of the document.  Instead, authors
+   MAY consider the following options:
 
    *  Provide only a stable pointer to retrieve the full tree.  The full
       tree is thus not provided at all.
