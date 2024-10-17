@@ -7,8 +7,8 @@ Internet-Draft                                                 YumaWorks
 Obsoletes: 8407 (if approved)                          M. Boucadair, Ed.
 Updates: 6020, 8126 (if approved)                                 Orange
 Intended status: Best Current Practice                             Q. Wu
-Expires: 15 April 2025                                            Huawei
-                                                         12 October 2024
+Expires: 20 April 2025                                            Huawei
+                                                         17 October 2024
 
 
  Guidelines for Authors and Reviewers of Documents Containing YANG Data
@@ -56,7 +56,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 15 April 2025.
+   This Internet-Draft will expire on 20 April 2025.
 
 Copyright Notice
 
@@ -527,21 +527,10 @@ Table of Contents
    *  Provide only a stable pointer to retrieve the full tree.  The full
       tree is thus not provided at all.
 
-   *  Include a note about how to generate the full tree.
-
-   *  A combination of the first and second bullets.
-
    *  Include the full tree in an appendix.
 
    The document SHOULD include the following note if the full tree is
    not included:
-
-      -- If no stable pointer to retrieve the tree is included
-
-      The full tree diagram of the module can be generated using,
-      e.g., the 'pyang' tool. That tree is not included here because
-      it is too long (Section 3.4 of [RFCAAAA]). Instead, subtrees
-      are provided for the reader's convenience.
 
       -- If a stable pointer to retrieve the tree is included
 
