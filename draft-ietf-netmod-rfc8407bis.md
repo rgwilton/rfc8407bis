@@ -419,20 +419,11 @@ structure. If the complete tree diagram for a module becomes long (more than 2 p
 the diagram SHOULD be split into several smaller diagrams (a.k.a subtrees). For the reader's convenience, a subtree should fit within a page. If the complete tree diagram is too long (more than 5 pages, typically) even with groupings unexpanded ({{Section 2.2 of ?RFC8340}}), the authors SHOULD NOT include it in the main body of the document. Instead, authors MAY consider the following options:
 
 * Provide only a stable pointer to retrieve the full tree. The full tree is thus not provided at all.
-* Include a note about how to generate the full tree.
-* A combination of the first and second bullets.
 * Include the full tree in an appendix.
 
 The document SHOULD include the following note if the full tree is not included:
 
 ~~~~
-     -- If no stable pointer to retrieve the tree is included
-
-     The full tree diagram of the module can be generated using,
-     e.g., the 'pyang' tool. That tree is not included here because
-     it is too long (Section 3.4 of [RFCAAAA]). Instead, subtrees
-     are provided for the reader's convenience.
-
      -- If a stable pointer to retrieve the tree is included
 
      The full tree diagram of the module can be retrieved at
