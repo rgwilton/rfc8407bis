@@ -96,7 +96,6 @@ Table of Contents
        3.8.1.  Documents That Create a New Namespace
        3.8.2.  Documents That Extend an Existing Namespace
        3.8.3.  Registration Templates
-       3.8.4.  IANA Template for Revising YANG Modules
      3.9.  References Sections
      3.10. Validation Tools
      3.11. Module Extraction Tools
@@ -870,7 +869,7 @@ Table of Contents
        Prefix:
        Reference:
 
-3.8.4.  IANA Template for Revising YANG Modules
+3.8.3.2.  IANA Template for Revising YANG Modules
 
    A registration template for a revised module is provided below:
 
@@ -887,7 +886,7 @@ Table of Contents
     registry.
 
        Name:
-       Maintained by IANA?  N
+       Maintained by IANA?  Y/N
        Namespace:
        Prefix:
        Reference:
