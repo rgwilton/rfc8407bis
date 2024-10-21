@@ -1041,7 +1041,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Bierman, et al.</td>
-<td class="center">Expires 14 April 2025</td>
+<td class="center">Expires 24 April 2025</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1060,12 +1060,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <a href="https://www.rfc-editor.org/rfc/rfc6020" class="eref">6020</a>, <a href="https://www.rfc-editor.org/rfc/rfc8126" class="eref">8126</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2024-10-11" class="published">11 October 2024</time>
+<time datetime="2024-10-21" class="published">21 October 2024</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Best Current Practice</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2025-04-14">14 April 2025</time></dd>
+<dd class="expires"><time datetime="2025-04-24">24 April 2025</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1128,7 +1128,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 14 April 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 24 April 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1944,35 +1944,36 @@ document or if any terms are imported from other documents.<a href="#section-3.3
 <p id="section-3.4-1">YANG tree diagrams provide a concise representation of a YANG module
 and <span class="bcp14">SHOULD</span> be included to help readers understand YANG module
 structure. If the complete tree diagram for a module becomes long (more than 2 pages, typically),
-the diagram <span class="bcp14">SHOULD</span> be split into several smaller diagrams (a.k.a subtrees). For the reader's convenience, a subtree should fit within a page. If the complete tree diagram is too long (more than 5 pages, typically) even with groupings unexpanded (<span><a href="https://rfc-editor.org/rfc/rfc8340#section-2.2" class="relref">Section 2.2</a> of [<a href="#RFC8340" class="cite xref">RFC8340</a>]</span>), the authors <span class="bcp14">SHOULD NOT</span> include it in the document. A stable pointer to retrieve the full tree <span class="bcp14">MAY</span> be included.<a href="#section-3.4-1" class="pilcrow">¶</a></p>
-<p id="section-3.4-2">The document <span class="bcp14">SHOULD</span> include the following note if the full tree is not included:<a href="#section-3.4-2" class="pilcrow">¶</a></p>
-<div class="alignLeft art-text artwork" id="section-3.4-3">
+the diagram <span class="bcp14">SHOULD</span> be split into several smaller diagrams (a.k.a subtrees). For the reader's convenience, a subtree should fit within a page. If the complete tree diagram is too long (more than 5 pages, typically) even with groupings unexpanded (<span><a href="https://rfc-editor.org/rfc/rfc8340#section-2.2" class="relref">Section 2.2</a> of [<a href="#RFC8340" class="cite xref">RFC8340</a>]</span>), the authors <span class="bcp14">SHOULD NOT</span> include it in the main body of the document. Instead, authors <span class="bcp14">MAY</span> consider the following options:<a href="#section-3.4-1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-3.4-2.1">
+            <p id="section-3.4-2.1.1">Provide only a stable pointer to retrieve the full tree. The full tree is thus not provided at all.<a href="#section-3.4-2.1.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-3.4-2.2">
+            <p id="section-3.4-2.2.1">Include the full tree in an appendix.<a href="#section-3.4-2.2.1" class="pilcrow">¶</a></p>
+</li>
+        </ul>
+<p id="section-3.4-3">The document <span class="bcp14">SHOULD</span> include the following note if the full tree is not included:<a href="#section-3.4-3" class="pilcrow">¶</a></p>
+<div class="alignLeft art-text artwork" id="section-3.4-4">
 <pre>
-     -- If no stable pointer to retrieve the tree is included
-
-     The full tree diagram of the module can be generated using,
-     e.g., the 'pyang' tool. That tree is not included here because
-     it is too long (Section 3.4 of [RFCAAAA]). Instead, subtrees
-     are provided for the reader's convenience.
-
      -- If a stable pointer to retrieve the tree is included
 
      The full tree diagram of the module can be retrieved at
      &lt;stable_url_ref&gt;. That tree is not included here because it is too
      long (Section 3.4 of [RFCAAAA]). Instead, subtrees are provided
      for the reader's convenience.
-</pre><a href="#section-3.4-3" class="pilcrow">¶</a>
+</pre><a href="#section-3.4-4" class="pilcrow">¶</a>
 </div>
-<p id="section-3.4-4">When the note above is added to a document, RFC AAAA is listed as an informative reference.<a href="#section-3.4-4" class="pilcrow">¶</a></p>
-<p id="section-3.4-5">These guidelines take precedence over the generic guidance in <span><a href="https://rfc-editor.org/rfc/rfc8340#section-3" class="relref">Section 3</a> of [<a href="#RFC8340" class="cite xref">RFC8340</a>]</span>.<a href="#section-3.4-5" class="pilcrow">¶</a></p>
+<p id="section-3.4-5">When the note above is added to a document, RFC AAAA is listed as an informative reference.<a href="#section-3.4-5" class="pilcrow">¶</a></p>
+<p id="section-3.4-6">These guidelines take precedence over the generic guidance in <span><a href="https://rfc-editor.org/rfc/rfc8340#section-3" class="relref">Section 3</a> of [<a href="#RFC8340" class="cite xref">RFC8340</a>]</span>.<a href="#section-3.4-6" class="pilcrow">¶</a></p>
 <ul class="normal ulEmpty">
-<li class="normal ulEmpty" id="section-3.4-6.1">
-            <p id="section-3.4-6.1.1">The tooling may evolve in the future to provide better rendering of too long trees. This tooling may offer (but not limited to), unfold trees <span>[<a href="#RFC8792" class="cite xref">RFC8792</a>]</span>, control of expanded views, ease navigation among various levels of a tree, support of hyperlinks, etc. When such a tooling is available, too long trees can be displayed in the HTML version of documents that include such trees.<a href="#section-3.4-6.1.1" class="pilcrow">¶</a></p>
+<li class="normal ulEmpty" id="section-3.4-7.1">
+            <p id="section-3.4-7.1.1">The tooling may evolve in the future to provide better rendering of too long trees. This tooling may offer (but not limited to), unfold trees <span>[<a href="#RFC8792" class="cite xref">RFC8792</a>]</span>, control of expanded views, ease navigation among various levels of a tree, support of hyperlinks, etc. When such a tooling is available, too long trees can be displayed in the HTML version of documents that include such trees.<a href="#section-3.4-7.1.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
-<p id="section-3.4-7">If YANG tree diagrams are used, then an informative reference to the
+<p id="section-3.4-8">If YANG tree diagrams are used, then an informative reference to the
 YANG tree diagrams specification <span class="bcp14">MUST</span> be included in the document.
-Refer to <span><a href="https://rfc-editor.org/rfc/rfc8349#section-2.2" class="relref">Section 2.2</a> of [<a href="#RFC8349" class="cite xref">RFC8349</a>]</span> for an example of such a reference.<a href="#section-3.4-7" class="pilcrow">¶</a></p>
+Refer to <span><a href="https://rfc-editor.org/rfc/rfc8349#section-2.2" class="relref">Section 2.2</a> of [<a href="#RFC8349" class="cite xref">RFC8349</a>]</span> for an example of such a reference.<a href="#section-3.4-8" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="narrative-sections">
