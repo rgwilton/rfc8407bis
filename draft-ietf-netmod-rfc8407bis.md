@@ -593,11 +593,31 @@ should indicate whether the module is IANA-maintained or not. This applies to ne
 modules. An example of an update registration for the
 "ietf-template" module can be found in {{sec-iana}}.
 
-The following sections provide registration templates for new and revised YANG modules.
-
 Additional IANA considerations applicable to IANA-maintained modules (including instructions to maintain them) are provided in {{sec-iana-mm}}.
 
-###  IANA Template for Documents Defining New YANG Modules
+###  Documents That Create a New Namespace
+
+If an I-D defines a new namespace that is to be administered by the
+IANA, then the document MUST include an IANA Considerations section
+that specifies how the namespace is to be administered.
+
+Specifically, if any YANG module namespace statement value contained
+in the document is not already registered with IANA, then a new entry
+in the "ns" subregistry within the "IETF XML Registry" MUST be
+requested from the IANA.
+
+A registration template for new YANG modules is provided in {{sec-reg-def-iana}}.
+
+### Documents That Extend an Existing Namespace
+
+It is possible to extend an existing namespace using a YANG submodule
+that belongs to an existing module already administered by IANA.  In
+this case, the document containing the main module MUST be updated to
+use the latest revision of the submodule.
+
+### Registration Templates
+
+####  IANA Template for Documents Defining New YANG Modules {#sec-reg-def-iana}
 
 A registration template for a new module is provided below:
 
@@ -644,23 +664,6 @@ A registration template for a revised module is provided below:
       Reference:
 ~~~
 
-###  Documents That Create a New Namespace
-
-If an I-D defines a new namespace that is to be administered by the
-IANA, then the document MUST include an IANA Considerations section
-that specifies how the namespace is to be administered.
-
-Specifically, if any YANG module namespace statement value contained
-in the document is not already registered with IANA, then a new entry
-in the "ns" subregistry within the "IETF XML Registry" MUST be
-requested from the IANA.
-
-### Documents That Extend an Existing Namespace
-
-It is possible to extend an existing namespace using a YANG submodule
-that belongs to an existing module already administered by IANA.  In
-this case, the document containing the main module MUST be updated to
-use the latest revision of the submodule.
 
 ## References Sections
 
