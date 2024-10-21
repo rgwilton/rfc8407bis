@@ -640,7 +640,7 @@ A registration template for a new module is provided below:
       Reference:
 ~~~
 
-###  IANA Template for Revising YANG Modules
+####  IANA Template for Revising YANG Modules
 
 A registration template for a revised module is provided below:
 
@@ -658,7 +658,7 @@ A registration template for a revised module is provided below:
    registry.
 
       Name:
-      Maintained by IANA?  N
+      Maintained by IANA?  Y/N
       Namespace:
       Prefix:
       Reference:
