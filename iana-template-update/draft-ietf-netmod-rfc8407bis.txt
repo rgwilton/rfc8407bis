@@ -93,10 +93,10 @@ Table of Contents
      3.7.  Security Considerations Section
        3.7.1.  Security Considerations Section Template
      3.8.  IANA Considerations Section
-       3.8.1.  IANA Template for Documents Defining New YANG Modules
-       3.8.2.  IANA Template for Revising YANG Modules
-       3.8.3.  Documents That Create a New Namespace
-       3.8.4.  Documents That Extend an Existing Namespace
+       3.8.1.  Documents That Create a New Namespace
+       3.8.2.  Documents That Extend an Existing Namespace
+       3.8.3.  Registration Templates
+       3.8.4.  IANA Template for Revising YANG Modules
      3.9.  References Sections
      3.10. Validation Tools
      3.11. Module Extraction Tools
@@ -822,14 +822,34 @@ Table of Contents
    An example of an update registration for the "ietf-template" module
    can be found in Section 5.
 
-   The following sections provide registration templates for new and
-   revised YANG modules.
-
    Additional IANA considerations applicable to IANA-maintained modules
    (including instructions to maintain them) are provided in
    Section 4.30.3.
 
-3.8.1.  IANA Template for Documents Defining New YANG Modules
+3.8.1.  Documents That Create a New Namespace
+
+   If an I-D defines a new namespace that is to be administered by the
+   IANA, then the document MUST include an IANA Considerations section
+   that specifies how the namespace is to be administered.
+
+   Specifically, if any YANG module namespace statement value contained
+   in the document is not already registered with IANA, then a new entry
+   in the "ns" subregistry within the "IETF XML Registry" MUST be
+   requested from the IANA.
+
+   A registration template for new YANG modules is provided in
+   Section 3.8.3.1.
+
+3.8.2.  Documents That Extend an Existing Namespace
+
+   It is possible to extend an existing namespace using a YANG submodule
+   that belongs to an existing module already administered by IANA.  In
+   this case, the document containing the main module MUST be updated to
+   use the latest revision of the submodule.
+
+3.8.3.  Registration Templates
+
+3.8.3.1.  IANA Template for Documents Defining New YANG Modules
 
    A registration template for a new module is provided below:
 
@@ -850,7 +870,7 @@ Table of Contents
        Prefix:
        Reference:
 
-3.8.2.  IANA Template for Revising YANG Modules
+3.8.4.  IANA Template for Revising YANG Modules
 
    A registration template for a revised module is provided below:
 
@@ -871,24 +891,6 @@ Table of Contents
        Namespace:
        Prefix:
        Reference:
-
-3.8.3.  Documents That Create a New Namespace
-
-   If an I-D defines a new namespace that is to be administered by the
-   IANA, then the document MUST include an IANA Considerations section
-   that specifies how the namespace is to be administered.
-
-   Specifically, if any YANG module namespace statement value contained
-   in the document is not already registered with IANA, then a new entry
-   in the "ns" subregistry within the "IETF XML Registry" MUST be
-   requested from the IANA.
-
-3.8.4.  Documents That Extend an Existing Namespace
-
-   It is possible to extend an existing namespace using a YANG submodule
-   that belongs to an existing module already administered by IANA.  In
-   this case, the document containing the main module MUST be updated to
-   use the latest revision of the submodule.
 
 3.9.  References Sections
 
