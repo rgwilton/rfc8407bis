@@ -524,10 +524,10 @@ Table of Contents
    NOT include it in the main body of the document.  Instead, authors
    MAY consider the following options:
 
-   *  Provide only a stable pointer to retrieve the full tree.  The full
-      tree is thus not provided at all.
-
    *  Include the full tree in an appendix.
+
+   *  Provide only a stable pointer to retrieve the full tree.  The full
+      tree is thus not provided at all in the document.
 
    The document SHOULD include the following note if the full tree is
    not included:
@@ -546,11 +546,10 @@ Table of Contents
    Section 3 of [RFC8340].
 
       The tooling may evolve in the future to provide better rendering
-      of too long trees.  This tooling may offer (but not limited to),
-      unfold trees [RFC8792], control of expanded views, ease navigation
-      among various levels of a tree, support of hyperlinks, etc.  When
-      such a tooling is available, too long trees can be displayed in
-      the HTML version of documents that include such trees.
+      of too long trees, especially for HTML version of documents.  This
+      tooling may offer (but not limited to), unfold trees [RFC8792],
+      control of expanded views, ease navigation among various levels of
+      a tree, support of hyperlinks, etc.
 
    If YANG tree diagrams are used, then an informative reference to the
    YANG tree diagrams specification MUST be included in the document.
