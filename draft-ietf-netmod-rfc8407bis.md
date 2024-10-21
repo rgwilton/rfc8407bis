@@ -593,11 +593,33 @@ should indicate whether the module is IANA-maintained or not. This applies to ne
 modules. An example of an update registration for the
 "ietf-template" module can be found in {{sec-iana}}.
 
-A registration template is provided below:
+A registration template for a new module is provided below:
 
 ~~~
    IANA is requested to register the following URI in the "ns"
    subregistry within the "IETF XML Registry" [RFC3688]:
+
+      URI:
+      Registrant Contact:  The IESG.
+      XML: N/A; the requested URI is an XML namespace.
+
+   IANA is requested to register the following YANG module in the "YANG
+   Module Names" subregistry [RFC6020] within the "YANG Parameters"
+   registry.
+
+      Name:
+      Maintained by IANA?  Y/N
+      Namespace:
+      Prefix:
+      Reference:
+~~~
+
+A registration template for a revised module is provided below:
+
+~~~
+   IANA is requested to update the following registration in the "ns"
+   subregistry within the "IETF XML Registry" [RFC3688] to reference
+   this document:
 
       URI:
       Registrant Contact:  The IESG.
