@@ -593,6 +593,12 @@ should indicate whether the module is IANA-maintained or not. This applies to ne
 modules. An example of an update registration for the
 "ietf-template" module can be found in {{sec-iana}}.
 
+The following sections provide registration templates for new and revised YANG modules.
+
+Additional IANA considerations applicable to IANA-maintained modules (including instructions to maintain them) are provided in {{sec-iana-mm}}.
+
+###  IANA Template for Documents Defining New YANG Modules
+
 A registration template for a new module is provided below:
 
 ~~~
@@ -614,6 +620,8 @@ A registration template for a new module is provided below:
       Reference:
 ~~~
 
+###  IANA Template for Revising YANG Modules
+
 A registration template for a revised module is provided below:
 
 ~~~
@@ -630,14 +638,11 @@ A registration template for a revised module is provided below:
    registry.
 
       Name:
-      Maintained by IANA?  Y/N
+      Maintained by IANA?  N
       Namespace:
       Prefix:
       Reference:
 ~~~
-
-Additional IANA considerations applicable to IANA-maintained modules (including instructions to maintain them) are provided in {{sec-iana-mm}}.
-
 
 ###  Documents That Create a New Namespace
 
