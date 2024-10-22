@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-10-20T01:45:44.562523+00:00",
+  "timestamp": "2024-10-22T01:39:49.611578+00:00",
   "repo": "netmod-wg/rfc8407bis",
   "labels": [
     {
@@ -2026,24 +2026,54 @@
       "id": "PR_kwDOJTh_ks5-W3WM",
       "title": "long trees",
       "url": "https://github.com/netmod-wg/rfc8407bis/pull/70",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "boucadair",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2024-10-11T15:32:25Z",
-      "updatedAt": "2024-10-17T12:09:41Z",
+      "updatedAt": "2024-10-21T09:25:52Z",
       "baseRepository": "netmod-wg/rfc8407bis",
       "baseRefName": "main",
       "baseRefOid": "6aa068d53d195dfe555f0540099da4ced16c0433",
       "headRepository": "netmod-wg/rfc8407bis",
       "headRefName": "long-trees",
       "headRefOid": "3fad032c47277bb24555cfea50da09003274f6f6",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2024-10-21T09:25:50Z",
+      "mergedAt": "2024-10-21T09:25:50Z",
+      "mergedBy": "boucadair",
+      "mergeCommit": {
+        "oid": "f93a38991eeb78d1750e278e391daf5b995f3e82"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 71,
+      "id": "PR_kwDOJTh_ks5_UwTy",
+      "title": "iana-template-update",
+      "url": "https://github.com/netmod-wg/rfc8407bis/pull/71",
+      "state": "MERGED",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2024-10-21T13:45:57Z",
+      "updatedAt": "2024-10-21T15:51:00Z",
+      "baseRepository": "netmod-wg/rfc8407bis",
+      "baseRefName": "main",
+      "baseRefOid": "7f8513df336a7ca1a3ab51a8130ea756e8ae7707",
+      "headRepository": "netmod-wg/rfc8407bis",
+      "headRefName": "iana-template-update",
+      "headRefOid": "de5d4fe498724e7fe94709e41d00daa2a48006a1",
+      "closedAt": "2024-10-21T15:50:58Z",
+      "mergedAt": "2024-10-21T15:50:58Z",
+      "mergedBy": "boucadair",
+      "mergeCommit": {
+        "oid": "b0cb3b439fc1a18d39d8cafe8448a7b397b68c8c"
+      },
       "comments": [],
       "reviews": []
     }
