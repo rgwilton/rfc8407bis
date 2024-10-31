@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-10-29T01:40:53.637510+00:00",
+  "timestamp": "2024-10-31T01:40:44.243756+00:00",
   "repo": "netmod-wg/rfc8407bis",
   "labels": [
     {
@@ -2074,6 +2074,32 @@
       "mergeCommit": {
         "oid": "b0cb3b439fc1a18d39d8cafe8448a7b397b68c8c"
       },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 72,
+      "id": "PR_kwDOJTh_ks6AM_n6",
+      "title": "too-long-trees-bis",
+      "url": "https://github.com/netmod-wg/rfc8407bis/pull/72",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2024-10-29T08:06:52Z",
+      "updatedAt": "2024-10-29T08:06:52Z",
+      "baseRepository": "netmod-wg/rfc8407bis",
+      "baseRefName": "main",
+      "baseRefOid": "b0cb3b439fc1a18d39d8cafe8448a7b397b68c8c",
+      "headRepository": "netmod-wg/rfc8407bis",
+      "headRefName": "too-long-trees-bis",
+      "headRefOid": "5ae954ccb456a10742e6b0ce9c418e99c29e35e4",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
       "comments": [],
       "reviews": []
     }
