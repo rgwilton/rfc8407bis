@@ -7,8 +7,8 @@ Internet-Draft                                                 YumaWorks
 Obsoletes: 8407 (if approved)                          M. Boucadair, Ed.
 Updates: 6020, 8126 (if approved)                                 Orange
 Intended status: Best Current Practice                             Q. Wu
-Expires: 3 April 2025                                             Huawei
-                                                       30 September 2024
+Expires: 9 May 2025                                               Huawei
+                                                         5 November 2024
 
 
  Guidelines for Authors and Reviewers of Documents Containing YANG Data
@@ -56,7 +56,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 3 April 2025.
+   This Internet-Draft will expire on 9 May 2025.
 
 Copyright Notice
 
@@ -95,6 +95,7 @@ Table of Contents
      3.8.  IANA Considerations Section
        3.8.1.  Documents That Create a New Namespace
        3.8.2.  Documents That Extend an Existing Namespace
+       3.8.3.  Registration Templates
      3.9.  References Sections
      3.10. Validation Tools
      3.11. Module Extraction Tools
@@ -521,18 +522,16 @@ Table of Contents
    convenience, a subtree should fit within a page.  If the complete
    tree diagram is too long (more than 5 pages, typically) even with
    groupings unexpanded (Section 2.2 of [RFC8340]), the authors SHOULD
-   NOT include it in the document.  A stable pointer to retrieve the
-   full tree MAY be included.
+   NOT include it in the main body of the document.  Instead, authors
+   MAY consider the following options:
+
+   *  Include the full tree in an appendix.
+
+   *  Provide only a stable pointer to retrieve the full tree.  The full
+      tree is thus not provided at all in the document.
 
    The document SHOULD include the following note if the full tree is
    not included:
-
-      -- If no stable pointer to retrieve the tree is included
-
-      The full tree diagram of the module can be generated using,
-      e.g., the "pyang" tool. That tree is not included here because
-      it is too long (Section 3.4 of [RFCAAAA]). Instead, subtrees
-      are provided for the reader's convenience.
 
       -- If a stable pointer to retrieve the tree is included
 
@@ -548,11 +547,10 @@ Table of Contents
    Section 3 of [RFC8340].
 
       The tooling may evolve in the future to provide better rendering
-      of too long trees.  This tooling may offer (but not limited to),
-      unfold trees, control of expanded views, ease navigation among
-      various levels of a tree, support of hyperlinks, etc.  When such a
-      tooling is available, too long trees can be displayed in the HTML
-      version of documents that include such trees.
+      of too long trees, especially for HTML version of documents.  This
+      tooling may offer (but not limited to), unfold trees [RFC8792],
+      control of expanded views, ease navigation among various levels of
+      a tree, support of hyperlinks, etc.
 
    If YANG tree diagrams are used, then an informative reference to the
    YANG tree diagrams specification MUST be included in the document.
@@ -597,7 +595,7 @@ Table of Contents
    Native YANG features (e.g., breaking line, "+") SHOULD be used to fit
    a module into the line limits.  Exceptionally, RFC8792-folding of
    YANG modules MAY be used if and only if native YANG features are not
-   sufficient.  A similar approach (e.g., use "--yang-line-length 69" or
+   sufficient.  A similar approach (e.g., use "--tree-line-length 69" or
    split a tree into subtrees) SHOULD be followed for tree diagrams.
 
 3.5.1.  YANG Module Classification
@@ -725,6 +723,7 @@ Table of Contents
 
     -- if you have any writable data nodes (those are all the
     -- "config true" nodes, and remember, that is the default)
+    -- that could be especially disruptive if abused,
     -- describe their specific sensitivity or vulnerability.
 
    There are a number of data nodes defined in this YANG module that are
@@ -745,7 +744,9 @@ Table of Contents
     -- get-config) are sensitive or vulnerable (for instance, if they
     -- might reveal customer information or violate personal privacy
     -- laws such as those of the European Union if exposed to
-    -- unauthorized parties)
+    -- unauthorized parties). Describe here specific sensitivity or
+    -- vulnerability of readable data nodes that contain especially
+    -- sensitive information or that raise significant privacy concerns.
 
    Some of the readable data nodes in this YANG module may be considered
    sensitive or vulnerable in some network environments.  It is thus
@@ -757,8 +758,10 @@ Table of Contents
    <list subtrees and data nodes and explain the reasons for
     the sensitivity/privacy concerns>
 
-    -- if your YANG module has defined any RPC operations
-    -- describe their specific sensitivity or vulnerability.
+    -- if your YANG module has defined any RPC operations that are
+    -- potentially harmful to system behavior or that raise significant
+    -- privacy concerns, describe their specific sensitivity or
+    -- vulnerability.
 
    Some of the RPC operations in this YANG module may be considered
    sensitive or vulnerable in some network environments.  It is thus
@@ -823,7 +826,36 @@ Table of Contents
    An example of an update registration for the "ietf-template" module
    can be found in Section 5.
 
-   A registration template is provided below:
+   Additional IANA considerations applicable to IANA-maintained modules
+   (including instructions to maintain them) are provided in
+   Section 4.30.3.
+
+3.8.1.  Documents That Create a New Namespace
+
+   If an I-D defines a new namespace that is to be administered by the
+   IANA, then the document MUST include an IANA Considerations section
+   that specifies how the namespace is to be administered.
+
+   Specifically, if any YANG module namespace statement value contained
+   in the document is not already registered with IANA, then a new entry
+   in the "ns" subregistry within the "IETF XML Registry" MUST be
+   requested from the IANA.
+
+   A registration template for new YANG modules is provided in
+   Section 3.8.3.1.
+
+3.8.2.  Documents That Extend an Existing Namespace
+
+   It is possible to extend an existing namespace using a YANG submodule
+   that belongs to an existing module already administered by IANA.  In
+   this case, the document containing the main module MUST be updated to
+   use the latest revision of the submodule.
+
+3.8.3.  Registration Templates
+
+3.8.3.1.  IANA Template for Documents Defining New YANG Modules
+
+   A registration template for a new module is provided below:
 
     IANA is requested to register the following URI in the "ns"
     subregistry within the "IETF XML Registry" [RFC3688]:
@@ -842,27 +874,27 @@ Table of Contents
        Prefix:
        Reference:
 
-   Additional IANA considerations applicable to IANA-maintained modules
-   (including instructions to maintain them) are provided in
-   Section 4.30.3.
+3.8.3.2.  IANA Template for Revising YANG Modules
 
-3.8.1.  Documents That Create a New Namespace
+   A registration template for a revised module is provided below:
 
-   If an I-D defines a new namespace that is to be administered by the
-   IANA, then the document MUST include an IANA Considerations section
-   that specifies how the namespace is to be administered.
+    IANA is requested to update the following registration in the "ns"
+    subregistry within the "IETF XML Registry" [RFC3688] to reference
+    this document:
 
-   Specifically, if any YANG module namespace statement value contained
-   in the document is not already registered with IANA, then a new entry
-   in the "ns" subregistry within the "IETF XML Registry" MUST be
-   requested from the IANA.
+       URI:
+       Registrant Contact:  The IESG.
+       XML: N/A; the requested URI is an XML namespace.
 
-3.8.2.  Documents That Extend an Existing Namespace
+    IANA is requested to register the following YANG module in the "YANG
+    Module Names" subregistry [RFC6020] within the "YANG Parameters"
+    registry.
 
-   It is possible to extend an existing namespace using a YANG submodule
-   that belongs to an existing module already administered by IANA.  In
-   this case, the document containing the main module MUST be updated to
-   use the latest revision of the submodule.
+       Name:
+       Maintained by IANA?  Y/N
+       Namespace:
+       Prefix:
+       Reference:
 
 3.9.  References Sections
 
@@ -927,7 +959,7 @@ Table of Contents
    ENDS>" tags are used correctly and that the normative YANG modules
    can be extracted correctly.
 
-   The "xym" tool is freely available on GitHub and can be used to
+   The 'xym' tool is freely available on GitHub and can be used to
    extract YANG modules from a document.
 
       <https://github.com/xym-tool/xym>
