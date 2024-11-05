@@ -17,6 +17,7 @@ RESTCONF protocol operations and content.
 
  -- if you have any writable data nodes (those are all the
  -- "config true" nodes, and remember, that is the default)
+ -- that could be especially disruptive if abused,
  -- describe their specific sensitivity or vulnerability.
 
 There are a number of data nodes defined in this YANG module that are
@@ -37,7 +38,9 @@ sensitivities/vulnerabilities:
  -- get-config) are sensitive or vulnerable (for instance, if they
  -- might reveal customer information or violate personal privacy
  -- laws such as those of the European Union if exposed to
- -- unauthorized parties)
+ -- unauthorized parties). Describe here specific sensitivity or 
+ -- vulnerability of readable data nodes that contain especially
+ -- sensitive information or that raise significant privacy concerns.
 
 Some of the readable data nodes in this YANG module may be considered
 sensitive or vulnerable in some network environments.  It is thus
@@ -49,8 +52,10 @@ vulnerabilities:
 <list subtrees and data nodes and explain the reasons for
  the sensitivity/privacy concerns>
 
- -- if your YANG module has defined any RPC operations
- -- describe their specific sensitivity or vulnerability.
+ -- if your YANG module has defined any RPC operations that are 
+ -- potentially harmful to system behavior or that raise significant 
+ -- privacy concerns, describe their specific sensitivity or 
+ -- vulnerability.
 
 Some of the RPC operations in this YANG module may be considered
 sensitive or vulnerable in some network environments.  It is thus
