@@ -20,19 +20,19 @@
    for RFCs that specify IANA-maintained modules. The document also updates RFC 6020
    by clarifying how modules and their revisions are handled by IANA. 
     " name="description">
-<meta content="xml2rfc 3.23.2" name="generator">
+<meta content="xml2rfc 3.24.0" name="generator">
 <meta content="NETCONF" name="keyword">
 <meta content="RESTCONF" name="keyword">
 <meta content="Automation" name="keyword">
 <meta content="draft-ietf-netmod-rfc8407bis-latest" name="ietf.draft">
 <!-- Generator version information:
-  xml2rfc 3.23.2
+  xml2rfc 3.24.0
     Python 3.12.7
     ConfigArgParse 1.7
     google-i18n-address 3.1.1
     intervaltree 3.1.0
     Jinja2 3.1.4
-    lxml 4.9.4
+    lxml 5.3.0
     platformdirs 4.3.6
     pycountry 22.3.5
     PyYAML 6.0.1
@@ -1090,11 +1090,11 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">Guidelines for YANG Documents</td>
-<td class="right">October 2024</td>
+<td class="right">November 2024</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Bierman, et al.</td>
-<td class="center">Expires 2 May 2025</td>
+<td class="center">Expires 10 May 2025</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1113,12 +1113,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <a href="https://www.rfc-editor.org/rfc/rfc6020" class="eref">6020</a>, <a href="https://www.rfc-editor.org/rfc/rfc8126" class="eref">8126</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2024-10-29" class="published">29 October 2024</time>
+<time datetime="2024-11-06" class="published">6 November 2024</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Best Current Practice</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2025-05-02">2 May 2025</time></dd>
+<dd class="expires"><time datetime="2025-05-10">10 May 2025</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1181,7 +1181,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 2 May 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 10 May 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1999,17 +1999,12 @@ document or if any terms are imported from other documents.<a href="#section-3.3
         </h3>
 <p id="section-3.4-1">YANG tree diagrams provide a concise representation of a YANG module
 and <span class="bcp14">SHOULD</span> be included to help readers understand YANG module
-structure. If the complete tree diagram for a module becomes long (more than 2 pages, typically),
-the diagram <span class="bcp14">SHOULD</span> be split into several smaller diagrams (a.k.a subtrees). For the reader's convenience, a subtree should fit within a page. If the complete tree diagram is too long (more than 5 pages, typically) even with groupings unexpanded (<span><a href="https://rfc-editor.org/rfc/rfc8340#section-2.2" class="relref">Section 2.2</a> of [<a href="#RFC8340" class="cite xref">RFC8340</a>]</span>), the authors <span class="bcp14">SHOULD NOT</span> include it in the main body of the document. Instead, authors <span class="bcp14">MAY</span> consider including the full tree in an appendix.<a href="#section-3.4-1" class="pilcrow">¶</a></p>
-<p id="section-3.4-2">These guidelines take precedence over the generic guidance in <span><a href="https://rfc-editor.org/rfc/rfc8340#section-3" class="relref">Section 3</a> of [<a href="#RFC8340" class="cite xref">RFC8340</a>]</span>.<a href="#section-3.4-2" class="pilcrow">¶</a></p>
-<ul class="normal ulEmpty">
-<li class="normal ulEmpty" id="section-3.4-3.1">
-            <p id="section-3.4-3.1.1">The tooling may evolve in the future to provide better rendering of too long trees, especially for HTML version of documents. This tooling may offer (but not limited to), unfold trees <span>[<a href="#RFC8792" class="cite xref">RFC8792</a>]</span>, control of expanded views, ease navigation among various levels of a tree, support of hyperlinks, etc.<a href="#section-3.4-3.1.1" class="pilcrow">¶</a></p>
-</li>
-        </ul>
-<p id="section-3.4-4">If YANG tree diagrams are used, then an informative reference to the
+structure.  Guidelines on tree diagrams can be found in  <span><a href="https://rfc-editor.org/rfc/rfc8340#section-3" class="relref">Section 3</a> of [<a href="#RFC8340" class="cite xref">RFC8340</a>]</span>.
+Tree diagrams longer than one page <span class="bcp14">SHOULD</span> be included
+in an appendix, i.e., not in the main body of the document.<a href="#section-3.4-1" class="pilcrow">¶</a></p>
+<p id="section-3.4-2">If YANG tree diagrams are used, then an informative reference to the
 YANG tree diagrams specification <span class="bcp14">MUST</span> be included in the document.
-Refer to <span><a href="https://rfc-editor.org/rfc/rfc8349#section-2.2" class="relref">Section 2.2</a> of [<a href="#RFC8349" class="cite xref">RFC8349</a>]</span> for an example of such a reference.<a href="#section-3.4-4" class="pilcrow">¶</a></p>
+Refer to <span><a href="https://rfc-editor.org/rfc/rfc8349#section-2.2" class="relref">Section 2.2</a> of [<a href="#RFC8349" class="cite xref">RFC8349</a>]</span> for an example of such a reference.<a href="#section-3.4-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="narrative-sections">
