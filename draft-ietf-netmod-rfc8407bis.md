@@ -415,12 +415,9 @@ document or if any terms are imported from other documents.
 
 YANG tree diagrams provide a concise representation of a YANG module
 and SHOULD be included to help readers understand YANG module
-structure. If the complete tree diagram for a module becomes long (more than 2 pages, typically),
-the diagram SHOULD be split into several smaller diagrams (a.k.a subtrees). For the reader's convenience, a subtree should fit within a page. If the complete tree diagram is too long (more than 5 pages, typically) even with groupings unexpanded ({{Section 2.2 of ?RFC8340}}), the authors SHOULD NOT include it in the main body of the document. Instead, authors MAY consider including the full tree in an appendix.
-
-These guidelines take precedence over the generic guidance in {{Section 3 of ?RFC8340}}.
-
-> The tooling may evolve in the future to provide better rendering of too long trees, especially for HTML version of documents. This tooling may offer (but not limited to), unfold trees {{!RFC8792}}, control of expanded views, ease navigation among various levels of a tree, support of hyperlinks, etc.
+structure.  Guidelines on tree diagrams can be found in  {{Section 3 of ?RFC8340}}.
+Tree diagrams longer than one page SHOULD be included
+in an appendix, i.e., not in the main body of the document.
 
 If YANG tree diagrams are used, then an informative reference to the
 YANG tree diagrams specification MUST be included in the document.
